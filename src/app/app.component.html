@@ -1,8 +1,24 @@
-<a class="website" href="https://frontenddevelopment.tech/" target="_blank"
->www.frontenddevelopment.tech</a
->
-<div>
-  <canvas id="areaChart"></canvas>
+<p>Scegliere un valore di soglia (ad esempio 0.05) per osservare quali variabili superano tale valore</p>
+<input id="input-soglia" value="soglia">
+<br/>
+<br/>
+<button (click)="addSoglia()">aggiungi soglia</button>
+&nbsp;&nbsp;
+<button (click)="filterByTreshold()">filtra per soglia</button>
+<br/>
+<br/>
+<p>Scegliere una delle variabili ottenute come output di "filtra soglia"</p>
+<input id="variabile" value="variabile da confrontare">
+<br/>
+<br/>
+<button (click)="analizzaVariabili()">analizza variabili</button>
+<ul>
+  <li *ngFor="let item of this.over_soglia_list_with_info">{{item}}</li>
+</ul>
+<div class="chartWrapper">
+  <div class="chartAreaWrapper">
+    <canvas id="areaChart" height="400" width="1500"></canvas>
+  </div>
 </div>
 <br/>
 <br/>
@@ -12,7 +28,31 @@
 <br/>
 <br/>
 <br/>
+<input id="x1" value="2020-05-18 15:15:00">
+&nbsp;&nbsp;
+<input id="x2" value="2020-05-18 15:55:00">
+<br/>
+<br/>
+<button (click)="cambiaLeX()">restringi asse delle x</button>
+<p>Scegliere un valore di soglia (ad esempio 0.05) per osservare quali variabili superano tale valore</p>
+<input id="input-soglia-x-ristrette" value="soglia">
+<br/>
+<br/>
+<button (click)="addSogliaXristrette()">aggiungi soglia</button>
+&nbsp;&nbsp;
+<button (click)="filterByTresholdXristrette()">filtra per soglia</button>
+<br/>
+<br/><p>Scegliere una delle variabili ottenute come output di "filtra soglia"</p>
+<input id="variabileXristrette" value="variabile da confrontare">
+<br/>
+<br/>
+<button (click)="analizzaVariabiliXristrette()">analizza variabili</button>
+<ul>
+  <li *ngFor="let item of this.over_soglia_list_with_infoXristrette">{{item}}</li>
+</ul>
+<div class="chartWrapper">
+  <div class="chartAreaWrapper">
+    <canvas id="areaChart1"></canvas>
+  </div>
+</div>
 
-<div>
-  <canvas id="areaChart1"></canvas>
-</div>
