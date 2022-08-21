@@ -1,3 +1,4 @@
+//@ts-nocheck https://stackoverflow.com/questions/51145180/how-to-use-ts-ignore-for-a-block
 import {Component} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Chart, registerables} from "chart.js";
@@ -6,10 +7,12 @@ import zoomPlugin from 'chartjs-plugin-zoom';
 import {ChartjsService} from "../services/chartjs.service";
 import {EvaluateDistanceService} from "../services/evaluate-distance.service";
 import {GraphdbRequestsService} from "../services/graphdb-requests.service";
+import {SvgRequestServiceService} from "../services/svg-request-service.service";
+import {GlobalVariablesService} from "../services/global-variables.service";
 
 Chart.register(zoomPlugin);
 
-//https://stackoverflow.com/questions/67060070/chart-js-core-js6162-error-error-line-is-not-a-registered-controller
+//  https://stackoverflow.com/questions/67060070/chart-js-core-js6162-error-error-line-is-not-a-registered-controller
 
 @Component({
   selector: 'app-root',
@@ -25,6 +28,15 @@ export class AppComponent {
   jsonObject: any
   over_soglia_list: any
   over_soglia_list_with_info: any
+  list_of_scheramte_to_attach = []
+  svg = ''
+  overSogliaListXristrette: any
+  over_soglia_list_with_infoXristrette: any
+  restringiAsseLevaImg = true;
+  timeEventsXristrette: any
+  dataSetXRistrette: any
+  soglia = 0
+  sogliaXRistrette: any
 
 
   myObserver = {
@@ -40,13 +52,12 @@ export class AppComponent {
   };
 
 
-  constructor(public http: HttpClient, private chartJsService: ChartjsService, private distanceService: EvaluateDistanceService, private graphDBrequestService: GraphdbRequestsService) {
+  constructor(public http: HttpClient, private chartJsService: ChartjsService, private distanceService: EvaluateDistanceService, private graphDBrequestService: GraphdbRequestsService, private svgRequestService: SvgRequestServiceService, public globalVariableService: GlobalVariablesService) {
     Chart.register(...registerables);
   }
 
 
   async ngOnInit() {
-
     await this.http.get<any>('assets/shap.json').subscribe(this.myObserver);
     await this.delay(1000);
     await this.delay(1000);
@@ -54,12 +65,6 @@ export class AppComponent {
   }
 
 
-  delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
-
-
-  soglia = 0
 
   addSoglia() {
     // @ts-ignore
@@ -80,7 +85,6 @@ export class AppComponent {
         return obj !== 'soglia' || obj !== 'prediction'
       });
       this.over_soglia_list_with_info = this.over_soglia_list
-      // @ts-ignore
       let element = this.soglia = (document.getElementById('variabile').value)
       let el1 = this.distanceService.variables[element]
       let nomeEl2
@@ -91,16 +95,12 @@ export class AppComponent {
           console.log('stesso impianto')
           const index = this.over_soglia_list_with_info.indexOf(nomeEl2);
           let distance = await this.graphDBrequestService.getDistanceBetweenNodes(el1.label, el2.label)
-          this.over_soglia_list_with_info[index] = this.over_soglia_list_with_info[index] + ' Impianto : ' + el2.impianto[0] + ' ---------' + element + ' Impianto : ' + el1.impianto[0] + ' distanza nodi = ' + String(Number(distance) + 1)
+          this.over_soglia_list_with_info[index] = this.over_soglia_list_with_info[index] + ' Schermata : ' + el2.impianto[0] + ' ---------' + element + ' Schermata : ' + el1.impianto[0] + ' distanza nodi = ' + String(Number(distance) + 1)
 
         }
         if (el1.impianto[0] != el2.impianto[0]) {
           console.log('impianti diversi')
-          const index = this.over_soglia_list_with_info.indexOf(nomeEl2);
-          let distance = await this.graphDBrequestService.getDistanceBetweenImpianti(el1.impianto[0], el2.impianto[0])
-          console.log(el1.impianto[0] + ' ' + el2.impianto[0] + 'distance =' + distance)
-          this.over_soglia_list_with_info[index] = this.over_soglia_list_with_info[index] + ' Impianto : ' + el2.impianto[0] + ' ---------' + element + ' Impianto : ' + el1.impianto[0] + ' distanza impianti = ' + String(Number(distance) + 1)
-
+          continue
 
         }
       }
@@ -110,19 +110,14 @@ export class AppComponent {
 
   }
 
-
-  timeEventsXristrette: any
-  dataSetXRistrette: any
-
   async cambiaLeX() {
+    this.restringiAsseLevaImg = false
 
     let timesEvent: any
 
     let dataSet: any
 
-    // @ts-ignore
     let date1 = new Date(document.getElementById('x1').value).getTime()
-    // @ts-ignore
     let date2 = new Date(document.getElementById('x2').value).getTime()
 
     this.http.get<any>('assets/shap.json').subscribe(async value => {
@@ -178,8 +173,6 @@ export class AppComponent {
     this.timeEventsXristrette = timesEvent
   }
 
-  sogliaXRistrette: any
-
   addSogliaXristrette() {
     // @ts-ignore
     this.sogliaXRistrette = Number(document.getElementById('input-soglia-x-ristrette').value)
@@ -188,22 +181,20 @@ export class AppComponent {
 
   }
 
-  overSogliaListXristrette: any
-  over_soglia_list_with_infoXristrette: any
-
   filterByTresholdXristrette() {
     this.overSogliaListXristrette = this.chartJsService.filterDataSetByThreshold(this.dataSetXRistrette, this.sogliaXRistrette)[1]
     this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
+    this.globalVariableService.nodiRotti = this.overSogliaListXristrette
   }
 
   async analizzaVariabiliXristrette() {
+
 
     try {
       this.overSogliaListXristrette = this.overSogliaListXristrette.filter((obj: any) => {
         return obj !== 'soglia' || obj !== 'prediction'
       });
       this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
-      // @ts-ignore
       let element = this.soglia = (document.getElementById('variabileXristrette').value)
       let el1 = this.distanceService.variables[element]
       let nomeEl2
@@ -215,17 +206,12 @@ export class AppComponent {
           const index = this.over_soglia_list_with_infoXristrette.indexOf(nomeEl2);
           let distance = 'x'
           distance = await this.graphDBrequestService.getDistanceBetweenNodes(el1.label, el2.label)
-          if(distance == '9')
-          this.over_soglia_list_with_infoXristrette[index] = this.over_soglia_list_with_infoXristrette[index] + ' Nome in ontologia: ' + el2.label + ' Impianto: ' + el2.impianto[0] + ' - ' + element + ' Nome in ontologia: ' + el1.label + ' Impianto: ' + el1.impianto[0] + ' distanza nodi = ' + String(Number(distance) + 1)
-
+          if (distance == '9')
+            this.over_soglia_list_with_infoXristrette[index] = this.over_soglia_list_with_infoXristrette[index] + ' Nome in ontologia: ' + el2.label + ' Schermata: ' + el2.impianto[0] + ' - ' + element + ' Nome in ontologia: ' + el1.label + ' Schermata: ' + el1.impianto[0] + ' distanza nodi = ' + String(Number(distance) + 1)
         }
         if (el1.impianto[0] != el2.impianto[0]) {
           console.log('impianti diversi')
-          const index = this.over_soglia_list_with_infoXristrette.indexOf(nomeEl2);
-          let distance = 'x'
-          distance = await this.graphDBrequestService.getDistanceBetweenImpianti(el1.impianto[0], el2.impianto[0])
-          console.log(el1.impianto[0] + ' ' + el2.impianto[0] + 'distance =' + distance)
-          this.over_soglia_list_with_infoXristrette[index] = this.over_soglia_list_with_infoXristrette[index] + ' Impianto: ' + el2.impianto[0] + ' - ' + element + ' Impianto: ' + el1.impianto[0] + ' distanza impianti = ' + String(Number(distance) + 1)
+          continue
 
         }
       }
@@ -233,6 +219,33 @@ export class AppComponent {
       console.log(e)
     }
 
+  }
+
+  async generaSVG() {
+    this.svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, this.list_of_scheramte_to_attach)
+  }
+
+  openInNewTab(url: string) {
+    window.open(url, '_blank').focus();
+  }
+
+  onChange(event: Event) {
+    console.log(event.target.value)
+    if (this.list_of_scheramte_to_attach.includes(event.target.value)) {
+      this.removeElementFromStringArray(event.target.value, this.list_of_scheramte_to_attach)
+    } else
+      this.list_of_scheramte_to_attach.push(event.target.value)
+    console.log(this.list_of_scheramte_to_attach)
+  }
+
+  removeElementFromStringArray(element: string, list: []) {
+    list.forEach((value, index) => {
+      if (value == element) list.splice(index, 1);
+    });
+  }
+
+  delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
 }

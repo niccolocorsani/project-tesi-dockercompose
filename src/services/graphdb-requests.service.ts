@@ -9,9 +9,29 @@ export class GraphdbRequestsService {
 
   distanceImpianti: any
   distanceNodes: any
+  queryResult: any
 
   constructor(public http: HttpClient) {
   }
+
+
+
+  async normalQuery() {
+    await this.http.get<any>('http://127.0.0.1:8081/query/').subscribe((value: any) => {
+        this.queryResult = value
+        //console.log('observer impainti get ' + value)
+      },
+      (error: any) => {
+        this.queryResult = 'x'
+        console.error(error)
+
+      }
+    );
+    await this.delay(100);
+    return this.queryResult
+  }
+
+
 
 
   async getDistanceBetweenNodes(node1: string, node2: string) {
