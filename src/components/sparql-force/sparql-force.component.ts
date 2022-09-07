@@ -21,7 +21,6 @@ import {PrefixSimplePipe} from '../../pipes/prefix-simple.pipe';
 import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
 
-//Tell TS D3 exists as a variable/object somewhere globally
 declare const d3: any;
 
 export interface Node {
@@ -160,7 +159,6 @@ export class SparqlForceComponent implements OnInit {
     console.log(this.divWidth)
     this.force = d3.layout.force().size([5000, 5000]);
 
-    // Limit result length
     var limit = parseInt(this.limit);
     if (this.data.length > limit) {
       var triples = this.data.slice(0, limit);
@@ -168,8 +166,7 @@ export class SparqlForceComponent implements OnInit {
       var triples = this.data;
     }
 
-    // If type of data is text/turtle (not array)
-    // the triples must be parsed to objects instead
+
     if (typeof triples === 'string') {
       this._parseTriples(triples).then(d => {
         console.log(d);
@@ -196,9 +193,7 @@ export class SparqlForceComponent implements OnInit {
 
   updateChart() {
     if (!this.svg) return;
-    // if(!this.graph) return;
 
-    // ==================== Add Marker ====================
     this.svg.append("svg:defs").selectAll("marker")
       .data(["end"])
       .enter().append("svg:marker")
@@ -212,7 +207,6 @@ export class SparqlForceComponent implements OnInit {
       .append("svg:polyline")
       .attr("points", "0,-5 10,0 0,5");
 
-    // ==================== Add Links ====================
     var links = this.svg.selectAll(".link")
       .data(this.graph.triples)
       .enter()
@@ -220,7 +214,6 @@ export class SparqlForceComponent implements OnInit {
       .attr("marker-end", "url(#end)")
       .attr("class", "link");
 
-    // ==================== Add Link Names =====================
     var linkTexts = this.svg.selectAll(".link-text")
       .data(this.graph.triples)
       .enter()
@@ -228,7 +221,6 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", "link-text")
       .text(d => d.p.label);
 
-    // ==================== Add Link Names =====================
     var nodeTexts = this.svg.selectAll(".node-text")
       .data(this._filterNodesByType(this.graph.nodes, "node"))
       .enter()
@@ -236,19 +228,14 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", "node-text")
       .text(d => d.label);
 
-    // ==================== Add Node =====================
     var nodes = this.svg.selectAll(".node")
       .data(this._filterNodesByType(this.graph.nodes, "node"))
       .enter()
       .append("circle")
-      // .attr("class", "node")
       .attr("class", d => {
         if (d.owlClass) {
           return "class"
-          //}else if(d.instSpace){ //MB
-          //return "instance-space" //MB
-          //}else if(d.instSpaceType){ //MB
-          //return "instance-spaceType"	//MB
+
         } else if (d.label.indexOf("_:") != -1) {
           return "blank"
         } else if (d.instance || d.label.indexOf("inst:") != -1) {
@@ -351,9 +338,7 @@ export class SparqlForceComponent implements OnInit {
       if (subjNode == null) {
         subjNode = {id: subjId, label: subjId, weight: 1, type: "node"};
 
-        //TODO riguardare
-
-
+        //TODO check
 
 
         graph.nodes.push(subjNode);
@@ -361,8 +346,6 @@ export class SparqlForceComponent implements OnInit {
 
       if (objNode == null) {
         objNode = {id: objId, label: objId, weight: 1, type: "node"};
-        // If the predicate is rdf:type, the node is an OWL Class
-        // Then the domain is an instance
         if (predNode.label == "rdf:type" || predNode.label == "http://www.w3.org/1999/02/22-rdf-syntax-ns#type") {
           objNode.owlClass = true;
           subjNode.instance = true;
@@ -376,13 +359,7 @@ export class SparqlForceComponent implements OnInit {
       graph.links.push({source: predNode, target: objNode, predicate: blankLabel, weight: 1});
 
 
-
-
       graph.triples.push({s: subjNode, p: predNode, o: objNode});
-
-
-
-
 
 
     });

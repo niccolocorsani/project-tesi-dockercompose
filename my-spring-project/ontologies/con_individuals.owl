@@ -1,0 +1,941 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_577>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul19> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_556>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul12> .
+
+<https://saref.etsi.org/saref4bldg/a2ul11>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> , <https://saref.etsi.org/saref4bldg/xv904abc_2> , <https://saref.etsi.org/saref4bldg/ibcexit> .
+
+<https://saref.etsi.org/saref4bldg/a2truck2exit>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> .
+
+<http://www.disit.org/saref4bldg-ext/Water>
+        a                owl:Class ;
+        rdfs:comment     "Water Flow from and to a Physical Object." ;
+        rdfs:label       "Water" ;
+        rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <https://saref.etsi.org/core/Measurement> ;
+                           owl:onProperty     <https://saref.etsi.org/saref4bldg/waterPressureMax>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <https://saref.etsi.org/core/Measurement> ;
+                           owl:onProperty     <https://saref.etsi.org/saref4bldg/waterPressureMin>
+                         ] .
+
+<https://saref.etsi.org/saref4bldg/s-904c>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Tank> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul11> , <https://saref.etsi.org/saref4bldg/a2ul19> , <https://saref.etsi.org/saref4bldg/a2ul18> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_464>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul2> .
+
+<http://www.disit.org/saref4bldg-ext/>
+        a            owl:Ontology ;
+        owl:imports  <https://saref.etsi.org/saref4bldg/v1.1.2/> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_564>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904c> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul14> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_543>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904de_2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/xv904de_1> .
+
+<https://saref.etsi.org/saref4bldg/a2ul19>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul20> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_472>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul8> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904d> .
+
+<https://saref.etsi.org/saref4bldg/a1ul13>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-904e> .
+
+<http://www.disit.org/saref4bldg-ext/Area>
+        a                owl:Class ;
+        rdfs:comment     "A Site can be divided in areas." ;
+        rdfs:label       "Area" ;
+        rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_572>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul15> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904a> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_551>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul11> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_480>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul11> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul9> .
+
+<https://saref.etsi.org/saref4bldg/li904c>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Sensor> ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/percentage> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/s-904c> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_459>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul13> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul12> .
+
+<https://saref.etsi.org/saref4bldg/a1ul5>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul4> , <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_580>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul19> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_559>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul10> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/p904a> .
+
+<https://saref.etsi.org/saref4bldg/a2ul14>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-904b> , <https://saref.etsi.org/saref4bldg/s-904c> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_467>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul6> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_567>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul19> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904c> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_546>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv954ab> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/p954> .
+
+<https://saref.etsi.org/saref4bldg/fi904b>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/m3-h> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/p904b> .
+
+<https://saref.etsi.org/saref4bldg/p954>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Pump> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul3> , <https://saref.etsi.org/saref4bldg/xv954ab> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_475>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul9> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904e> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_454>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul14> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul12> .
+
+<https://saref.etsi.org/saref4bldg/xv904de_2>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Valve> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2truck2exit> .
+
+<https://saref.etsi.org/saref4bldg/p904b>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Pump> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul12> , <https://saref.etsi.org/saref4bldg/xv904de_2> , <https://saref.etsi.org/saref4bldg/xv904de_1> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_575>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul11> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_554>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul10> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_483>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul7> .
+
+<https://saref.etsi.org/saref4bldg/s-904a>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Tank> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul13> , <https://saref.etsi.org/saref4bldg/a2ul15> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_462>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904e> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferricostart> .
+
+<https://saref.etsi.org/saref4bldg/a1ul8>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul11> , <https://saref.etsi.org/saref4bldg/a1ul9> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_583>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul18> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_562>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferricononpotabilestart> .
+
+<https://saref.etsi.org/saref4bldg/fi954>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/m3-h> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/a1ul3> .
+
+<http://www.disit.org/saref4bldg-ext/Reactor>
+        a                owl:Class ;
+        rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/FlowStorageDevice> .
+
+<https://saref.etsi.org/saref4bldg/a2ul17>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul20> .
+
+<http://www.disit.org/saref4bldg-ext/endIn>
+        a             owl:ObjectProperty ;
+        rdfs:comment  "The Physical Object into which the Flow end." ;
+        rdfs:label    "endIn" .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_470>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul5> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<https://saref.etsi.org/core/percentage>
+        a       owl:NamedIndividual , <https://saref.etsi.org/core/UnitOfMeasure> .
+
+<https://saref.etsi.org/saref4bldg/a1ul11>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/p904b> .
+
+<https://saref.etsi.org/saref4bldg/a2truck1exit>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_570>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul18> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904c> .
+
+<https://saref.etsi.org/saref4bldg/rampa1>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_549>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul13> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_478>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul11> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul10> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_457>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904d> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul14> .
+
+<https://saref.etsi.org/saref4bldg/a1ul3>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul2> , <https://saref.etsi.org/saref4bldg/a1ul1> , <https://saref.etsi.org/saref4bldg/rampa1> .
+
+<https://saref.etsi.org/saref4bldg/s-954a>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul7> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_578>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul15> .
+
+<http://www.disit.org/saref4bldg-ext/ChemicalCompound>
+        a                owl:Class ;
+        rdfs:comment     "Any sort of Chemical Compounds that flow between Physical Object," ;
+        rdfs:label       "ChemicalCompound" ;
+        rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> .
+
+<https://saref.etsi.org/core/Not-specified>
+        a       owl:NamedIndividual , <https://saref.etsi.org/core/UnitOfMeasure> .
+
+<https://saref.etsi.org/saref4bldg/ferrosostart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-954a> , <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_557>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul13> .
+
+<https://saref.etsi.org/saref4bldg/a2ul12>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> , <https://saref.etsi.org/saref4bldg/xv904abc_2> , <https://saref.etsi.org/saref4bldg/ibcexit> .
+
+<https://saref.etsi.org/saref4bldg/s-904d>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul8> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_465>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferrosostart> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_565>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2truck2exit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/xv904de_2> .
+
+<http://www.disit.org/saref4bldg-ext/to>
+        a           owl:ObjectProperty ;
+        rdfs:label  "to" .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_544>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904de_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/p904b> .
+
+<https://saref.etsi.org/saref4bldg/a2ul20>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/p904a> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_473>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/p954> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul4> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_452>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/rampa1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul3> .
+
+<https://saref.etsi.org/saref4bldg/a1ul14>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-904d> .
+
+<https://saref.etsi.org/saref4bldg/li954a>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/percentage> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/s-954a> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_573>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul13> .
+
+<http://www.disit.org/saref4bldg-ext/color>
+        a             owl:DatatypeProperty ;
+        rdfs:comment  "Color of a PhysicalObject or Flow's illustrative color." ;
+        rdfs:label    "color" .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_552>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul10> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_481>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul7> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-954a> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_460>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul3> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/p954> .
+
+<https://saref.etsi.org/saref4bldg/li904d>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/percentage> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/s-904d> .
+
+<https://saref.etsi.org/saref4bldg/a1ul6>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul4> , <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_581>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul19> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_560>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferricononpotabilestart> .
+
+<https://saref.etsi.org/saref4bldg/a2ul15>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul20> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_468>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-954a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferrosostart> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_568>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul17> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904b> .
+
+<https://saref.etsi.org/saref4bldg/xv904abc_1>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Valve> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2truck1exit> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_547>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul14> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferricopotabilestart> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_476>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul9> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul8> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_455>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul3> .
+
+<https://saref.etsi.org/saref4bldg/a1ul1>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-954a> .
+
+<http://www.disit.org/saref4bldg-ext/ProductionLine>
+        a                owl:Class ;
+        rdfs:comment     "A Production Line of an industry." ;
+        rdfs:label       "ProductionLine" ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+                           owl:onProperty     <https://saref.etsi.org/saref4bldg/contains>
+                         ] .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_576>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul10> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_555>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul11> .
+
+<https://saref.etsi.org/saref4bldg/a2ul10>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> , <https://saref.etsi.org/saref4bldg/xv904abc_2> , <https://saref.etsi.org/saref4bldg/ibcexit> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_484>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul5> .
+
+<https://saref.etsi.org/saref4bldg/s-904b>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Tank> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul12> , <https://saref.etsi.org/saref4bldg/a2ul17> , <https://saref.etsi.org/saref4bldg/a2ul16> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_463>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904e> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul13> .
+
+<http://www.disit.org/saref4bldg-ext/Energy>
+        a                owl:Class ;
+        rdfs:comment     "Any sort of Energy used or producted by a Phisycal Object." ;
+        rdfs:label       "Energy" ;
+        rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> .
+
+<https://saref.etsi.org/saref4bldg/a1ul9>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul11> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_563>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904c> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferricononpotabilestart> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_542>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904de_2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/p904b> .
+
+<http://www.disit.org/saref4bldg-ext/Flow>
+        a                owl:Class ;
+        rdfs:comment     "A generic Flow from and to a Physical Object, usually achived with pipes." ;
+        rdfs:label       "Flow" ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+                           owl:onProperty     <http://www.disit.org/saref4bldg-ext/endIn>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+                           owl:onProperty     <http://www.disit.org/saref4bldg-ext/startIn>
+                         ] ;
+        rdfs:subClassOf  [ a                            owl:Restriction ;
+                           owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass                  <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+                           owl:onProperty               <http://www.disit.org/saref4bldg-ext/endIn>
+                         ] ;
+        rdfs:subClassOf  [ a                            owl:Restriction ;
+                           owl:minQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass                  <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+                           owl:onProperty               <http://www.disit.org/saref4bldg-ext/startIn>
+                         ] .
+
+<https://saref.etsi.org/saref4bldg/a2ul18>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul20> .
+
+<http://www.disit.org/saref4bldg-ext/canMeasureIn>
+        a             owl:ObjectProperty ;
+        rdfs:comment  "A relation between a sensor and the unit of measurement in which the sensor measurement is expressed." ;
+        rdfs:label    "canMeasureIn" .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_471>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/p904b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul11> .
+
+<https://saref.etsi.org/saref4bldg/a1ul12>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul13> , <https://saref.etsi.org/saref4bldg/a1ul14> , <https://saref.etsi.org/saref4bldg/rampa2> .
+
+<https://saref.etsi.org/saref4bldg/ferricopotabilestart>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul14> .
+
+<http://www.disit.org/saref4bldg-ext/startIn>
+        a             owl:ObjectProperty ;
+        rdfs:comment  "The Physical Object from which the Flow start." ;
+        rdfs:label    "startIn" .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_571>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/p904a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> .
+
+<https://saref.etsi.org/saref4bldg/rampa2>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_550>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul12> .
+
+<https://saref.etsi.org/saref4bldg/fi900>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Sensor> ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/Not-specified> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/p904a> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_479>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul11> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul8> .
+
+<http://www.disit.org/saref4bldg-ext/Site>
+        a                owl:Class ;
+        rdfs:comment     "A Building can be divided in sites." ;
+        rdfs:label       "Site" ;
+        rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_458>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul3> .
+
+<https://saref.etsi.org/saref4bldg/li904b>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Sensor> ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/percentage> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/s-904b> .
+
+<https://saref.etsi.org/saref4bldg/a1ul4>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/p954> .
+
+<https://saref.etsi.org/saref4bldg/s-954b>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul6> , <https://saref.etsi.org/saref4bldg/a1ul5> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_579>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul16> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_558>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul11> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904c> .
+
+<https://saref.etsi.org/saref4bldg/a2ul13>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> , <https://saref.etsi.org/saref4bldg/xv904abc_2> , <https://saref.etsi.org/saref4bldg/ibcexit> .
+
+<https://saref.etsi.org/saref4bldg/s-904e>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul9> , <https://saref.etsi.org/saref4bldg/a1ul10> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_466>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul5> .
+
+<https://saref.etsi.org/saref4bldg/ferricostart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-904e> , <https://saref.etsi.org/saref4bldg/s-904d> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_566>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2truck1exit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/xv904abc_1> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_545>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/xv904de_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/xv954ab> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_474>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul10> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904e> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_453>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/rampa2> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul12> .
+
+<https://saref.etsi.org/saref4bldg/xv904de_1>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Valve> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/xv904de_2> .
+
+<https://saref.etsi.org/saref4bldg/li954b>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/percentage> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<https://saref.etsi.org/saref4bldg/p904a>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Pump> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul10> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_574>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul12> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_553>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul12> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904b> .
+
+<https://saref.etsi.org/saref4bldg/ferricononpotabilestart>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-904a> , <https://saref.etsi.org/saref4bldg/s-904b> , <https://saref.etsi.org/saref4bldg/s-904c> .
+
+<http://www.disit.org/saref4bldg-ext/Container>
+        a                owl:Class ;
+        rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/Tank> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_482>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul6> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_461>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul12> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/p904b> .
+
+<https://saref.etsi.org/saref4bldg/li904e>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <https://saref.etsi.org/core/percentage> ;
+        <https://saref.etsi.org/saref4bldg/isContainedIn>
+                <https://saref.etsi.org/saref4bldg/s-904e> .
+
+<https://saref.etsi.org/saref4bldg/a1ul7>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul4> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_582>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul17> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_561>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a2ul14> .
+
+<https://saref.etsi.org/saref4bldg/xv954ab>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Valve> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/xv904de_1> .
+
+<https://saref.etsi.org/saref4bldg/a2ul16>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a2ul20> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_469>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-954a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/a1ul1> .
+
+<https://saref.etsi.org/saref4bldg/a1ul10>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/a1ul11> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_569>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul16> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904b> .
+
+<https://saref.etsi.org/saref4bldg/xv904abc_2>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/Valve> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_548>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a2ul13> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-904a> .
+
+<https://saref.etsi.org/core/m3-h>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_477>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/a1ul6> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<https://saref.etsi.org/saref4bldg/a1ul2>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <https://saref.etsi.org/saref4bldg/s-954b> .
+
+<http://www.disit.org/saref4bldg-ext/Flusso_456>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <https://saref.etsi.org/saref4bldg/s-904d> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <https://saref.etsi.org/saref4bldg/ferricostart> .
+
+<https://saref.etsi.org/saref4bldg/ibcexit>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> .

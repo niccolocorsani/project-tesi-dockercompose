@@ -98,11 +98,7 @@ export class AppComponent {
           this.over_soglia_list_with_info[index] = this.over_soglia_list_with_info[index] + ' Schermata : ' + el2.impianto[0] + ' ---------' + element + ' Schermata : ' + el1.impianto[0] + ' distanza nodi = ' + String(Number(distance) + 1)
 
         }
-        if (el1.impianto[0] != el2.impianto[0]) {
-          console.log('impianti diversi')
-          continue
 
-        }
       }
     } catch (e) {
       console.log(e)
@@ -201,19 +197,14 @@ export class AppComponent {
       for (const element1 of this.overSogliaListXristrette) {
         nomeEl2 = element1
         let el2 = this.distanceService.variables[element1]
-        if (el1.impianto[0] == el2.impianto[0] && el1.label != el2.label) {
           console.log('stesso impianto')
           const index = this.over_soglia_list_with_infoXristrette.indexOf(nomeEl2);
           let distance = 'x'
           distance = await this.graphDBrequestService.getDistanceBetweenNodes(el1.label, el2.label)
-          if (distance == '9')
+          if (distance != '99')
             this.over_soglia_list_with_infoXristrette[index] = this.over_soglia_list_with_infoXristrette[index] + ' Nome in ontologia: ' + el2.label + ' Schermata: ' + el2.impianto[0] + ' - ' + element + ' Nome in ontologia: ' + el1.label + ' Schermata: ' + el1.impianto[0] + ' distanza nodi = ' + String(Number(distance) + 1)
-        }
-        if (el1.impianto[0] != el2.impianto[0]) {
-          console.log('impianti diversi')
-          continue
 
-        }
+
       }
     } catch (e) {
       console.log(e)
@@ -239,7 +230,7 @@ export class AppComponent {
         let el2 = this.distanceService.variables[element1]
         const index = this.over_soglia_list_with_infoXristrette.indexOf(nomeEl2);
         distance = await this.graphDBrequestService.getDistanceBetweenNodes(el1, el2.label)
-        if (distance != '9')
+        if (distance != '99')
           this.over_soglia_list_with_infoXristrette[index] = this.over_soglia_list_with_infoXristrette[index] + ' Nome in ontologia: ' + el2.label + ' Schermata: ' + el2.impianto[0] + ' - ' + element + ' Nome in ontologia: ' + el1 + ' distanza nodi = ' + String(Number(distance) + 1)
       }
 
