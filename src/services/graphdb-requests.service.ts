@@ -19,7 +19,6 @@ export class GraphdbRequestsService {
   async normalQuery() {
     await this.http.get<any>('http://127.0.0.1:8081/query/').subscribe((value: any) => {
         this.queryResult = value
-        //console.log('observer impainti get ' + value)
       },
       (error: any) => {
         this.queryResult = 'x'
