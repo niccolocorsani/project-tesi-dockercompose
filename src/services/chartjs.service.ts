@@ -51,6 +51,7 @@ export class ChartjsService {
     let over_list: any[] = []
     dataset.forEach((value: any) => {
       for (let element of value.data) {
+        if (element < 0) element = -element
         if (element > threshold) {
           value.hidden = false
           over_list.push(value.label)

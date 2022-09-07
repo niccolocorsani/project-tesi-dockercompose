@@ -50,6 +50,16 @@
   <br/>
   <br/>
   <button class="btn btn-secondary" (click)="analizzaVariabiliXristrette()">analizza variabili</button>
+
+  <br/>
+  <br/>
+  <p>Scegliere una delle variabili presenti nell'ontologia</p>
+  <input id="nonTraVariabili" value="non tra le variabili">
+  <br/>
+  <br/>
+  <button class="btn btn-secondary" (click)="analizzaVariabiliXristretteNonTraLeVariabili()">analizza variabili con elemento non tra variabili</button>
+  <br/>
+  <br/>
   <ul>
     <li *ngFor="let item of this.over_soglia_list_with_infoXristrette">{{item}}</li>
   </ul>
@@ -163,8 +173,6 @@
     <a href="http://localhost:8080/spring-app/svg/files">DOWNLOAD GENERATED ONTOLOGY </a>
   </p>
   <div *ngIf="this.globalVariableService.svgReady" class="svg-loader">
-
-
     <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
       <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
       <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>

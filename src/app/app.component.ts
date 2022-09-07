@@ -221,6 +221,34 @@ export class AppComponent {
 
   }
 
+  async analizzaVariabiliXristretteNonTraLeVariabili() {
+
+    let distance;
+    try {
+      this.overSogliaListXristrette = this.overSogliaListXristrette.filter((obj: any) => {
+        return obj !== 'soglia' || obj !== 'prediction'
+      });
+      this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
+      let element = this.soglia = (document.getElementById('nonTraVariabili').value)
+      let el1 = element
+      let nomeEl2
+
+      for (const element1 of this.overSogliaListXristrette) {
+        nomeEl2 = element1
+
+        let el2 = this.distanceService.variables[element1]
+        const index = this.over_soglia_list_with_infoXristrette.indexOf(nomeEl2);
+        distance = await this.graphDBrequestService.getDistanceBetweenNodes(el1, el2.label)
+        if (distance != '9')
+          this.over_soglia_list_with_infoXristrette[index] = this.over_soglia_list_with_infoXristrette[index] + ' Nome in ontologia: ' + el2.label + ' Schermata: ' + el2.impianto[0] + ' - ' + element + ' Nome in ontologia: ' + el1 + ' distanza nodi = ' + String(Number(distance) + 1)
+      }
+
+    } catch (e) {
+      console.log(e)
+    }
+
+  }
+
   async generaSVG() {
     this.svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, this.list_of_scheramte_to_attach)
   }
