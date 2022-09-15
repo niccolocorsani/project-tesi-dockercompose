@@ -1,4 +1,5 @@
-//@ts-nocheck https://stackoverflow.com/questions/51145180/how-to-use-ts-ignore-for-a-block
+//@ts-nocheck
+
 import {
   Component,
   OnInit,
@@ -20,6 +21,7 @@ import * as d3_save_svg from 'd3-save-svg';
 import {PrefixSimplePipe} from '../../pipes/prefix-simple.pipe';
 import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 declare const d3: any;
 
@@ -65,41 +67,48 @@ export class SparqlForceComponent implements OnInit {
   private svg;
   private force;
 
-  private divWidth;
-  private divHeight;
-  private widthBeforeResize;
+  private divWidth = 10;
+  private divHeight = 10;
 
   private limit: string = "10000";
 
-  //Time
-  private timeEnter: number;
-  private timeOut: number;
 
   @ViewChild('chart') private chartContainer: ElementRef;
   @Input() public data: Array<any>;
   @Input() public height: number;
   @Output() clickedURI = new EventEmitter<string>();
 
-  constructor(private prefixSimplePipe: PrefixSimplePipe, private graphDBrequestService: GraphdbRequestsService, public globalVariableService: GlobalVariablesService) {
+  constructor(private prefixSimplePipe: PrefixSimplePipe, private graphDBrequestService: GraphdbRequestsService, public globalVariableService: GlobalVariablesService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    let rotti = this.activatedRoute.snapshot.queryParamMap.get('rotti')
+    this.globalVariableService.nodiRotti = rotti.split(",");
+
+
     if (this.data) {
-      // set initial height
-      if (this.height) {
-        this.divHeight = this.height;
-      } else {
-        this.divHeight = this.getContainerHeight() ? this.getContainerHeight() : 500;
-      }
       this.createChart();
     }
+    await this.redraw()
 
-    this.getContainerHeight();
-  }
+    await this.delay(1500)
+    // let x = document.querySelector("circle").getAttribute('cx')
+    // let y = document.querySelector("circle").getAttribute('cy')
+    // window.scrollTo(x,y)
 
+    // let b1 = document.getElementById('bottone1')
+    //
+    // b1.style.position = "absolute";
+    // b1.style.left = x+'px';
+    // b1.style.top = y+'px';
+    //
+    //
+    // let b2 = document.getElementById('bottone2')
 
-  getContainerHeight() {
-    return this.chartContainer.nativeElement.clientHeight;
+    // b2.style.position = "absolute";
+    // b2.style.left = Number(x)+140+'px';
+    // b2.style.top = y+30+'px';
+
   }
 
   async redraw() {
@@ -110,31 +119,28 @@ export class SparqlForceComponent implements OnInit {
     d3.selectAll("svg").remove();
     this.createChart();
     this.globalVariableService.svgReady = false
-
-
+    this.globalVariableService.svgd3 = this.svg
   }
 
   // Redraw on resize
   @HostListener('window:resize') onResize() {
-    // Redraw
     d3.selectAll("svg").remove();
     this.createChart();
-
   }
 
   // Resize on scroll
   @HostListener('mousewheel', ['$event']) onScroll(ev) {
     var delta = Math.max(-1, Math.min(1, (ev.wheelDelta || -ev.detail)));
     if (delta > 0) {
-      console.log("zoom in");
+      // console.log("zoom in");
     } else if (delta < 0) {
-      console.log("zoom out");
+      //  console.log("zoom out");
     }
   }
 
   saveSVG() {
     var config = {
-      filename: 'sparql-viz-graph',
+      filename: 'd3-svg',
     }
     d3_save_svg.save(d3.select('svg').node(), config);
   }
@@ -142,9 +148,7 @@ export class SparqlForceComponent implements OnInit {
   createChart() {
     const element = this.chartContainer.nativeElement;
 
-    // Get container width
-    console.log('ooo')
-    console.log(this.divHeight)
+
     if (!this.divWidth) this.divWidth = element.clientWidth;
     if (!this.divHeight) this.divHeight = element.clientHeight;
 
@@ -156,7 +160,6 @@ export class SparqlForceComponent implements OnInit {
   }
 
   attachData() {
-    console.log(this.divWidth)
     this.force = d3.layout.force().size([5000, 5000]);
 
     var limit = parseInt(this.limit);
@@ -169,7 +172,6 @@ export class SparqlForceComponent implements OnInit {
 
     if (typeof triples === 'string') {
       this._parseTriples(triples).then(d => {
-        console.log(d);
         var abr = this._abbreviateTriples(d);
         this.graph = this._triplesToGraph(abr);
         this.updateChart();
@@ -226,7 +228,14 @@ export class SparqlForceComponent implements OnInit {
       .enter()
       .append("text")
       .attr("class", "node-text")
-      .text(d => d.label);
+      .text(d => d.label.replace('https://saref.etsi.org/saref4bldg/', '').replace('http://www.disit.org/saref4bldg-ext/', '')).on("click", (d) => {
+        this.router.navigate([]).then(result => {
+            window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
+            //window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
+          }
+        );
+      })
+    ;
 
     var nodes = this.svg.selectAll(".node")
       .data(this._filterNodesByType(this.graph.nodes, "node"))
@@ -366,13 +375,15 @@ export class SparqlForceComponent implements OnInit {
 
 
     graph.nodes.forEach(node => {
-      this.globalVariableService.nodiRotti.forEach(value => {
-        if (value != 'KOHrampa1caricoprodotti' && value != 'prediction' && value != 'KOHrampa2caricoprodotti' && value != 'ConversioneNaOH' && value != 'ConversioneKOHlinea1') {
-          if (node.id.includes(this.globalVariableService.variables[value].label)) {
-            node.instance = true;
+      if (this.globalVariableService.nodiRotti[0] != '') {
+        this.globalVariableService.nodiRotti.forEach(value => {
+          if (value != 'KOHrampa1caricoprodotti' && value != 'prediction' && value != 'KOHrampa2caricoprodotti' && value != 'ConversioneNaOH' && value != 'ConversioneKOHlinea1') {
+            if (node.id.includes(this.globalVariableService.variables[value].label)) {
+              node.instance = true;
+            }
           }
-        }
-      })
+        })
+      }
     })
 
     return graph;
@@ -430,5 +441,12 @@ export class SparqlForceComponent implements OnInit {
     });
     return triples;
   }
+
+
+
+  delay(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
 
 }

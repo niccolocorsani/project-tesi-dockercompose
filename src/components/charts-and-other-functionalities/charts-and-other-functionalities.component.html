@@ -1,0 +1,199 @@
+<p>Scegliere un valore di soglia (ad esempio 0.05) per osservare quali variabili superano tale valore</p>
+<input id="input-soglia" value="soglia">
+<br/>
+<br/>
+<button type="button" class="btn btn-secondary" (click)="addSoglia()">aggiungi soglia</button>
+&nbsp;&nbsp;
+<button type="button" class="btn btn-secondary" (click)="filterByTreshold()">filtra per soglia</button>
+<br/>
+<br/>
+<p>Scegliere una delle variabili ottenute come output di "filtra soglia"</p>
+<input id="variabile" value="variabile da confrontare">
+<br/>
+<br/>
+<button class="btn btn-secondary" (click)="analizzaVariabili()">analizza variabili</button>
+<ul>
+  <li *ngFor="let item of this.over_soglia_list_with_info">{{item}}</li>
+</ul>
+<div class="chartWrapper">
+  <div class="chartAreaWrapper">
+    <canvas id="areaChart" height="400" width="1500"></canvas>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<input id="x1" value="2020-05-20 03:40:00">
+&nbsp;&nbsp;
+<input id="x2" value="2020-05-20 15:30:00">
+<br/>
+<br/>
+<button id="restringi" class="btn btn-secondary" (click)="cambiaLeX()">restringi asse delle x</button>
+<p>Scegliere un valore di soglia (ad esempio 0.05) per osservare quali variabili superano tale valore</p>
+<input id="input-soglia-x-ristrette" value="soglia">
+<br/>
+<br/>
+<button id="aggiungi-soglia-ristrette-button" class="btn btn-secondary" (click)="addSogliaXristrette()">aggiungi
+  soglia
+</button>
+&nbsp;&nbsp;
+<button id="filtra-per-soglia-ristrette-button" class="btn btn-secondary" (click)="filterByTresholdXristrette()">
+  filtra per soglia
+</button>
+<br/>
+<br/>
+<p>Scegliere una delle variabili ottenute come output di "filtra soglia"</p>
+<input id="variabileXristrette" value="variabile da confrontare">
+<br/>
+<br/>
+<button id="analizzaRistretteTraVariabili" class="btn btn-secondary" (click)="analizzaVariabiliXristrette()">analizza
+  variabili
+</button>
+
+<br/>
+<br/>
+<p>Scegliere una delle variabili presenti nell'ontologia</p>
+<input id="nonTraVariabili" value="non tra le variabili">
+<br/>
+<br/>
+<button class="btn btn-secondary" (click)="analizzaVariabiliXristretteNonTraLeVariabili()">analizza variabili con
+  elemento non tra variabili
+</button>
+<br/>
+<br/>
+<ul>
+  <li *ngFor="let item of this.over_soglia_list_with_infoXristrette">{{item}}</li>
+</ul>
+<div class="chartWrapper">
+  <div class="chartAreaWrapper">
+    <canvas id="areaChart1"></canvas>
+  </div>
+</div>
+<br/>
+<br/>
+
+<label class="container">CARICO_FERRICO_FERROSO.csv
+  <input type="checkbox" id="radio1" value="CARICO_FERRICO_FERROSO.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+<label class="container">CARICO_FERRICO_FERROSO_2.csv
+  <input type="checkbox" id="radio2" value="CARICO_FERRICO_FERROSO_2.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+<label class="container">FERRICO_FERROSO_CLORO_FERRO.csv
+  <input type="checkbox" id="radio3" value="FERRICO_FERROSO_CLORO_FERRO.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+<label class="container">HCL_1_LINEA_(FG600).csv
+  <input type="checkbox" id="radio4" value="HCL_1_LINEA_(FG600).csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">HCL_2_LINEA_ACIDINO.csv
+  <input type="checkbox" id="radio5" value="HCL_2_LINEA_ACIDINO.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">HCL_3_LINEA.csv
+  <input type="checkbox" id="radio6" value="HCL_3_LINEA.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">HCL_4_LINEA.csv
+  <input type="checkbox" id="radio7" value="HCL_4_LINEA.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">IMPIANTO_FeCL3_2.csv
+  <input type="checkbox" id="radio8" value="IMPIANTO_FeCL3_2.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">IPOCLORITO.csv
+  <input type="checkbox" id="radio9" value="IPOCLORITO.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">K2CO3.csv
+  <input type="checkbox" id="radio10" value="K2CO3.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">PARCO_SERBATOI_2.csv
+  <input type="checkbox" id="radio11" value="PARCO_SERBATOI_2.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">PREPARAZIONE_NAOH_20.csv
+  <input type="checkbox" id="radio12" value="PREPARAZIONE_NAOH_20.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">RECUPERO_CO2.csv
+  <input type="checkbox" id="radio13" value="RECUPERO_CO2.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">SEZIONE REAZIONE R-4003.csv
+  <input type="checkbox" id="radio14" value="SEZIONE REAZIONE R-4003.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">SEZIONE_REAZIONE_R-4001.csv
+  <input type="checkbox" id="radio15" value="SEZIONE_REAZIONE_R-4001.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">SEZIONE_REAZIONE_R-4002.csv
+  <input type="checkbox" id="radio16" value="SEZIONE_REAZIONE_R-4002.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">STOCCAGGIO.csv
+  <input type="checkbox" id="radio17" value="STOCCAGGIO.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container">STOCCAGGIO_IPOCLORITO_DI_SODIO.csv
+  <input type="checkbox" id="radio18" value="STOCCAGGIO_IPOCLORITO_DI_SODIO.csv" (change)="onChange($event)">
+  <span class="checkmark"></span>
+</label>
+<br/>
+<br/>
+<p id="danger" class="alert alert-danger">
+  Selezionare almeno una schermata
+</p>
+<p>
+  Qui sotto è possibile osservare un grafo generato con implementazione custom
+  <button id="generaSVGjava" class="btn btn-secondary" (click)="generaSVG()">Genera SVG</button>
+  <label>&nbsp;&nbsp;</label>
+  <a href="http://localhost:8080/spring-app/svg/svg-download">DOWNLOAD GENERATED SVG </a>
+  <label>&nbsp;&nbsp;</label>
+  <a href="http://localhost:8080/spring-app/svg/files">DOWNLOAD GENERATED ONTOLOGY </a>
+</p>
+<div id="sta-caricando-svg" *ngIf="this.globalVariableService.svgReady" class="svg-loader">
+  <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+    <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+    <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+  </svg>
+</div>
+
+<div id='svg' style="height : 0px">
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+

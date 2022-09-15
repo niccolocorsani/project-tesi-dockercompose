@@ -8,6 +8,8 @@ export class GlobalVariablesService {
 
   svgReady = false
   nodiRotti = [];
+  svgd3 = '';
+
   variables = {
     prediction: {label: 'none', impianto: ['none']},
 

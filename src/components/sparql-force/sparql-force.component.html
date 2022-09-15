@@ -1,12 +1,16 @@
 <label>&nbsp;&nbsp;</label>
-<div>
-<button class="btn btn-secondary" (click)="redraw()">Genera grafo d3</button>
-  <label>&nbsp;&nbsp;</label>
-  <button  class="btn btn-secondary" (click)="cleanGraph()">rimuovi grafo</button>
-</div>
+<br/>
+<br/>
+
+<button id="bottone1" class="z-indexed" class="btn btn-primary" (click)="cleanGraph()">rimuovi grafo</button>
+<button id="bottone2" class="z-indexed" class="btn btn-primary" (click)="saveSVG()">Download grafo</button>
+
+<!--<button (click)="openInNewTab('www.test.com');">Something To Click On</button>--->
+
 <div
+
   id="svg-body"
   class="panel-body"
-  [ngStyle]="{'height': height}"
   #chart>
-</div>
+</div
+  >

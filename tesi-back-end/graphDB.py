@@ -3,28 +3,28 @@ import os
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-def get_distance_property_path(node1, node2):
-    sparql = SPARQLWrapper("http://localhost:7200/repositories/altair")
-    sparql.setQuery("""PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX : <http://www.disit.org/saref4bldg-ext/>
-    PREFIX s: <https://saref.etsi.org/saref4bldg/>
-    PREFIX c: <https://saref.etsi.org/core/>
-    SELECT *{
-       s:""" + node1 + """ :to+ ?x.
-       ?x :to+ s:""" + node2 + """
-    }
-     """)
-
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
-
-    print('---------------------------')
-
-    for result in results["results"]["bindings"]:
-        print((result["x"]["value"]))
+# def get_distance_property_path(node1, node2):
+#     sparql = SPARQLWrapper("http://localhost:7200/repositories/altair")
+#     sparql.setQuery("""PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#     PREFIX owl: <http://www.w3.org/2002/07/owl#>
+#     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+#     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+#     PREFIX : <http://www.disit.org/saref4bldg-ext/>
+#     PREFIX s: <https://saref.etsi.org/saref4bldg/>
+#     PREFIX c: <https://saref.etsi.org/core/>
+#     SELECT *{
+#        s:""" + node1 + """ :to+ ?x.
+#        ?x :to+ s:""" + node2 + """
+#     }
+#      """)
+#
+#     sparql.setReturnFormat(JSON)
+#     results = sparql.query().convert()
+#
+#     print('---------------------------')
+#
+#     for result in results["results"]["bindings"]:
+#         print((result["x"]["value"]))
 
 
 def get_distance_graphdb_path(node1, node2):
@@ -37,10 +37,12 @@ def get_distance_graphdb_path(node1, node2):
         PREFIX s: <https://saref.etsi.org/saref4bldg/>
         PREFIX c: <https://saref.etsi.org/core/>
         PREFIX path: <http://www.ontotext.com/path#>
+        PREFIX r: <http://www.disit.org/altair/resource/>
+
         SELECT ?start ?end ?index ?path
         WHERE {
             VALUES (?src ?dst) {
-                ( s:""" + node1 + """ s:""" + node2 + """ )
+                ( r:""" + node1 + """ r:""" + node2 + """ )
             }
             SERVICE <http://www.ontotext.com/path#search> {
                 <urn:path> path:findPath path:shortestPath ;
@@ -77,10 +79,11 @@ def get_distance_graphdb_path_bidirectional(node1, node2):
         PREFIX s: <https://saref.etsi.org/saref4bldg/>
         PREFIX c: <https://saref.etsi.org/core/>
         PREFIX path: <http://www.ontotext.com/path#>
+        PREFIX r: <http://www.disit.org/altair/resource/>
         SELECT ?start ?end ?index ?path
         WHERE {
             VALUES (?src ?dst) {
-                ( :""" + node1 + """ :""" + node2 + """ )
+                ( r:""" + node1 + """ r:""" + node2 + """ )
             }
             SERVICE <http://www.ontotext.com/path#search> {
                 <urn:path> path:findPath path:shortestPath ;
@@ -116,8 +119,8 @@ def normalQuery():
                         PREFIX : <http://www.disit.org/saref4bldg-ext/>
                         PREFIX s: <https://saref.etsi.org/saref4bldg/>
                         PREFIX c: <https://saref.etsi.org/core/>
+                        PREFIX r: <http://www.disit.org/altair/resource/>
                         select *  {
-
                             ?s :to ?o.
                         }""")
     sparql.setReturnFormat(JSON)

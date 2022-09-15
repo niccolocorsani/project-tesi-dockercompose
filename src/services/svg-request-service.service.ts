@@ -2,6 +2,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {GlobalVariablesService} from "./global-variables.service";
+import {newArray} from "@angular/compiler/src/util";
 
 @Injectable({
   providedIn: 'root'
@@ -87,17 +88,21 @@ export class SvgRequestServiceService {
 
 
   async getSVG(listOfVariable: [], listOfSchermate: []) {
-    if (listOfVariable == null) {
-      alert('analizzare prima le variabili con soglia minima')
-      return ""
-    }
+
     this.globalVariableService.svgReady = true
     let values = ''
-    listOfVariable.forEach(value => {
-      if (value != 'KOHrampa1caricoprodotti' && value != 'prediction' && value != 'KOHrampa2caricoprodotti' && value != 'ConversioneNaOH' && value != 'ConversioneKOHlinea1')
-        values = values + this.variables[value].label + ','
-    })
-    values = values.substring(0, values.length - 1)
+    if (listOfVariable != null) {
+      listOfVariable.forEach(value => {
+        if (value != 'KOHrampa1caricoprodotti' && value != 'prediction' && value != 'KOHrampa2caricoprodotti' && value != 'ConversioneNaOH' && value != 'ConversioneKOHlinea1')
+          try {
+            values = values + this.variables[value].label + ','
+          } catch (e) {
+          console.log(value)
+          console.error(e)
+          }
+      })
+      values = values.substring(0, values.length - 1)
+    } else values = 'mock' // se non sono state analizzate le variabili
 
 
     let schermate = ''
@@ -106,12 +111,13 @@ export class SvgRequestServiceService {
     })
     schermate = schermate.substring(0, schermate.length - 1)
 
-    console.log(schermate)
-    this.http.get<any>('http://localhost:8080/spring-app/svg/get?values=' + values + '&schermate='+schermate, this.httpOptions).subscribe((value: string) => {
-        console.log('observer get ' + value)
+    this.http.get<any>('http://localhost:8080/spring-app/svg/get?values=' + values + '&schermate=' + schermate, this.httpOptions).subscribe((value: string) => {
         this.svg = value
-        var newSvg = document.getElementById('svg');
-        newSvg.outerHTML += value
+        const newSvg = document.getElementById('svg');
+        newSvg.innerHTML = ''
+        var SVGjava = document.createElement('div'); // is a node
+        SVGjava.innerHTML = value;
+        newSvg.appendChild(SVGjava)
         this.globalVariableService.svgReady = false
       },
       (error: any) => {

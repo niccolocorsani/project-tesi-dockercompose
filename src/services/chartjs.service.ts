@@ -103,13 +103,7 @@ export class ChartjsService {
 
     options = {
 
-      scales: {
-        xAxes: [{
-          ticks: {
-            padding: 20
-          }
-        }]
-      },
+
       animation: false,
       responsive: true,
       maintainAspectRatio: false,
@@ -172,13 +166,7 @@ export class ChartjsService {
 
     options = {
 
-      scales: {
-        xAxes: [{
-          ticks: {
-            padding: 20
-          }
-        }]
-      },
+
       animation: false,
 
       responsive: true,
