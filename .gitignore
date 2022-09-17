@@ -5,7 +5,7 @@
 /tmp
 /out-tsc
 /bazel-out
-
+/my-spring-project/SVGs
 # Node
 /node_modules
 npm-debug.log
