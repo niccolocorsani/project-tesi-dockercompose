@@ -22,7 +22,8 @@ public class Main {
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
-        List<String> csv_paths = new ArrayList<>();
+
+      List<String> csv_paths = new ArrayList<>();
 
         for (String s : schermate)
             csv_paths.add(s);
@@ -33,6 +34,7 @@ public class Main {
         }
 
 
+      System.out.println("ii");
         AsyncExecutionFolder start = new AsyncExecutionFolder("./directory", "./ontologies/saref4bldg-solo-classi-e-proprieta.owl", variablesToColor);
 
         //Delete Ontologies not needed

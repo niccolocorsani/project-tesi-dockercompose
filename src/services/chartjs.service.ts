@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Chart} from "chart.js";
+import {log} from "../decorators/log.decorator";
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ export class ChartjsService {
   constructor() {
   }
 
+  @log()
   createTimeEventsAndDataSetFromJson(json: any) {
 
 
@@ -47,6 +49,7 @@ export class ChartjsService {
 
   }
 
+  @log()
   filterDataSetByThreshold(dataset: any, threshold: number) {
     let over_list: any[] = []
     dataset.forEach((value: any) => {
@@ -63,7 +66,7 @@ export class ChartjsService {
   }
 
 
-
+  @log()
   addSoglia(soglia: number, dataset: any) {
 
     Chart.getChart('areaChart')?.destroy()
@@ -86,6 +89,7 @@ export class ChartjsService {
     return dataset
   }
 
+  @log()
   render(time_events: any, dataset: any) {
 
 
@@ -149,6 +153,7 @@ export class ChartjsService {
     });
   }
 
+  @log()
   renderWithRange(time_events: any, dataset: any) {
 
     Chart.getChart('areaChart1')?.destroy()
@@ -212,6 +217,7 @@ export class ChartjsService {
     });
   }
 
+  @log()
   getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';

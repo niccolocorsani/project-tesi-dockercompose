@@ -10,6 +10,7 @@ import {EvaluateDistanceService} from "../../services/evaluate-distance.service"
 import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {SvgRequestServiceService} from "../../services/svg-request-service.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
+import {log} from "../../decorators/log.decorator";
 
 Chart.register(zoomPlugin);
 
@@ -54,7 +55,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     Chart.register(...registerables);
   }
 
-
+  @log()
   async ngOnInit() {
     document.getElementById('danger').style.display = 'none';
     await this.http.get<any>('assets/shap.json').subscribe(this.myObserver);
@@ -70,18 +71,21 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     await this.generaSVG()
   }
 
+  @log()
   addSoglia() {
     this.soglia = Number(document.getElementById('input-soglia').value)
     this.chartJsService.addSoglia(this.soglia, this.dataset)
     this.chartJsService.render(this.time_events, this.dataset)
   }
 
+  @log()
   filterByTreshold() {
     this.over_soglia_list = this.chartJsService.filterDataSetByThreshold(this.dataset, this.soglia)[1]
     this.over_soglia_list_with_info = this.over_soglia_list
 
   }
 
+  @log()
   async analizzaVariabili() {
     try {
       this.over_soglia_list = this.over_soglia_list.filter((obj: any) => {
@@ -108,6 +112,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
+  @log()
   async cambiaLeX() {
 
     this.restringiAsseLevaImg = false
@@ -155,6 +160,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     this.timeEventsXristrette = timesEvent
   }
 
+  @log()
   addSogliaXristrette() {
     // @ts-ignore
     this.sogliaXRistrette = Number(document.getElementById('input-soglia-x-ristrette').value)
@@ -163,6 +169,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
+  @log()
   filterByTresholdXristrette() {
     this.overSogliaListXristrette = this.chartJsService.filterDataSetByThreshold(this.dataSetXRistrette, this.sogliaXRistrette)[1]
     this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
@@ -170,6 +177,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     console.log(this.globalVariableService.nodiRotti)
   }
 
+  @log()
   async analizzaVariabiliXristrette() {
 
 
@@ -177,7 +185,6 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
       this.overSogliaListXristrette = this.overSogliaListXristrette.filter((obj: any) => {
         return obj !== 'soglia' && obj !== 'prediction'
       });
-
       this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
       let element = this.soglia = (document.getElementById('variabileXristrette').value)
       let el1 = this.distanceService.variables[element]
@@ -198,6 +205,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
+  @log()
   async analizzaVariabiliXristretteNonTraLeVariabili() {
 
     let distance;
@@ -227,6 +235,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
+  @log()
   async generaSVG() {
     if (this.list_of_scheramte_to_attach.length == 0) {
 
@@ -247,7 +256,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     this.svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, this.list_of_scheramte_to_attach)
   }
 
-
+  @log()
   onChange(event: Event) {
     if (this.list_of_scheramte_to_attach.includes(event.target.value)) {
       this.removeElementFromStringArray(event.target.value, this.list_of_scheramte_to_attach)
@@ -255,6 +264,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
       this.list_of_scheramte_to_attach.push(event.target.value)
   }
 
+  @log()
   removeElementFromStringArray(element: string, list: []) {
     list.forEach((value, index) => {
       if (value == element) list.splice(index, 1);

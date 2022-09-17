@@ -22,6 +22,7 @@ import {PrefixSimplePipe} from '../../pipes/prefix-simple.pipe';
 import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {log} from "../../decorators/log.decorator";
 
 declare const d3: any;
 
@@ -111,6 +112,7 @@ export class SparqlForceComponent implements OnInit {
 
   }
 
+  @log()
   async redraw() {
     this.globalVariableService.svgReady = true
     this.data = await this.graphDBrequestService.normalQuery()
@@ -138,6 +140,7 @@ export class SparqlForceComponent implements OnInit {
     }
   }
 
+  @log()
   saveSVG() {
     var config = {
       filename: 'd3-svg',
@@ -145,6 +148,8 @@ export class SparqlForceComponent implements OnInit {
     d3_save_svg.save(d3.select('svg').node(), config);
   }
 
+
+  @log()
   createChart() {
     const element = this.chartContainer.nativeElement;
 
@@ -159,6 +164,8 @@ export class SparqlForceComponent implements OnInit {
     this.attachData();
   }
 
+
+  @log()
   attachData() {
     this.force = d3.layout.force().size([5000, 5000]);
 
@@ -182,17 +189,22 @@ export class SparqlForceComponent implements OnInit {
     }
   }
 
+
+  @log()
   public clicked(d) {
     if (d3.event.defaultPrevented) return; // dragged
 
     this.clickedURI.emit(d);
   }
 
+  @log()
   cleanGraph() {
     // Remove everything below the SVG element
     d3.selectAll("svg > *").remove();
   }
 
+
+  @log()
   updateChart() {
     if (!this.svg) return;
 
@@ -310,14 +322,17 @@ export class SparqlForceComponent implements OnInit {
       .start();
   }
 
+  @log()
   private _filterNodesById(nodes, id) {
     return nodes.filter(n => n.id === id);
   }
 
+  @log()
   private _filterNodesByType(nodes, value) {
     return nodes.filter(n => n.type === value);
   }
 
+  @log()
   private _triplesToGraph(triples) {
 
 
@@ -389,6 +404,7 @@ export class SparqlForceComponent implements OnInit {
     return graph;
   }
 
+  @log()
   private _parseTriples(triples) {
     // ParseTriples
     var parser = N3.Parser();
@@ -408,6 +424,7 @@ export class SparqlForceComponent implements OnInit {
     );
   }
 
+  @log()
   private _abbreviateTriples(data) {
 
     var prefixes = data.prefixes;

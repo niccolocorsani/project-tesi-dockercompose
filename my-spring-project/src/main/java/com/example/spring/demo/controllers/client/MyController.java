@@ -25,6 +25,7 @@ public class MyController {
 
     Main main = new Main();
     List<String> variablesToColor = values;
+
     main.execute(variablesToColor, schermate);
     System.out.println("SVG.....");
 

@@ -3,6 +3,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {GlobalVariablesService} from "./global-variables.service";
 import {newArray} from "@angular/compiler/src/util";
+import {log} from "../decorators/log.decorator";
 
 @Injectable({
   providedIn: 'root'
@@ -86,7 +87,7 @@ export class SvgRequestServiceService {
   constructor(public http: HttpClient, private globalVariableService: GlobalVariablesService) {
   }
 
-
+  @log()
   async getSVG(listOfVariable: [], listOfSchermate: []) {
 
     this.globalVariableService.svgReady = true
