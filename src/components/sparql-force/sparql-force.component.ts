@@ -3,8 +3,6 @@
 import {
   Component,
   OnInit,
-  OnChanges,
-  SimpleChanges,
   ViewChild,
   ElementRef,
   Input,
@@ -22,7 +20,7 @@ import {PrefixSimplePipe} from '../../pipes/prefix-simple.pipe';
 import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {log} from "../../decorators/log.decorator";
+import {log, logD3} from "../../decorators/log.decorator";
 
 declare const d3: any;
 
@@ -61,7 +59,6 @@ export interface Graph {
   templateUrl: './sparql-force.component.html',
   styleUrls: ['./sparql-force.component.css']
 })
-
 export class SparqlForceComponent implements OnInit {
 
   private graph: Graph;
@@ -112,7 +109,7 @@ export class SparqlForceComponent implements OnInit {
 
   }
 
-  @log()
+
   async redraw() {
     this.globalVariableService.svgReady = true
     this.data = await this.graphDBrequestService.normalQuery()
@@ -140,7 +137,7 @@ export class SparqlForceComponent implements OnInit {
     }
   }
 
-  @log()
+  @logD3()
   saveSVG() {
     var config = {
       filename: 'd3-svg',
@@ -148,8 +145,7 @@ export class SparqlForceComponent implements OnInit {
     d3_save_svg.save(d3.select('svg').node(), config);
   }
 
-
-  @log()
+  @logD3()
   createChart() {
     const element = this.chartContainer.nativeElement;
 
@@ -164,8 +160,7 @@ export class SparqlForceComponent implements OnInit {
     this.attachData();
   }
 
-
-  @log()
+  @logD3()
   attachData() {
     this.force = d3.layout.force().size([5000, 5000]);
 
@@ -189,22 +184,20 @@ export class SparqlForceComponent implements OnInit {
     }
   }
 
-
-  @log()
+  @logD3()
   public clicked(d) {
     if (d3.event.defaultPrevented) return; // dragged
 
     this.clickedURI.emit(d);
   }
 
-  @log()
+  @logD3()
   cleanGraph() {
     // Remove everything below the SVG element
     d3.selectAll("svg > *").remove();
   }
 
-
-  @log()
+  @logD3()
   updateChart() {
     if (!this.svg) return;
 
@@ -322,17 +315,17 @@ export class SparqlForceComponent implements OnInit {
       .start();
   }
 
-  @log()
+  @logD3()
   private _filterNodesById(nodes, id) {
     return nodes.filter(n => n.id === id);
   }
 
-  @log()
+  @logD3()
   private _filterNodesByType(nodes, value) {
     return nodes.filter(n => n.type === value);
   }
 
-  @log()
+  @logD3()
   private _triplesToGraph(triples) {
 
 
@@ -404,7 +397,7 @@ export class SparqlForceComponent implements OnInit {
     return graph;
   }
 
-  @log()
+  @logD3()
   private _parseTriples(triples) {
     // ParseTriples
     var parser = N3.Parser();
@@ -424,7 +417,7 @@ export class SparqlForceComponent implements OnInit {
     );
   }
 
-  @log()
+  @logD3()
   private _abbreviateTriples(data) {
 
     var prefixes = data.prefixes;
@@ -458,7 +451,6 @@ export class SparqlForceComponent implements OnInit {
     });
     return triples;
   }
-
 
 
   delay(ms: number) {

@@ -16,7 +16,7 @@ export class GraphdbRequestsService {
   }
 
 
-  @log()
+  @log('',[])
   async normalQuery() {
     await this.http.get<any>('http://127.0.0.1:8081/query/').subscribe((value: any) => {
         this.queryResult = value
@@ -31,8 +31,7 @@ export class GraphdbRequestsService {
   }
 
 
-
-  @log()
+  @log('',[])
   async getDistanceBetweenNodes(node1: string, node2: string) {
     await this.http.get<any>('http://127.0.0.1:8081/nodes-distance/?node=' + node1 + '*' + node2).subscribe((value: any) => {
         this.distanceNodes = value
@@ -48,7 +47,7 @@ export class GraphdbRequestsService {
     return this.distanceNodes
   }
 
-  @log()
+  @log('',[])
   async getDistanceBetweenImpianti(impianto1: string, impianto2: string) {
     await this.http.get<any>('http://127.0.0.1:8081/impianti-distance/?impianto=' + impianto1 + '*' + impianto2).subscribe(async (value: any) => {
         this.distanceImpianti = value
@@ -62,7 +61,7 @@ export class GraphdbRequestsService {
     return this.distanceImpianti
   }
 
-
+  @log('',[])
   delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }

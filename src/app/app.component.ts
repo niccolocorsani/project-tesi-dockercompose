@@ -3,7 +3,7 @@ import {Chart} from "chart.js";
 import zoomPlugin from 'chartjs-plugin-zoom';
 import {Router} from "@angular/router";
 import {GlobalVariablesService} from "../services/global-variables.service";
-import {log} from "../decorators/log.decorator";
+import {classDecorator, log} from "../decorators/log.decorator";
 
 Chart.register(zoomPlugin);
 
@@ -14,13 +14,13 @@ Chart.register(zoomPlugin);
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+@classDecorator
 export class AppComponent {
 
   constructor(private router: Router, public globalVaraibleService: GlobalVariablesService) {
   }
 
 
-  @log()
   navigateTab(viewName: string) {
     let nodiRottiString = ''
     this.globalVaraibleService.nodiRotti.forEach(nodoRotto => {

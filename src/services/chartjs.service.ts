@@ -10,7 +10,8 @@ export class ChartjsService {
   constructor() {
   }
 
-  @log()
+
+  @log('',[])
   createTimeEventsAndDataSetFromJson(json: any) {
 
 
@@ -32,7 +33,7 @@ export class ChartjsService {
         }
       })
       let color = this.getRandomColor()
-       dataset.push({
+      dataset.push({
         label: key,
         // @ts-ignore
         data: list_of_Y,
@@ -48,8 +49,7 @@ export class ChartjsService {
     return [dataset, time_events]
 
   }
-
-  @log()
+  @log('',[])
   filterDataSetByThreshold(dataset: any, threshold: number) {
     let over_list: any[] = []
     dataset.forEach((value: any) => {
@@ -62,11 +62,10 @@ export class ChartjsService {
         }
       }
     })
-    return [dataset,over_list]
+    return [dataset, over_list]
   }
 
-
-  @log()
+  @log('',[])
   addSoglia(soglia: number, dataset: any) {
 
     Chart.getChart('areaChart')?.destroy()
@@ -89,9 +88,8 @@ export class ChartjsService {
     return dataset
   }
 
-  @log()
+  @log('',[])
   render(time_events: any, dataset: any) {
-
 
 
     let data: any,
@@ -153,7 +151,7 @@ export class ChartjsService {
     });
   }
 
-  @log()
+  @log('',[])
   renderWithRange(time_events: any, dataset: any) {
 
     Chart.getChart('areaChart1')?.destroy()
@@ -217,7 +215,7 @@ export class ChartjsService {
     });
   }
 
-  @log()
+  @log('',[])
   getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';

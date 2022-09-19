@@ -87,7 +87,7 @@ export class SvgRequestServiceService {
   constructor(public http: HttpClient, private globalVariableService: GlobalVariablesService) {
   }
 
-  @log()
+  @log('',[])
   async getSVG(listOfVariable: [], listOfSchermate: []) {
 
     this.globalVariableService.svgReady = true
