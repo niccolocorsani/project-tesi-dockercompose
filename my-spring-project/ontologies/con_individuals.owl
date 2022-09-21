@@ -4,6 +4,14 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
+
+
+
+
+###  http://www.disit.org/saref4bldg-ext/to_yellow
+:to_yellow rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :to .
+
 <http://www.disit.org/altair/resource/xv857>
         a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/to>

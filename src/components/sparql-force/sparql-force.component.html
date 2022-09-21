@@ -5,12 +5,8 @@
 <button id="bottone1" class="z-indexed" class="btn btn-primary" (click)="cleanGraph()">rimuovi grafo</button>
 <button id="bottone2" class="z-indexed" class="btn btn-primary" (click)="saveSVG()">Download grafo</button>
 
-<!--<button (click)="openInNewTab('www.test.com');">Something To Click On</button>--->
 
-<div
+<div id="svg-body" class="panel-body" #chart></div>
 
-  id="svg-body"
-  class="panel-body"
-  #chart>
-</div
-  >
+
+<button mat-raised-button (click)="openDialog()">Open dialog</button>

@@ -10,6 +10,9 @@ export class GlobalVariablesService {
   nodiRotti = [];
   svgd3 = '';
 
+
+  variabileDelModalRadio = ''
+
   variables = {
     prediction: {label: 'none', impianto: ['none']},
 

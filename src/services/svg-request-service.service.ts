@@ -87,7 +87,7 @@ export class SvgRequestServiceService {
   constructor(public http: HttpClient, private globalVariableService: GlobalVariablesService) {
   }
 
-  @log('',[])
+  @log('', [])
   async getSVG(listOfVariable: [], listOfSchermate: []) {
 
     this.globalVariableService.svgReady = true
@@ -98,8 +98,8 @@ export class SvgRequestServiceService {
           try {
             values = values + this.variables[value].label + ','
           } catch (e) {
-          console.log(value)
-          console.error(e)
+            console.log(value)
+            console.error(e)
           }
       })
       values = values.substring(0, values.length - 1)
@@ -129,6 +129,13 @@ export class SvgRequestServiceService {
     return this.svg
   }
 
+
+  @log('', [])
+  async addTriple(triple: string) {
+    this.http.get<any>('http://localhost:8080/spring-app/svg/update-csv?triple=' + triple , this.httpOptions).subscribe((value: string) => {
+      console.log(value)
+    })
+  }
 
   delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));

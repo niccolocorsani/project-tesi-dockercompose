@@ -47,19 +47,10 @@ export class GraphdbRequestsService {
     return this.distanceNodes
   }
 
-  @log('',[])
-  async getDistanceBetweenImpianti(impianto1: string, impianto2: string) {
-    await this.http.get<any>('http://127.0.0.1:8081/impianti-distance/?impianto=' + impianto1 + '*' + impianto2).subscribe(async (value: any) => {
-        this.distanceImpianti = value
-      }
-      ,
-      (error: any) => {
-        this.distanceImpianti = 'x'
-        console.error(error)
-      });
-    await this.delay(100);
-    return this.distanceImpianti
-  }
+
+
+
+
 
   @log('',[])
   delay(ms: number) {

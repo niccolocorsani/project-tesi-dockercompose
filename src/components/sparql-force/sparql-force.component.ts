@@ -21,6 +21,11 @@ import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {log, logD3} from "../../decorators/log.decorator";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {ModalComponent} from "./modal-radio-button/modal.component";
+import {DialogAnimationsExampleDialog} from "./modal-radio-button/dialog-animations-example";
+import {MatDialog} from "@angular/material/dialog";
+import {SvgRequestServiceService} from "../../services/svg-request-service.service";
 
 declare const d3: any;
 
@@ -76,7 +81,7 @@ export class SparqlForceComponent implements OnInit {
   @Input() public height: number;
   @Output() clickedURI = new EventEmitter<string>();
 
-  constructor(private prefixSimplePipe: PrefixSimplePipe, private graphDBrequestService: GraphdbRequestsService, public globalVariableService: GlobalVariablesService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private prefixSimplePipe: PrefixSimplePipe, private graphDBrequestService: GraphdbRequestsService, public globalVariableService: GlobalVariablesService, private router: Router, private activatedRoute: ActivatedRoute, public dialog: MatDialog, private svgRequestService: SvgRequestServiceService) {
   }
 
   async ngOnInit() {
@@ -219,21 +224,41 @@ export class SparqlForceComponent implements OnInit {
       .enter()
       .append("path")
       .attr("marker-end", "url(#end)")
-      .attr("class", "link");
+      .attr("class", "link")
+    ;
+
 
     var linkTexts = this.svg.selectAll(".link-text")
       .data(this.graph.triples)
       .enter()
       .append("text")
       .attr("class", "link-text")
-      .text(d => d.p.label);
+      .text(d => d.p.label).on("click", (d) => {
+        this.openDialog()
+
+        this.delay(4000).then(r => (console.log(r)))
+
+        this.globalVariableService.variabileDelModalRadio
+
+        alert(this.globalVariableService.variabileDelModalRadio)
+        let tripla = "<http://www.disit.org/altair/resource/xv857> a    <http://www.disit.org/saref4bldg-ext/" + this.globalVariableService.variabileDelModalRadio + ">  <http://www.disit.org/altair/resource/s-857> ."
+        this.svgRequestService.addTriple(tripla)
+
+        // aggiungi tripla --> aggiorna ontologia --> fai nuova query per ottenere anche subObjectProperty di Object property --> cambia colore
+
+        // cambia colore
+
+        // let foo = prompt('Type here');
+        //  let bar = confirm('Confirm or deny');
+        //console.log(foo, bar);
+      });
 
     var nodeTexts = this.svg.selectAll(".node-text")
       .data(this._filterNodesByType(this.graph.nodes, "node"))
       .enter()
       .append("text")
       .attr("class", "node-text")
-      .text(d => d.label.replace('https://saref.etsi.org/saref4bldg/', '').replace('http://www.disit.org/saref4bldg-ext/', '')).on("click", (d) => {
+      .text(d => d.label.replace('https://saref.etsi.org/saref4bldg/', '').replace('http://www.disit.org/altair/resource/', '')).on("click", (d) => {
         this.router.navigate([]).then(result => {
             window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
             //window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
@@ -457,5 +482,13 @@ export class SparqlForceComponent implements OnInit {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
+  constructor(public dialog: MatDialog) {
+  }
+
+  openDialog(): void {
+    this.dialog.open(DialogAnimationsExampleDialog, {
+      width: '250px'
+    });
+  }
 
 }

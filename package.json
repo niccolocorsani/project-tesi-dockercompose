@@ -24,6 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^12.1.2",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^3.3.7",
+    "c": "^1.1.1",
     "chart.js": "^3.8.0",
     "chartjs-plugin-zoom": "^1.2.1",
     "cypress": "^10.7.0",

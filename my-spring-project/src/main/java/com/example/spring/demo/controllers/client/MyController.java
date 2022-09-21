@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 @CrossOrigin
@@ -22,13 +24,10 @@ public class MyController {
   //http://localhost:8080/spring-app/svg/get?values=abc,2,3
   public String getSVG(@RequestParam List<String> values, @RequestParam List<String> schermate) throws IOException {
 
-
     Main main = new Main();
     List<String> variablesToColor = values;
-
     main.execute(variablesToColor, schermate);
     System.out.println("SVG.....");
-
     String svg = Files.readString(Path.of("./generated_svg/" + this.getLastSvgGenerated()));
 
     return svg;
@@ -59,13 +58,18 @@ public class MyController {
   }
 
 
-  @ExceptionHandler(value = Exception.class)
-  public ResponseEntity<String> handleNullPointerException(Exception e) {
-    String error = "";
-    error = e.getMessage();
-    System.err.println(e.getMessage());
-    HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
-    return new ResponseEntity<>(error, status);
+  @GetMapping("/update-csv")
+  //http://localhost:8080/spring-app/svg/get?values=abc,2,3
+  public String updateCSV(@RequestParam String triple) throws IOException {
+
+
+    try {
+      Files.write(Paths.get("./ontologies/con_individuals.owl"), triple.getBytes(), StandardOpenOption.APPEND);
+    } catch (IOException e) {
+    }
+
+    return null;
+
   }
 
 
@@ -73,13 +77,21 @@ public class MyController {
     File folder = new File("./generated_svg/");
     File[] listOfFiles = folder.listFiles();
     Map<String, Long> fileName_DateMap = new TreeMap();
-
     for (File f : listOfFiles) {
       fileName_DateMap.put(f.getName(), f.lastModified());
     }
-
     String key = Collections.max(fileName_DateMap.entrySet(), Map.Entry.comparingByValue()).getKey();
     return key;
+  }
+
+
+  @ExceptionHandler(value = Exception.class)
+  public ResponseEntity<String> handleNullPointerException(Exception e) {
+    String error = "";
+    error = e.getMessage();
+    System.err.println(e.getMessage());
+    HttpStatus status = HttpStatus.INTERNAL_SERVER_ERROR;
+    return new ResponseEntity<>(error, status);
   }
 
 }

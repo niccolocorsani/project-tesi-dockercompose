@@ -19,6 +19,9 @@
               rdfs:label "canMeasureIn" .
 
 
+
+
+
 ###  http://www.disit.org/saref4bldg-ext/endIn
 :endIn rdf:type owl:ObjectProperty ;
        rdfs:comment "The Physical Object into which the Flow end." ;
@@ -29,6 +32,14 @@
        rdfs:label "to" .
 
 
+
+###  http://www.disit.org/saref4bldg-ext/to_yellow
+:to_yellow rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :to .
+
+###  http://www.disit.org/saref4bldg-ext/to_blue
+:to_blue rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :to .
 
 ###  http://www.disit.org/saref4bldg-ext/startIn
 :startIn rdf:type owl:ObjectProperty ;
