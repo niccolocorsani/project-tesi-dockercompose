@@ -1,8 +1,9 @@
 <h1 mat-dialog-title>Delete file</h1>
 <div mat-dialog-content>
   <mat-radio-group aria-label="Select an option" [(ngModel)]="selected">
-    <mat-radio-button (change)="changed($event)" value="blue">blue</mat-radio-button>
-    <mat-radio-button (change)="changed($event)" value="yellow">yellow</mat-radio-button>
+    <div *ngFor="let element of this.listOfObjectProperties">
+      <mat-radio-button (change)="changed($event)" value="{{element}}">{{element}}</mat-radio-button>
+    </div>
   </mat-radio-group>
 </div>
 <div mat-dialog-actions>

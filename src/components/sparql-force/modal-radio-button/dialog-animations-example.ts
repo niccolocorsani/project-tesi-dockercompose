@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {GlobalVariablesService} from "../../../services/global-variables.service";
 
@@ -26,14 +26,21 @@ export class DialogAnimationsExample {
   templateUrl: 'dialog-animations-example-dialog.html',
 })
 export class DialogAnimationsExampleDialog {
+
   selected: any;
+
+  listOfObjectProperties = ['to_ferroso','to_cloro','to_cloro_ferrico']
 
   constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>, private globalVariableService: GlobalVariablesService) {
   }
 
+
+
   changed(event: any) {
     this.globalVariableService.variabileDelModalRadio = this.selected
   }
+
+
 }
 
 
