@@ -27,7 +27,6 @@ export class DialogAnimationsExample {
 })
 export class DialogAnimationsExampleDialog {
 
-  selected: any;
 
   listOfObjectProperties = ['to_ferroso','to_cloro','to_cloro_ferrico']
 
@@ -37,7 +36,7 @@ export class DialogAnimationsExampleDialog {
 
 
   changed(event: any) {
-    this.globalVariableService.variabileDelModalRadio = this.selected
+    this.globalVariableService.variabileDelModalRadio = event.value
   }
 
 

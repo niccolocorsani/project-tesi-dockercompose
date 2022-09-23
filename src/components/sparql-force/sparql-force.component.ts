@@ -66,9 +66,14 @@ export interface Graph {
 })
 export class SparqlForceComponent implements OnInit {
 
+
+
+  private waitDialog = true
   private graph: Graph;
   private svg;
   private force;
+
+
 
   private divWidth = 10;
   private divHeight = 10;
@@ -233,15 +238,17 @@ export class SparqlForceComponent implements OnInit {
       .enter()
       .append("text")
       .attr("class", "link-text")
-      .text(d => d.p.label).on("click", (d) => {
-        this.openDialog()
+      .text(d => d.p.label).on("click",async (d) => {
 
-        this.delay(4000).then(r => (console.log(r)))
+        await this.openDialogSync()
 
-        this.globalVariableService.variabileDelModalRadio
 
-        alert(this.globalVariableService.variabileDelModalRadio)
+
+         this.globalVariableService.variabileDelModalRadio
+
         let tripla = "<http://www.disit.org/altair/resource/xv857> a    <http://www.disit.org/saref4bldg-ext/" + this.globalVariableService.variabileDelModalRadio + ">  <http://www.disit.org/altair/resource/s-857> ."
+
+
         this.svgRequestService.addTriple(tripla)
 
         // aggiungi tripla --> aggiorna ontologia --> fai nuova query per ottenere anche subObjectProperty di Object property --> cambia colore
@@ -482,13 +489,25 @@ export class SparqlForceComponent implements OnInit {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
-  constructor(public dialog: MatDialog) {
-  }
 
   openDialog(): void {
     this.dialog.open(DialogAnimationsExampleDialog, {
       width: '250px'
     });
+  }
+
+  async openDialogSync(): Promise<number> {
+    const dialogRef = this.dialog.open(DialogAnimationsExampleDialog, {
+      width: "500px",
+    });
+
+    return dialogRef.afterClosed()
+      .toPromise() // here you have a Promise instead an Observable
+      .then(result => {
+        console.log("The dialog was closed " + result);
+        this.waitDialog = false
+        return Promise.resolve(result); // will return a Promise here
+      });
   }
 
 }
