@@ -645,7 +645,7 @@ export class SparqlForceComponent implements OnInit {
 
   async spinner_delay() {
     this.globalVariableService.spinner = true
-    await this.delay(2000)
+    await this.delay(4000)
     this.globalVariableService.spinner = false
   }
 }
