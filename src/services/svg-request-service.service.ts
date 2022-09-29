@@ -74,6 +74,7 @@ export class SvgRequestServiceService {
   }
 
   svg = ''
+  variable_to_wait: any
 
 
   httpOptions: Object = {
@@ -115,24 +116,29 @@ export class SvgRequestServiceService {
     this.http.get<any>('http://localhost:8080/spring-app/svg/get?values=' + values + '&schermate=' + schermate, this.httpOptions).subscribe((value: string) => {
         this.svg = value
         const newSvg = document.getElementById('svg');
-        newSvg.innerHTML = ''
-        var SVGjava = document.createElement('div'); // is a node
-        SVGjava.innerHTML = value;
-        newSvg.appendChild(SVGjava)
-        this.globalVariableService.svgReady = false
+        if (newSvg != null) {
+          newSvg.innerHTML = ''
+          var SVGjava = document.createElement('div'); // is a node
+          SVGjava.innerHTML = value;
+          newSvg.appendChild(SVGjava)
+          this.globalVariableService.svgReady = false
+        }
+        this.variable_to_wait = 'something'
       },
       (error: any) => {
         console.error(error)
       }
     );
-    await this.delay(100);
+    await this.delay(10)
+
+    await this.spinner_delay()
     return this.svg
   }
 
 
   @log('', [])
-  async addTriple(triple: string) {
-    this.http.get<any>('http://localhost:8080/spring-app/svg/update-csv?triple=' + triple , this.httpOptions).subscribe((value: string) => {
+  async addInfoToCSV(infoToAdd: string, csvName) {
+    this.http.get<any>('http://localhost:8080/spring-app/svg/update-csv?infoToAddToCSV=' + infoToAdd + '&csvName=' + csvName, this.httpOptions).subscribe((value: string) => {
       console.log(value)
     })
   }
@@ -141,4 +147,11 @@ export class SvgRequestServiceService {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
+  async spinner_delay() {
+    this.globalVariableService.spinner = true
+    while (this.variable_to_wait === undefined) {
+      await this.delay(100)
+    }
+    this.globalVariableService.spinner = false
+  }
 }

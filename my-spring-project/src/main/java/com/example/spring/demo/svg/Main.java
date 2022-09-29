@@ -12,71 +12,82 @@ import java.util.List;
 public class Main {
 
 
-    public void execute(List<String> variablesToColor, List<String> schermate) throws IOException {
+  public void execute(List<String> variablesToColor, List<String> schermate) throws IOException {
 
-        File f1 = new File("./ontologies/saref4bldg-solo-classi-e-proprieta.owl");
-        File f2 = new File("./ontologies/saref4bldg-ext-toTEMP.owl");
-
-
-        File theDir = new File("./directory");
-        if (!theDir.exists()) {
-            theDir.mkdirs();
-        }
-
-      List<String> csv_paths = new ArrayList<>();
-
-        for (String s : schermate)
-            csv_paths.add(s);
+    File f1 = new File("./ontologies/saref4bldg-solo-classi-e-proprieta.owl");
+    File f2 = new File("./ontologies/saref4bldg-ext-toTEMP.owl");
 
 
-        for (String s : csv_paths) {
-            Files.copy(Path.of("./all_csv/" + s), Path.of("./directory/" + s));
-        }
+    File theDir = new File("./directory");
 
 
-      System.out.println("ii");
-        AsyncExecutionFolder start = new AsyncExecutionFolder("./directory", "./ontologies/saref4bldg-solo-classi-e-proprieta.owl", variablesToColor);
+    if (!theDir.exists()) {
+      theDir.mkdirs();
+    }
 
-        //Delete Ontologies not needed
-        start.run();
-        File conIndividuals = new File("./ontologies/con_individuals.owl");
-        conIndividuals.delete();
-        Files.copy(f1.toPath(), Path.of("./ontologies/con_individuals.owl"));
-        f1.delete();
-        Files.copy(f2.toPath(), Path.of("./ontologies/saref4bldg-solo-classi-e-proprieta.owl")); // in questa maniera se pur i dati vengono copiati nell'ontologia questa viene resettata per automaatizzare il processo ricorsivamnete
+    //// se la directory per qualche motivo ha dei file dentro.....vengono eliminati.... altrimenti può generare errori
+    if (theDir.isDirectory() && theDir.list().length != 0) {
+      File[] listOfFiless = theDir.listFiles();
+      for (File f : listOfFiless) {
+        f.delete();
+      }
+    }
 
-        // delete CSVs
-        File folder = new File("./directory/");
-        File[] listOfFiles = folder.listFiles();
-        for (File f : listOfFiles) {
-            f.delete();
-        }
+    List<String> csv_paths = new ArrayList<>();
 
-
-        File ontologyFile = new File("./ontologies/con_individuals.owl");
-
-        RepositoryConnection repCon = UpdateOntologyFiletoRepository.getRepositoryConnection();
-        UpdateOntologyFiletoRepository.deleteEverythingFromRepository(repCon);
-        UpdateOntologyFiletoRepository.uploadOntology(repCon, ontologyFile);
+    for (String s : schermate)
+      csv_paths.add(s);
 
 
+    for (String s : csv_paths) {
+      Files.copy(Path.of("./all_csv/" + s), Path.of("./directory/" + s));
     }
 
 
-    public static void main(String[] args) throws Exception {
+    AsyncExecutionFolder start = new AsyncExecutionFolder("./directory", "./ontologies/saref4bldg-solo-classi-e-proprieta.owl", variablesToColor);
 
+    //Delete Ontologies not needed
+    start.run();
+    File conIndividuals = new File("./ontologies/con_individuals.owl");
+    conIndividuals.delete();
+    Files.copy(f1.toPath(), Path.of("./ontologies/con_individuals.owl"));
+    f1.delete();
+    Files.copy(f2.toPath(), Path.of("./ontologies/saref4bldg-solo-classi-e-proprieta.owl")); // in questa maniera se pur i dati vengono copiati nell'ontologia questa viene resettata per automaatizzare il processo ricorsivamnete
 
-        //// prove
-        Main main = new Main();
-        List l = new ArrayList();
-        l.add("s-904a");
-        List schermate = new ArrayList();
-        schermate.add("CARICO_FERRICO_FERROSO.csv");
-        schermate.add("FERRICO_FERROSO_CLORO_FERRO.csv");
-        schermate.add("K2CO3.csv");
-
-        main.execute(l, schermate);
-
-
+    // delete CSVs
+    File folder = new File("./directory/");
+    File[] listOfFiles = folder.listFiles();
+    for (File f : listOfFiles) {
+      f.delete();
     }
+
+
+    File ontologyFile = new File("./ontologies/con_individuals.owl");
+
+    RepositoryConnection repCon = UpdateOntologyFiletoRepository.getRepositoryConnection();
+    UpdateOntologyFiletoRepository.deleteEverythingFromRepository(repCon);
+    UpdateOntologyFiletoRepository.uploadOntology(repCon, ontologyFile);
+
+
+
+
+  }
+
+
+  public static void main(String[] args) throws Exception {
+
+
+    //// prove
+    Main main = new Main();
+    List l = new ArrayList();
+    l.add("s-904a");
+    List schermate = new ArrayList();
+    schermate.add("CARICO_FERRICO_FERROSO.csv");
+    schermate.add("FERRICO_FERROSO_CLORO_FERRO.csv");
+    schermate.add("K2CO3.csv");
+
+    main.execute(l, schermate);
+
+
+  }
 }

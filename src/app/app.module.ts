@@ -17,6 +17,10 @@ import {
   DialogAnimationsExample,
   DialogAnimationsExampleDialog
 } from "../components/sparql-force/modal-radio-button/dialog-animations-example";
+import {QueriesViewComponent} from "../components/queries-view/queries-view.component";
+import {
+  SpinnerMaterialComponentComponent
+} from "../components/spinner-material-component/spinner-material-component.component";
 
 @NgModule({
   declarations: [
@@ -25,11 +29,16 @@ import {
     PrefixSimplePipe,
     ChartsAndOtherFunctionalitiesComponent,
     DialogAnimationsExample,
-    DialogAnimationsExampleDialog
+    DialogAnimationsExampleDialog,
+    QueriesViewComponent,
+    SpinnerMaterialComponentComponent
 
 
   ],
   imports: [
+
+
+
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
@@ -43,6 +52,8 @@ import {
     RouterModule.forRoot([
       {path: 'svg-output', component: SparqlForceComponent},
       {path: 'charts', component: ChartsAndOtherFunctionalitiesComponent},
+      {path: 'queries-view', component: QueriesViewComponent},
+
     ]),
   ],
   providers: [PrefixSimplePipe],

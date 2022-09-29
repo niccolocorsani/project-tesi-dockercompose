@@ -28,6 +28,15 @@
 :to rdf:type owl:ObjectProperty ;
        rdfs:label "to" .
 
+###  http://www.disit.org/saref4bldg-ext/to_cloruro_ferrico
+:to_cloruro_ferrico rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :to .
+###  http://www.disit.org/saref4bldg-ext/to_cloro
+:to_cloro rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :to .
+###  http://www.disit.org/saref4bldg-ext/to_ferroso
+:to_ferroso rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf :to .
 
 
 ###  http://www.disit.org/saref4bldg-ext/startIn

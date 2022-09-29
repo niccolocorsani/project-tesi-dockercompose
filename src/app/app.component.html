@@ -1,4 +1,6 @@
 <main style="padding-left: 100px">
+  <app-spinner-material-component *ngIf="this.globalVaraibleService.spinner"></app-spinner-material-component>
+
   <router-outlet></router-outlet>
   <br/>
   <br/>
@@ -14,7 +16,6 @@
   <br/>
   <br/>
   <br/>
-
 </main>
 
 

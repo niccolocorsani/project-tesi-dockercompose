@@ -30,108 +30,108 @@ ul141;Class;PhysicalObject;
 degasamentoiposodioexit;Class;PhysicalObject;
 ul140;Class;PhysicalObject;
 s4304-exit;Class;PhysicalObject;
-Flusso_739;Class;Flow;
-Flusso_739;ObjectProperty;startIn;r-4003
-Flusso_739;ObjectProperty;endIn;xv4003d
 Flusso_740;Class;Flow;
-Flusso_740;ObjectProperty;startIn;xv4003d
-Flusso_740;ObjectProperty;endIn;gasdisingaggio-exit
+Flusso_740;ObjectProperty;startIn;r-4003
+Flusso_740;ObjectProperty;endIn;xv4003d
 Flusso_741;Class;Flow;
-Flusso_741;ObjectProperty;startIn;xv4301a
-Flusso_741;ObjectProperty;endIn;abbacidoexit
+Flusso_741;ObjectProperty;startIn;xv4003d
+Flusso_741;ObjectProperty;endIn;gasdisingaggio-exit
 Flusso_742;Class;Flow;
-Flusso_742;ObjectProperty;startIn;r-4003
-Flusso_742;ObjectProperty;endIn;xv4301a
+Flusso_742;ObjectProperty;startIn;xv4301a
+Flusso_742;ObjectProperty;endIn;abbacidoexit
 Flusso_743;Class;Flow;
-Flusso_743;ObjectProperty;startIn;p-4606b
-Flusso_743;ObjectProperty;endIn;ul145
+Flusso_743;ObjectProperty;startIn;r-4003
+Flusso_743;ObjectProperty;endIn;xv4301a
 Flusso_744;Class;Flow;
-Flusso_744;ObjectProperty;startIn;e-4506
-Flusso_744;ObjectProperty;endIn;ul143
+Flusso_744;ObjectProperty;startIn;p-4606b
+Flusso_744;ObjectProperty;endIn;ul145
 Flusso_745;Class;Flow;
-Flusso_745;ObjectProperty;startIn;p-4606b
-Flusso_745;ObjectProperty;endIn;ul142
+Flusso_745;ObjectProperty;startIn;e-4506
+Flusso_745;ObjectProperty;endIn;ul143
 Flusso_746;Class;Flow;
-Flusso_746;ObjectProperty;startIn;r-4003
-Flusso_746;ObjectProperty;endIn;h20caldaexit
+Flusso_746;ObjectProperty;startIn;p-4606b
+Flusso_746;ObjectProperty;endIn;ul142
 Flusso_747;Class;Flow;
-Flusso_747;ObjectProperty;startIn;s-4301start
-Flusso_747;ObjectProperty;endIn;r-4003
+Flusso_747;ObjectProperty;startIn;r-4003
+Flusso_747;ObjectProperty;endIn;h20caldaexit
 Flusso_748;Class;Flow;
-Flusso_748;ObjectProperty;startIn;s-4302start
+Flusso_748;ObjectProperty;startIn;s-4301start
 Flusso_748;ObjectProperty;endIn;r-4003
 Flusso_749;Class;Flow;
-Flusso_749;ObjectProperty;startIn;p-4606start
+Flusso_749;ObjectProperty;startIn;s-4302start
 Flusso_749;ObjectProperty;endIn;r-4003
 Flusso_750;Class;Flow;
-Flusso_750;ObjectProperty;startIn;ul142
+Flusso_750;ObjectProperty;startIn;p-4606start
 Flusso_750;ObjectProperty;endIn;r-4003
 Flusso_751;Class;Flow;
-Flusso_751;ObjectProperty;startIn;ul143
+Flusso_751;ObjectProperty;startIn;ul142
 Flusso_751;ObjectProperty;endIn;r-4003
 Flusso_752;Class;Flow;
-Flusso_752;ObjectProperty;startIn;ul145
+Flusso_752;ObjectProperty;startIn;ul143
 Flusso_752;ObjectProperty;endIn;r-4003
 Flusso_753;Class;Flow;
-Flusso_753;ObjectProperty;startIn;xv4313
+Flusso_753;ObjectProperty;startIn;ul145
 Flusso_753;ObjectProperty;endIn;r-4003
 Flusso_754;Class;Flow;
-Flusso_754;ObjectProperty;startIn;h2otorrestart
-Flusso_754;ObjectProperty;endIn;xv4506
+Flusso_754;ObjectProperty;startIn;xv4313
+Flusso_754;ObjectProperty;endIn;r-4003
 Flusso_755;Class;Flow;
-Flusso_755;ObjectProperty;startIn;h2ocaldastart
-Flusso_755;ObjectProperty;endIn;xv4313
+Flusso_755;ObjectProperty;startIn;h2otorrestart
+Flusso_755;ObjectProperty;endIn;xv4506
 Flusso_756;Class;Flow;
-Flusso_756;ObjectProperty;startIn;p-4606b
-Flusso_756;ObjectProperty;endIn;e-4506
+Flusso_756;ObjectProperty;startIn;h2ocaldastart
+Flusso_756;ObjectProperty;endIn;xv4313
 Flusso_757;Class;Flow;
-Flusso_757;ObjectProperty;startIn;xv4506
+Flusso_757;ObjectProperty;startIn;p-4606b
 Flusso_757;ObjectProperty;endIn;e-4506
 Flusso_758;Class;Flow;
-Flusso_758;ObjectProperty;startIn;e-4506
-Flusso_758;ObjectProperty;endIn;h2otorreexit
+Flusso_758;ObjectProperty;startIn;xv4506
+Flusso_758;ObjectProperty;endIn;e-4506
 Flusso_759;Class;Flow;
-Flusso_759;ObjectProperty;startIn;ul144
-Flusso_759;ObjectProperty;endIn;xv4207c
+Flusso_759;ObjectProperty;startIn;e-4506
+Flusso_759;ObjectProperty;endIn;h2otorreexit
 Flusso_760;Class;Flow;
-Flusso_760;ObjectProperty;startIn;clorostart
-Flusso_760;ObjectProperty;endIn;ul144
+Flusso_760;ObjectProperty;startIn;ul144
+Flusso_760;ObjectProperty;endIn;xv4207c
 Flusso_761;Class;Flow;
-Flusso_761;ObjectProperty;startIn;r-4003
-Flusso_761;ObjectProperty;endIn;xv4321b
+Flusso_761;ObjectProperty;startIn;clorostart
+Flusso_761;ObjectProperty;endIn;ul144
 Flusso_762;Class;Flow;
-Flusso_762;ObjectProperty;startIn;xv4321b
-Flusso_762;ObjectProperty;endIn;p-4606b
+Flusso_762;ObjectProperty;startIn;r-4003
+Flusso_762;ObjectProperty;endIn;xv4321b
 Flusso_763;Class;Flow;
-Flusso_763;ObjectProperty;startIn;p-4606b
-Flusso_763;ObjectProperty;endIn;xv4235
+Flusso_763;ObjectProperty;startIn;xv4321b
+Flusso_763;ObjectProperty;endIn;p-4606b
 Flusso_764;Class;Flow;
-Flusso_764;ObjectProperty;startIn;xv4235
-Flusso_764;ObjectProperty;endIn;s4305-exit
+Flusso_764;ObjectProperty;startIn;p-4606b
+Flusso_764;ObjectProperty;endIn;xv4235
 Flusso_765;Class;Flow;
-Flusso_765;ObjectProperty;startIn;r-4003
-Flusso_765;ObjectProperty;endIn;xv4245c
+Flusso_765;ObjectProperty;startIn;xv4235
+Flusso_765;ObjectProperty;endIn;s4305-exit
 Flusso_766;Class;Flow;
-Flusso_766;ObjectProperty;startIn;xv4207c
+Flusso_766;ObjectProperty;startIn;r-4003
 Flusso_766;ObjectProperty;endIn;xv4245c
 Flusso_767;Class;Flow;
-Flusso_767;ObjectProperty;startIn;ul141
+Flusso_767;ObjectProperty;startIn;xv4207c
 Flusso_767;ObjectProperty;endIn;xv4245c
 Flusso_768;Class;Flow;
-Flusso_768;ObjectProperty;startIn;p-4606b
-Flusso_768;ObjectProperty;endIn;xv4236
+Flusso_768;ObjectProperty;startIn;ul141
+Flusso_768;ObjectProperty;endIn;xv4245c
 Flusso_769;Class;Flow;
-Flusso_769;ObjectProperty;startIn;ul140
-Flusso_769;ObjectProperty;endIn;ul141
+Flusso_769;ObjectProperty;startIn;p-4606b
+Flusso_769;ObjectProperty;endIn;xv4236
 Flusso_770;Class;Flow;
-Flusso_770;ObjectProperty;startIn;xv4245c
-Flusso_770;ObjectProperty;endIn;degasamentoiposodioexit
+Flusso_770;ObjectProperty;startIn;ul140
+Flusso_770;ObjectProperty;endIn;ul141
 Flusso_771;Class;Flow;
-Flusso_771;ObjectProperty;startIn;azotostart
-Flusso_771;ObjectProperty;endIn;ul140
+Flusso_771;ObjectProperty;startIn;xv4245c
+Flusso_771;ObjectProperty;endIn;degasamentoiposodioexit
 Flusso_772;Class;Flow;
-Flusso_772;ObjectProperty;startIn;xv4236
-Flusso_772;ObjectProperty;endIn;s4304-exit
+Flusso_772;ObjectProperty;startIn;azotostart
+Flusso_772;ObjectProperty;endIn;ul140
+Flusso_773;Class;Flow;
+Flusso_773;ObjectProperty;startIn;xv4236
+Flusso_773;ObjectProperty;endIn;s4304-exit
 fic4003;Class;Sensor;
 m3-h;Class;UnitOfMeasure;
 fic4003;ObjectProperty;canMeasureIn;m3-h
@@ -211,3 +211,46 @@ ul140;ObjectProperty;to;ul141
 xv4245c;ObjectProperty;to;degasamentoiposodioexit
 azotostart;ObjectProperty;to;ul140
 xv4236;ObjectProperty;to;s4304-exit
+xv4003d;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+gasdisingaggio-exit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+s-4301start;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+abbacidoexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4301a;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+s-4302start;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul145;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+fic4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+pi4322;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+p-4606start;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ti4316;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul143;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul142;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+tic4318;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+h20caldaexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ti4326;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+r-4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+h2otorrestart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+h2ocaldastart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4506;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4313;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ti4317;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+wi4343;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+fic4208c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+e-4506;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+pi4208c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+h2otorreexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4207c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ti4328;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+clorostart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul144;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4321b;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+fic4002c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+p-4606b;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4235;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+s4305-exit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4245c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+azotostart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+xv4236;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul141;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+degasamentoiposodioexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul140;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+s4304-exit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt

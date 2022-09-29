@@ -24,8 +24,8 @@ export function log(generalInfo: string, calledFunctions: []): MethodDecorator {
 
 
       if (key != 'getRandomColor') {
-        console.log(classeChiamante)
-        console.log('%c' + funzioneChiamata, 'color: #6495ED')
+       // console.log(classeChiamante)
+      //  console.log('%c' + funzioneChiamata, 'color: #6495ED')
       }
 
 
@@ -34,9 +34,11 @@ export function log(generalInfo: string, calledFunctions: []): MethodDecorator {
 
 
       if (result == null && key != 'getRandomColor')
-        console.error('return: nothing' + ' ' + splitted1[0])
+     //   console.error('return: nothing' + ' ' + splitted1[0])
+        console.log()
       else if (result != null && key != 'getRandomColor')
-        console.error('return: ' + typeof (result) + ' ' + splitted1[0])
+       // console.error('return: ' + typeof (result) + ' ' + splitted1[0])
+        console.log()
 
       return result;
     }

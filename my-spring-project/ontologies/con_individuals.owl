@@ -4,44 +4,39 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://www.disit.org/altair/resource/p-4614>
-        a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4614-1> , <http://www.disit.org/altair/resource/xv4614-2> , <http://www.disit.org/altair/resource/xv4614-3> .
+<http://www.disit.org/altair/resource/Flusso_542>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/900-p910a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/s-901> .
 
-<http://www.disit.org/altair/resource/xv4614-2>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul90> .
+<http://www.disit.org/altair/resource/Flusso_514>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul45> .
+
+<http://www.disit.org/altair/resource/m3-h>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
 
 <http://www.disit.org/altair/resource/percentage>
         a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
 
-<http://www.disit.org/altair/resource/Flusso_82>
+<http://www.disit.org/altair/resource/Flusso_527>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4305-2> ;
+                <http://www.disit.org/altair/resource/s-909> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-4305> .
+                <http://www.disit.org/altair/resource/c-909> .
 
-<http://www.disit.org/altair/resource/Flusso_54>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4306-1> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/hv4236-start> .
-
-<http://www.disit.org/altair/resource/xv4307-2>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/s-909>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p-4616> .
-
-<http://www.disit.org/altair/resource/Flusso_67>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4307> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4307-1> .
+                <http://www.disit.org/altair/resource/p909> .
 
 <http://www.disit.org/saref4bldg-ext/Area>
         a                owl:Class ;
@@ -49,79 +44,109 @@
         rdfs:label       "Area" ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/BuildingSpace> .
 
-<http://www.disit.org/altair/resource/xv4306-2>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p-4616> .
+<http://www.disit.org/saref4bldg-ext/to_cloro-to_cloruroFerrico>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to_cloro> .
 
-<http://www.disit.org/altair/resource/hv4235start>
+<http://www.disit.org/altair/resource/ul44>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4326> , <http://www.disit.org/altair/resource/xv4307-1> .
+                <http://www.disit.org/altair/resource/c-909> .
 
-<http://www.disit.org/altair/resource/Flusso_61>
+<http://www.disit.org/altair/resource/p-900start>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul45> .
+
+<http://www.disit.org/altair/resource/Flusso_496>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4305-3> ;
+                <http://www.disit.org/altair/resource/ul41> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4615-3> .
+                <http://www.disit.org/altair/resource/p902a> .
 
-<http://www.disit.org/altair/resource/xv4305-2>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p-4615> .
-
-<http://www.disit.org/altair/resource/Flusso_74>
+<http://www.disit.org/altair/resource/Flusso_521>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4615-1> ;
+                <http://www.disit.org/altair/resource/ul43> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4614-1> .
+                <http://www.disit.org/altair/resource/p902b> .
 
-<http://www.disit.org/altair/resource/xv4616-1>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/Flusso_534>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/p902b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/s-910> .
+
+<http://www.disit.org/altair/resource/p902a>
+        a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/cisternaexit> .
+                <http://www.disit.org/altair/resource/p902b> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> .
 
-<http://www.disit.org/altair/resource/xv4321>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4304> .
+<http://www.disit.org/altair/resource/Flusso_506>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul42> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv912_1> .
 
-<http://www.disit.org/altair/resource/hv4236-start>
+<http://www.disit.org/altair/resource/lic910>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/percentage> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/s-910> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/r980>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4321> , <http://www.disit.org/altair/resource/xv4306-1> .
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/saref4bldg-ext/to_cloruro_ferrico>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
+<http://www.disit.org/altair/resource/Flusso_519>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv901b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv901a> .
+
+<http://www.disit.org/altair/resource/Flusso_490>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul45> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p-901start> .
 
 <http://www.disit.org/saref4bldg-ext/endIn>
         a             owl:ObjectProperty ;
         rdfs:comment  "The Physical Object into which the Flow end." ;
         rdfs:label    "endIn" .
 
-<http://www.disit.org/altair/resource/Flusso_87>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4615-2> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4614-1> .
+<http://www.disit.org/altair/resource/degasamentoexit>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/xv4304-2>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p-4614> .
+<http://www.disit.org/altair/resource/nm3-h>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
 
 <http://www.disit.org/saref4bldg-ext/Site>
         a                owl:Class ;
         rdfs:comment     "A Building can be divided in sites." ;
         rdfs:label       "Site" ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/BuildingSpace> .
-
-<http://www.disit.org/altair/resource/Flusso_59>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4614-3> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4614> .
 
 <http://www.disit.org/saref4bldg-ext/ProductionLine>
         a                owl:Class ;
@@ -132,114 +157,152 @@
                            owl:onProperty     <https://saref.etsi.org/saref4bldg/contains>
                          ] .
 
-<http://www.disit.org/altair/resource/xv4615-1>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/cisternaexit> .
-
-<http://www.disit.org/altair/resource/xv4614-1>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4615-2> , <http://www.disit.org/altair/resource/xv4615-3> , <http://www.disit.org/altair/resource/xv4615-1> .
-
-<http://www.disit.org/altair/resource/p-4613>
-        a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/cisternaexit> .
-
-<http://www.disit.org/altair/resource/Flusso_81>
+<http://www.disit.org/altair/resource/Flusso_500>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4616-1> ;
+                <http://www.disit.org/altair/resource/ul44> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4616> .
+                <http://www.disit.org/altair/resource/xv901b> .
 
-<http://www.disit.org/altair/resource/Flusso_53>
+<http://www.disit.org/altair/resource/Flusso_488>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/cisternaexit> ;
+                <http://www.disit.org/altair/resource/ul40> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4320> .
+                <http://www.disit.org/altair/resource/900-p910a> .
 
-<http://www.disit.org/altair/resource/xv4307-1>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/s-910>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4307> .
+                <http://www.disit.org/altair/resource/p902a> , <http://www.disit.org/altair/resource/p902b> .
 
-<http://www.disit.org/altair/resource/Flusso_94>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4615> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4305-2> .
-
-<http://www.disit.org/altair/resource/Flusso_66>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4305> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4615-3> .
-
-<http://www.disit.org/altair/resource/ti4324>
+<http://www.disit.org/altair/resource/node-rh910>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/c> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4305> .
+                <http://www.disit.org/altair/resource/Not-specified> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/p902a> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_79>
+<http://www.disit.org/altair/resource/Flusso_541>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4615-3> ;
+                <http://www.disit.org/altair/resource/p909> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4615> .
+                <http://www.disit.org/altair/resource/s-909> .
 
-<http://www.disit.org/altair/resource/xv4326>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4615-3> , <http://www.disit.org/altair/resource/s-4305> , <http://www.disit.org/altair/resource/xv4305-3> .
+<http://www.disit.org/altair/resource/Flusso_513>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul44> .
 
-<http://www.disit.org/altair/resource/xv4306-1>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/Flusso_526>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ms-922> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul46> .
+
+<http://www.disit.org/altair/resource/Flusso_539>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/900-p910c> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/atbstart1> .
+
+<http://www.disit.org/altair/resource/c905exit>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/ul43>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4306> .
+                <http://www.disit.org/altair/resource/r980> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/r980> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro-to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/r980> .
+
+<http://www.disit.org/altair/resource/Flusso_495>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/cv-905-1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/gasdagpsstart> .
+
+<http://www.disit.org/altair/resource/Flusso_520>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul43> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p902a> .
+
+<http://www.disit.org/altair/resource/fic912>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/nm3-h> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/ul42> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
 <http://www.disit.org/saref4bldg-ext/Container>
         a                owl:Class ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/Tank> .
 
-<http://www.disit.org/altair/resource/Flusso_60>
+<http://www.disit.org/altair/resource/p-901start>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul45> .
+
+<http://www.disit.org/altair/resource/Flusso_533>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4305-3> ;
+                <http://www.disit.org/altair/resource/ul47> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4326> .
+                <http://www.disit.org/altair/resource/p902b> .
 
 <http://www.disit.org/saref4bldg-ext/startIn>
         a             owl:ObjectProperty ;
         rdfs:comment  "The Physical Object from which the Flow start." ;
         rdfs:label    "startIn" .
 
-<http://www.disit.org/altair/resource/Flusso_73>
+<http://www.disit.org/altair/resource/Flusso_505>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4306> ;
+                <http://www.disit.org/altair/resource/s-954a> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4306-1> .
+                <http://www.disit.org/altair/resource/900-p910b> .
 
-<http://www.disit.org/altair/resource/li4320>
+<http://www.disit.org/altair/resource/hc900>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
                 <http://www.disit.org/altair/resource/percentage> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4320> .
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/ul46> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_86>
+<http://www.disit.org/saref4bldg-ext/isContainedIn>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/isContainedIn> .
+
+<http://www.disit.org/altair/resource/Flusso_518>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4615-2> ;
+                <http://www.disit.org/altair/resource/xv912_2> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4615> .
+                <http://www.disit.org/altair/resource/xv912_1> .
 
 <http://www.disit.org/saref4bldg-ext/Flow>
         a                owl:Class ;
@@ -264,103 +327,143 @@
                            owl:onProperty     <http://www.disit.org/saref4bldg-ext/endIn>
                          ] .
 
-<http://www.disit.org/altair/resource/Flusso_58>
+<http://www.disit.org/altair/resource/Flusso_487>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4616-3> ;
+                <http://www.disit.org/altair/resource/ul40> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4616> .
+                <http://www.disit.org/altair/resource/900-p910c> .
 
-<http://www.disit.org/altair/resource/li4333>
-        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/percentage> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4307> .
-
-<http://www.disit.org/altair/resource/s-4303start>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p-4613> .
-
-<http://www.disit.org/altair/resource/li4318>
-        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/percentage> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4304> .
-
-<http://www.disit.org/altair/resource/Flusso_80>
+<http://www.disit.org/altair/resource/Flusso_540>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4307-2> ;
+                <http://www.disit.org/altair/resource/p902a> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-4307> .
+                <http://www.disit.org/altair/resource/s-910> .
 
-<http://www.disit.org/altair/resource/r-4001start>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4320> .
+<http://www.disit.org/altair/resource/Flusso_512>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/900-p910b> .
 
-<http://www.disit.org/altair/resource/p-4320>
+<http://www.disit.org/altair/resource/fic909-2>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/m3-h> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/ul45> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/pi909-2>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/mmh20> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/p909>
         a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/cisternaexit> .
+                <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> .
 
-<http://www.disit.org/altair/resource/Flusso_52>
+<http://www.disit.org/altair/resource/Flusso_525>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/cisternaexit> ;
+                <http://www.disit.org/altair/resource/r980> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4616-1> .
-
-<http://www.disit.org/altair/resource/Flusso_93>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4614-1> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4614> .
+                <http://www.disit.org/altair/resource/ul43> .
 
 <http://www.disit.org/saref4bldg-ext/>
         a            owl:Ontology ;
         owl:imports  <https://saref.etsi.org/saref4bldg/v1.1.2/> .
 
-<http://www.disit.org/altair/resource/Flusso_65>
+<http://www.disit.org/altair/resource/Flusso_538>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4305> ;
+                <http://www.disit.org/altair/resource/900-p910c> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4326> .
+                <http://www.disit.org/altair/resource/s-910astart> .
 
-<http://www.disit.org/altair/resource/s-4307>
+<http://www.disit.org/altair/resource/s-954b>
         a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4307-2> .
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_78>
+<http://www.disit.org/altair/resource/ul42>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-910> .
+
+<http://www.disit.org/altair/resource/Flusso_494>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4615-3> ;
+                <http://www.disit.org/altair/resource/c-910> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4614-1> .
+                <http://www.disit.org/altair/resource/ul42> .
+
+<http://www.disit.org/saref4bldg-ext/to_cloro>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
+<http://www.disit.org/altair/resource/s-900exit>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/s-901>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/s-954b> , <http://www.disit.org/altair/resource/s-954a> , <http://www.disit.org/altair/resource/ul40> .
+
+<http://www.disit.org/altair/resource/Flusso_532>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul47> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p909> .
+
+<http://www.disit.org/altair/resource/cl2-da-k2204start>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv912_1> , <http://www.disit.org/altair/resource/xv901a> .
+
+<http://www.disit.org/altair/resource/Flusso_504>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-954a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/900-p910a> .
+
+<http://www.disit.org/altair/resource/cv-905-1>
+        a       <http://www.disit.org/saref4bldg-ext/Container> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-909> .
 
 <http://www.disit.org/saref4bldg-ext/to>
         a           owl:ObjectProperty ;
         rdfs:label  "to" .
 
-<http://www.disit.org/altair/resource/Flusso_72>
+<http://www.disit.org/altair/resource/Flusso_517>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4306> ;
+                <http://www.disit.org/altair/resource/degasamentoexit> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4616-3> .
-
-<http://www.disit.org/altair/resource/Flusso_85>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4320> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-4320> .
+                <http://www.disit.org/altair/resource/xv901b> .
 
 <http://www.disit.org/saref4bldg-ext/ChemicalCompound>
         a                owl:Class ;
@@ -368,15 +471,8 @@
         rdfs:label       "ChemicalCompound" ;
         rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> .
 
-<http://www.disit.org/altair/resource/Flusso_57>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4321> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/hv4236-start> .
-
-<http://www.disit.org/altair/resource/ul90>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual .
+<http://www.disit.org/altair/resource/Not-specified>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
 
 <http://www.disit.org/saref4bldg-ext/Water>
         a                owl:Class ;
@@ -392,99 +488,184 @@
                            owl:onProperty     <https://saref.etsi.org/saref4bldg/waterPressureMax>
                          ] .
 
+<http://www.disit.org/altair/resource/xv901b>
+        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/degasamentoexit> , <http://www.disit.org/altair/resource/ul44> .
+
+<http://www.disit.org/altair/resource/ms-922>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_511>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/900-p910a> .
+
+<http://www.disit.org/altair/resource/Flusso_486>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul40> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/s-901> .
+
+<http://www.disit.org/altair/resource/Flusso_499>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul44> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv901a> .
+
+<http://www.disit.org/altair/resource/s-910astart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910c> .
+
+<http://www.disit.org/altair/resource/900-p910c>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-954b> , <http://www.disit.org/altair/resource/s-954a> , <http://www.disit.org/altair/resource/ul40> .
+
+<http://www.disit.org/altair/resource/ul47>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-900exit> .
+
 <http://www.disit.org/saref4bldg-ext/Reactor>
         a                owl:Class ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/FlowStorageDevice> .
 
-<http://www.disit.org/altair/resource/Flusso_51>
+<http://www.disit.org/altair/resource/pi909-1>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/mmh20> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_524>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/cisternaexit> ;
+                <http://www.disit.org/altair/resource/ul46> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4613> .
+                <http://www.disit.org/altair/resource/p902b> .
 
 <http://www.disit.org/saref4bldg-ext/canMeasureIn>
         a             owl:ObjectProperty ;
         rdfs:comment  "A relation between a sensor and the unit of measurement in which the sensor measurement is expressed." ;
         rdfs:label    "canMeasureIn" .
 
-<http://www.disit.org/altair/resource/Flusso_92>
+<http://www.disit.org/saref4bldg-ext/isSchermata>
+        a       owl:DatatypeProperty .
+
+<http://www.disit.org/altair/resource/Flusso_537>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4614> ;
+                <http://www.disit.org/altair/resource/900-p910b> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4304-2> .
+                <http://www.disit.org/altair/resource/900-p910a> .
 
-<http://www.disit.org/altair/resource/Flusso_64>
+<http://www.disit.org/altair/resource/Flusso_509>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4320> ;
+                <http://www.disit.org/altair/resource/s-954b> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/r-4001start> .
+                <http://www.disit.org/altair/resource/900-p910c> .
 
-<http://www.disit.org/altair/resource/s-4306>
-        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4306-2> .
-
-<http://www.disit.org/altair/resource/xv4616-4>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4307> .
-
-<http://www.disit.org/altair/resource/Flusso_77>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4615-3> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4326> .
-
-<http://www.disit.org/altair/resource/cisternaexit>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual .
-
-<http://www.disit.org/altair/resource/Flusso_71>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4304> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4304-3> .
-
-<http://www.disit.org/saref4bldg-ext/to_blue>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
-
-<http://www.disit.org/altair/resource/p-4616>
-        a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4616-1> , <http://www.disit.org/altair/resource/xv4616-4> , <http://www.disit.org/altair/resource/xv4616-3> .
-
-<http://www.disit.org/altair/resource/Flusso_84>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4306-2> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-4306> .
-
-<http://www.disit.org/altair/resource/Flusso_56>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4326> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/hv4235start> .
-
-<http://www.disit.org/altair/resource/li4303>
+<http://www.disit.org/altair/resource/pi901>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/percentage> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4303start> .
+                <http://www.disit.org/altair/resource/mmh2o> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/xv901a> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_69>
+<http://www.disit.org/altair/resource/ul41>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-910> .
+
+<http://www.disit.org/altair/resource/s-954a>
+        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_493>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4304> ;
+                <http://www.disit.org/altair/resource/c-910> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4321> .
+                <http://www.disit.org/altair/resource/ul41> .
+
+<http://www.disit.org/altair/resource/l-hr>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
+
+<http://www.disit.org/altair/resource/Flusso_531>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-910> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/c-910> .
+
+<http://www.disit.org/altair/resource/Flusso_503>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-954a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/s-901> .
+
+<http://www.disit.org/altair/resource/Flusso_516>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/degasamentoexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv912_2> .
+
+<http://www.disit.org/altair/resource/mmh2o>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
+
+<http://www.disit.org/altair/resource/Flusso_529>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-901> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/900-p910b> .
+
+<http://www.disit.org/altair/resource/xv901a>
+        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv901b> , <http://www.disit.org/altair/resource/ul44> .
+
+<http://www.disit.org/altair/resource/Flusso_485>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/c905exit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/c-910> .
+
+<http://www.disit.org/altair/resource/Flusso_510>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-954b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/s-901> .
 
 <http://www.disit.org/saref4bldg-ext/Energy>
         a                owl:Class ;
@@ -492,183 +673,286 @@
         rdfs:label       "Energy" ;
         rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> .
 
-<http://www.disit.org/altair/resource/Flusso_50>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/cisternaexit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4615-1> .
-
-<http://www.disit.org/saref4bldg-ext/to_yellow>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
-
-<http://www.disit.org/altair/resource/s-4320>
-        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/ul46>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p-4320> .
+                <http://www.disit.org/altair/resource/ms-922> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/ms-922> .
 
-<http://www.disit.org/altair/resource/Flusso_91>
+<http://www.disit.org/altair/resource/Flusso_498>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4613> ;
+                <http://www.disit.org/altair/resource/ul41> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-4303start> .
+                <http://www.disit.org/altair/resource/p909> .
 
-<http://www.disit.org/altair/resource/Flusso_63>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4616-4> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4616> .
-
-<http://www.disit.org/altair/resource/xv4616-3>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/900-p910b>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4306> .
+                <http://www.disit.org/altair/resource/s-901> , <http://www.disit.org/altair/resource/s-954b> , <http://www.disit.org/altair/resource/s-954a> , <http://www.disit.org/altair/resource/ul40> .
 
-<http://www.disit.org/altair/resource/s-4305>
-        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4305-2> .
-
-<http://www.disit.org/altair/resource/Flusso_76>
+<http://www.disit.org/altair/resource/Flusso_523>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul90> ;
+                <http://www.disit.org/altair/resource/ul46> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4615-2> .
+                <http://www.disit.org/altair/resource/p909> .
 
-<http://www.disit.org/altair/resource/li4323>
+<http://www.disit.org/altair/resource/fic902>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/percentage> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4305> .
+                <http://www.disit.org/altair/resource/l-hr> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/ul41> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_89>
+<http://www.disit.org/altair/resource/mmh20>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
+
+<http://www.disit.org/altair/resource/Flusso_536>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4616> ;
+                <http://www.disit.org/altair/resource/900-p910b> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4306-2> .
+                <http://www.disit.org/altair/resource/atbstart2> .
 
-<http://www.disit.org/altair/resource/xv4615-3>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/Flusso_508>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv912_1> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/cl2-da-k2204start> .
+
+<http://www.disit.org/altair/resource/c-909>
+        a       <http://www.disit.org/saref4bldg-ext/Container> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4305> , <http://www.disit.org/altair/resource/xv4305-3> .
+                <http://www.disit.org/altair/resource/s-909> .
 
-<http://www.disit.org/altair/resource/ti4319>
+<http://www.disit.org/altair/resource/ul40>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-910> .
+
+<http://www.disit.org/altair/resource/Flusso_492>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/c-910> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul40> .
+
+<http://www.disit.org/altair/resource/rh900>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/mv> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/s-909> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/altair/resource/xv912_2>
+        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/degasamentoexit> , <http://www.disit.org/altair/resource/ul42> .
+
+<http://www.disit.org/altair/resource/Flusso_530>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-900exit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul47> .
+
+<http://www.disit.org/altair/resource/Flusso_502>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-954a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/900-p910c> .
+
+<http://www.disit.org/altair/resource/atbstart2>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/900-p910b> .
+
+<http://www.disit.org/altair/resource/Flusso_543>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/900-p910a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/atbstart2> .
+
+<http://www.disit.org/altair/resource/ti900>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
                 <http://www.disit.org/altair/resource/c> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4304> .
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/c-910> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_70>
+<http://www.disit.org/altair/resource/Flusso_515>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4304> ;
+                <http://www.disit.org/altair/resource/c-909> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4614-3> .
+                <http://www.disit.org/altair/resource/cv-905-1> .
 
 <http://www.disit.org/altair/resource/c>
         a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
 
-<http://www.disit.org/altair/resource/p-4615>
-        a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
+<http://www.disit.org/saref4bldg-ext/to_ferroso>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
+<http://www.disit.org/altair/resource/Flusso_528>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s-901> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/900-p910a> .
+
+<http://www.disit.org/altair/resource/mv>
+        a       <https://saref.etsi.org/core/UnitOfMeasure> , owl:NamedIndividual .
+
+<http://www.disit.org/altair/resource/gasdagpsstart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4615-2> , <http://www.disit.org/altair/resource/xv4615-3> .
+                <http://www.disit.org/altair/resource/cv-905-1> .
 
-<http://www.disit.org/altair/resource/xv4614-3>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/ul45>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4304> .
+                <http://www.disit.org/altair/resource/c-909> .
 
-<http://www.disit.org/altair/resource/Flusso_83>
+<http://www.disit.org/altair/resource/Flusso_497>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4304-2> ;
+                <http://www.disit.org/altair/resource/ul41> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-4304> .
+                <http://www.disit.org/altair/resource/p902b> .
 
-<http://www.disit.org/altair/resource/Flusso_55>
+<http://www.disit.org/altair/resource/900-p910a>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910b> , <http://www.disit.org/altair/resource/s-901> , <http://www.disit.org/altair/resource/s-954b> , <http://www.disit.org/altair/resource/s-954a> , <http://www.disit.org/altair/resource/ul40> .
+
+<http://www.disit.org/altair/resource/c-910>
+        a       <http://www.disit.org/saref4bldg-ext/Container> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-910> , <http://www.disit.org/altair/resource/c905exit> .
+
+<http://www.disit.org/altair/resource/Flusso_522>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4307-1> ;
+                <http://www.disit.org/altair/resource/ul43> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/hv4235start> .
+                <http://www.disit.org/altair/resource/p909> .
 
-<http://www.disit.org/altair/resource/Flusso_68>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s-4307> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4616-4> .
-
-<http://www.disit.org/altair/resource/li4328>
+<http://www.disit.org/altair/resource/fic901>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/percentage> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4306> .
+                <http://www.disit.org/altair/resource/l-hr> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/ul40> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
 <http://www.disit.org/saref4bldg-ext/color>
         a             owl:DatatypeProperty ;
         rdfs:comment  "Color of a PhysicalObject or Flow's illustrative color." ;
         rdfs:label    "color" .
 
-<http://www.disit.org/altair/resource/Flusso_90>
+<http://www.disit.org/altair/resource/Flusso_535>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4616> ;
+                <http://www.disit.org/altair/resource/p902b> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4307-2> .
+                <http://www.disit.org/altair/resource/p902a> .
 
-<http://www.disit.org/altair/resource/Flusso_62>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4304-3> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4305-3> .
-
-<http://www.disit.org/altair/resource/xv4305-3>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/p902b>
+        a       <https://saref.etsi.org/saref4bldg/Pump> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4304-3> .
+                <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> .
 
-<http://www.disit.org/altair/resource/ti4320>
+<http://www.disit.org/altair/resource/Flusso_507>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul42> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv912_2> .
+
+<http://www.disit.org/altair/resource/Flusso_491>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul45> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p-900start> .
+
+<http://www.disit.org/altair/resource/xv912_1>
+        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv912_2> , <http://www.disit.org/altair/resource/ul42> .
+
+<http://www.disit.org/altair/resource/lic909>
         a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/c> ;
-        <https://saref.etsi.org/saref4bldg/isContainedIn>
-                <http://www.disit.org/altair/resource/s-4320> .
+                <http://www.disit.org/altair/resource/percentage> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/s-909> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/s-4304>
-        a       <https://saref.etsi.org/saref4bldg/Tank> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4304-2> .
+<http://www.disit.org/altair/resource/fic253_4>
+        a       <https://saref.etsi.org/saref4bldg/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/nm3-h> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/ul44> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_75>
+<http://www.disit.org/altair/resource/Flusso_501>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul90> ;
+                <http://www.disit.org/altair/resource/xv901a> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4614-2> .
+                <http://www.disit.org/altair/resource/cl2-da-k2204start> .
 
-<http://www.disit.org/altair/resource/xv4304-3>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-4304> .
-
-<http://www.disit.org/altair/resource/Flusso_88>
+<http://www.disit.org/altair/resource/Flusso_489>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4614-2> ;
+                <http://www.disit.org/altair/resource/ul40> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4614> .
+                <http://www.disit.org/altair/resource/900-p910b> .
 
-<http://www.disit.org/altair/resource/xv4615-2>
-        a       <https://saref.etsi.org/saref4bldg/Valve> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/atbstart1>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul90> .
+                <http://www.disit.org/altair/resource/900-p910c> .

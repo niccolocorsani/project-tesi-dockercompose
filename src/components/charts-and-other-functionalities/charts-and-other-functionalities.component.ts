@@ -11,6 +11,7 @@ import {GraphdbRequestsService} from "../../services/graphdb-requests.service";
 import {SvgRequestServiceService} from "../../services/svg-request-service.service";
 import {GlobalVariablesService} from "../../services/global-variables.service";
 import {log, logD3} from "../../decorators/log.decorator";
+import {GraphdbRequesDerviceToSpringAppService} from "../../services/graphdb-reques-dervice-to-spring-app.service";
 
 Chart.register(zoomPlugin);
 
@@ -50,17 +51,19 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
   };
 
 
-  constructor(public http: HttpClient, private chartJsService: ChartjsService, private distanceService: EvaluateDistanceService, private graphDBrequestService: GraphdbRequestsService, private svgRequestService: SvgRequestServiceService, public globalVariableService: GlobalVariablesService) {
+  constructor(public http: HttpClient, private chartJsService: ChartjsService, private distanceService: EvaluateDistanceService, private graphDBrequestService: GraphdbRequestsService, private svgRequestService: SvgRequestServiceService, public globalVariableService: GlobalVariablesService, private graphdbRequestServiceToSpring : GraphdbRequesDerviceToSpringAppService) {
     Chart.register(...registerables);
   }
 
-  @log('chart component',['chartJsService.render'])  async ngOnInit() {
+  @log('chart component', ['chartJsService.render'])
+  async ngOnInit() {
     document.getElementById('danger').style.display = 'none';
     await this.http.get<any>('assets/shap.json').subscribe(this.myObserver);
     await this.delay(1000);
     await this.delay(1000);
     this.chartJsService.render(this.time_events, this.dataset)
     await this.cambiaLeX()
+    this.checkIfOntologyIsAlreadyPresent()
   }
 
   @HostListener('window:resize', ['$event'])
@@ -69,19 +72,20 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     await this.generaSVG()
   }
 
-  @log('chart component',['this.chartJsService.addSoglia','this.chartJsService.render'])  addSoglia() {
+  @log('chart component', ['this.chartJsService.addSoglia', 'this.chartJsService.render']) addSoglia() {
     this.soglia = Number(document.getElementById('input-soglia').value)
     this.chartJsService.addSoglia(this.soglia, this.dataset)
     this.chartJsService.render(this.time_events, this.dataset)
   }
 
-  @log('chart component',['chartJsService.filterDataSetByThreshold'])  filterByTreshold() {
+  @log('chart component', ['chartJsService.filterDataSetByThreshold']) filterByTreshold() {
     this.over_soglia_list = this.chartJsService.filterDataSetByThreshold(this.dataset, this.soglia)[1]
     this.over_soglia_list_with_info = this.over_soglia_list
 
   }
 
-  @log('chart component',[])  async analizzaVariabili() {
+  @log('chart component', [])
+  async analizzaVariabili() {
     try {
       this.over_soglia_list = this.over_soglia_list.filter((obj: any) => {
         return obj !== 'soglia' && obj !== 'prediction'
@@ -107,7 +111,8 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
-  @log('chart component',[])  async cambiaLeX() {
+  @log('chart component', [])
+  async cambiaLeX() {
 
     this.restringiAsseLevaImg = false
 
@@ -148,7 +153,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     this.timeEventsXristrette = timesEvent
   }
 
-  @log('chart component',[])  addSogliaXristrette() {
+  @log('chart component', []) addSogliaXristrette() {
     // @ts-ignore
     this.sogliaXRistrette = Number(document.getElementById('input-soglia-x-ristrette').value)
     this.chartJsService.addSoglia(this.sogliaXRistrette, this.dataSetXRistrette)
@@ -156,14 +161,15 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
-  @log('chart component',[])  filterByTresholdXristrette() {
+  @log('chart component', []) filterByTresholdXristrette() {
     this.overSogliaListXristrette = this.chartJsService.filterDataSetByThreshold(this.dataSetXRistrette, this.sogliaXRistrette)[1]
     this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
     this.globalVariableService.nodiRotti = this.overSogliaListXristrette
     console.log(this.globalVariableService.nodiRotti)
   }
 
-  @log('chart component',[])  async analizzaVariabiliXristrette() {
+  @log('chart component', [])
+  async analizzaVariabiliXristrette() {
 
 
     try {
@@ -190,7 +196,8 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
-  @log('chart component',[])  async analizzaVariabiliXristretteNonTraLeVariabili() {
+  @log('chart component', [])
+  async analizzaVariabiliXristretteNonTraLeVariabili() {
 
     let distance;
     try {
@@ -219,9 +226,9 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   }
 
-  @log('chart component',[])  async generaSVG() {
+  @log('chart component', [])
+  async generaSVG() {
     if (this.list_of_scheramte_to_attach.length == 0) {
-
       document.getElementById('danger').style.display = '';
       await this.delay(2000)
       document.getElementById('danger').style.display = 'none';
@@ -239,21 +246,39 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     this.svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, this.list_of_scheramte_to_attach)
   }
 
-  @log('chart component',[])  onChange(event: Event) {
+  @log('chart component', []) onChange(event: Event) {
     if (this.list_of_scheramte_to_attach.includes(event.target.value)) {
       this.removeElementFromStringArray(event.target.value, this.list_of_scheramte_to_attach)
     } else
       this.list_of_scheramte_to_attach.push(event.target.value)
   }
 
-  @log('chart component','qualcosa')  removeElementFromStringArray(element: string, list: []) {
+  @log('chart component', 'qualcosa') removeElementFromStringArray(element: string, list: []) {
     list.forEach((value, index) => {
       if (value == element) list.splice(index, 1);
     });
   }
 
+
+  ontologyAlreadyPresent = false;
+
+  async checkIfOntologyIsAlreadyPresent() {
+
+    let normalQueryOutput =  await this.graphDBrequestService.normalQuery()
+
+    if(normalQueryOutput.length != 0)
+      this.ontologyAlreadyPresent = true;
+
+
+
+  }
+
+
   delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 
+  async eliminaTuttoDalRepository() {
+    await this.graphdbRequestServiceToSpring.deleteEveryThing()
+  }
 }

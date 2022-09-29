@@ -60,12 +60,12 @@ html, html * {
 }
 
 :host ::ng-deep .node-text {
-  font: 11px Roboto;
+  font: 20px Roboto;
   fill: black;
 }
 
 :host ::ng-deep .link-text {
-  font: 9px Roboto;
+  font: 18px Roboto;
   fill: grey;
 }
 
@@ -104,4 +104,13 @@ html, html * {
 
 
 
+
+.mygrid {
+  display: grid;
+  padding-right: 80%;
+}
+.content {
+  height: 60%;
+  font-size: 300px;
+}
 

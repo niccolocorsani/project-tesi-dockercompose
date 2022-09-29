@@ -20,6 +20,7 @@ import java.util.*;
 public class MyController {
 
 
+
   @GetMapping("/get")
   //http://localhost:8080/spring-app/svg/get?values=abc,2,3
   public String getSVG(@RequestParam List<String> values, @RequestParam List<String> schermate) throws IOException {
@@ -60,12 +61,17 @@ public class MyController {
 
   @GetMapping("/update-csv")
   //http://localhost:8080/spring-app/svg/get?values=abc,2,3
-  public String updateCSV(@RequestParam String triple) throws IOException {
+  public String
+  updateCSV(@RequestParam String infoToAddToCSV, @RequestParam String csvName) throws IOException {
 
 
     try {
-      Files.write(Paths.get("./ontologies/con_individuals.owl"), triple.getBytes(), StandardOpenOption.APPEND);
+      Files.write(Paths.get("./all_csv/"+csvName+".csv"), (infoToAddToCSV+"\n").getBytes(), StandardOpenOption.APPEND);
     } catch (IOException e) {
+      System.err.println("probelma nella scrittura");
+      System.err.println(e.getMessage());
+      e.printStackTrace();
+
     }
 
     return null;

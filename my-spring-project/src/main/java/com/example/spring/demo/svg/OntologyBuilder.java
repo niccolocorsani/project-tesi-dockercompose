@@ -1,5 +1,6 @@
 package com.example.spring.demo.svg;
 
+import com.github.owlcs.ontapi.owlapi.objects.ce.OWLObjectUnionOfImpl;
 import org.semanticweb.owlapi.formats.TurtleDocumentFormat;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.model.parameters.Imports;
@@ -22,8 +23,8 @@ public class OntologyBuilder {
   // su il tipo di sostanza che gira, ha detto: metti cosa del tipo "cloro_to" (come objectProperty) anziche "to"
 
 
-  private final String[] prefixes = {"http://www.disit.org/saref4bldg-ext/", "https://saref.etsi.org/saref4bldg/", "https://saref.etsi.org/core/","http://www.disit.org/altair/resource/"};
-  private String xxxx = "http://www.disit.org/saref4bldg-ext/" + "https://saref.etsi.org/saref4bldg/" + "https://saref.etsi.org/core/"+"http://www.disit.org/altair/resource/";
+  private final String[] prefixes = {"http://www.disit.org/saref4bldg-ext/", "https://saref.etsi.org/saref4bldg/", "https://saref.etsi.org/core/", "http://www.disit.org/altair/resource/"};
+  private String xxxx = "http://www.disit.org/saref4bldg-ext/" + "https://saref.etsi.org/saref4bldg/" + "https://saref.etsi.org/core/" + "http://www.disit.org/altair/resource/";
   private final OWLOntology o;
   private final OWLOntologyManager man;
   private final OWLDataFactory factory;
@@ -80,6 +81,36 @@ public class OntologyBuilder {
 
           case "ObjectProperty":
 
+            IRI myIri = IRI.create("http://www.disit.org/saref4bldg-ext/");
+            OWLObjectProperty addedObjectProperty = factory.getOWLObjectProperty(myIri + data[2]);
+            boolean axiomEsist = false;
+
+            List<OWLAxiom> axioms = o.axioms().collect(Collectors.toList());
+
+            for (OWLAxiom axiom : axioms) {
+              if (axiom.toString().contains(data[2]))
+                axiomEsist = true;
+            }
+
+            String[] list_of_profondita_di_to = data[2].split("-");
+
+            OWLObjectProperty newObjectProperty = null;
+
+            if (axiomEsist == false) {
+              OWLDeclarationAxiom declarationAxiom = factory.getOWLDeclarationAxiom(addedObjectProperty);
+              o.add(declarationAxiom);
+
+              if (list_of_profondita_di_to.length == 1)
+                newObjectProperty = factory.getOWLObjectProperty(myIri + data[2].split("_")[0]); // che sarebbe il to
+
+              if (list_of_profondita_di_to.length == 2)
+                newObjectProperty = factory.getOWLObjectProperty(myIri + list_of_profondita_di_to[0]); // che sarebbetipo to_cloro
+
+              OWLSubPropertyAxiom ax = factory.getOWLSubObjectPropertyOfAxiom(addedObjectProperty,newObjectProperty);
+
+              man.applyChange(new AddAxiom(o, ax));
+            }
+
 
             pm = new DefaultPrefixManager(null, null, individuals_iri.get(data[0]));
             individual = factory.getOWLNamedIndividual(":" + data[0], pm);
@@ -107,6 +138,24 @@ public class OntologyBuilder {
             man.addAxiom(o, owlObjectPropertyAssertionAxiom);
             break;
           case "DataProperty":
+
+
+            myIri = IRI.create("http://www.disit.org/saref4bldg-ext/");
+            OWLDataProperty addedDataProperty = factory.getOWLDataProperty(myIri + data[2]);
+            axiomEsist = false;
+
+            axioms = o.axioms().collect(Collectors.toList());
+
+            for (OWLAxiom axiom : axioms) {
+              if (axiom.toString().contains(data[2]))
+                axiomEsist = true;
+            }
+            if (axiomEsist == false) {
+              OWLDeclarationAxiom declarationAxiom = factory.getOWLDeclarationAxiom(addedDataProperty);
+              o.add(declarationAxiom);
+            }
+
+
             pm = new DefaultPrefixManager(null, null, individuals_iri.get(data[0]));
             individual = factory.getOWLNamedIndividual(":" + data[0], pm);
             pm = findDataPropertyPrefix(o, data[2]);

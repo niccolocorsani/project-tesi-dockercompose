@@ -3,7 +3,7 @@ import json
 from flask import Flask, request
 import os
 import time
-from graphDB import get_distance_graphdb_path_bidirectional, get_distance_graphdb_path, normalQuery
+from graphDB import get_distance_graphdb_path_bidirectional, get_distance_graphdb_path, normalQuery,normalQueryWithPreidcateSpecified, normalQueryAllSelectedStatmentSpecified
 
 from flask_cors import cross_origin, CORS
 
@@ -47,12 +47,29 @@ def query():
 
     obj = json.dumps(list(set), default=serialize_sets)
 
-    f = open(ROOT_DIR + 'file.txt', 'w')
-    f.write(obj)
-    f.flush()
-    f.close()
-
     return obj
+
+@app.route('/query-with-specified-predicated/')
+@cross_origin()
+def queryWithPredicate():
+
+  predicate = request.args.get('predicate')
+  print(predicate)
+  set = normalQueryWithPreidcateSpecified(predicate)
+  obj = json.dumps(list(set), default=serialize_sets)
+  print(obj)
+  return obj
+
+@app.route('/query-with-specified-statement-senza-graffa/')
+@cross_origin()
+def queryAllSelectedStatmentSpecified():
+
+  statment = request.args.get('statement_senza_graffe')
+  print('la query è :    '+statment)
+  set = normalQueryAllSelectedStatmentSpecified(statment)
+  obj = json.dumps(list(set), default=serialize_sets)
+  print(obj)
+  return obj
 
 
 def serialize_sets(obj):

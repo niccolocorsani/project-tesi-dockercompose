@@ -1,9 +1,9 @@
 <div mat-dialog-content>
-  <mat-radio-group aria-label="Select an option">
+  <section aria-label="Select an option">
     <div *ngFor="let element of this.listOfObjectProperties">
-      <mat-radio-button (change)="changed($event)" value="{{element}}">{{element}}</mat-radio-button>
+      <mat-checkbox  (change)="changed($event)" value="{{element}}">{{element}}</mat-checkbox >
     </div>
-  </mat-radio-group>
+  </section>
 </div>
 <div mat-dialog-actions>
   <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>

@@ -76,124 +76,117 @@
 </div>
 <br/>
 <br/>
+<div *ngIf="ontologyAlreadyPresent == false">
+  <label class="container">CARICO_FERRICO_FERROSO.csv
+    <input type="checkbox" id="radio1" value="CARICO_FERRICO_FERROSO.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">CARICO_FERRICO_FERROSO_2.csv
+    <input type="checkbox" id="radio2" value="CARICO_FERRICO_FERROSO_2.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">FERRICO_FERROSO_CLORO_FERRO.csv
+    <input type="checkbox" id="radio3" value="FERRICO_FERROSO_CLORO_FERRO.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">HCL_1_LINEA_(FG600).csv
+    <input type="checkbox" id="radio4" value="HCL_1_LINEA_(FG600).csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">CARICO_FERRICO_FERROSO.csv
-  <input type="checkbox" id="radio1" value="CARICO_FERRICO_FERROSO.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
-<label class="container">CARICO_FERRICO_FERROSO_2.csv
-  <input type="checkbox" id="radio2" value="CARICO_FERRICO_FERROSO_2.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
-<label class="container">FERRICO_FERROSO_CLORO_FERRO.csv
-  <input type="checkbox" id="radio3" value="FERRICO_FERROSO_CLORO_FERRO.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
-<label class="container">HCL_1_LINEA_(FG600).csv
-  <input type="checkbox" id="radio4" value="HCL_1_LINEA_(FG600).csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">HCL_2_LINEA_ACIDINO.csv
+    <input type="checkbox" id="radio5" value="HCL_2_LINEA_ACIDINO.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">HCL_2_LINEA_ACIDINO.csv
-  <input type="checkbox" id="radio5" value="HCL_2_LINEA_ACIDINO.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">HCL_3_LINEA.csv
+    <input type="checkbox" id="radio6" value="HCL_3_LINEA.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">HCL_3_LINEA.csv
-  <input type="checkbox" id="radio6" value="HCL_3_LINEA.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">HCL_4_LINEA.csv
+    <input type="checkbox" id="radio7" value="HCL_4_LINEA.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">HCL_4_LINEA.csv
-  <input type="checkbox" id="radio7" value="HCL_4_LINEA.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">IMPIANTO_FeCL3_2.csv
+    <input type="checkbox" id="radio8" value="IMPIANTO_FeCL3_2.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">IMPIANTO_FeCL3_2.csv
-  <input type="checkbox" id="radio8" value="IMPIANTO_FeCL3_2.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">IPOCLORITO.csv
+    <input type="checkbox" id="radio9" value="IPOCLORITO.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">IPOCLORITO.csv
-  <input type="checkbox" id="radio9" value="IPOCLORITO.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">K2CO3.csv
+    <input type="checkbox" id="radio10" value="K2CO3.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">K2CO3.csv
-  <input type="checkbox" id="radio10" value="K2CO3.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">PARCO_SERBATOI_2.csv
+    <input type="checkbox" id="radio11" value="PARCO_SERBATOI_2.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">PARCO_SERBATOI_2.csv
-  <input type="checkbox" id="radio11" value="PARCO_SERBATOI_2.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">PREPARAZIONE_NAOH_20.csv
+    <input type="checkbox" id="radio12" value="PREPARAZIONE_NAOH_20.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">PREPARAZIONE_NAOH_20.csv
-  <input type="checkbox" id="radio12" value="PREPARAZIONE_NAOH_20.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">RECUPERO_CO2.csv
+    <input type="checkbox" id="radio13" value="RECUPERO_CO2.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">RECUPERO_CO2.csv
-  <input type="checkbox" id="radio13" value="RECUPERO_CO2.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">SEZIONE REAZIONE R-4003.csv
+    <input type="checkbox" id="radio14" value="SEZIONE REAZIONE R-4003.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">SEZIONE REAZIONE R-4003.csv
-  <input type="checkbox" id="radio14" value="SEZIONE REAZIONE R-4003.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">SEZIONE_REAZIONE_R-4001.csv
+    <input type="checkbox" id="radio15" value="SEZIONE_REAZIONE_R-4001.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">SEZIONE_REAZIONE_R-4001.csv
-  <input type="checkbox" id="radio15" value="SEZIONE_REAZIONE_R-4001.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">SEZIONE_REAZIONE_R-4002.csv
+    <input type="checkbox" id="radio16" value="SEZIONE_REAZIONE_R-4002.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">SEZIONE_REAZIONE_R-4002.csv
-  <input type="checkbox" id="radio16" value="SEZIONE_REAZIONE_R-4002.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">STOCCAGGIO.csv
+    <input type="checkbox" id="radio17" value="STOCCAGGIO.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
 
-<label class="container">STOCCAGGIO.csv
-  <input type="checkbox" id="radio17" value="STOCCAGGIO.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
+  <label class="container">x
+    <input type="checkbox" id="radio18" value="STOCCAGGIO_IPOCLORITO_DI_SODIO.csv" (change)="onChange($event)">
+    <span class="checkmark"></span>
+  </label>
+  <br/>
+  <br/>
 
-<label class="container">STOCCAGGIO_IPOCLORITO_DI_SODIO.csv
-  <input type="checkbox" id="radio18" value="STOCCAGGIO_IPOCLORITO_DI_SODIO.csv" (change)="onChange($event)">
-  <span class="checkmark"></span>
-</label>
-<br/>
-<br/>
+  <p>
+    Qui sotto è possibile osservare un grafo generato con implementazione custom
+    <button id="generaSVGjava" class="btn btn-secondary" (click)="generaSVG()">Genera SVG</button>
+    <label>&nbsp;&nbsp;</label>
+    <a href="http://localhost:8080/spring-app/svg/svg-download">DOWNLOAD GENERATED SVG </a>
+    <label>&nbsp;&nbsp;</label>
+    <a href="http://localhost:8080/spring-app/svg/files">DOWNLOAD GENERATED ONTOLOGY </a>
+  </p>
+  <div id="sta-caricando-svg" *ngIf="this.globalVariableService.svgReady" class="svg-loader">
+    <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+      <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+      <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+    </svg>
+  </div>
+</div>
 <p id="danger" class="alert alert-danger">
   Selezionare almeno una schermata
 </p>
-<p>
-  Qui sotto è possibile osservare un grafo generato con implementazione custom
-  <button id="generaSVGjava" class="btn btn-secondary" (click)="generaSVG()">Genera SVG</button>
-  <label>&nbsp;&nbsp;</label>
-  <a href="http://localhost:8080/spring-app/svg/svg-download">DOWNLOAD GENERATED SVG </a>
-  <label>&nbsp;&nbsp;</label>
-  <a href="http://localhost:8080/spring-app/svg/files">DOWNLOAD GENERATED ONTOLOGY </a>
-</p>
-<div id="sta-caricando-svg" *ngIf="this.globalVariableService.svgReady" class="svg-loader">
-  <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
-    <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
-    <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
-  </svg>
-</div>
-
 <div id='svg' style="height : 0px">
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 
-
+<button id="eliminaTutto" class="btn btn-secondary" (click)="eliminaTuttoDalRepository()">
+  elimina tutto dal repository
+</button>

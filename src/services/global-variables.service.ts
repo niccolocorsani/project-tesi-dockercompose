@@ -9,6 +9,8 @@ export class GlobalVariablesService {
   svgReady = false
   nodiRotti = [];
   svgd3 = '';
+  spinner= false;
+
 
 
   variabileDelModalRadio = ''
