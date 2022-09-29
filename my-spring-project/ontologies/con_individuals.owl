@@ -18,6 +18,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ul43> .
 
+<http://www.disit.org/saref4bldg-ext/to_ferroso-to_cloro>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to_ferroso> .
+
 <http://www.disit.org/altair/resource/Flusso_706>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -2631,7 +2635,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul20> , <http://www.disit.org/altair/resource/ul22> .
+                <http://www.disit.org/altair/resource/ul20> , <http://www.disit.org/altair/resource/ul22> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_cloro>
+                <http://www.disit.org/altair/resource/ul22> .
 
 <http://www.disit.org/altair/resource/Flusso_627>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;

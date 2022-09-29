@@ -157,14 +157,17 @@ export class SparqlForceComponent implements OnInit {
     await this.spinner_delay()
     this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples('select * where {' + query + '}')
     console.log(this.data)
-    await this.delay(5000)
+    await this.spinner_delay()
     this.cleanGraph();
     this.attachData();
     d3.selectAll("svg").remove();
     this.createChart();
     this.globalVariableService.svgReady = false
     this.globalVariableService.svgd3 = this.svg
+
     let esito = await this.checkIfTextInDome("to_cloro")
+    await this.spinner_delay()
+
     if (esito === false)
       await this.redrawWithDifferentPredicate('select * where {' + query + '}')
   }
@@ -438,16 +441,19 @@ export class SparqlForceComponent implements OnInit {
         let schermata = queryResult[0][0].split(":")[1].split("^")[0].replace("\"", "").replace("\"", "").replace(".txt", "")
         let infoDaAggiungereAlCSV = d.s.label.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.variabileDelModalRadio + ';' + d.o.label.replace('http://www.disit.org/altair/resource/', '')
 
-        let foo = confirm('aggiunto:    ' + d.s.label.replace("http://www.disit.org/altair/resource/","") + '    ' + this.globalVariableService.variabileDelModalRadio + '     ' + d.o.label.replace("http://www.disit.org/altair/resource/",""));
+        let foo = confirm('aggiunto:    ' + d.s.label.replace("http://www.disit.org/altair/resource/", "") + '    ' + this.globalVariableService.variabileDelModalRadio + '     ' + d.o.label.replace("http://www.disit.org/altair/resource/", ""));
 
-        if(foo === false) return
-        else alert("aggiunta sostanza con successo")
-
+        if (foo === false) {
+          this.globalVariableService.variabileDelModalRadio = ''
+          return
+        }
+        alert("aggiunta sostanza con successo")
 
 
         await this.svgRequestService.addInfoToCSV(infoDaAggiungereAlCSV, schermata)
+        this.globalVariableService.variabileDelModalRadio = ''
+
         // let foo = prompt('Type here');
-        //  let bar = confirm('Confirm or deny');
         //console.log(foo, bar);
       });
 
@@ -500,6 +506,7 @@ export class SparqlForceComponent implements OnInit {
       })
       .call(this.force.drag);//nodes
 
+
     // ==================== When dragging ====================
     this.force.on("tick", () => {
       nodes
@@ -530,14 +537,24 @@ export class SparqlForceComponent implements OnInit {
       ;
     });
 
+
     // ==================== Run ====================
     this.force
       .nodes(this.graph.nodes)
       .links(this.graph.links)
       .charge(-500)
-      .linkDistance(200)
+      .linkDistance(160)
       .start();
+
+
+    ///// Per trascinare i nodi e fixarli nella posizione selezionata
+    var dragstart = function (d) {
+      d.fixed = true;
+    };
+    var drag = this.force.drag().on("dragstart", dragstart);
   }
+
+  ///// Per trascinare i nodi e fixarli nella posizione selezionata
 
 
   async updateColors() {
@@ -611,7 +628,7 @@ export class SparqlForceComponent implements OnInit {
 
   async riaggiornaGrafoConColori() { // con sto servizio aggiorno l'ontologia su graphDB eliminando quella precedente e mettendone una nuova
     //let schermate = ['CARICO_FERRICO_FERROSO.csv','CARICO_FERRICO_FERROSO_2.csv','FERRICO_FERROSO_CLORO_FERRO.csv','HCL_1_LINEA_(FG600).csv','HCL_2_LINEA_ACIDINO.csv','HCL_3_LINEA.csv','HCL_4_LINEA.csv','IMPIANTO_FeCL3_2.csv','IPOCLORITO.csv','K2CO3.csv','PARCO_SERBATOI_2.csv','PREPARAZIONE_NAOH_20.csv','RECUPERO_CO2.csv','SEZIONE REAZIONE R-4003.csv','SEZIONE_REAZIONE_R-4001.csv','SEZIONE_REAZIONE_R-4002.csv','STOCCAGGIO.csv','STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
-    let schermate = ['IMPIANTO_FeCL3_2.csv','CARICO_FERRICO_FERROSO.csv','CARICO_FERRICO_FERROSO_2.csv','HCL_1_LINEA_(FG600).csv','HCL_2_LINEA_ACIDINO.csv','HCL_3_LINEA.csv','HCL_4_LINEA.csv','PARCO_SERBATOI_2.csv','STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
+    let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
     let svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, schermate)
     await this.delay(1000)
     this.cleanGraph()
