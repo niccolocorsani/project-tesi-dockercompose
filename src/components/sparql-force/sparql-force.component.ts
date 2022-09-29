@@ -211,14 +211,14 @@ export class SparqlForceComponent implements OnInit {
     if (!this.divWidth) this.divWidth = element.clientWidth;
     if (!this.divHeight) this.divHeight = element.clientHeight;
     this.svg = d3.select(element).append('svg')
-      .attr('width', 5000)
-      .attr('height', 5000);
+      .attr('width', 20000)
+      .attr('height', 20000);
     this.attachData();
   }
 
   @logD3()
   attachData() {
-    this.force = d3.layout.force().size([5000, 5000]);
+    this.force = d3.layout.force().size([20000, 20000]);
 
     var limit = parseInt(this.limit);
     if (this.data.length > limit) {
@@ -535,7 +535,7 @@ export class SparqlForceComponent implements OnInit {
       .nodes(this.graph.nodes)
       .links(this.graph.links)
       .charge(-500)
-      .linkDistance(50)
+      .linkDistance(200)
       .start();
   }
 
@@ -616,7 +616,6 @@ export class SparqlForceComponent implements OnInit {
     await this.delay(1000)
     this.cleanGraph()
     await this.redraw()
-
   }
 
 
