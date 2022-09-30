@@ -380,3 +380,6 @@ p902a;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 p909;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 900-p910a;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 atbstart1;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
+cv-905-1;ObjectProperty;to_cloro;c-909
+gasdagpsstart;ObjectProperty;to_cloro;cv-905-1
+xv070b;ObjectProperty;to_n2-to_cl2;ul28

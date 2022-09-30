@@ -92,22 +92,21 @@ public class OntologyBuilder {
                 axiomEsist = true;
             }
 
-            String[] list_of_profondita_di_to = data[2].split("-");
 
-            OWLObjectProperty newObjectProperty = null;
+            OWLObjectProperty parentObjectProperty = null;
 
             if (axiomEsist == false) {
               OWLDeclarationAxiom declarationAxiom = factory.getOWLDeclarationAxiom(addedObjectProperty);
               o.add(declarationAxiom);
 
-              if (list_of_profondita_di_to.length == 1)
+              parentObjectProperty = factory.getOWLObjectProperty(myIri + data[2].split("_")[0]); // esce --> to
+
+            /*   String[] list_of_profondita_di_to = data[2].split("-"); //  Versione alternativa con sotto sotto proprieta
+             if (list_of_profondita_di_to.length == 1)
                 newObjectProperty = factory.getOWLObjectProperty(myIri + data[2].split("_")[0]); // che sarebbe il to
-
               if (list_of_profondita_di_to.length == 2)
-                newObjectProperty = factory.getOWLObjectProperty(myIri + list_of_profondita_di_to[0]); // che sarebbetipo to_cloro
-
-              OWLSubPropertyAxiom ax = factory.getOWLSubObjectPropertyOfAxiom(addedObjectProperty,newObjectProperty);
-
+                newObjectProperty = factory.getOWLObjectProperty(myIri + list_of_profondita_di_to[0]); // che sarebbetipo to_cloro*/
+              OWLSubPropertyAxiom ax = factory.getOWLSubObjectPropertyOfAxiom(addedObjectProperty, parentObjectProperty);
               man.applyChange(new AddAxiom(o, ax));
             }
 

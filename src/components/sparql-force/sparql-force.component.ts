@@ -492,11 +492,11 @@ export class SparqlForceComponent implements OnInit {
       .attr("r", d => {
         //MB if(d.instance || d.instSpace || d.instSpaceType){
         if (d.label.indexOf("_:") != -1) {
-          return 7;
-        } else if (d.instance || d.label.indexOf("inst:") != -1) {
           return 10;
+        } else if (d.instance || d.label.indexOf("inst:") != -1) {
+          return 14;
         } else if (d.owlClass || d.label.indexOf("inst:") != -1) {
-          return 9;
+          return 12;
         } else {
           return 8;
         }
