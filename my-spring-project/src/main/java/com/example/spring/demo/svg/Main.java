@@ -83,8 +83,18 @@ public class Main {
     l.add("s-904a");
     List schermate = new ArrayList();
     schermate.add("CARICO_FERRICO_FERROSO.csv");
+    schermate.add("CARICO_FERRICO_FERROSO_2.csv");
     schermate.add("FERRICO_FERROSO_CLORO_FERRO.csv");
+    schermate.add("HCL_1_LINEA_(FG600).csv");
+    schermate.add("HCL_2_LINEA_ACIDINO.csv");
+    schermate.add("HCL_3_LINEA.csv");
+    schermate.add("HCL_4_LINEA.csv");
     schermate.add("K2CO3.csv");
+    schermate.add("K2CO3.csv");
+    schermate.add("K2CO3.csv");
+    schermate.add("K2CO3.csv");
+    schermate.add("K2CO3.csv");
+
 
     main.execute(l, schermate);
 

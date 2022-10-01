@@ -628,7 +628,7 @@ export class SparqlForceComponent implements OnInit {
 
   async riaggiornaGrafoConColori() { // con sto servizio aggiorno l'ontologia su graphDB eliminando quella precedente e mettendone una nuova
     //let schermate = ['CARICO_FERRICO_FERROSO.csv','CARICO_FERRICO_FERROSO_2.csv','FERRICO_FERROSO_CLORO_FERRO.csv','HCL_1_LINEA_(FG600).csv','HCL_2_LINEA_ACIDINO.csv','HCL_3_LINEA.csv','HCL_4_LINEA.csv','IMPIANTO_FeCL3_2.csv','IPOCLORITO.csv','K2CO3.csv','PARCO_SERBATOI_2.csv','PREPARAZIONE_NAOH_20.csv','RECUPERO_CO2.csv','SEZIONE REAZIONE R-4003.csv','SEZIONE_REAZIONE_R-4001.csv','SEZIONE_REAZIONE_R-4002.csv','STOCCAGGIO.csv','STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
-    let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
+    let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', /*'HCL_4_LINEA.csv', */'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
     let svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, schermate)
     await this.delay(1000)
     this.cleanGraph()

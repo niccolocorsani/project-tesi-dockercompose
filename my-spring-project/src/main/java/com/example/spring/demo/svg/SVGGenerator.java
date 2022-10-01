@@ -126,10 +126,6 @@ public class SVGGenerator {
             else colorFill = "aliceblue";*/
       colorFill = "aliceblue";
 
-      for (String s : this.variablesTocolor) {
-        if (queryDevices.get(i).contains(s))
-          colorFill = "#FFF633";
-      }
 
       if (i < nUp) {
         devices.put(queryDevices.get(i), new Device(100 + i * 200, 100, 1, queryDevices.get(i), sensors, document, root, colorFill));
@@ -202,6 +198,9 @@ public class SVGGenerator {
 
       startAndEndDevices.add(start);
       startAndEndDevices.add(end);
+
+      if(start.isEmpty())
+        System.out.println("dl");
 
       if (areAllSameLevel(start, end)) {
         if (start.get(0).getLevel() == 1) {
@@ -306,7 +305,6 @@ public class SVGGenerator {
 
 
   }
-
 
   private ArrayList<String> runQuery(String query) {
     ArrayList<String> arrayList = new ArrayList<>();
@@ -517,4 +515,6 @@ public class SVGGenerator {
     }
     return TRUE;
   }
+
+
 }
