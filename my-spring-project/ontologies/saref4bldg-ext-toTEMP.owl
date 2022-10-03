@@ -13,30 +13,30 @@
 #    Object Properties
 #################################################################
 
+
+
+###  http://www.disit.org/saref4bldg-ext/to
+:to rdf:type owl:ObjectProperty ;
+              rdfs:label "to" .
+
+###  http://www.disit.org/saref4bldg-ext/isContainedIn
+:isContainedIn rdf:type owl:ObjectProperty ;
+              rdfs:label "isContainedIn" .
+
+###  http://www.disit.org/saref4bldg-ext/canMeasureIn
+:canMeasureIn rdf:type owl:ObjectProperty ;
+              rdfs:label "canMeasureIn" .
+
+
 ###  http://www.disit.org/saref4bldg-ext/canMeasureIn
 :canMeasureIn rdf:type owl:ObjectProperty ;
               rdfs:comment "A relation between a sensor and the unit of measurement in which the sensor measurement is expressed." ;
               rdfs:label "canMeasureIn" .
 
-
 ###  http://www.disit.org/saref4bldg-ext/endIn
 :endIn rdf:type owl:ObjectProperty ;
        rdfs:comment "The Physical Object into which the Flow end." ;
        rdfs:label "endIn" .
-
-###  http://www.disit.org/saref4bldg-ext/to
-:to rdf:type owl:ObjectProperty ;
-       rdfs:label "to" .
-
-###  http://www.disit.org/saref4bldg-ext/to_cloruro_ferrico
-:to_cloruro_ferrico rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf :to .
-###  http://www.disit.org/saref4bldg-ext/to_cloro
-:to_cloro rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf :to .
-###  http://www.disit.org/saref4bldg-ext/to_ferroso
-:to_ferroso rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf :to .
 
 
 ###  http://www.disit.org/saref4bldg-ext/startIn
@@ -59,6 +59,43 @@
 #    Classes
 #################################################################
 
+
+
+###  http://www.disit.org/saref4bldg-ext/Sensor
+:Sensor rdf:type owl:Class ;
+      rdfs:label "Sensor" .
+
+
+###  http://www.disit.org/saref4bldg-ext/Pump
+:Pump rdf:type owl:Class ;
+      rdfs:subClassOf <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+      rdfs:label "Pump" .
+
+###  http://www.disit.org/saref4bldg-ext/Container
+:Container rdf:type owl:Class ;
+      rdfs:subClassOf <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+      rdfs:label "Container" .
+
+###  http://www.disit.org/saref4bldg-ext/UnitOfMeasure
+:UnitOfMeasure rdf:type owl:Class ;
+      rdfs:label "UnitOfMeasure" .
+
+###  http://www.disit.org/saref4bldg-ext/Tank
+:Tank rdf:type owl:Class ;
+      rdfs:subClassOf <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+      rdfs:label "Tank" .
+
+
+###  http://www.disit.org/saref4bldg-ext/Reactor
+:Tank rdf:type owl:Class ;
+      rdfs:subClassOf <https://saref.etsi.org/saref4bldg/Reactor> ;
+      rdfs:label "Reactor" .
+
+###  http://www.disit.org/saref4bldg-ext/Valve
+:Valve rdf:type owl:Class ;
+      rdfs:subClassOf <https://saref.etsi.org/saref4bldg/Valve> ;
+      rdfs:label "Valve" .
+
 ###  http://www.disit.org/saref4bldg-ext/Area
 :Area rdf:type owl:Class ;
       rdfs:subClassOf <https://saref.etsi.org/saref4bldg/BuildingSpace> ;
@@ -71,11 +108,6 @@
                   rdfs:subClassOf :Flow ;
                   rdfs:comment "Any sort of Chemical Compounds that flow between Physical Object," ;
                   rdfs:label "ChemicalCompound" .
-
-
-###  http://www.disit.org/saref4bldg-ext/Container
-:Container rdf:type owl:Class ;
-           rdfs:subClassOf <https://saref.etsi.org/saref4bldg/Tank> .
 
 
 ###  http://www.disit.org/saref4bldg-ext/Energy
@@ -117,11 +149,6 @@
                                 ] ;
                 rdfs:comment "A Production Line of an industry." ;
                 rdfs:label "ProductionLine" .
-
-
-###  http://www.disit.org/saref4bldg-ext/Reactor
-:Reactor rdf:type owl:Class ;
-         rdfs:subClassOf <https://saref.etsi.org/saref4bldg/FlowStorageDevice> .
 
 
 ###  http://www.disit.org/saref4bldg-ext/Site
