@@ -35,6 +35,20 @@
 '    ?p rdfs:subPropertyOf* :to.%0A'+
 '    FILTER (?p != :to) .')">visualizza con tutte le sostanze
   </button>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <app-queries-view></app-queries-view>
+
+  <br/>
+  <br/>
+
+  <button class="content" style="height: 100px; font-size: 30px;" id="bottone11" class="z-indexed"
+          class="btn btn-primary" (click)="redrawWithWrittenQuery('')">Genera grafo da query
+  </button>
 </div>
 
 <div id="svg-body" class="panel-body" #chart></div>

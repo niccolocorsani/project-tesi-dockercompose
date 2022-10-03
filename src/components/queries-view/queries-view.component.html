@@ -1,0 +1,21 @@
+Affinchè possa essere generato il grafo correttamente le variabili della query devono essere denominate ?s ?p ?o
+<br/>
+<br/>
+
+
+<div mat-dialog-content>
+  <mat-radio-group  aria-label="Select an option">
+    <div *ngFor="let element of this.someQuries">
+      <mat-radio-button  (change)="changed($event)" value="{{element}}">{{element}}</mat-radio-button >
+    </div>
+  </mat-radio-group >
+</div>
+
+
+<!--
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>genera grafo su query</mat-label>
+    <textarea matInput placeholder="Ex. It makes me feel..."  (keyup)="addNewItem(newItem.value)" #newItem></textarea>
+  </mat-form-field>
+</form> -->

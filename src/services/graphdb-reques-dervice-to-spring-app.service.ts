@@ -17,7 +17,6 @@ export class GraphdbRequesDerviceToSpringAppService {
 
   @log('',[])
   async normalQuery(queryOnlySelectClause : string) {
-
     queryOnlySelectClause = queryOnlySelectClause.replace('}','%7D').replace('{','%7B')
     //console.log(queryOnlySelectClause)
     await this.http.get<any>('http://127.0.0.1:8080/spring-app/queries/get?query='+queryOnlySelectClause).subscribe((value: any) => {

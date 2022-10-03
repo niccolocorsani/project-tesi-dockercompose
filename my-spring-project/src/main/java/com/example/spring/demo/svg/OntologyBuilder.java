@@ -171,7 +171,6 @@ public class OntologyBuilder {
 
               } catch (NumberFormatException e) {
                 owlDataPropertyAssertionAxiom = factory.getOWLDataPropertyAssertionAxiom(owlDataProperty, individual, data[3]);
-                System.err.println(row);
 
               }
             }

@@ -150,6 +150,28 @@ export class SparqlForceComponent implements OnInit {
 
   }
 
+  async redrawWithWrittenQuery(query: string) {
+    this.createChart();
+    query = this.globalVariableService.variabileListaRadiosButtonQuery
+    this.globalVariableService.svgReady = true
+    await this.spinner_delay()
+    this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples(query)
+    console.log(this.data)
+    await this.spinner_delay()
+    this.cleanGraph();
+    this.attachData();
+    d3.selectAll("svg").remove();
+    this.createChart();
+    this.globalVariableService.svgReady = false
+    this.globalVariableService.svgd3 = this.svg
+
+    let esito = await this.checkIfTextInDome("to_cloro")
+    await this.spinner_delay()
+
+   // if (esito === false)
+    //  await this.redrawWithDifferentPredicate('select * where {' + query + '}')
+  }
+
 
   async redrawWithComplexStatment(query: string) {
     this.createChart();

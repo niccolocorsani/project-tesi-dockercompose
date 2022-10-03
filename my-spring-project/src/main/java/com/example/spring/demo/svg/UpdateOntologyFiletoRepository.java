@@ -98,17 +98,14 @@ public class UpdateOntologyFiletoRepository {
 
           if (variable.equals("s")) {
             t.setSubject(String.valueOf(bindingSet.getValue(variable)));
-            System.out.println("Aggiunto " + String.valueOf(bindingSet.getValue(variable)));
 
           }
           if (variable.equals("p")) {
             t.setPredicate(String.valueOf(bindingSet.getValue(variable)));
-            System.out.println("Aggiunto " + String.valueOf(bindingSet.getValue(variable)));
 
           }
           if (variable.equals("o")) {
             t.setObject(String.valueOf(bindingSet.getValue(variable)));
-            System.out.println("Aggiunto " + String.valueOf(bindingSet.getValue(variable)));
           }
 
         }

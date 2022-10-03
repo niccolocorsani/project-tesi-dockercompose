@@ -10,6 +10,9 @@ export class GlobalVariablesService {
   nodiRotti = [];
   svgd3 = '';
   spinner= false;
+  query = ''
+  variabileListaRadiosButtonQuery = '';
+
 
 
 
