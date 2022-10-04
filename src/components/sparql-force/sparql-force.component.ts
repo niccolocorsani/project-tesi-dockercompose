@@ -438,6 +438,12 @@ export class SparqlForceComponent implements OnInit {
         if (d.p.label.includes('to_cloro')) return '#FFEA00'
         if (d.p.label.includes('to_ferroso')) return 'green'
         if (d.p.label.includes('to_cloruro_ferrico')) return 'red'
+        if (d.p.label.includes('to_cl2')) return '#FFEA00'
+        if (d.p.label.includes('to_hcl')) return '#FF8000'
+        if (d.p.label.includes('IpocloritoDiSodio')) return '#e7d496'
+        return '#0418ee'
+
+
         //d.p.color
       })
       .attr("class", "link")
