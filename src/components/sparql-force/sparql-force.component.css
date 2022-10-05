@@ -51,7 +51,7 @@ html, html * {
   fill: none;
   stroke: #999;
   stroke-opacity: .6;
-  stroke-width: 1px;
+  stroke-width: 3px;
 }
 
 :host ::ng-deep marker {
@@ -60,7 +60,7 @@ html, html * {
 }
 
 :host ::ng-deep .node-text {
-  font: 20px Roboto;
+  font: 40px Roboto;
   fill: black;
 }
 

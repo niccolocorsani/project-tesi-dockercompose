@@ -418,6 +418,18 @@ export class SparqlForceComponent implements OnInit {
       .data(["end"])
       .enter().append("svg:marker")
       .attr("id", String)
+      .attr("viewBox", "0 -5 20 20")
+      .attr("refX", 30)
+      .attr("refY", -0.5)
+      .attr("markerWidth", 20)
+      .attr("markerHeight", 20)
+      .attr("orient", "auto")
+      .append("svg:polyline")
+      .attr("points", "0,-5 10,0 0,5");
+
+
+    // vecchio
+      /*.attr("id", String)
       .attr("viewBox", "0 -5 10 10")
       .attr("refX", 30)
       .attr("refY", -0.5)
@@ -425,7 +437,7 @@ export class SparqlForceComponent implements OnInit {
       .attr("markerHeight", 6)
       .attr("orient", "auto")
       .append("svg:polyline")
-      .attr("points", "0,-5 10,0 0,5");
+      .attr("points", "0,-5 10,0 0,5");*/
 
 
     var links = this.svg.selectAll(".link")
@@ -441,7 +453,6 @@ export class SparqlForceComponent implements OnInit {
         if (d.p.label.includes('to_cl2')) return '#FFEA00'
         if (d.p.label.includes('to_hcl')) return '#FF8000'
         if (d.p.label.includes('IpocloritoDiSodio')) return '#e7d496'
-        return '#0418ee'
 
 
         //d.p.color
@@ -507,7 +518,6 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", d => {
         if (d.owlClass) {
           return "class"
-
         } else if (d.label.indexOf("_:") != -1) {
           return "blank"
         } else if (d.instance || d.label.indexOf("inst:") != -1) {
@@ -517,18 +527,7 @@ export class SparqlForceComponent implements OnInit {
         }
       })
       .attr("id", d => d.label)
-      .attr("r", d => {
-        //MB if(d.instance || d.instSpace || d.instSpaceType){
-        if (d.label.indexOf("_:") != -1) {
-          return 10;
-        } else if (d.instance || d.label.indexOf("inst:") != -1) {
-          return 14;
-        } else if (d.owlClass || d.label.indexOf("inst:") != -1) {
-          return 12;
-        } else {
-          return 8;
-        }
-      })
+      .attr("r", 24)
       .on("click", (d) => {
         this.clicked(d);
       })
@@ -550,8 +549,8 @@ export class SparqlForceComponent implements OnInit {
       ;
 
       nodeTexts
-        .attr("x", d => d.x + 12)
-        .attr("y", d => d.y + 3)
+        .attr("x", d => d.x + 20)
+        .attr("y", d => d.y + 8)
       ;
 
 
@@ -570,9 +569,14 @@ export class SparqlForceComponent implements OnInit {
     this.force
       .nodes(this.graph.nodes)
       .links(this.graph.links)
-      .charge(-500)
-      .linkDistance(160)
+      .charge(-5000)
+      .linkDistance(20)
       .start();
+
+    //// TODO da scrivere in tesi, vincolando al minimo la distanza dei link tra nodi e mettendo al massimo la carica di repulsione elettromagnetica ottengo il comportamento di separazione delle schermate  perfetto
+
+
+
 
 
     ///// Per trascinare i nodi e fixarli nella posizione selezionata
