@@ -1,137 +1,137 @@
 xv4003d;Class;Valve;
 gasdisingaggio-exit;Class;PhysicalObject;
-s-4301start_4003;Class;PhysicalObject;
-abbacidoexit_4003;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txts-4301start;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txtabbacidoexit;Class;PhysicalObject;
 xv4301a;Class;Valve;
-s-4302start_4003;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txts-4302start;Class;PhysicalObject;
 ul145;Class;PhysicalObject;
-p-4606start_4003;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txtp-4606start;Class;PhysicalObject;
 ul143;Class;PhysicalObject;
 ul142;Class;PhysicalObject;
-h20caldaexit_4003;Class;PhysicalObject;
-h2otorrestart_4003;Class;PhysicalObject;
+h20caldaexit;Class;PhysicalObject;
 r-4003;Class;PhysicalObject;
-h2ocaldastart_4003;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txth2otorrestart;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txth2ocaldastart;Class;PhysicalObject;
 xv4506;Class;Valve;
 xv4313;Class;Valve;
 e-4506;Class;PhysicalObject;
-h2otorreexit_4003;Class;PhysicalObject;
-clorostart_4003;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txth2otorreexit;Class;PhysicalObject;
 xv4207c;Class;Valve;
+SEZIONE REAZIONE R-4003.txtclorostart;Class;PhysicalObject;
 ul144;Class;PhysicalObject;
 xv4321b;Class;Valve;
-s4305-exit_4003;Class;PhysicalObject;
 p-4606b;Class;Pump;
 SEZIONE REAZIONE R-4003.txtxv4235;Class;Valve;
+s4305-exit;Class;PhysicalObject;
 xv4245c;Class;Valve;
-azotostart_4003;Class;PhysicalObject;
-ul141;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txtazotostart;Class;PhysicalObject;
 SEZIONE REAZIONE R-4003.txtxv4236;Class;Valve;
-degasamentoiposodioexit_4003;Class;PhysicalObject;
-s4304-exit_4003;Class;PhysicalObject;
+ul141;Class;PhysicalObject;
+SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit;Class;PhysicalObject;
 ul140;Class;PhysicalObject;
-Flusso_736;Class;Flow;
-Flusso_736;ObjectProperty;startIn;r-4003
-Flusso_736;ObjectProperty;endIn;xv4003d
-Flusso_737;Class;Flow;
-Flusso_737;ObjectProperty;startIn;xv4003d
-Flusso_737;ObjectProperty;endIn;gasdisingaggio-exit
+s4304-exit;Class;PhysicalObject;
 Flusso_738;Class;Flow;
-Flusso_738;ObjectProperty;startIn;xv4301a
-Flusso_738;ObjectProperty;endIn;abbacidoexit_4003
+Flusso_738;ObjectProperty;startIn;r-4003
+Flusso_738;ObjectProperty;endIn;xv4003d
 Flusso_739;Class;Flow;
-Flusso_739;ObjectProperty;startIn;r-4003
-Flusso_739;ObjectProperty;endIn;xv4301a
+Flusso_739;ObjectProperty;startIn;xv4003d
+Flusso_739;ObjectProperty;endIn;gasdisingaggio-exit
 Flusso_740;Class;Flow;
-Flusso_740;ObjectProperty;startIn;p-4606b
-Flusso_740;ObjectProperty;endIn;ul145
+Flusso_740;ObjectProperty;startIn;xv4301a
+Flusso_740;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txtabbacidoexit
 Flusso_741;Class;Flow;
-Flusso_741;ObjectProperty;startIn;e-4506
-Flusso_741;ObjectProperty;endIn;ul143
+Flusso_741;ObjectProperty;startIn;r-4003
+Flusso_741;ObjectProperty;endIn;xv4301a
 Flusso_742;Class;Flow;
 Flusso_742;ObjectProperty;startIn;p-4606b
-Flusso_742;ObjectProperty;endIn;ul142
+Flusso_742;ObjectProperty;endIn;ul145
 Flusso_743;Class;Flow;
-Flusso_743;ObjectProperty;startIn;r-4003
-Flusso_743;ObjectProperty;endIn;h20caldaexit_4003
+Flusso_743;ObjectProperty;startIn;e-4506
+Flusso_743;ObjectProperty;endIn;ul143
 Flusso_744;Class;Flow;
-Flusso_744;ObjectProperty;startIn;s-4301start_4003
-Flusso_744;ObjectProperty;endIn;r-4003
+Flusso_744;ObjectProperty;startIn;p-4606b
+Flusso_744;ObjectProperty;endIn;ul142
 Flusso_745;Class;Flow;
-Flusso_745;ObjectProperty;startIn;s-4302start_4003
-Flusso_745;ObjectProperty;endIn;r-4003
+Flusso_745;ObjectProperty;startIn;r-4003
+Flusso_745;ObjectProperty;endIn;h20caldaexit
 Flusso_746;Class;Flow;
-Flusso_746;ObjectProperty;startIn;p-4606start_4003
+Flusso_746;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txts-4301start
 Flusso_746;ObjectProperty;endIn;r-4003
 Flusso_747;Class;Flow;
-Flusso_747;ObjectProperty;startIn;ul142
+Flusso_747;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txts-4302start
 Flusso_747;ObjectProperty;endIn;r-4003
 Flusso_748;Class;Flow;
-Flusso_748;ObjectProperty;startIn;ul143
+Flusso_748;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtp-4606start
 Flusso_748;ObjectProperty;endIn;r-4003
 Flusso_749;Class;Flow;
-Flusso_749;ObjectProperty;startIn;ul145
+Flusso_749;ObjectProperty;startIn;ul142
 Flusso_749;ObjectProperty;endIn;r-4003
 Flusso_750;Class;Flow;
-Flusso_750;ObjectProperty;startIn;xv4313
+Flusso_750;ObjectProperty;startIn;ul143
 Flusso_750;ObjectProperty;endIn;r-4003
 Flusso_751;Class;Flow;
-Flusso_751;ObjectProperty;startIn;h2otorrestart_4003
-Flusso_751;ObjectProperty;endIn;xv4506
+Flusso_751;ObjectProperty;startIn;ul145
+Flusso_751;ObjectProperty;endIn;r-4003
 Flusso_752;Class;Flow;
-Flusso_752;ObjectProperty;startIn;h2ocaldastart_4003
-Flusso_752;ObjectProperty;endIn;xv4313
+Flusso_752;ObjectProperty;startIn;xv4313
+Flusso_752;ObjectProperty;endIn;r-4003
 Flusso_753;Class;Flow;
-Flusso_753;ObjectProperty;startIn;p-4606b
-Flusso_753;ObjectProperty;endIn;e-4506
+Flusso_753;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txth2otorrestart
+Flusso_753;ObjectProperty;endIn;xv4506
 Flusso_754;Class;Flow;
-Flusso_754;ObjectProperty;startIn;xv4506
-Flusso_754;ObjectProperty;endIn;e-4506
+Flusso_754;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txth2ocaldastart
+Flusso_754;ObjectProperty;endIn;xv4313
 Flusso_755;Class;Flow;
-Flusso_755;ObjectProperty;startIn;e-4506
-Flusso_755;ObjectProperty;endIn;h2otorreexit_4003
+Flusso_755;ObjectProperty;startIn;p-4606b
+Flusso_755;ObjectProperty;endIn;e-4506
 Flusso_756;Class;Flow;
-Flusso_756;ObjectProperty;startIn;ul144
-Flusso_756;ObjectProperty;endIn;xv4207c
+Flusso_756;ObjectProperty;startIn;xv4506
+Flusso_756;ObjectProperty;endIn;e-4506
 Flusso_757;Class;Flow;
-Flusso_757;ObjectProperty;startIn;clorostart_4003
-Flusso_757;ObjectProperty;endIn;ul144
+Flusso_757;ObjectProperty;startIn;e-4506
+Flusso_757;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txth2otorreexit
 Flusso_758;Class;Flow;
-Flusso_758;ObjectProperty;startIn;r-4003
-Flusso_758;ObjectProperty;endIn;xv4321b
+Flusso_758;ObjectProperty;startIn;ul144
+Flusso_758;ObjectProperty;endIn;xv4207c
 Flusso_759;Class;Flow;
-Flusso_759;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtxv4235
-Flusso_759;ObjectProperty;endIn;s4305-exit_4003
+Flusso_759;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtclorostart
+Flusso_759;ObjectProperty;endIn;ul144
 Flusso_760;Class;Flow;
-Flusso_760;ObjectProperty;startIn;xv4321b
-Flusso_760;ObjectProperty;endIn;p-4606b
+Flusso_760;ObjectProperty;startIn;r-4003
+Flusso_760;ObjectProperty;endIn;xv4321b
 Flusso_761;Class;Flow;
-Flusso_761;ObjectProperty;startIn;p-4606b
-Flusso_761;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txtxv4235
+Flusso_761;ObjectProperty;startIn;xv4321b
+Flusso_761;ObjectProperty;endIn;p-4606b
 Flusso_762;Class;Flow;
-Flusso_762;ObjectProperty;startIn;r-4003
-Flusso_762;ObjectProperty;endIn;xv4245c
+Flusso_762;ObjectProperty;startIn;p-4606b
+Flusso_762;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txtxv4235
 Flusso_763;Class;Flow;
-Flusso_763;ObjectProperty;startIn;xv4207c
-Flusso_763;ObjectProperty;endIn;xv4245c
+Flusso_763;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtxv4235
+Flusso_763;ObjectProperty;endIn;s4305-exit
 Flusso_764;Class;Flow;
-Flusso_764;ObjectProperty;startIn;ul141
+Flusso_764;ObjectProperty;startIn;r-4003
 Flusso_764;ObjectProperty;endIn;xv4245c
 Flusso_765;Class;Flow;
-Flusso_765;ObjectProperty;startIn;ul140
-Flusso_765;ObjectProperty;endIn;ul141
+Flusso_765;ObjectProperty;startIn;xv4207c
+Flusso_765;ObjectProperty;endIn;xv4245c
 Flusso_766;Class;Flow;
-Flusso_766;ObjectProperty;startIn;p-4606b
-Flusso_766;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txtxv4236
+Flusso_766;ObjectProperty;startIn;ul141
+Flusso_766;ObjectProperty;endIn;xv4245c
 Flusso_767;Class;Flow;
-Flusso_767;ObjectProperty;startIn;xv4245c
-Flusso_767;ObjectProperty;endIn;degasamentoiposodioexit_4003
+Flusso_767;ObjectProperty;startIn;p-4606b
+Flusso_767;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txtxv4236
 Flusso_768;Class;Flow;
-Flusso_768;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtxv4236
-Flusso_768;ObjectProperty;endIn;s4304-exit_4003
+Flusso_768;ObjectProperty;startIn;ul140
+Flusso_768;ObjectProperty;endIn;ul141
 Flusso_769;Class;Flow;
-Flusso_769;ObjectProperty;startIn;azotostart_4003
-Flusso_769;ObjectProperty;endIn;ul140
+Flusso_769;ObjectProperty;startIn;xv4245c
+Flusso_769;ObjectProperty;endIn;SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit
+Flusso_770;Class;Flow;
+Flusso_770;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtazotostart
+Flusso_770;ObjectProperty;endIn;ul140
+Flusso_771;Class;Flow;
+Flusso_771;ObjectProperty;startIn;SEZIONE REAZIONE R-4003.txtxv4236
+Flusso_771;ObjectProperty;endIn;s4304-exit
 fic4003;Class;Sensor;
 m3-h;Class;UnitOfMeasure;
 fic4003;ObjectProperty;canMeasureIn;m3-h
@@ -168,7 +168,7 @@ fic4208c;ObjectProperty;isContainedIn;ul144
 pi4208c;Class;Sensor;
 mmh20;Class;UnitOfMeasure;
 pi4208c;ObjectProperty;canMeasureIn;mmh20
-pi4208c;ObjectProperty;isContainedIn;clorostart_4003
+pi4208c;ObjectProperty;isContainedIn;SEZIONE REAZIONE R-4003.txtclorostart
 ti4328;Class;Sensor;
 c;Class;UnitOfMeasure;
 ti4328;ObjectProperty;canMeasureIn;c
@@ -176,60 +176,60 @@ ti4328;ObjectProperty;isContainedIn;e-4506
 fic4002c;Class;Sensor;
 nm3-h;Class;UnitOfMeasure;
 fic4002c;ObjectProperty;canMeasureIn;nm3-h
-fic4002c;ObjectProperty;isContainedIn;azotostart_4003
+fic4002c;ObjectProperty;isContainedIn;SEZIONE REAZIONE R-4003.txtazotostart
 r-4003;ObjectProperty;to;xv4003d
 xv4003d;ObjectProperty;to;gasdisingaggio-exit
-xv4301a;ObjectProperty;to;abbacidoexit_4003
+xv4301a;ObjectProperty;to;SEZIONE REAZIONE R-4003.txtabbacidoexit
 r-4003;ObjectProperty;to;xv4301a
 p-4606b;ObjectProperty;to;ul145
 e-4506;ObjectProperty;to;ul143
 p-4606b;ObjectProperty;to;ul142
-r-4003;ObjectProperty;to;h20caldaexit_4003
-s-4301start_4003;ObjectProperty;to;r-4003
-s-4302start_4003;ObjectProperty;to;r-4003
-p-4606start_4003;ObjectProperty;to;r-4003
+r-4003;ObjectProperty;to;h20caldaexit
+SEZIONE REAZIONE R-4003.txts-4301start;ObjectProperty;to;r-4003
+SEZIONE REAZIONE R-4003.txts-4302start;ObjectProperty;to;r-4003
+SEZIONE REAZIONE R-4003.txtp-4606start;ObjectProperty;to;r-4003
 ul142;ObjectProperty;to;r-4003
 ul143;ObjectProperty;to;r-4003
 ul145;ObjectProperty;to;r-4003
 xv4313;ObjectProperty;to;r-4003
-h2otorrestart_4003;ObjectProperty;to;xv4506
-h2ocaldastart_4003;ObjectProperty;to;xv4313
+SEZIONE REAZIONE R-4003.txth2otorrestart;ObjectProperty;to;xv4506
+SEZIONE REAZIONE R-4003.txth2ocaldastart;ObjectProperty;to;xv4313
 p-4606b;ObjectProperty;to;e-4506
 xv4506;ObjectProperty;to;e-4506
-e-4506;ObjectProperty;to;h2otorreexit_4003
+e-4506;ObjectProperty;to;SEZIONE REAZIONE R-4003.txth2otorreexit
 ul144;ObjectProperty;to;xv4207c
-clorostart_4003;ObjectProperty;to;ul144
+SEZIONE REAZIONE R-4003.txtclorostart;ObjectProperty;to;ul144
 r-4003;ObjectProperty;to;xv4321b
-SEZIONE REAZIONE R-4003.txtxv4235;ObjectProperty;to;s4305-exit_4003
 xv4321b;ObjectProperty;to;p-4606b
 p-4606b;ObjectProperty;to;SEZIONE REAZIONE R-4003.txtxv4235
+SEZIONE REAZIONE R-4003.txtxv4235;ObjectProperty;to;s4305-exit
 r-4003;ObjectProperty;to;xv4245c
 xv4207c;ObjectProperty;to;xv4245c
 ul141;ObjectProperty;to;xv4245c
-ul140;ObjectProperty;to;ul141
 p-4606b;ObjectProperty;to;SEZIONE REAZIONE R-4003.txtxv4236
-xv4245c;ObjectProperty;to;degasamentoiposodioexit_4003
-SEZIONE REAZIONE R-4003.txtxv4236;ObjectProperty;to;s4304-exit_4003
-azotostart_4003;ObjectProperty;to;ul140
+ul140;ObjectProperty;to;ul141
+xv4245c;ObjectProperty;to;SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit
+SEZIONE REAZIONE R-4003.txtazotostart;ObjectProperty;to;ul140
+SEZIONE REAZIONE R-4003.txtxv4236;ObjectProperty;to;s4304-exit
 xv4003d;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 gasdisingaggio-exit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-s-4301start_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-abbacidoexit_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txts-4301start;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txtabbacidoexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 xv4301a;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-s-4302start_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txts-4302start;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ul145;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 fic4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 pi4322;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-p-4606start_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txtp-4606start;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ti4316;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ul143;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ul142;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 tic4318;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-h20caldaexit_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+h20caldaexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ti4326;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-h2otorrestart_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 r-4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-h2ocaldastart_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txth2otorrestart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txth2ocaldastart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 xv4506;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 xv4313;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ti4317;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
@@ -237,20 +237,20 @@ wi4343;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 fic4208c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 e-4506;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 pi4208c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-h2otorreexit_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-clorostart_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txth2otorreexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 xv4207c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ti4328;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txtclorostart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ul144;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 xv4321b;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-s4305-exit_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 fic4002c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 p-4606b;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 SEZIONE REAZIONE R-4003.txtxv4235;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+s4305-exit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 xv4245c;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-azotostart_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-ul141;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txtazotostart;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 SEZIONE REAZIONE R-4003.txtxv4236;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-degasamentoiposodioexit_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
-s4304-exit_4003;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+ul141;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
 ul140;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt
+s4304-exit;DataProperty;isSchermata;SEZIONE REAZIONE R-4003.txt

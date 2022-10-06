@@ -18,6 +18,7 @@ export class DialogAnimationsExample {
   openDialog(): void {
     this.dialog.open(DialogAnimationsExampleDialog, {
       width: '250px'
+
     });
   }
 }

@@ -446,7 +446,6 @@ export class SparqlForceComponent implements OnInit {
       .append("path")
       .attr("marker-end", "url(#end)")
       .style("stroke", (d) => {
-
         if (d.p.label.includes('to_cloro')) return '#FFEA00'
         if (d.p.label.includes('to_ferroso')) return 'green'
         if (d.p.label.includes('to_cloruro_ferrico')) return 'red'

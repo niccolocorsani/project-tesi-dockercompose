@@ -1,4 +1,4 @@
-<div mat-dialog-content>
+<div  mat-dialog-content>
   <section aria-label="Select an option">
     <div *ngFor="let element of this.listOfObjectProperties">
       <mat-checkbox  (change)="changed($event)" value="{{element}}">{{element}}</mat-checkbox >
