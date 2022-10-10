@@ -96,6 +96,8 @@ public class OntologyBuilder {
             OWLObjectProperty parentObjectProperty = null;
 
             if (axiomEsist == false) {
+
+              System.out.println("Assioma non esiste, lo aggiungo");
               OWLDeclarationAxiom declarationAxiom = factory.getOWLDeclarationAxiom(addedObjectProperty);
               o.add(declarationAxiom);
 

@@ -30,7 +30,7 @@ export class DialogAnimationsExample {
 export class DialogAnimationsExampleDialog {
 
 
-  listOfObjectProperties = ['to_ferroso','to_cloro','to_cloruroFerrico','to_CloroParaffine','to_n2','to_cl2','to_cw','to_hcl','to_acquaDemineralizzata','to_aria','to_aw','to_ariaAtmosferica','to_h2','to_ariaFalsa','IpocloritoDiSodio'] //l'underScore va messo con prudenza in quanto nel back end, serve a delineare una subProperty
+  listOfObjectProperties = ['to_ferroso','to_cloro','to_cloruroFerrico','to_CloroParaffine','to_n2','to_cl2','to_cw','to_hcl','to_acquaDemineralizzata','to_aria','to_aw','to_ariaAtmosferica','to_h2','to_ariaFalsa','to_IpocloritoDiSodio'] //l'underScore va messo con prudenza in quanto nel back end, serve a delineare una subProperty
 
   constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>, private globalVariableService: GlobalVariablesService) {
   }
