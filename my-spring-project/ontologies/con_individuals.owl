@@ -4,29 +4,36 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 
+<http://www.disit.org/altair/resource/Flusso_197>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4321b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/r-4003> .
+
 <http://www.disit.org/altair/resource/m3-h>
         a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
 
 <http://www.disit.org/altair/resource/r-4003>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv4245c> , <http://www.disit.org/altair/resource/xv4321b> , <http://www.disit.org/altair/resource/h20caldaexit> , <http://www.disit.org/altair/resource/xv4301a> , <http://www.disit.org/altair/resource/xv4003d> .
 
-<http://www.disit.org/altair/resource/Flusso_762>
+<http://www.disit.org/altair/resource/Flusso_207>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4235> ;
+                <http://www.disit.org/altair/resource/ul140> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4606b> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtazotostart> .
 
-<http://www.disit.org/altair/resource/Flusso_747>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/r-4003> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txts-4302start> .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtazotostart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul140> .
 
 <http://www.disit.org/saref4bldg-ext/Area>
         a                owl:Class ;
@@ -34,61 +41,68 @@
         rdfs:label       "Area" ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/BuildingSpace> .
 
+<http://www.disit.org/altair/resource/Flusso_191>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4313> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2ocaldastart> .
+
 <http://www.disit.org/altair/resource/xv4321b>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/p-4606b> .
 
 <http://www.disit.org/altair/resource/xv4506>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/e-4506> .
+
+<http://www.disit.org/altair/resource/Flusso_176>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/gasdisingaggio-exit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv4003d> .
 
 <http://www.disit.org/altair/resource/p-4606b>
         a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4236> , <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4235> , <http://www.disit.org/altair/resource/e-4506> , <http://www.disit.org/altair/resource/ul142> , <http://www.disit.org/altair/resource/ul145> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4236> , <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4235> , <http://www.disit.org/altair/resource/e-4506> , <http://www.disit.org/altair/resource/ul142> , <http://www.disit.org/altair/resource/ul145> .
+
+<http://www.disit.org/altair/resource/Flusso_201>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4245c> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/r-4003> .
 
 <http://www.disit.org/altair/resource/ul144>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv4207c> .
 
-<http://www.disit.org/altair/resource/Flusso_741>
+<http://www.disit.org/altair/resource/Flusso_189>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4301a> ;
+                <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/r-4003> .
-
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txts-4302start>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/r-4003> .
+                <http://www.disit.org/altair/resource/xv4313> .
 
 <http://www.disit.org/altair/resource/xv4245c>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit> .
-
-<http://www.disit.org/altair/resource/Flusso_754>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4313> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2ocaldastart> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtdegasamentoiposodioexit> .
 
 <http://www.disit.org/saref4bldg-ext/endIn>
         a             owl:ObjectProperty ;
@@ -98,25 +112,11 @@
 <http://www.disit.org/altair/resource/nm3-h>
         a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
 
-<http://www.disit.org/altair/resource/Flusso_767>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4236> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4606b> .
-
 <http://www.disit.org/saref4bldg-ext/Site>
         a                owl:Class ;
         rdfs:comment     "A Building can be divided in sites." ;
         rdfs:label       "Site" ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/BuildingSpace> .
-
-<http://www.disit.org/altair/resource/Flusso_739>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/gasdisingaggio-exit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4003d> .
 
 <http://www.disit.org/saref4bldg-ext/ProductionLine>
         a                owl:Class ;
@@ -127,6 +127,13 @@
                            owl:onProperty     <https://saref.etsi.org/saref4bldg/contains>
                          ] .
 
+<http://www.disit.org/altair/resource/Flusso_183>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/r-4003> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txts-4301start> .
+
 <http://www.disit.org/altair/resource/ti4317>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -134,73 +141,57 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
-
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4236>
-        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s4304-exit> .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
 <http://www.disit.org/altair/resource/s4305-exit>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtazotostart>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul140> .
+<http://www.disit.org/altair/resource/Flusso_196>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul144> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtclorostart> .
 
 <http://www.disit.org/altair/resource/gasdisingaggio-exit>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_761>
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2otorreexit>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_206>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4606b> ;
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtdegasamentoiposodioexit> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4321b> .
+                <http://www.disit.org/altair/resource/xv4245c> .
 
 <http://www.disit.org/altair/resource/xv4003d>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/gasdisingaggio-exit> .
 
 <http://www.disit.org/altair/resource/xv4313>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4003> .
 
-<http://www.disit.org/altair/resource/Flusso_746>
+<http://www.disit.org/altair/resource/Flusso_190>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/r-4003> ;
+                <http://www.disit.org/altair/resource/xv4506> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txts-4301start> .
-
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2ocaldastart>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4313> .
-
-<http://www.disit.org/altair/resource/Flusso_759>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul144> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtclorostart> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2otorrestart> .
 
 <http://www.disit.org/altair/resource/pi4322>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -209,7 +200,33 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_200>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/s4305-exit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4235> .
+
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtdegasamentoiposodioexit>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_175>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4003d> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/r-4003> .
+
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2ocaldastart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv4313> .
 
 <http://www.disit.org/saref4bldg-ext/Container>
         a                owl:Class ;
@@ -219,16 +236,16 @@
 <http://www.disit.org/altair/resource/ul143>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4003> .
 
-<http://www.disit.org/altair/resource/Flusso_740>
+<http://www.disit.org/altair/resource/Flusso_188>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtabbacidoexit> ;
+                <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4301a> .
+                <http://www.disit.org/altair/resource/ul145> .
 
 <http://www.disit.org/saref4bldg-ext/startIn>
         a             owl:ObjectProperty ;
@@ -239,13 +256,6 @@
         a                owl:Class ;
         rdfs:label       "Pump" ;
         rdfs:subClassOf  <https://saref.etsi.org/saref4bldg/PhysicalObject> .
-
-<http://www.disit.org/altair/resource/Flusso_753>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4506> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2otorrestart> .
 
 <http://www.disit.org/saref4bldg-ext/Valve>
         a                owl:Class ;
@@ -282,21 +292,14 @@
 <http://www.disit.org/altair/resource/xv4301a>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtabbacidoexit> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtabbacidoexit> .
 
-<http://www.disit.org/altair/resource/Flusso_766>
+<http://www.disit.org/altair/resource/Flusso_182>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4245c> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/ul141> .
-
-<http://www.disit.org/altair/resource/Flusso_738>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4003d> ;
+                <http://www.disit.org/altair/resource/h20caldaexit> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/r-4003> .
 
@@ -307,14 +310,7 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/ul144> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
-
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4235>
-        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s4305-exit> .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
 <http://www.disit.org/altair/resource/ti4316>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -323,101 +319,82 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/xv4207c>
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4236>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4245c> .
+                <http://www.disit.org/altair/resource/s4304-exit> .
 
-<http://www.disit.org/altair/resource/Flusso_760>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4321b> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/r-4003> .
-
-<http://www.disit.org/saref4bldg-ext/>
-        a            owl:Ontology ;
-        owl:imports  <https://saref.etsi.org/saref4bldg/v1.1.2/> .
-
-<http://www.disit.org/altair/resource/Flusso_745>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/h20caldaexit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/r-4003> .
-
-<http://www.disit.org/altair/resource/e-4506>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2otorreexit> , <http://www.disit.org/altair/resource/ul143> .
-
-<http://www.disit.org/altair/resource/kg>
-        a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
-
-<http://www.disit.org/altair/resource/Flusso_758>
+<http://www.disit.org/altair/resource/Flusso_195>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/xv4207c> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ul144> .
 
+<http://www.disit.org/altair/resource/xv4207c>
+        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv4245c> .
+
+<http://www.disit.org/altair/resource/Flusso_205>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul141> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul140> .
+
+<http://www.disit.org/saref4bldg-ext/>
+        a            owl:Ontology ;
+        owl:imports  <https://saref.etsi.org/saref4bldg/v1.1.2/> .
+
+<http://www.disit.org/altair/resource/e-4506>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2otorreexit> , <http://www.disit.org/altair/resource/ul143> .
+
+<http://www.disit.org/altair/resource/kg>
+        a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
+
 <http://www.disit.org/saref4bldg-ext/Sensor>
         a           owl:Class ;
         rdfs:label  "Sensor" .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
-
 <http://www.disit.org/altair/resource/ul142>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4003> .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2otorrestart>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4506> .
+<http://www.disit.org/altair/resource/Flusso_187>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/r-4003> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul143> .
 
 <http://www.disit.org/saref4bldg-ext/to>
         a           owl:ObjectProperty ;
         rdfs:label  "to" .
 
-<http://www.disit.org/altair/resource/Flusso_752>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/r-4003> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4313> .
-
 <http://www.disit.org/altair/resource/h20caldaexit>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
 <http://www.disit.org/saref4bldg-ext/ChemicalCompound>
         a                owl:Class ;
         rdfs:comment     "Any sort of Chemical Compounds that flow between Physical Object," ;
         rdfs:label       "ChemicalCompound" ;
         rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> .
-
-<http://www.disit.org/altair/resource/Flusso_765>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4245c> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4207c> .
 
 <http://www.disit.org/saref4bldg-ext/Water>
         a                owl:Class ;
@@ -433,10 +410,33 @@
                            owl:onProperty     <https://saref.etsi.org/saref4bldg/waterPressureMax>
                          ] .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtabbacidoexit>
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2otorrestart>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv4506> .
+
+<http://www.disit.org/altair/resource/Flusso_181>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul142> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p-4606b> .
+
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4235>
+        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s4305-exit> .
+
+<http://www.disit.org/altair/resource/Flusso_194>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txth2otorreexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/e-4506> .
 
 <http://www.disit.org/altair/resource/ti4328>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -445,29 +445,43 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/e-4506> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_179>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul145> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p-4606b> .
 
 <http://www.disit.org/saref4bldg-ext/canMeasureIn>
         a             owl:ObjectProperty ;
         rdfs:comment  "A relation between a sensor and the unit of measurement in which the sensor measurement is expressed." ;
         rdfs:label    "canMeasureIn" .
 
-<http://www.disit.org/saref4bldg-ext/isSchermata>
-        a       owl:DatatypeProperty .
-
-<http://www.disit.org/altair/resource/Flusso_744>
+<http://www.disit.org/altair/resource/Flusso_204>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul142> ;
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4236> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p-4606b> .
 
-<http://www.disit.org/altair/resource/Flusso_757>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2otorreexit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/e-4506> .
+<http://www.disit.org/saref4bldg-ext/isSchermata>
+        a       owl:DatatypeProperty .
+
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtp-4606start>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/r-4003> .
+
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txts-4302start>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/r-4003> .
 
 <http://www.disit.org/altair/resource/wi4343>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -476,49 +490,58 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
 <http://www.disit.org/altair/resource/ul141>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv4245c> .
 
-<http://www.disit.org/altair/resource/Flusso_751>
+<http://www.disit.org/altair/resource/Flusso_186>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/ul145> .
+                <http://www.disit.org/altair/resource/ul142> .
+
+<http://www.disit.org/altair/resource/Flusso_199>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4235> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p-4606b> .
+
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txts-4301start>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/r-4003> .
 
 <http://www.disit.org/altair/resource/fic4002c>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
                 <http://www.disit.org/altair/resource/nm3-h> ;
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtazotostart> ;
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtazotostart> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_764>
+<http://www.disit.org/altair/resource/Flusso_180>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4245c> ;
+                <http://www.disit.org/altair/resource/ul143> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/r-4003> .
+                <http://www.disit.org/altair/resource/e-4506> .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txth2otorreexit>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
-
-<http://www.disit.org/altair/resource/Flusso_749>
+<http://www.disit.org/altair/resource/Flusso_193>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/r-4003> ;
+                <http://www.disit.org/altair/resource/e-4506> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/ul142> .
+                <http://www.disit.org/altair/resource/xv4506> .
 
 <http://www.disit.org/saref4bldg-ext/Energy>
         a                owl:Class ;
@@ -526,77 +549,75 @@
         rdfs:label       "Energy" ;
         rdfs:subClassOf  <http://www.disit.org/saref4bldg-ext/Flow> .
 
+<http://www.disit.org/altair/resource/Flusso_178>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4301a> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/r-4003> .
+
 <http://www.disit.org/altair/resource/mmh20>
         a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
 
-<http://www.disit.org/altair/resource/Flusso_771>
+<http://www.disit.org/altair/resource/Flusso_203>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s4304-exit> ;
+                <http://www.disit.org/altair/resource/xv4245c> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4236> .
+                <http://www.disit.org/altair/resource/ul141> .
 
-<http://www.disit.org/altair/resource/Flusso_743>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul143> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/e-4506> .
-
-<http://www.disit.org/altair/resource/Flusso_756>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/e-4506> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4506> .
-
-<http://www.disit.org/altair/resource/Flusso_769>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtdegasamentoiposodioexit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4245c> .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtclorostart>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul144> .
 
 <https://saref.etsi.org/saref4bldg/Reactor>
         a       owl:Class .
 
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtabbacidoexit>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" .
+
 <http://www.disit.org/altair/resource/ul140>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul141> .
 
-<http://www.disit.org/altair/resource/Flusso_750>
+<http://www.disit.org/altair/resource/Flusso_185>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/r-4003> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/ul143> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtp-4606start> .
+
+<http://www.disit.org/altair/resource/Flusso_198>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/p-4606b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv4321b> .
 
 <http://www.disit.org/altair/resource/c>
         a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
 
-<http://www.disit.org/altair/resource/Flusso_763>
+<http://www.disit.org/altair/resource/Flusso_208>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/s4305-exit> ;
+                <http://www.disit.org/altair/resource/s4304-exit> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtxv4235> .
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtxv4236> .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtp-4606start>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/r-4003> .
-
-<http://www.disit.org/altair/resource/Flusso_748>
+<http://www.disit.org/altair/resource/Flusso_192>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/r-4003> ;
+                <http://www.disit.org/altair/resource/e-4506> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtp-4606start> .
+                <http://www.disit.org/altair/resource/p-4606b> .
 
 <http://www.disit.org/saref4bldg-ext/UnitOfMeasure>
         a           owl:Class ;
@@ -609,21 +630,21 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/e-4506> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txts-4301start>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/r-4003> .
+<http://www.disit.org/altair/resource/Flusso_177>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtabbacidoexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv4301a> .
 
-<http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtclorostart>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul144> .
+<http://www.disit.org/altair/resource/Flusso_202>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4245c> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv4207c> .
 
 <http://www.disit.org/saref4bldg-ext/color>
         a             owl:DatatypeProperty ;
@@ -633,42 +654,23 @@
 <http://www.disit.org/altair/resource/ul145>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" ;
+                "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4003> .
-
-<http://www.disit.org/altair/resource/Flusso_770>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul140> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtazotostart> .
-
-<http://www.disit.org/altair/resource/Flusso_742>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul145> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4606b> .
-
-<http://www.disit.org/altair/resource/Flusso_755>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/e-4506> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4606b> .
 
 <http://www.disit.org/altair/resource/s4304-exit>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/Flusso_768>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul141> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/ul140> .
+<http://www.disit.org/altair/resource/pi4208c>
+        a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
+                <http://www.disit.org/altair/resource/mmh20> ;
+        <http://www.disit.org/saref4bldg-ext/isContainedIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txtclorostart> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
 <http://www.disit.org/altair/resource/fic4208c>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -677,16 +679,14 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/ul144> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/pi4208c>
-        a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-                <http://www.disit.org/altair/resource/mmh20> ;
-        <http://www.disit.org/saref4bldg-ext/isContainedIn>
-                <http://www.disit.org/altair/resource/SEZIONE REAZIONE R-4003.txtclorostart> ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+<http://www.disit.org/altair/resource/Flusso_184>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/r-4003> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txts-4302start> .
 
 <http://www.disit.org/saref4bldg-ext/Tank>
         a                owl:Class ;
@@ -700,4 +700,4 @@
         <http://www.disit.org/saref4bldg-ext/isContainedIn>
                 <http://www.disit.org/altair/resource/ul143> , <http://www.disit.org/altair/resource/ul142> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE REAZIONE R-4003.txt" .
+                "SEZIONE_REAZIONE_R-4003.txt" .
