@@ -476,9 +476,9 @@ export class SparqlForceComponent implements OnInit {
           return
 
         let query = "select * where {<" + d.s.label + "> :isSchermata ?o.}"
-        console.log(query)
         let queryResult = await this.graphdbRequesDerviceToSpringAppService.normalQuery(query)
-        console.log(queryResult)
+
+
         let schermata = queryResult[0][0].split(":")[1].split("^")[0].replace("\"", "").replace("\"", "").replace(".txt", "")
         let infoDaAggiungereAlCSV = d.s.label.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.variabileDelModalRadio + ';' + d.o.label.replace('http://www.disit.org/altair/resource/', '')
 
