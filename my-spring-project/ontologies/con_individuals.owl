@@ -106,6 +106,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a2ul10> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a2ul10> .
 
 <http://www.disit.org/altair/resource/Flusso_222>
@@ -141,6 +143,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p904a> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/p904a> .
 
 <http://www.disit.org/altair/resource/ti981>
@@ -180,6 +184,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul184> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/ul184> .
 
 <http://www.disit.org/altair/resource/mc-443>
@@ -194,6 +200,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> .
 
 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601b>
@@ -201,6 +209,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul35> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/ul35> .
 
 <http://www.disit.org/altair/resource/Flusso_555>
@@ -229,7 +239,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954a> .
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954a> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954a> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> .
 
 <http://www.disit.org/altair/resource/Flusso_390>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -335,6 +349,13 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ch4start_recuperoco2> .
 
+<http://www.disit.org/altair/resource/Flusso_622>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul186> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/s-856> .
+
 <http://www.disit.org/altair/resource/adstart2_recuperoco2>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -365,13 +386,6 @@
                            owl:onProperty               <http://www.disit.org/saref4bldg-ext/startIn>
                          ] .
 
-<http://www.disit.org/altair/resource/Flusso_622>
-        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul186> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/s-856> .
-
 <http://www.disit.org/altair/resource/s980>
         a       <http://www.disit.org/saref4bldg-ext/Tank> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -384,7 +398,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-910> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtc905exit> .
+                <http://www.disit.org/altair/resource/s-910> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtc905exit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtc905exit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/s-910> .
 
 <http://www.disit.org/altair/resource/xv1709b>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
@@ -419,6 +437,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul24> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/ul24> .
 
 <http://www.disit.org/altair/resource/Flusso_176>
@@ -441,6 +461,10 @@
                 "HCL_4_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv631> .
+
+<http://www.disit.org/saref4bldg-ext/to_cloro-to_cl2-to_cloro>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/fal670_1>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
@@ -510,6 +534,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtp601b> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtp601b> .
 
 <http://www.disit.org/altair/resource/Flusso_496>
@@ -545,6 +571,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv802> , <http://www.disit.org/altair/resource/xv801> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/xv802> , <http://www.disit.org/altair/resource/xv801> .
 
 <http://www.disit.org/altair/resource/Flusso_256>
@@ -708,6 +736,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul31> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/ul31> .
 
 <http://www.disit.org/altair/resource/ul150>
@@ -736,7 +766,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv912_1> , <http://www.disit.org/altair/resource/xv901a> .
+                <http://www.disit.org/altair/resource/xv912_1> , <http://www.disit.org/altair/resource/xv901a> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/xv901a> , <http://www.disit.org/altair/resource/xv912_1> .
 
 <http://www.disit.org/altair/resource/Flusso_336>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -874,7 +906,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul280> , <http://www.disit.org/altair/resource/ul240> , <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtcwHCL_3_LINEA.txtexit2> .
+                <http://www.disit.org/altair/resource/ul280> , <http://www.disit.org/altair/resource/ul240> , <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtcwHCL_3_LINEA.txtexit2> ;
+        <http://www.disit.org/saref4bldg-ext/to_cw>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtcwHCL_3_LINEA.txtexit2> .
 
 <http://www.disit.org/altair/resource/p1701b>
         a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
@@ -902,6 +936,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txthclexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/HCL_3_LINEA.txthclexit> .
 
 <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b>
@@ -926,6 +962,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_aria-to_h2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/Flusso_416>
@@ -934,6 +972,10 @@
                 <http://www.disit.org/altair/resource/ul13> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p985> .
+
+<http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_710>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -947,6 +989,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_h2-to_n2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/Flusso_251>
@@ -1153,6 +1197,10 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/s461> .
 
+<http://www.disit.org/saref4bldg-ext/to_aw>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_597>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -1193,13 +1241,19 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/a1ul4> .
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> .
 
 <http://www.disit.org/altair/resource/atbstart1>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910c> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/900-p910c> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
                 <http://www.disit.org/altair/resource/900-p910c> .
 
 <http://www.disit.org/altair/resource/Flusso_104>
@@ -1226,6 +1280,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601b> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601b> .
 
 <http://www.disit.org/altair/resource/ferrosorisodottoatoscaggioexit>
@@ -1238,6 +1294,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv854_2> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/xv854_2> .
 
 <http://www.disit.org/altair/resource/Flusso_192>
@@ -1294,7 +1352,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/exits-851> , <http://www.disit.org/altair/resource/xv854> , <http://www.disit.org/altair/resource/xv857> , <http://www.disit.org/altair/resource/xv855> , <http://www.disit.org/altair/resource/xv856> , <http://www.disit.org/altair/resource/xv852> .
+                <http://www.disit.org/altair/resource/xv855> , <http://www.disit.org/altair/resource/xv856> , <http://www.disit.org/altair/resource/xv857> , <http://www.disit.org/altair/resource/xv852> , <http://www.disit.org/altair/resource/exits-851> , <http://www.disit.org/altair/resource/xv854> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
+                <http://www.disit.org/altair/resource/xv854> , <http://www.disit.org/altair/resource/xv855> .
 
 <http://www.disit.org/altair/resource/Flusso_677>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -1317,6 +1377,10 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv904de_2> .
 
+<http://www.disit.org/saref4bldg-ext/to_n2-to_h2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/e-4506>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -1329,6 +1393,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv808> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv808> .
 
 <http://www.disit.org/altair/resource/Flusso_437>
@@ -1364,14 +1430,20 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv804> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtacidoneexit> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtxv072c> .
+                <http://www.disit.org/altair/resource/xv804> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtacidoneexit> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtxv072c> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
+                <http://www.disit.org/altair/resource/xv804> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2-to_cl2>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtacidoneexit> .
 
 <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtawstart1>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul280> , <http://www.disit.org/altair/resource/ul290> .
+                <http://www.disit.org/altair/resource/ul280> , <http://www.disit.org/altair/resource/ul290> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw>
+                <http://www.disit.org/altair/resource/ul290> , <http://www.disit.org/altair/resource/ul280> .
 
 <http://www.disit.org/altair/resource/Flusso_504>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -1399,7 +1471,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-904a> , <http://www.disit.org/altair/resource/s-904b> , <http://www.disit.org/altair/resource/s-904c> .
+                <http://www.disit.org/altair/resource/s-904c> , <http://www.disit.org/altair/resource/s-904b> , <http://www.disit.org/altair/resource/s-904a> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/s-904c> , <http://www.disit.org/altair/resource/s-904b> , <http://www.disit.org/altair/resource/s-904a> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/s-904a> .
 
 <http://www.disit.org/altair/resource/pi981-1>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -1429,6 +1505,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv602> ;
+        <http://www.disit.org/saref4bldg-ext/to_ariaAtmosferica>
                 <http://www.disit.org/altair/resource/xv602> .
 
 <http://www.disit.org/altair/resource/Flusso_352>
@@ -1443,6 +1521,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_h2>
                 <http://www.disit.org/altair/resource/bruciatore1> .
 
 <http://www.disit.org/altair/resource/Flusso_45>
@@ -1466,12 +1546,20 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ul240> .
 
+<http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_ferroso-to_cloruroFerrico-to_ferroso>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_112>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txte-4505> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/xv4602-2> .
+
+<http://www.disit.org/saref4bldg-ext/to_h2-to_h2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/pi-492>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
@@ -1512,6 +1600,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/hciexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/hciexit> .
 
 <http://www.disit.org/altair/resource/Flusso_378>
@@ -1585,6 +1675,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p909> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/p909> .
 
 <http://www.disit.org/altair/resource/starts-904c>
@@ -1620,6 +1712,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_aw>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/Flusso_5>
@@ -1734,6 +1828,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/polveristart>
@@ -1783,9 +1879,7 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "PARCO_SERBATOI_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4321> , <http://www.disit.org/altair/resource/xv4306-1> ;
-        <http://www.disit.org/saref4bldg-ext/to_cloro>
-                <http://www.disit.org/altair/resource/xv4306-1> .
+                <http://www.disit.org/altair/resource/xv4321> , <http://www.disit.org/altair/resource/xv4306-1> .
 
 <http://www.disit.org/altair/resource/Flusso_53>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -1806,6 +1900,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/k601a> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
                 <http://www.disit.org/altair/resource/k601a> .
 
 <http://www.disit.org/saref4bldg-ext/to_cloro>
@@ -1833,6 +1929,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/sv884> .
 
+<http://www.disit.org/saref4bldg-ext/to_cl2-to_cl2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_120>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -1850,6 +1950,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/k601b> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
                 <http://www.disit.org/altair/resource/k601b> .
 
 <http://www.disit.org/altair/resource/Flusso_66>
@@ -1873,7 +1975,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv203a> , <http://www.disit.org/altair/resource/k601d> .
+                <http://www.disit.org/altair/resource/xv203a> , <http://www.disit.org/altair/resource/k601d> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
+                <http://www.disit.org/altair/resource/k601d> , <http://www.disit.org/altair/resource/xv203a> .
 
 <http://www.disit.org/altair/resource/Flusso_133>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -1933,11 +2037,17 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p-4616> .
 
+<http://www.disit.org/saref4bldg-ext/to_cl2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/n2start4>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv884> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_n2>
                 <http://www.disit.org/altair/resource/xv884> .
 
 <http://www.disit.org/altair/resource/Flusso_605>
@@ -1968,6 +2078,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ms-922> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/ms-922> .
 
 <http://www.disit.org/altair/resource/Flusso_146>
@@ -2084,7 +2196,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p606> , <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtcwexit1> , <http://www.disit.org/altair/resource/ventgasexit> .
+                <http://www.disit.org/altair/resource/p606> , <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtcwexit1> , <http://www.disit.org/altair/resource/ventgasexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cw>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtHCL_3_LINEA.txtcwexit1> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/p606> .
 
 <http://www.disit.org/altair/resource/Flusso_466>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -2171,7 +2287,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> .
+                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/ibcexit> , <http://www.disit.org/altair/resource/xv904abc_1> .
 
 <http://www.disit.org/altair/resource/Flusso_239>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -2192,6 +2310,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_n2>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_h2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/fi465>
@@ -2259,13 +2381,17 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul20> , <http://www.disit.org/altair/resource/ul22> .
+                <http://www.disit.org/altair/resource/ul20> , <http://www.disit.org/altair/resource/ul22> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
+                <http://www.disit.org/altair/resource/ul20> .
 
 <http://www.disit.org/altair/resource/HCL_3_LINEA.txtawstart>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv406> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw-to_aw>
                 <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv406> .
 
 <http://www.disit.org/altair/resource/Flusso_559>
@@ -2301,7 +2427,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul21> , <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcwexit> , <http://www.disit.org/altair/resource/ul27> .
+                <http://www.disit.org/altair/resource/ul21> , <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcwexit> , <http://www.disit.org/altair/resource/ul27> ;
+        <http://www.disit.org/saref4bldg-ext/to_cw>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcwexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/ul21> , <http://www.disit.org/altair/resource/ul27> .
 
 <http://www.disit.org/altair/resource/Flusso_394>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -2315,6 +2445,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-910> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/c-910> .
 
 <http://www.disit.org/altair/resource/ul133>
@@ -2465,6 +2597,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/sv101> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/sv101> .
 
 <http://www.disit.org/altair/resource/Flusso_639>
@@ -2549,6 +2683,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_aw>
                 <http://www.disit.org/altair/resource/bruciatore1> .
 
 <http://www.disit.org/altair/resource/Flusso_706>
@@ -2621,6 +2757,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw-to_n2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/a1ul13>
@@ -2628,6 +2766,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904e> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904e> .
 
 <http://www.disit.org/altair/resource/xv078>
@@ -2635,13 +2775,19 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul24> , <http://www.disit.org/altair/resource/xv077> .
+                <http://www.disit.org/altair/resource/ul24> , <http://www.disit.org/altair/resource/xv077> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
+                <http://www.disit.org/altair/resource/ul24> , <http://www.disit.org/altair/resource/xv077> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro-to_cl2-to_cloro>
+                <http://www.disit.org/altair/resource/ul24> .
 
 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601a>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul35> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/ul35> .
 
 <http://www.disit.org/altair/resource/Flusso_554>
@@ -2669,6 +2815,10 @@
                 "SEZIONE_REAZIONE_R-4002.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4002> .
+
+<http://www.disit.org/saref4bldg-ext/to_ariaFalsa>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_567>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -2752,6 +2902,10 @@
                 "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv4245c> .
+
+<http://www.disit.org/saref4bldg-ext/to_n2-to_aria-to_h2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/rh900>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -2901,6 +3055,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_4_LINEA.txt" .
 
+<http://www.disit.org/saref4bldg-ext/to_aria-to_cl2-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_647>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -2913,6 +3071,12 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_n2-to_h2>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_aria-to_h2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/Flusso_188>
@@ -2980,6 +3144,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtp601a> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtp601a> .
 
 <http://www.disit.org/altair/resource/p985>
@@ -3026,6 +3192,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtdegasamentoexit> , <http://www.disit.org/altair/resource/ul42> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
                 <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtdegasamentoexit> , <http://www.disit.org/altair/resource/ul42> .
 
 <http://www.disit.org/altair/resource/ti900>
@@ -3227,6 +3395,10 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4002> .
 
+<http://www.disit.org/saref4bldg-ext/to_aria-to_n2-to_ariaFalsa-to_cl2-to_aria-to_ariaFalsa-to_n2-to_cl2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_170>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -3246,7 +3418,15 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_ariaFalsa-to_cl2-to_aria>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_ariaFalsa-to_cl2-to_n2-to_aria>
                 <http://www.disit.org/altair/resource/bruciatore1> .
+
+<http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/pi909-1>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -3424,6 +3604,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_n2-to_aria>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/Flusso_250>
@@ -3611,7 +3793,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/exitversoimpiantoiposodio> , <http://www.disit.org/altair/resource/ul180> , <http://www.disit.org/altair/resource/xv851_2> , <http://www.disit.org/altair/resource/xv851_1> .
+                <http://www.disit.org/altair/resource/exitversoimpiantoiposodio> , <http://www.disit.org/altair/resource/ul180> , <http://www.disit.org/altair/resource/xv851_2> , <http://www.disit.org/altair/resource/xv851_1> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
+                <http://www.disit.org/altair/resource/ul180> .
 
 <http://www.disit.org/altair/resource/Flusso_596>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -3674,6 +3858,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p954> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/p954> .
 
 <http://www.disit.org/altair/resource/Flusso_103>
@@ -3716,6 +3902,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ys-102-2> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/ys-102-2> .
 
 <http://www.disit.org/altair/resource/xv4321>
@@ -3767,6 +3955,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910c> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
                 <http://www.disit.org/altair/resource/900-p910c> .
 
 <http://www.disit.org/altair/resource/Flusso_369>
@@ -3818,6 +4008,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/Flusso_410>
@@ -3870,6 +4062,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul280> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/ul280> .
 
 <http://www.disit.org/altair/resource/Flusso_689>
@@ -3965,6 +4159,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul250> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/ul250> .
 
 <http://www.disit.org/altair/resource/Flusso_503>
@@ -4042,6 +4238,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul28> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/ul28> .
 
 <http://www.disit.org/altair/resource/c460b>
@@ -4073,6 +4271,10 @@
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcl2start> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtcl2start> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" , "HCL_2_LINEA_ACIDINO.txt" .
+
+<http://www.disit.org/saref4bldg-ext/to_cw>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/ul11>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
@@ -4130,6 +4332,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv070b> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/xv070b> .
 
 <http://www.disit.org/altair/resource/Flusso_124>
@@ -4196,6 +4400,10 @@
                 <http://www.disit.org/altair/resource/s985> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/s-901> .
+
+<http://www.disit.org/saref4bldg-ext/to_h2-to_hcl>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_609>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -4291,6 +4499,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a2truck1exit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a2truck1exit> .
 
 <http://www.disit.org/altair/resource/Flusso_217>
@@ -4339,6 +4549,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/fcv103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
+                <http://www.disit.org/altair/resource/fcv103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_cl2>
                 <http://www.disit.org/altair/resource/fcv103> .
 
 <http://www.disit.org/altair/resource/Flusso_524>
@@ -4356,6 +4570,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a2ul20> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a2ul20> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts-4302start>
@@ -4366,9 +4582,14 @@
                 <http://www.disit.org/altair/resource/r-4002> .
 
 <http://www.disit.org/saref4bldg-ext/endIn>
-        a             owl:ObjectProperty ;
-        rdfs:comment  "The Physical Object into which the Flow end." ;
-        rdfs:label    "endIn" .
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "The Physical Object into which the Flow end." ;
+        rdfs:label          "endIn" ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/endIn> .
+
+<http://www.disit.org/saref4bldg-ext/to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_537>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -4396,6 +4617,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/fcv103> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/fcv103> .
 
 <http://www.disit.org/altair/resource/t>
@@ -4420,6 +4643,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/fcv076> ;
+        <http://www.disit.org/saref4bldg-ext/to_ariaFalsa>
                 <http://www.disit.org/altair/resource/fcv076> .
 
 <http://www.disit.org/altair/resource/Flusso_65>
@@ -4451,8 +4676,9 @@
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" .
 
 <http://www.disit.org/saref4bldg-ext/to>
-        a           owl:ObjectProperty ;
-        rdfs:label  "to" .
+        a                   owl:ObjectProperty ;
+        rdfs:label          "to" ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/fic4002b>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -4475,7 +4701,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp600b> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp602> .
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp600b> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp602> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp602> , <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp600b> .
 
 <http://www.disit.org/altair/resource/Flusso_385>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -4524,6 +4752,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ys-202-2> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/ys-202-2> .
 
 <http://www.disit.org/altair/resource/ams441>
@@ -4536,6 +4766,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtxv808> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtxv808> .
 
 <http://www.disit.org/altair/resource/type-c>
@@ -4560,6 +4792,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/c-909> .
 
 <http://www.disit.org/altair/resource/Flusso_692>
@@ -4685,7 +4919,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> .
+                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/ibcexit> .
 
 <http://www.disit.org/altair/resource/fic986>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -4739,7 +4975,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/bruciatore> , <http://www.disit.org/altair/resource/ul36> .
+                <http://www.disit.org/altair/resource/bruciatore> , <http://www.disit.org/altair/resource/ul36> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/ul36> , <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/Flusso_545>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -4836,6 +5074,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-910> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/c-910> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
                 <http://www.disit.org/altair/resource/c-910> .
 
 <http://www.disit.org/altair/resource/ul132>
@@ -5021,7 +5263,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv072c> , <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtacidoneexit> , <http://www.disit.org/altair/resource/xv078> .
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv072c> , <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtacidoneexit> , <http://www.disit.org/altair/resource/xv078> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
+                <http://www.disit.org/altair/resource/xv078> , <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv072c> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2-to_cl2>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtacidoneexit> .
 
 <http://www.disit.org/altair/resource/Flusso_473>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -5042,7 +5288,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtdegasamentoexit> , <http://www.disit.org/altair/resource/ul44> .
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtdegasamentoexit> , <http://www.disit.org/altair/resource/ul44> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/ul44> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtdegasamentoexit> .
 
 <http://www.disit.org/altair/resource/Flusso_486>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -5065,19 +5313,19 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul73> .
 
-<http://www.disit.org/altair/resource/start2>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "IPOCLORITO.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/c1701b> , <http://www.disit.org/altair/resource/c1701a> , <http://www.disit.org/altair/resource/xv1703a> , <http://www.disit.org/altair/resource/xv1703b> , <http://www.disit.org/altair/resource/ul65> .
-
 <http://www.disit.org/altair/resource/e981>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "FERRICO_FERROSO_CLORO_FERRO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul15> .
+
+<http://www.disit.org/altair/resource/start2>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IPOCLORITO.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c1701b> , <http://www.disit.org/altair/resource/c1701a> , <http://www.disit.org/altair/resource/xv1703a> , <http://www.disit.org/altair/resource/xv1703b> , <http://www.disit.org/altair/resource/ul65> .
 
 <http://www.disit.org/altair/resource/Flusso_705>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -5143,13 +5391,17 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/rampa2> , <http://www.disit.org/altair/resource/a1ul14> , <http://www.disit.org/altair/resource/a1ul13> .
+                <http://www.disit.org/altair/resource/rampa2> , <http://www.disit.org/altair/resource/a1ul14> , <http://www.disit.org/altair/resource/a1ul13> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/rampa2> , <http://www.disit.org/altair/resource/a1ul13> , <http://www.disit.org/altair/resource/a1ul14> .
 
 <http://www.disit.org/altair/resource/xv077>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtHCL_1_LINEA_(FG600).txtdegasamentoexit1> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtHCL_1_LINEA_(FG600).txtdegasamentoexit1> .
 
 <http://www.disit.org/altair/resource/Flusso_553>
@@ -5171,6 +5423,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul22> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/ul22> .
 
 <http://www.disit.org/altair/resource/Flusso_566>
@@ -5179,6 +5433,10 @@
                 <http://www.disit.org/altair/resource/a2truck2exit> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/xv904de_2> .
+
+<http://www.disit.org/saref4bldg-ext/to_ariaAtmosferica>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_81>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -5320,7 +5578,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/bruciatore> , <http://www.disit.org/altair/resource/ul36> .
+                <http://www.disit.org/altair/resource/bruciatore> , <http://www.disit.org/altair/resource/ul36> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/ul36> .
 
 <http://www.disit.org/altair/resource/Flusso_620>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -5369,7 +5629,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/bruciatore> , <http://www.disit.org/altair/resource/ul39> .
+                <http://www.disit.org/altair/resource/bruciatore> , <http://www.disit.org/altair/resource/ul39> ;
+        <http://www.disit.org/saref4bldg-ext/to_cw>
+                <http://www.disit.org/altair/resource/ul39> .
 
 <http://www.disit.org/altair/resource/Flusso_633>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -5438,6 +5700,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_aria-to_n2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/pah640>
@@ -5487,6 +5753,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/sv201> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
                 <http://www.disit.org/altair/resource/sv201> .
 
 <http://www.disit.org/altair/resource/fic982_1>
@@ -5510,7 +5778,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/a1ul5> , <http://www.disit.org/altair/resource/a1ul6> .
+                <http://www.disit.org/altair/resource/a1ul5> , <http://www.disit.org/altair/resource/a1ul6> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/a1ul6> , <http://www.disit.org/altair/resource/a1ul5> .
 
 <http://www.disit.org/altair/resource/Flusso_406>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -5573,11 +5843,13 @@
                 <http://www.disit.org/altair/resource/start> .
 
 <http://www.disit.org/altair/resource/p909>
-        a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Pump> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> .
+                <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul41> , <http://www.disit.org/altair/resource/ul43> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul41> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul46> .
 
 <http://www.disit.org/altair/resource/xv986_1>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
@@ -5591,6 +5863,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv912_2> , <http://www.disit.org/altair/resource/ul42> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
                 <http://www.disit.org/altair/resource/xv912_2> , <http://www.disit.org/altair/resource/ul42> .
 
 <http://www.disit.org/altair/resource/Flusso_713>
@@ -5657,6 +5931,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_cw>
                 <http://www.disit.org/altair/resource/bruciatore1> .
 
 <http://www.disit.org/altair/resource/ms980start>
@@ -5688,6 +5964,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv808> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv808> .
 
 <http://www.disit.org/altair/resource/fi9201>
@@ -5705,6 +5983,10 @@
                 <http://www.disit.org/altair/resource/ibcexit> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/a2ul13> .
+
+<http://www.disit.org/saref4bldg-ext/to_cl2-to_n2-to_ariaAtmosferica>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_321>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -5756,6 +6038,10 @@
                 <http://www.disit.org/altair/resource/xv854> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/startdaimpiantoiposodio> .
+
+<http://www.disit.org/saref4bldg-ext/to_h2-to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_334>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -5864,6 +6150,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul230> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/ul230> .
 
 <http://www.disit.org/altair/resource/a1ul8>
@@ -5871,6 +6159,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a1ul9> , <http://www.disit.org/altair/resource/a1ul11> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a1ul9> , <http://www.disit.org/altair/resource/a1ul11> .
 
 <http://www.disit.org/altair/resource/Flusso_654>
@@ -5927,6 +6217,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul26> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/ul26> .
 
 <http://www.disit.org/altair/resource/starts-486>
@@ -5946,6 +6238,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtdegasamentoexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtdegasamentoexit> .
 
 <http://www.disit.org/altair/resource/mx2234>
@@ -6081,6 +6375,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul181> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/ul181> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txtxv4236>
@@ -6132,7 +6428,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/rampa1> , <http://www.disit.org/altair/resource/a1ul1> , <http://www.disit.org/altair/resource/a1ul2> .
+                <http://www.disit.org/altair/resource/rampa1> , <http://www.disit.org/altair/resource/a1ul1> , <http://www.disit.org/altair/resource/a1ul2> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/rampa1> , <http://www.disit.org/altair/resource/a1ul1> .
 
 <http://www.disit.org/altair/resource/xv1703a>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
@@ -6167,6 +6465,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv855_2> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/xv855_2> .
 
 <http://www.disit.org/altair/resource/Flusso_190>
@@ -6225,6 +6525,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_h2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/condottofumiexit>
@@ -6237,6 +6539,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_cl2-to_aria>
                 <http://www.disit.org/altair/resource/bruciatore1> .
 
 <http://www.disit.org/altair/resource/Flusso_128>
@@ -6265,6 +6569,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcaminoexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcaminoexit> .
 
 <http://www.disit.org/altair/resource/mv>
@@ -6294,6 +6600,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/cv-905-1> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
                 <http://www.disit.org/altair/resource/cv-905-1> .
 
 <http://www.disit.org/altair/resource/h20torrestart>
@@ -6322,6 +6630,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv203b> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/xv203b> .
 
 <http://www.disit.org/saref4bldg-ext/Energy>
@@ -6359,7 +6669,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/a2ul11> , <http://www.disit.org/altair/resource/a2ul19> , <http://www.disit.org/altair/resource/a2ul18> .
+                <http://www.disit.org/altair/resource/a2ul11> , <http://www.disit.org/altair/resource/a2ul19> , <http://www.disit.org/altair/resource/a2ul18> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/a2ul18> , <http://www.disit.org/altair/resource/a2ul19> , <http://www.disit.org/altair/resource/a2ul11> .
 
 <http://www.disit.org/altair/resource/Flusso_208>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -6463,6 +6775,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv606> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/xv606> .
 
 <http://www.disit.org/altair/resource/c460a>
@@ -6538,6 +6852,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> , <http://www.disit.org/altair/resource/ul27> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_hcl>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/bruciatore1> , <http://www.disit.org/altair/resource/ul27> .
 
 <http://www.disit.org/altair/resource/xv4506>
@@ -6612,6 +6930,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtxv406> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtxv406> .
 
 <http://www.disit.org/altair/resource/Flusso_389>
@@ -6626,6 +6946,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txthclexit1> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txthclexit1> .
 
 <http://www.disit.org/altair/resource/xv1739>
@@ -6723,11 +7045,15 @@
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtcwstart> .
 
 <http://www.disit.org/altair/resource/900-p910c>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/ul40> .
+                <http://www.disit.org/altair/resource/ul40> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/ul40> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> .
 
 <http://www.disit.org/saref4bldg-ext/Site>
         a                owl:Class ;
@@ -6768,6 +7094,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-909> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/s-909> .
 
 <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904e>
@@ -6775,7 +7103,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/a1ul10> , <http://www.disit.org/altair/resource/a1ul9> .
+                <http://www.disit.org/altair/resource/a1ul10> , <http://www.disit.org/altair/resource/a1ul9> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/a1ul10> .
 
 <http://www.disit.org/altair/resource/ti642>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
@@ -6794,11 +7124,15 @@
                 <http://www.disit.org/altair/resource/a1ul14> .
 
 <http://www.disit.org/altair/resource/p902b>
-        a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Pump> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> .
+                <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul41> , <http://www.disit.org/altair/resource/ul43> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/ul41> , <http://www.disit.org/altair/resource/ul47> , <http://www.disit.org/altair/resource/ul46> , <http://www.disit.org/altair/resource/ul43> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/ul41> .
 
 <http://www.disit.org/altair/resource/Flusso_203>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -6813,6 +7147,10 @@
                 <http://www.disit.org/altair/resource/ul39> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtcwstart> .
+
+<http://www.disit.org/saref4bldg-ext/to_n2-to_aw>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/saref4bldg-ext/color>
         a             owl:DatatypeProperty ;
@@ -6846,6 +7184,10 @@
                 <http://www.disit.org/altair/resource/p1701b> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/xv1738> .
+
+<http://www.disit.org/saref4bldg-ext/to_h2-to_n2-to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_510>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -6924,6 +7266,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-904b> , <http://www.disit.org/altair/resource/s-904c> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/s-904b> , <http://www.disit.org/altair/resource/s-904c> .
 
 <http://www.disit.org/altair/resource/Flusso_536>
@@ -7020,6 +7364,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv102> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/xv102> .
 
 <http://www.disit.org/altair/resource/Flusso_384>
@@ -7050,7 +7396,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul30> , <http://www.disit.org/altair/resource/xv203a> , <http://www.disit.org/altair/resource/ul33> .
+                <http://www.disit.org/altair/resource/ul30> , <http://www.disit.org/altair/resource/xv203a> , <http://www.disit.org/altair/resource/ul33> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
+                <http://www.disit.org/altair/resource/ul33> , <http://www.disit.org/altair/resource/xv203a> .
 
 <http://www.disit.org/altair/resource/Flusso_131>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -7104,6 +7452,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
                 <http://www.disit.org/altair/resource/c-909> .
 
 <http://www.disit.org/altair/resource/xv1707c>
@@ -7204,7 +7554,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv954ab> , <http://www.disit.org/altair/resource/a1ul3> .
+                <http://www.disit.org/altair/resource/xv954ab> , <http://www.disit.org/altair/resource/a1ul3> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/a1ul3> , <http://www.disit.org/altair/resource/xv954ab> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
+                <http://www.disit.org/altair/resource/a1ul3> .
 
 <http://www.disit.org/altair/resource/Flusso_211>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -7301,6 +7655,10 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ba460> , <http://www.disit.org/altair/resource/ba461> , <http://www.disit.org/altair/resource/ba462> , <http://www.disit.org/altair/resource/ba463> .
 
+<http://www.disit.org/saref4bldg-ext/to_ariaFalsa-to_cl2-to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/li851>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -7343,6 +7701,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore1> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw-to_n2>
                 <http://www.disit.org/altair/resource/bruciatore1> .
 
 <http://www.disit.org/altair/resource/Flusso_304>
@@ -7357,6 +7717,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul30> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
                 <http://www.disit.org/altair/resource/ul30> .
 
 <http://www.disit.org/altair/resource/HCL_4_LINEA.txtcl2start>
@@ -7365,6 +7727,10 @@
                 "HCL_4_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv630_1> .
+
+<http://www.disit.org/saref4bldg-ext/to_h2-to_aria-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_392>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -7385,7 +7751,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p902a> , <http://www.disit.org/altair/resource/p902b> .
+                <http://www.disit.org/altair/resource/p902a> , <http://www.disit.org/altair/resource/p902b> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/p902b> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/p902a> .
 
 <http://www.disit.org/altair/resource/Flusso_85>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -7482,6 +7852,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/degasamento> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/degasamento> .
 
 <http://www.disit.org/altair/resource/Flusso_152>
@@ -7559,6 +7931,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_h2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/Flusso_178>
@@ -7596,7 +7970,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv901b> , <http://www.disit.org/altair/resource/ul44> .
+                <http://www.disit.org/altair/resource/xv901b> , <http://www.disit.org/altair/resource/ul44> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/ul44> , <http://www.disit.org/altair/resource/xv901b> .
 
 <http://www.disit.org/altair/resource/Flusso_485>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -7617,6 +7993,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/k601d> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
                 <http://www.disit.org/altair/resource/k601d> .
 
 <http://www.disit.org/altair/resource/fic1101>
@@ -7708,6 +8086,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p904b> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/p904b> .
 
 <http://www.disit.org/altair/resource/Flusso_552>
@@ -7728,6 +8108,10 @@
                 <http://www.disit.org/altair/resource/ul45> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" .
+
+<http://www.disit.org/saref4bldg-ext/to_h2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/xv4615-3>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
@@ -7783,6 +8167,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-855> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/s-855> .
 
 <http://www.disit.org/altair/resource/mc-492a>
@@ -7797,6 +8183,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul260> ;
+        <http://www.disit.org/saref4bldg-ext/to_ariaAtmosferica>
                 <http://www.disit.org/altair/resource/ul260> .
 
 <http://www.disit.org/altair/resource/pi462>
@@ -7961,6 +8349,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a2ul14> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a2ul14> .
 
 <http://www.disit.org/altair/resource/Flusso_658>
@@ -7975,6 +8365,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a1ul7> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/a1ul7> .
 
 <http://www.disit.org/altair/resource/HCL_4_LINEA.txtHCL_4_LINEA.txtcwexit1>
@@ -8117,6 +8509,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/truck2> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/truck2> .
 
 <http://www.disit.org/altair/resource/starts-851>
@@ -8143,7 +8537,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/sv884> , <http://www.disit.org/altair/resource/sv802> , <http://www.disit.org/altair/resource/sv801> .
+                <http://www.disit.org/altair/resource/sv884> , <http://www.disit.org/altair/resource/sv802> , <http://www.disit.org/altair/resource/sv801> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
+                <http://www.disit.org/altair/resource/sv884> , <http://www.disit.org/altair/resource/sv801> , <http://www.disit.org/altair/resource/sv802> .
 
 <http://www.disit.org/altair/resource/fi1712b>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -8311,6 +8707,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro-to_ferroso-to_ferroso-to_cloro-to_ferroso>
+                <http://www.disit.org/altair/resource/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/a1ul4> .
 
 <http://www.disit.org/altair/resource/Flusso_106>
@@ -8340,6 +8740,10 @@
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/xv856_2> .
+
+<http://www.disit.org/saref4bldg-ext/to_aw-to_aw>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_194>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -8388,6 +8792,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul26> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/ul26> .
 
 <http://www.disit.org/altair/resource/Flusso_119>
@@ -8411,12 +8817,20 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/lv-201> .
 
+<http://www.disit.org/saref4bldg-ext/to_aria-to_h2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_413>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/ul17> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p982b> .
+
+<http://www.disit.org/saref4bldg-ext/to_aria-to_h2-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/p1702b>
         a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
@@ -8446,14 +8860,18 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p851b> , <http://www.disit.org/altair/resource/p851a> .
+                <http://www.disit.org/altair/resource/p851b> , <http://www.disit.org/altair/resource/p851a> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
+                <http://www.disit.org/altair/resource/p851a> .
 
 <http://www.disit.org/altair/resource/ul240>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p600a> , <http://www.disit.org/altair/resource/HCL_3_LINEA.txtp600b> .
+                <http://www.disit.org/altair/resource/p600a> , <http://www.disit.org/altair/resource/HCL_3_LINEA.txtp600b> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/p600a> .
 
 <http://www.disit.org/altair/resource/Flusso_679>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -8638,6 +9056,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_aria-to_n2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/fic4003>
@@ -8668,6 +9088,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> .
 
 <http://www.disit.org/altair/resource/Flusso_101>
@@ -8689,7 +9111,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv851_2> , <http://www.disit.org/altair/resource/xv851_1> .
+                <http://www.disit.org/altair/resource/xv851_2> , <http://www.disit.org/altair/resource/xv851_1> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
+                <http://www.disit.org/altair/resource/xv851_1> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio-to_IpocloritoDiSodio>
+                <http://www.disit.org/altair/resource/xv851_2> .
 
 <http://www.disit.org/altair/resource/ul14>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
@@ -8737,6 +9163,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_cl2>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_cl2-to_cl2-to_n2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/ul27>
@@ -8744,7 +9174,11 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/bruciatore1> , <http://www.disit.org/altair/resource/me600> .
+                <http://www.disit.org/altair/resource/bruciatore1> , <http://www.disit.org/altair/resource/me600> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
+                <http://www.disit.org/altair/resource/me600> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/bruciatore1> .
 
 <http://www.disit.org/altair/resource/Flusso_127>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -8847,7 +9281,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/a2ul12> , <http://www.disit.org/altair/resource/a2ul17> , <http://www.disit.org/altair/resource/a2ul16> .
+                <http://www.disit.org/altair/resource/a2ul12> , <http://www.disit.org/altair/resource/a2ul17> , <http://www.disit.org/altair/resource/a2ul16> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/a2ul17> .
 
 <http://www.disit.org/altair/resource/fic-3460>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
@@ -8879,6 +9315,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/s-901> .
 
+<http://www.disit.org/saref4bldg-ext/to_n2-to_cl2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_295>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -8907,6 +9347,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv803> , <http://www.disit.org/altair/resource/ul31> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/xv803> , <http://www.disit.org/altair/resource/ul31> .
 
 <http://www.disit.org/altair/resource/Flusso_527>
@@ -8970,6 +9412,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv070c> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_h2>
                 <http://www.disit.org/altair/resource/xv070c> .
 
 <http://www.disit.org/altair/resource/Flusso_375>
@@ -8978,6 +9422,10 @@
                 <http://www.disit.org/altair/resource/pah103> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv808> .
+
+<http://www.disit.org/saref4bldg-ext/to_ariaFalsa-to_cl2-to_n2-to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_122>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9008,6 +9456,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_aw>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/Flusso_388>
@@ -9022,6 +9472,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul34> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/ul34> .
 
 <http://www.disit.org/altair/resource/Flusso_135>
@@ -9092,7 +9544,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/s-901> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/ul40> .
+                <http://www.disit.org/altair/resource/s-901> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/ul40> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/ul40> .
 
 <http://www.disit.org/altair/resource/Flusso_442>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9136,6 +9590,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a1ul8> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a1ul8> .
 
 <http://www.disit.org/altair/resource/h2ostart>
@@ -9173,7 +9629,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p902b> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> .
+                <http://www.disit.org/altair/resource/p902b> , <http://www.disit.org/altair/resource/ul43> , <http://www.disit.org/altair/resource/ul41> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/p902b> , <http://www.disit.org/altair/resource/ul41> , <http://www.disit.org/altair/resource/ul43> .
 
 <http://www.disit.org/altair/resource/Flusso_290>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -9219,13 +9677,6 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/c1701b> .
 
-<http://www.disit.org/altair/resource/p600a>
-        a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "HCL_3_LINEA.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul230> .
-
 <http://www.disit.org/altair/resource/fi900>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -9234,6 +9685,15 @@
                 <http://www.disit.org/altair/resource/p904a> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" .
+
+<http://www.disit.org/altair/resource/p600a>
+        a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "HCL_3_LINEA.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul230> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/ul230> .
 
 <http://www.disit.org/altair/resource/Flusso_228>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9268,12 +9728,28 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> .
 
 <http://www.disit.org/altair/resource/FERRICO_FERROSO_CLORO_FERRO.txtc905exit>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "FERRICO_FERROSO_CLORO_FERRO.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_50>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/cisternaexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/p-4320> .
+
+<http://www.disit.org/altair/resource/Flusso_535>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/900-p910b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/atbstart2> .
 
 <http://www.disit.org/altair/resource/pic1702>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -9283,20 +9759,6 @@
                 <http://www.disit.org/altair/resource/p1702b> , <http://www.disit.org/altair/resource/p1702a> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IPOCLORITO.txt" .
-
-<http://www.disit.org/altair/resource/Flusso_535>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/900-p910b> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/atbstart2> .
-
-<http://www.disit.org/altair/resource/Flusso_50>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/cisternaexit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/p-4320> .
 
 <http://www.disit.org/altair/resource/li2226b>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -9312,6 +9774,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/k601a> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_h2>
                 <http://www.disit.org/altair/resource/k601a> .
 
 <http://www.disit.org/altair/resource/Flusso_370>
@@ -9356,12 +9820,16 @@
 <http://www.disit.org/altair/resource/kg-m3>
         a       <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> , owl:NamedIndividual .
 
-<http://www.disit.org/altair/resource/Flusso_383>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul280> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtcwstart> .
+<http://www.disit.org/altair/resource/ul30>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "HCL_2_LINEA_ACIDINO.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv202> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_h2>
+                <http://www.disit.org/altair/resource/xv202> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_aria>
+                <http://www.disit.org/altair/resource/xv202> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txtazotostart>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
@@ -9370,12 +9838,12 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul160> .
 
-<http://www.disit.org/altair/resource/ul30>
-        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "HCL_2_LINEA_ACIDINO.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv202> .
+<http://www.disit.org/altair/resource/Flusso_383>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul280> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtcwstart> .
 
 <http://www.disit.org/altair/resource/k601c>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
@@ -9384,19 +9852,19 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul179> , <http://www.disit.org/altair/resource/ul171> , <http://www.disit.org/altair/resource/sv640pdoppione> , <http://www.disit.org/altair/resource/ul170> .
 
-<http://www.disit.org/altair/resource/Flusso_130>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/gasdisingaccioexit> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4002d> .
-
 <http://www.disit.org/altair/resource/xv1733>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IPOCLORITO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/e1702> .
+
+<http://www.disit.org/altair/resource/Flusso_130>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/gasdisingaccioexit> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv4002d> .
 
 <http://www.disit.org/altair/resource/Flusso_76>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9417,7 +9885,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/FERRICO_FERROSO_CLORO_FERRO.txtr980> , <http://www.disit.org/altair/resource/ul40> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/s985> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/c981> .
+                <http://www.disit.org/altair/resource/FERRICO_FERROSO_CLORO_FERRO.txtr980> , <http://www.disit.org/altair/resource/ul40> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/s985> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/c981> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/ul40> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> .
 
 <http://www.disit.org/altair/resource/Flusso_308>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -9426,17 +9896,17 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ch4start_recuperoco2> .
 
+<http://www.disit.org/altair/resource/gasdisingaggio-exit>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "SEZIONE_REAZIONE_R-4003.txt" .
+
 <http://www.disit.org/altair/resource/Flusso_602>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/s-854> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/xv854> .
-
-<http://www.disit.org/altair/resource/gasdisingaggio-exit>
-        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "SEZIONE_REAZIONE_R-4003.txt" .
 
 <http://www.disit.org/altair/resource/Flusso_396>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9455,6 +9925,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtr980> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txtr980> .
 
 <http://www.disit.org/altair/resource/Flusso_690>
@@ -9511,6 +9983,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/sv203b> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria>
+                <http://www.disit.org/altair/resource/sv203b> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
                 <http://www.disit.org/altair/resource/sv203b> .
 
 <http://www.disit.org/altair/resource/Flusso_628>
@@ -9532,6 +10008,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_n2-to_ariaFalsa-to_cl2-to_aria-to_ariaFalsa-to_n2-to_cl2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/c980>
@@ -9569,6 +10047,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/a1ul2> .
 
+<http://www.disit.org/saref4bldg-ext/to_n2-to_cl2-to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_210>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -9581,6 +10063,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul280> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw>
                 <http://www.disit.org/altair/resource/ul280> .
 
 <http://www.disit.org/altair/resource/Flusso_476>
@@ -9595,6 +10079,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv904de_2> , <http://www.disit.org/altair/resource/xv904de_1> , <http://www.disit.org/altair/resource/a1ul12> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/xv904de_2> , <http://www.disit.org/altair/resource/xv904de_1> , <http://www.disit.org/altair/resource/a1ul12> .
 
 <http://www.disit.org/altair/resource/Flusso_223>
@@ -9626,9 +10112,10 @@
                 <http://www.disit.org/altair/resource/v1701a> .
 
 <http://www.disit.org/saref4bldg-ext/startIn>
-        a             owl:ObjectProperty ;
-        rdfs:comment  "The Physical Object from which the Flow start." ;
-        rdfs:label    "startIn" .
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "The Physical Object from which the Flow start." ;
+        rdfs:label          "startIn" ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/startIn> .
 
 <http://www.disit.org/altair/resource/Flusso_530>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9697,11 +10184,19 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" .
 
+<http://www.disit.org/saref4bldg-ext/to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtawstart>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv406> ;
+        <http://www.disit.org/saref4bldg-ext/to_aw>
+                <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv406> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_h2>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv406> .
 
 <http://www.disit.org/altair/resource/nm3-h>
@@ -9717,6 +10212,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul182> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/ul182> .
 
 <http://www.disit.org/altair/resource/Flusso_556>
@@ -9741,9 +10238,10 @@
                 <http://www.disit.org/altair/resource/p461b> .
 
 <http://www.disit.org/saref4bldg-ext/canMeasureIn>
-        a             owl:ObjectProperty ;
-        rdfs:comment  "A relation between a sensor and the unit of measurement in which the sensor measurement is expressed." ;
-        rdfs:label    "canMeasureIn" .
+        a                   owl:ObjectProperty ;
+        rdfs:comment        "A relation between a sensor and the unit of measurement in which the sensor measurement is expressed." ;
+        rdfs:label          "canMeasureIn" ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/canMeasureIn> .
 
 <http://www.disit.org/altair/resource/Flusso_391>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9835,7 +10333,22 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv607> , <http://www.disit.org/altair/resource/ul200> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
+                <http://www.disit.org/altair/resource/ul200> , <http://www.disit.org/altair/resource/xv607> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2-to_cl2>
                 <http://www.disit.org/altair/resource/xv607> , <http://www.disit.org/altair/resource/ul200> .
+
+<http://www.disit.org/altair/resource/ferricostart>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "CARICO_FERRICO_FERROSO.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> , <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904e> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904e> , <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> .
 
 <http://www.disit.org/altair/resource/ul143>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
@@ -9843,13 +10356,6 @@
                 "SEZIONE_REAZIONE_R-4003.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4003> .
-
-<http://www.disit.org/altair/resource/ferricostart>
-        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "CARICO_FERRICO_FERROSO.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> , <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904e> .
 
 <http://www.disit.org/altair/resource/Flusso_151>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -9886,6 +10392,13 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/e1701b> .
 
+<http://www.disit.org/altair/resource/xv1709c>
+        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IPOCLORITO.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p1701c> .
+
 <http://www.disit.org/altair/resource/ti4328>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -9895,20 +10408,6 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4003.txt" .
 
-<http://www.disit.org/altair/resource/xv1709c>
-        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "IPOCLORITO.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p1701c> .
-
-<http://www.disit.org/altair/resource/Flusso_164>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/p-4604b> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv4221> .
-
 <http://www.disit.org/altair/resource/li1704a>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -9917,6 +10416,13 @@
                 <http://www.disit.org/altair/resource/v1701a> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IPOCLORITO.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_164>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/p-4604b> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv4221> .
 
 <http://www.disit.org/altair/resource/ba462>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
@@ -9931,6 +10437,10 @@
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtcwexit> , <http://www.disit.org/altair/resource/ul34> , <http://www.disit.org/altair/resource/ul32> .
+
+<http://www.disit.org/saref4bldg-ext/to_cloro-to_ferroso-to_ferroso-to_cloro-to_ferroso>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_636>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -9951,6 +10461,13 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/start1> , <http://www.disit.org/altair/resource/xv4301a> .
 
+<http://www.disit.org/altair/resource/Flusso_471>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/a1ul8> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> .
+
 <http://www.disit.org/altair/resource/li484>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -9959,13 +10476,6 @@
                 <http://www.disit.org/altair/resource/starts-484> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO.txt" .
-
-<http://www.disit.org/altair/resource/Flusso_471>
-        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/a1ul8> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d> .
 
 <http://www.disit.org/altair/resource/HCL_3_LINEA.txtcwstart1>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
@@ -9979,6 +10489,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/k601b> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
+                <http://www.disit.org/altair/resource/k601b> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_h2>
                 <http://www.disit.org/altair/resource/k601b> .
 
 <http://www.disit.org/altair/resource/Flusso_649>
@@ -10019,6 +10533,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/v1701c> .
 
+<http://www.disit.org/saref4bldg-ext/to_n2-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_409>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -10031,6 +10549,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2-to_aw>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/sv650p>
@@ -10123,6 +10643,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a1ul11> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a1ul11> .
 
 <http://www.disit.org/altair/resource/Flusso_551>
@@ -10200,6 +10722,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul280> ;
+        <http://www.disit.org/saref4bldg-ext/to_cw>
                 <http://www.disit.org/altair/resource/ul280> .
 
 <http://www.disit.org/altair/resource/starts-855>
@@ -10212,6 +10736,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-854> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/s-854> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txth2otorrestart>
@@ -10302,6 +10828,10 @@
                 <http://www.disit.org/altair/resource/xv4245> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/r-4002> .
+
+<http://www.disit.org/saref4bldg-ext/to_h2-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_644>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -10475,6 +11005,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4002.txt" .
 
+<http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/ft-443>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
         <http://www.disit.org/saref4bldg-ext/canMeasureIn>
@@ -10534,6 +11068,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/truck1> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
                 <http://www.disit.org/altair/resource/truck1> .
 
 <http://www.disit.org/altair/resource/r986>
@@ -10572,6 +11108,10 @@
                 <http://www.disit.org/altair/resource/p904a> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/a2ul20> .
+
+<http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio-to_IpocloritoDiSodio>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_12>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -10692,19 +11232,27 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/xv606> .
 
-<http://www.disit.org/altair/resource/Flusso_105>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/r-4001> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtp-4606start> .
+<http://www.disit.org/altair/resource/atbstart2>
+        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IMPIANTO_FeCL3_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/900-p910b> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_ferroso-to_cloruroFerrico-to_ferroso>
+                <http://www.disit.org/altair/resource/900-p910a> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/900-p910b> , <http://www.disit.org/altair/resource/900-p910a> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
+                <http://www.disit.org/altair/resource/900-p910b> .
 
 <http://www.disit.org/altair/resource/a1ul6>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/a1ul4> .
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> , <http://www.disit.org/altair/resource/a1ul4> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954b> .
 
 <http://www.disit.org/altair/resource/Flusso_652>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -10713,18 +11261,20 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/mc-446start> .
 
-<http://www.disit.org/altair/resource/atbstart2>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "IMPIANTO_FeCL3_2.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/900-p910a> , <http://www.disit.org/altair/resource/900-p910b> .
+<http://www.disit.org/altair/resource/Flusso_105>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/r-4001> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtp-4606start> .
 
 <http://www.disit.org/altair/resource/h2odemistart2>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601a> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601a> .
 
 <http://www.disit.org/altair/resource/ul62exit>
@@ -10753,13 +11303,6 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ferrosorisodottoatoscaggioexit> .
 
-<http://www.disit.org/altair/resource/s-4304>
-        a       <http://www.disit.org/saref4bldg-ext/Tank> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "PARCO_SERBATOI_2.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv4304-2> .
-
 <http://www.disit.org/altair/resource/xv4616-3>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -10767,12 +11310,12 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/s-4306> .
 
-<http://www.disit.org/altair/resource/Flusso_665>
-        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/lv-201> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/K2CO3.txtkohstart> .
+<http://www.disit.org/altair/resource/s-4304>
+        a       <http://www.disit.org/saref4bldg-ext/Tank> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "PARCO_SERBATOI_2.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv4304-2> .
 
 <http://www.disit.org/altair/resource/Flusso_118>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -10780,6 +11323,13 @@
                 <http://www.disit.org/altair/resource/xv4602-2> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p-4602> .
+
+<http://www.disit.org/altair/resource/Flusso_665>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/lv-201> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/K2CO3.txtkohstart> .
 
 <http://www.disit.org/altair/resource/starts-484>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
@@ -10863,6 +11413,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv070d> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/xv070d> .
 
 <http://www.disit.org/altair/resource/Flusso_438>
@@ -10887,8 +11439,9 @@
                 <http://www.disit.org/altair/resource/h2odemistart1> .
 
 <http://www.disit.org/saref4bldg-ext/isContainedIn>
-        a           owl:ObjectProperty ;
-        rdfs:label  "isContainedIn" .
+        a                   owl:ObjectProperty ;
+        rdfs:label          "isContainedIn" ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/isContainedIn> .
 
 <http://www.disit.org/altair/resource/Flusso_286>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -10911,6 +11464,10 @@
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO.txt" .
+
+<http://www.disit.org/saref4bldg-ext/to_ferroso>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_505>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -10966,6 +11523,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ul177> .
 
+<http://www.disit.org/saref4bldg-ext/to_hcl>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
+
 <http://www.disit.org/altair/resource/Flusso_353>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -10978,6 +11539,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954a> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-954a> .
 
 <http://www.disit.org/altair/resource/Flusso_100>
@@ -10992,6 +11555,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul28> ;
+        <http://www.disit.org/saref4bldg-ext/to_n2>
                 <http://www.disit.org/altair/resource/ul28> .
 
 <http://www.disit.org/altair/resource/p-900start>
@@ -10999,6 +11564,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul45> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
                 <http://www.disit.org/altair/resource/ul45> .
 
 <http://www.disit.org/altair/resource/Flusso_46>
@@ -11029,19 +11596,14 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/pah103> .
 
-<http://www.disit.org/altair/resource/p603>
-        a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/cv-905-1>
+        a       <http://www.disit.org/saref4bldg-ext/Container> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "HCL_1_LINEA_(FG600).txt" ;
+                "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul25> , <http://www.disit.org/altair/resource/ul23> .
-
-<http://www.disit.org/altair/resource/Flusso_113>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txte-4505> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtSEZIONE_REAZIONE_R-4001.txth2otorrestart1> .
+                <http://www.disit.org/altair/resource/c-909> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
+                <http://www.disit.org/altair/resource/c-909> .
 
 <http://www.disit.org/altair/resource/Flusso_660>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -11050,12 +11612,21 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ariaambientestart> .
 
-<http://www.disit.org/altair/resource/cv-905-1>
-        a       <http://www.disit.org/saref4bldg-ext/Container> , owl:NamedIndividual ;
+<http://www.disit.org/altair/resource/Flusso_113>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txte-4505> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtSEZIONE_REAZIONE_R-4001.txth2otorrestart1> .
+
+<http://www.disit.org/altair/resource/p603>
+        a       <http://www.disit.org/saref4bldg-ext/Pump> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "IMPIANTO_FeCL3_2.txt" ;
+                "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/c-909> .
+                <http://www.disit.org/altair/resource/ul25> , <http://www.disit.org/altair/resource/ul23> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
+                <http://www.disit.org/altair/resource/ul23> , <http://www.disit.org/altair/resource/ul25> .
 
 <http://www.disit.org/altair/resource/pi980_1>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -11106,6 +11677,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul27> ;
+        <http://www.disit.org/saref4bldg-ext/to_acquaDemineralizzata>
                 <http://www.disit.org/altair/resource/ul27> .
 
 <http://www.disit.org/altair/resource/hciexit>
@@ -11113,19 +11686,19 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" .
 
-<http://www.disit.org/altair/resource/Flusso_126>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/ul154> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/ul150> .
-
 <http://www.disit.org/altair/resource/Flusso_673>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv406> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtawstart> .
+
+<http://www.disit.org/altair/resource/Flusso_126>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/ul154> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/ul150> .
 
 <http://www.disit.org/altair/resource/Flusso_420>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -11168,19 +11741,19 @@
 <http://www.disit.org/altair/resource/mmh2c>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> .
 
-<http://www.disit.org/altair/resource/Flusso_139>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/xv4234> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txtp-4606start> .
-
 <http://www.disit.org/altair/resource/Flusso_686>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/ul27> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/bruciatore1> .
+
+<http://www.disit.org/altair/resource/Flusso_139>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/xv4234> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txtp-4606start> .
 
 <http://www.disit.org/altair/resource/Flusso_433>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -11194,6 +11767,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2-to_n2-to_ariaAtmosferica>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/fq1702>
@@ -11210,6 +11785,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/to_aria-to_cl2-to_n2>
                 <http://www.disit.org/altair/resource/pah103> .
 
 <http://www.disit.org/altair/resource/Flusso_699>
@@ -11231,11 +11808,6 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4002.txt" .
 
-<http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtdegasamentoHCL_2_LINEA_ACIDINO.txtexit2>
-        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "HCL_2_LINEA_ACIDINO.txt" .
-
 <http://www.disit.org/altair/resource/Flusso_6>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -11243,12 +11815,10 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/sv640_2> .
 
-<http://www.disit.org/altair/resource/Flusso_281>
-        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/bruciatore> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/xv802> .
+<http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtdegasamentoHCL_2_LINEA_ACIDINO.txtexit2>
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "HCL_2_LINEA_ACIDINO.txt" .
 
 <http://www.disit.org/altair/resource/fic4108>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -11258,6 +11828,13 @@
                 <http://www.disit.org/altair/resource/ul151> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4001.txt" .
+
+<http://www.disit.org/altair/resource/Flusso_281>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/bruciatore> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/xv802> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtdegasamentoiposodioexit>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
@@ -11269,7 +11846,13 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/a2ul13> , <http://www.disit.org/altair/resource/a2ul15> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a2ul13> , <http://www.disit.org/altair/resource/a2ul15> .
+
+<http://www.disit.org/saref4bldg-ext/to_aria-to_n2-to_h2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_459>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -11350,7 +11933,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p851b> , <http://www.disit.org/altair/resource/p851a> .
+                <http://www.disit.org/altair/resource/p851b> , <http://www.disit.org/altair/resource/p851a> ;
+        <http://www.disit.org/saref4bldg-ext/to_IpocloritoDiSodio>
+                <http://www.disit.org/altair/resource/p851b> .
 
 <http://www.disit.org/altair/resource/pi4322>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Sensor> ;
@@ -11366,6 +11951,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtHCL_2_LINEA_ACIDINO.txtdegasamentoexit1> ;
+        <http://www.disit.org/saref4bldg-ext/to_cl2>
                 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtHCL_2_LINEA_ACIDINO.txtdegasamentoexit1> .
 
 <http://www.disit.org/altair/resource/Flusso_526>
@@ -11422,6 +12009,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_1_LINEA_(FG600).txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p603> ;
+        <http://www.disit.org/saref4bldg-ext/to_hcl>
                 <http://www.disit.org/altair/resource/p603> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txtp-4606start>
@@ -11462,6 +12051,13 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/ul18> .
 
+<http://www.disit.org/altair/resource/xv1737>
+        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/isSchermata>
+                "IPOCLORITO.txt" ;
+        <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/p1701a> .
+
 <http://www.disit.org/altair/resource/ul34>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -11476,19 +12072,16 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/p-4320> .
 
-<http://www.disit.org/altair/resource/xv1737>
-        a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/isSchermata>
-                "IPOCLORITO.txt" ;
-        <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/p1701a> .
-
 <http://www.disit.org/altair/resource/xv1706c>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IPOCLORITO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/v1701c> .
+
+<http://www.disit.org/saref4bldg-ext/to_aw-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_681>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -11519,6 +12112,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/s-900exit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/s-900exit> .
 
 <http://www.disit.org/altair/resource/Flusso_147>
@@ -11540,7 +12135,9 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/900-p910b> , <http://www.disit.org/altair/resource/s-901> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/ul40> .
+                <http://www.disit.org/altair/resource/900-p910b> , <http://www.disit.org/altair/resource/ul40> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b> , <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/s-901> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a> , <http://www.disit.org/altair/resource/s-901> , <http://www.disit.org/altair/resource/900-p910b> , <http://www.disit.org/altair/resource/ul40> .
 
 <http://www.disit.org/altair/resource/Flusso_441>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -11630,6 +12227,10 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/ul45> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso>
+                <http://www.disit.org/altair/resource/ul45> ;
+        <http://www.disit.org/saref4bldg-ext/to_ferroso-to_ferroso>
                 <http://www.disit.org/altair/resource/ul45> .
 
 <http://www.disit.org/altair/resource/Flusso_227>
@@ -11645,6 +12246,10 @@
                 <http://www.disit.org/altair/resource/ul43> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p909> .
+
+<http://www.disit.org/saref4bldg-ext/to_n2-to_cl2-to_cl2-to_n2>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/ti4226>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -11667,7 +12272,13 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "CARICO_FERRICO_FERROSO_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> .
+                <http://www.disit.org/altair/resource/xv904abc_1> , <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+                <http://www.disit.org/altair/resource/xv904abc_2> , <http://www.disit.org/altair/resource/ibcexit> .
+
+<http://www.disit.org/saref4bldg-ext/to_cloruroFerrico-to_cloruroFerrico>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/li4318>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -11761,7 +12372,15 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_3_LINEA.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul210> , <http://www.disit.org/altair/resource/sv203a> , <http://www.disit.org/altair/resource/ul220> .
+                <http://www.disit.org/altair/resource/sv203a> , <http://www.disit.org/altair/resource/ul210> , <http://www.disit.org/altair/resource/ul220> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2>
+                <http://www.disit.org/altair/resource/sv203a> , <http://www.disit.org/altair/resource/ul220> , <http://www.disit.org/altair/resource/ul210> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2-to_h2>
+                <http://www.disit.org/altair/resource/sv203a> , <http://www.disit.org/altair/resource/ul210> .
+
+<http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/fic981_2>
         a       <http://www.disit.org/saref4bldg-ext/Sensor> , owl:NamedIndividual ;
@@ -11805,6 +12424,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IMPIANTO_FeCL3_2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/c-910> ;
+        <http://www.disit.org/saref4bldg-ext/to_cloro>
                 <http://www.disit.org/altair/resource/c-910> .
 
 <http://www.disit.org/altair/resource/xv1707a>

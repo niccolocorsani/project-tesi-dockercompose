@@ -53,6 +53,7 @@ public class OntologyBuilder {
     Map<String, String> individuals_iri = new HashMap<>(); // per come è impostato il software e con la riga in questione in ogni csv deve essere definito tutti gli oggetti anche se sono stati precedentemente definiti
     String row;
     int dataProperty;
+    OWLDeclarationAxiom declarationAxiom = null;
     List addedLines = new ArrayList<String>();
     while ((row = br.readLine()) != null) {
       try {
@@ -61,13 +62,11 @@ public class OntologyBuilder {
 
         String[] data = row.split(";");
 
-        if (row.contains("shap"))
-          System.out.println("x");
+
 
         switch (data[1]) {
 
           case "Class":
-
 
             pm = new DefaultPrefixManager(null, null, "http://www.disit.org/altair/resource/");
             individuals_iri.put(data[0], pm.getDefaultPrefix());
@@ -83,34 +82,18 @@ public class OntologyBuilder {
 
             IRI myIri = IRI.create("http://www.disit.org/saref4bldg-ext/");
             OWLObjectProperty addedObjectProperty = factory.getOWLObjectProperty(myIri + data[2]);
-            boolean axiomEsist = false;
-
-            List<OWLAxiom> axioms = o.axioms().collect(Collectors.toList());
-
-            for (OWLAxiom axiom : axioms) {
-              if (axiom.toString().contains(data[2]))
-                axiomEsist = true;
-            }
-
-
             OWLObjectProperty parentObjectProperty = null;
-
-            if (axiomEsist == false) {
-
-              System.out.println("Assioma non esiste, lo aggiungo");
-              OWLDeclarationAxiom declarationAxiom = factory.getOWLDeclarationAxiom(addedObjectProperty);
-              o.add(declarationAxiom);
-
-              parentObjectProperty = factory.getOWLObjectProperty(myIri + data[2].split("_")[0]); // esce --> to
+            declarationAxiom = factory.getOWLDeclarationAxiom(addedObjectProperty);
+            o.add(declarationAxiom);
+            parentObjectProperty = factory.getOWLObjectProperty(myIri + data[2].split("_")[0]); // esce --> to
 
             /*   String[] list_of_profondita_di_to = data[2].split("-"); //  Versione alternativa con sotto sotto proprieta
              if (list_of_profondita_di_to.length == 1)
                 newObjectProperty = factory.getOWLObjectProperty(myIri + data[2].split("_")[0]); // che sarebbe il to
               if (list_of_profondita_di_to.length == 2)
                 newObjectProperty = factory.getOWLObjectProperty(myIri + list_of_profondita_di_to[0]); // che sarebbetipo to_cloro*/
-              OWLSubPropertyAxiom ax = factory.getOWLSubObjectPropertyOfAxiom(addedObjectProperty, parentObjectProperty);
-              man.applyChange(new AddAxiom(o, ax));
-            }
+            OWLSubPropertyAxiom ax = factory.getOWLSubObjectPropertyOfAxiom(addedObjectProperty, parentObjectProperty);
+            man.applyChange(new AddAxiom(o, ax));
 
 
             pm = new DefaultPrefixManager(null, null, individuals_iri.get(data[0]));
@@ -125,9 +108,8 @@ public class OntologyBuilder {
               for (OWLEntity a : entOnt) {
                 if (a.toString().replace("<", "").replace(">", "").contains(data[3])) {
                   String IRI = a.toString().replace("<", "").replace(">", "").replace(data[3], "").replace("start", "").replace(" ", "");
-
                   if (!this.xxxx.contains(IRI))
-                    System.out.println(IRI);
+                    System.err.println(IRI);
                   pm = new DefaultPrefixManager(null, null, IRI);
                 }
               }
@@ -143,18 +125,8 @@ public class OntologyBuilder {
 
             myIri = IRI.create("http://www.disit.org/saref4bldg-ext/");
             OWLDataProperty addedDataProperty = factory.getOWLDataProperty(myIri + data[2]);
-            axiomEsist = false;
-
-            axioms = o.axioms().collect(Collectors.toList());
-
-            for (OWLAxiom axiom : axioms) {
-              if (axiom.toString().contains(data[2]))
-                axiomEsist = true;
-            }
-            if (axiomEsist == false) {
-              OWLDeclarationAxiom declarationAxiom = factory.getOWLDeclarationAxiom(addedDataProperty);
-              o.add(declarationAxiom);
-            }
+            declarationAxiom = factory.getOWLDeclarationAxiom(addedDataProperty);
+            o.add(declarationAxiom);
 
 
             pm = new DefaultPrefixManager(null, null, individuals_iri.get(data[0]));
@@ -173,7 +145,6 @@ public class OntologyBuilder {
 
               } catch (NumberFormatException e) {
                 owlDataPropertyAssertionAxiom = factory.getOWLDataPropertyAssertionAxiom(owlDataProperty, individual, data[3]);
-
               }
             }
 
@@ -191,6 +162,7 @@ public class OntologyBuilder {
     if (willSave) {
       man.saveOntology(o, new TurtleDocumentFormat(), new FileOutputStream(file));
     }
+
   }
 
   private PrefixManager findClassPrefix(OWLOntology o, String toCkeck) throws IOException {
@@ -211,13 +183,17 @@ public class OntologyBuilder {
 
   private PrefixManager findObjectPropertyPrefix(OWLOntology o, String toCkeck) throws IOException {
     PrefixManager pm = null;
+
+    Set<OWLEntity> d = o.getSignature();
     for (int i = 0; i < 3; i++) {
+
       if (o.containsObjectPropertyInSignature(IRI.create(prefixes[i] + toCkeck), Imports.INCLUDED)) {
         pm = new DefaultPrefixManager(null, null, prefixes[i]);
         break;
       }
     }
     if (pm == null) {
+      System.err.println("pm null for: " + toCkeck);
       throw new IOException();
     }
     return pm;

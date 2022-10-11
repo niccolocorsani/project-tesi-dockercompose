@@ -199,8 +199,8 @@
   <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="4375" y="880">STARTS-879</text>
   <rect fill="aliceblue" height="100" id="xv4305-2" stroke="skyblue" stroke-width="3" width="150" x="7577" y="2490"/>
   <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="7652" y="2540">XV4305-2</text>
-  <rect fill="aliceblue" height="100" id="starts-873" stroke="skyblue" stroke-width="3" width="150" x="14500" y="830"/>
-  <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="14575" y="880">STARTS-873</text>
+  <rect fill="aliceblue" height="100" id="starts-873" stroke="skyblue" stroke-width="3" width="150" x="14700" y="830"/>
+  <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="14775" y="880">STARTS-873</text>
   <rect fill="aliceblue" height="100" id="starts-874" stroke="skyblue" stroke-width="3" width="150" x="4700" y="830"/>
   <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="4775" y="880">STARTS-874</text>
   <rect fill="aliceblue" height="100" id="starts-875" stroke="skyblue" stroke-width="3" width="150" x="577" y="2490"/>
@@ -227,8 +227,8 @@
   <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="4252" y="2540">EXITVERSOIMPIANTOIPOSODIO</text>
   <rect fill="aliceblue" height="100" id="p-4616" stroke="skyblue" stroke-width="3" width="150" x="7177" y="2490"/>
   <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="7252" y="2540">P-4616</text>
-  <rect fill="aliceblue" height="100" id="s-4320" stroke="skyblue" stroke-width="3" width="150" x="14700" y="830"/>
-  <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="14775" y="880">S-4320</text>
+  <rect fill="aliceblue" height="100" id="s-4320" stroke="skyblue" stroke-width="3" width="150" x="14500" y="830"/>
+  <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="14575" y="880">S-4320</text>
   <rect fill="aliceblue" height="100" id="s2226b" stroke="skyblue" stroke-width="3" width="150" x="6900" y="830"/>
   <text dominant-baseline="middle" font-weight="bold" text-anchor="middle" x="6975" y="880">S2226B</text>
   <rect fill="aliceblue" height="100" id="startdaimpiantoiposodio" stroke="skyblue" stroke-width="3" width="150" x="9300" y="830"/>
@@ -954,12 +954,12 @@
   </g>
   <line class="Flusso_517" stroke="rgb(0,0,0)" stroke-width="3" x1="15705" x2="15705" y1="658" y2="830"/>
   <line class="Flusso_517" marker-end="url(#triangle)" stroke="rgb(0,0,0)" stroke-width="3" x1="705" x2="705" y1="658" y2="830"/>
-  <line class="Flusso_83" stroke="rgb(0,0,0)" stroke-width="3" x1="7980" x2="14707" y1="1260" y2="1260"/>
+  <line class="Flusso_83" stroke="rgb(0,0,0)" stroke-width="3" x1="7980" x2="14507" y1="1260" y2="1260"/>
   <g display="none" id="Flusso_83">
-    <rect fill="white" height="30" stroke="steelblue" stroke-width="2" width="80" x="11303" y="1245"/>
-    <text dominant-baseline="middle" font-size="10" font-weight="bold" text-anchor="middle" x="11343" y="1260">FLUSSO_83</text>
+    <rect fill="white" height="30" stroke="steelblue" stroke-width="2" width="80" x="11203" y="1245"/>
+    <text dominant-baseline="middle" font-size="10" font-weight="bold" text-anchor="middle" x="11243" y="1260">FLUSSO_83</text>
   </g>
-  <line class="Flusso_83" stroke="rgb(0,0,0)" stroke-width="3" x1="14705" x2="14705" y1="930" y2="1262"/>
+  <line class="Flusso_83" stroke="rgb(0,0,0)" stroke-width="3" x1="14505" x2="14505" y1="930" y2="1262"/>
   <line class="Flusso_83" marker-end="url(#triangle)" stroke="rgb(0,0,0)" stroke-width="3" x1="7982" x2="7982" y1="1258" y2="2490"/>
   <line class="Flusso_615" stroke="rgb(0,0,0)" stroke-width="3" x1="11517" x2="22984" y1="1270" y2="1270"/>
   <g display="none" id="Flusso_615">
@@ -2333,13 +2333,13 @@
   </g>
   <line class="Flusso_582" stroke="rgb(0,0,0)" stroke-width="3" x1="18782" x2="18782" y1="3212" y2="2590"/>
   <line class="Flusso_582" marker-end="url(#triangle)" stroke="rgb(0,0,0)" stroke-width="3" x1="4624" x2="4624" y1="3212" y2="2590"/>
-  <line class="Flusso_62" stroke="rgb(0,0,0)" stroke-width="3" x1="1380" x2="14721" y1="2250" y2="2250"/>
+  <line class="Flusso_62" stroke="rgb(0,0,0)" stroke-width="3" x1="1380" x2="14521" y1="2250" y2="2250"/>
   <g display="none" id="Flusso_62">
-    <rect fill="white" height="30" stroke="steelblue" stroke-width="2" width="80" x="8010" y="2235"/>
-    <text dominant-baseline="middle" font-size="10" font-weight="bold" text-anchor="middle" x="8050" y="2250">FLUSSO_62</text>
+    <rect fill="white" height="30" stroke="steelblue" stroke-width="2" width="80" x="7910" y="2235"/>
+    <text dominant-baseline="middle" font-size="10" font-weight="bold" text-anchor="middle" x="7950" y="2250">FLUSSO_62</text>
   </g>
   <line class="Flusso_62" stroke="rgb(0,0,0)" stroke-width="3" x1="1382" x2="1382" y1="2248" y2="2490"/>
-  <line class="Flusso_62" marker-end="url(#triangle)" stroke="rgb(0,0,0)" stroke-width="3" x1="14719" x2="14719" y1="2252" y2="930"/>
+  <line class="Flusso_62" marker-end="url(#triangle)" stroke="rgb(0,0,0)" stroke-width="3" x1="14519" x2="14519" y1="2252" y2="930"/>
   <line class="Flusso_530" stroke="rgb(0,0,0)" stroke-width="3" x1="1517" x2="18412" y1="2260" y2="2260"/>
   <g display="none" id="Flusso_530">
     <rect fill="white" height="30" stroke="steelblue" stroke-width="2" width="80" x="9924" y="2245"/>

@@ -168,7 +168,7 @@ export class SparqlForceComponent implements OnInit {
     let esito = await this.checkIfTextInDome("to_cloro")
     await this.spinner_delay()
 
-   // if (esito === false)
+    // if (esito === false)
     //  await this.redrawWithDifferentPredicate('select * where {' + query + '}')
   }
 
@@ -429,15 +429,15 @@ export class SparqlForceComponent implements OnInit {
 
 
     // vecchio
-      /*.attr("id", String)
-      .attr("viewBox", "0 -5 10 10")
-      .attr("refX", 30)
-      .attr("refY", -0.5)
-      .attr("markerWidth", 6)
-      .attr("markerHeight", 6)
-      .attr("orient", "auto")
-      .append("svg:polyline")
-      .attr("points", "0,-5 10,0 0,5");*/
+    /*.attr("id", String)
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 30)
+    .attr("refY", -0.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+    .append("svg:polyline")
+    .attr("points", "0,-5 10,0 0,5");*/
 
 
     var links = this.svg.selectAll(".link")
@@ -446,9 +446,12 @@ export class SparqlForceComponent implements OnInit {
       .append("path")
       .attr("marker-end", "url(#end)")
       .style("stroke", (d) => {
+        if (d.p.label != 'http://www.disit.org/saref4bldg-ext/to') {
+          return '#0418ee'
+        }
         if (d.p.label.includes('to_cloro')) return '#FFEA00'
-        if (d.p.label.includes('to_ferroso')) return 'green'
-        if (d.p.label.includes('to_cloruro_ferrico')) return 'red'
+        if (d.p.label.includes('to_ferroso')) return '#07e512'
+        if (d.p.label.includes('to_cloruro_ferrico')) return '#e50707'
         if (d.p.label.includes('to_cl2')) return '#FFEA00'
         if (d.p.label.includes('to_hcl')) return '#FF8000'
         if (d.p.label.includes('IpocloritoDiSodio')) return '#e7d496'
@@ -502,7 +505,7 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", "node-text")
       .text(d => d.label.replace('https://saref.etsi.org/saref4bldg/', '').replace('http://www.disit.org/altair/resource/', '')).on("click", (d) => {
         this.router.navigate([]).then(result => {
-           // window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
+            // window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
             window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
           }
         );
@@ -573,9 +576,6 @@ export class SparqlForceComponent implements OnInit {
       .start();
 
     //// TODO da scrivere in tesi, vincolando al minimo la distanza dei link tra nodi e mettendo al massimo la carica di repulsione elettromagnetica ottengo il comportamento di separazione delle schermate  perfetto
-
-
-
 
 
     ///// Per trascinare i nodi e fixarli nella posizione selezionata

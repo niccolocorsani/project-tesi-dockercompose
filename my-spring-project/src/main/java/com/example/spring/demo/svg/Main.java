@@ -90,10 +90,7 @@ public class Main {
     schermate.add("HCL_3_LINEA.csv");
     schermate.add("HCL_4_LINEA.csv");
     schermate.add("K2CO3.csv");
-    schermate.add("K2CO3.csv");
-    schermate.add("K2CO3.csv");
-    schermate.add("K2CO3.csv");
-    schermate.add("K2CO3.csv");
+
 
 
     main.execute(l, schermate);
