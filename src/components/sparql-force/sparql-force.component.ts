@@ -474,6 +474,12 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", "link-text")
       .text(d => d.p.label.replace('http://www.disit.org/saref4bldg-ext/', '')).on("click", async (d) => {
 
+
+
+        let queryScheramta = "select * where {<" + d.s.label + "> :isSchermata ?o.}"
+        let queryResultSchermata = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryScheramta)
+        this.globalVariableService.currentSelectedShermataElement = queryResultSchermata
+
         this.globalVariableService.current_selected_D = d
         await this.openDialogSync()
 

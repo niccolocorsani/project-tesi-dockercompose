@@ -9,6 +9,8 @@ export class GlobalVariablesService {
   schermataCheRitornaLaQueryMale = ''
 
 
+  currentSelectedShermataElement = ''
+
 
   svgReady = false
   nodiRotti = [];
