@@ -61,7 +61,7 @@ export class DialogAnimationsExampleDialog {
 
     alert(nomeSchermata)
 
-    await this.svgRequestService.addInfoToCSV(daEliminare, nomeSchermata)
+    await this.svgRequestService.eliminaInfoDalCSV(daEliminare, nomeSchermata)
 
 
   }

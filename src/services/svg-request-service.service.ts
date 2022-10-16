@@ -143,6 +143,13 @@ export class SvgRequestServiceService {
     })
   }
 
+  eliminaInfoDalCSV(lineaDaEliminare: string, CSVname : string){
+    this.http.get<any>('http://localhost:8080/spring-app/svg/delete-raw-from-csv?rawToDelete=' + lineaDaEliminare + '&csvName=' + CSVname, this.httpOptions).subscribe((value: string) => {})
+  }
+
+
+
+
   delay(ms: number) {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }

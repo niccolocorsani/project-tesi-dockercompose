@@ -6,6 +6,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -82,25 +83,61 @@ public class MyController {
   @GetMapping("/delete-raw-from-csv")
   //http://localhost:8080/spring-app/svg/get?values=abc,2,3
   public String
-  deleteRaw(@RequestParam String rawToDelete, @RequestParam String csvName) throws IOException {
+  deleteRaw(@RequestParam String rawToDelete, @RequestParam String csvName) throws Exception {
 
-    File inputFile = new File(csvName);
-    File tempFile = new File(csvName);
+    long linesPrima = Files.lines(Paths.get("./all_csv/" + csvName + ".csv")).count();
 
-    BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-    BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
 
-    String lineToRemove = rawToDelete;
-    String currentLine;
 
-    while((currentLine = reader.readLine()) != null) {
-      // trim newline when comparing with lineToRemove
-      String trimmedLine = currentLine.trim();
-      if(trimmedLine.equals(lineToRemove)) continue;
-      writer.write(currentLine + System.getProperty("line.separator"));
+
+
+
+    File inputFile = null;
+    File tempFile = null;
+    try {
+      inputFile = new File("./all_csv/"+csvName+".csv");
+      tempFile = new File("./all_csv/"+"prova"+".csv");
+
+      BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+      BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+
+      String lineToRemove = rawToDelete;
+      String currentLine;
+
+      while((currentLine = reader.readLine()) != null) {
+        if(currentLine.equals(lineToRemove)) continue;
+        writer.write(currentLine + System.getProperty("line.separator"));
+      }
+      writer.close();
+      reader.close();
+      boolean successful = tempFile.renameTo(inputFile);
+      System.out.println(successful);
+
+    } catch (Exception e) {
+      e.printStackTrace();
     }
-    writer.close();
-    reader.close();
+
+
+    long linesDopo = Files.lines(Paths.get("./all_csv/" + csvName + ".csv")).count();
+
+
+    System.out.println("Righe prima" + linesPrima);
+    System.out.println("Righe dopo" + linesDopo);
+    JFrame frame = new JFrame("Erroree");
+    ///// TODO da finire....
+    JOptionPane.showMessageDialog(frame, "Eggs are not supposed to be green.");
+    ////
+    if(linesPrima == linesDopo) {
+      throw new Exception("Erroreeeeee elimina ");
+    }
+    if(linesPrima != (linesDopo - 1)) {
+
+      JOptionPane.showMessageDialog(frame, "Errore");
+      throw new Exception("Erroreeeee elimina");
+    }
+
+
+
     boolean successful = tempFile.renameTo(inputFile);
 
 
