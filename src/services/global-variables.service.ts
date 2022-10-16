@@ -17,6 +17,7 @@ export class GlobalVariablesService {
   query = ''
   variabileListaRadiosButtonQuery = '';
 
+  current_selected_D : any;
 
 
 

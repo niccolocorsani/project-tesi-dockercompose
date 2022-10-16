@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {GlobalVariablesService} from "../../../services/global-variables.service";
 import {MatCheckboxChange} from "@angular/material/checkbox";
@@ -30,18 +30,33 @@ export class DialogAnimationsExample {
 export class DialogAnimationsExampleDialog {
 
 
-  listOfObjectProperties = ['to_ferroso','to_ferrosoPotabile','to_cloro','to_cloruroFerrico','to_CloroParaffine','to_n2','to_cw','to_hcl','to_acquaDemineralizzata','to_aria','to_aw','to_ariaAtmosferica','to_h2','to_ariaFalsa','to_IpocloritoDiSodio','to_k2co3','to_CloroparaffinaConVariGradiDiClorurazione','to_ParaffinaACatenaMedia','to_ParaffinaACatenaLunga','to_ParaffinaACatenaLunghissima','to_Sfiati','to_AcquaDiRecupero','to_FanghiFiltroFunda','to_AcquaDiRicicloColonna','to_AcquaDiCondense','to_FumiDaCogenerazione','to_vapore','to_K2CO3al45PerCento','to_NaOH', 'to_vb','to_ai','to_cwr','to_atm','to_NaOH24','to_GasScarico'] //l'underScore va messo con prudenza in quanto nel back end, serve a delineare una subProperty
+  listOfObjectProperties = ['to_ferroso', 'to_ferrosoPotabile', 'to_cloro', 'to_cloruroFerrico', 'to_CloroParaffine', 'to_n2', 'to_cw', 'to_hcl', 'to_acquaDemineralizzata', 'to_aria', 'to_aw', 'to_ariaAtmosferica', 'to_h2', 'to_ariaFalsa', 'to_IpocloritoDiSodio', 'to_k2co3', 'to_CloroparaffinaConVariGradiDiClorurazione', 'to_ParaffinaACatenaMedia', 'to_ParaffinaACatenaLunga', 'to_ParaffinaACatenaLunghissima', 'to_Sfiati', 'to_AcquaDiRecupero', 'to_FanghiFiltroFunda', 'to_AcquaDiRicicloColonna', 'to_AcquaDiCondense', 'to_FumiDaCogenerazione', 'to_vapore', 'to_K2CO3al45PerCento', 'to_NaOH', 'to_vb', 'to_ai', 'to_cwr', 'to_atm', 'to_NaOH24', 'to_GasScarico', 'to_h2oCalda'] //l'underScore va messo con prudenza in quanto nel back end, serve a delineare una subProperty
 
   constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>, private globalVariableService: GlobalVariablesService) {
+
   }
 
 
-  changed(event:MatCheckboxChange) {
-    if(this.globalVariableService.variabileDelModalRadio != '')
-    this.globalVariableService.variabileDelModalRadio = this.globalVariableService.variabileDelModalRadio + '-'+event.source.value
+  ngOnInit() {
+    // will log the entire data object
+    alert(this.globalVariableService.current_selected_D)
+  }
+
+
+  changed(event: MatCheckboxChange) {
+    if (this.globalVariableService.variabileDelModalRadio != '')
+      this.globalVariableService.variabileDelModalRadio = this.globalVariableService.variabileDelModalRadio + '-' + event.source.value
     else
       this.globalVariableService.variabileDelModalRadio = event.source.value
     console.log(this.globalVariableService.variabileDelModalRadio)
+  }
+
+  eliminaObjectProperty() {
+
+    let daEliminare = this.globalVariableService.current_selected_D.s.label.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.current_selected_D.p.label.replace('http://www.disit.org/saref4bldg-ext/', '') + ';' + this.globalVariableService.current_selected_D.o.label.replace('http://www.disit.org/altair/resource/', '')
+
+    alert(daEliminare)
+
   }
 }
 

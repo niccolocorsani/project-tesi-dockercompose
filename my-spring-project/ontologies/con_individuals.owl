@@ -301,8 +301,6 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4001> ;
         <http://www.disit.org/saref4bldg-ext/to_ParaffinaACatenaMedia>
-                <http://www.disit.org/altair/resource/r-4001> ;
-        <http://www.disit.org/saref4bldg-ext/to_h2oCalda>
                 <http://www.disit.org/altair/resource/r-4001> .
 
 <http://www.disit.org/altair/resource/li875>
@@ -787,8 +785,6 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4001.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/ul154> ;
-        <http://www.disit.org/saref4bldg-ext/to_n2-to_n2>
                 <http://www.disit.org/altair/resource/ul154> .
 
 <http://www.disit.org/altair/resource/Flusso_589>
@@ -1218,7 +1214,7 @@
                 "RECUPERO_CO2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul135> ;
-        <http://www.disit.org/saref4bldg-ext/to_k2co3-to_KOH>
+        <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3>
                 <http://www.disit.org/altair/resource/ul135> .
 
 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4003.txts-4301start>
@@ -3503,8 +3499,6 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul133> ;
         <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3>
-                <http://www.disit.org/altair/resource/ul133> ;
-        <http://www.disit.org/saref4bldg-ext/to_k2co3-to_KOH>
                 <http://www.disit.org/altair/resource/ul133> .
 
 <http://www.disit.org/altair/resource/Flusso_15>
@@ -3595,10 +3589,6 @@
                 "SEZIONE_REAZIONE_R-4002.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/r-4002> .
-
-<http://www.disit.org/saref4bldg-ext/to_aria-to_n2-to_ariaFalsa-to_cl2-to_aria-to_ariaFalsa-to_n2-to_cl2>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_170>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -4119,10 +4109,6 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/xv4616-1> .
 
-<http://www.disit.org/saref4bldg-ext/to_k2co3-to_KOH>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
-
 <http://www.disit.org/altair/resource/s461>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Tank> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -4130,9 +4116,7 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/p461a> , <http://www.disit.org/altair/resource/p461b> ;
         <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3>
-                <http://www.disit.org/altair/resource/p461b> , <http://www.disit.org/altair/resource/p461a> ;
-        <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3-to_k2co3-to_KOH>
-                <http://www.disit.org/altair/resource/p461a> .
+                <http://www.disit.org/altair/resource/p461a> , <http://www.disit.org/altair/resource/p461b> .
 
 <http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtairstart1>
         a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
@@ -5384,8 +5368,6 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txte-4505> ;
         <http://www.disit.org/saref4bldg-ext/to_acquaDiTorre>
-                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txte-4505> ;
-        <http://www.disit.org/saref4bldg-ext/to_acquaDiTorre-to_acquaDiTorre>
                 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txte-4505> .
 
 <http://www.disit.org/altair/resource/ul40>
@@ -6556,10 +6538,6 @@
         <http://www.disit.org/saref4bldg-ext/to_cloruroFerrico>
                 <http://www.disit.org/altair/resource/a1ul9> , <http://www.disit.org/altair/resource/a1ul11> .
 
-<http://www.disit.org/saref4bldg-ext/to_h2oCalda-to_acquaDiTorre-to_h2oCalda>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
-
 <http://www.disit.org/altair/resource/Flusso_654>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -7188,6 +7166,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4001.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/xv4113> ;
+        <http://www.disit.org/saref4bldg-ext/to_h2oCalda>
                 <http://www.disit.org/altair/resource/xv4113> .
 
 <http://www.disit.org/altair/resource/li822>
@@ -7230,7 +7210,7 @@
                 "RECUPERO_CO2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/p460a> ;
-        <http://www.disit.org/saref4bldg-ext/to_k2co3-to_KOH>
+        <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3>
                 <http://www.disit.org/altair/resource/p460a> .
 
 <http://www.disit.org/altair/resource/Flusso_528>
@@ -7985,10 +7965,6 @@
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/a1ul3> .
 
-<http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3-to_k2co3-to_KOH>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
-
 <http://www.disit.org/altair/resource/Flusso_629>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
@@ -8487,10 +8463,6 @@
                 <http://www.disit.org/altair/resource/ul19> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "FERRICO_FERROSO_CLORO_FERRO.txt" .
-
-<http://www.disit.org/saref4bldg-ext/to_acquaDiTorre-to_acquaDiTorre>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/xv901a>
         a       <http://www.disit.org/saref4bldg-ext/Valve> , owl:NamedIndividual ;
@@ -10040,17 +10012,6 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "IPOCLORITO.txt" .
 
-<http://www.disit.org/saref4bldg-ext/to_ariaFalsa-to_cl2-to_n2-to_aria>
-        a                   owl:ObjectProperty ;
-        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
-
-<http://www.disit.org/altair/resource/Flusso_375>
-        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
-        <http://www.disit.org/saref4bldg-ext/endIn>
-                <http://www.disit.org/altair/resource/pah103> ;
-        <http://www.disit.org/saref4bldg-ext/startIn>
-                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv808> .
-
 <http://www.disit.org/altair/resource/ul22>
         a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
@@ -10059,6 +10020,17 @@
                 <http://www.disit.org/altair/resource/xv070c> ;
         <http://www.disit.org/saref4bldg-ext/to_aria-to_h2>
                 <http://www.disit.org/altair/resource/xv070c> .
+
+<http://www.disit.org/altair/resource/Flusso_375>
+        a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
+        <http://www.disit.org/saref4bldg-ext/endIn>
+                <http://www.disit.org/altair/resource/pah103> ;
+        <http://www.disit.org/saref4bldg-ext/startIn>
+                <http://www.disit.org/altair/resource/HCL_3_LINEA.txtxv808> .
+
+<http://www.disit.org/saref4bldg-ext/to_ariaFalsa-to_cl2-to_n2-to_aria>
+        a                   owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://www.disit.org/saref4bldg-ext/to> .
 
 <http://www.disit.org/altair/resource/Flusso_122>
         a       <http://www.disit.org/saref4bldg-ext/Flow> , owl:NamedIndividual ;
@@ -10374,6 +10346,8 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4001.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
+                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtabbacidoexit> ;
+        <http://www.disit.org/saref4bldg-ext/to_GasScarico>
                 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtabbacidoexit> .
 
 <http://www.disit.org/altair/resource/a2ul13>
@@ -10539,9 +10513,7 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtSEZIONE_REAZIONE_R-4001.txth2otorreexit1> , <http://www.disit.org/altair/resource/ul153> ;
         <http://www.disit.org/saref4bldg-ext/to_CloroParaffine>
-                <http://www.disit.org/altair/resource/ul153> ;
-        <http://www.disit.org/saref4bldg-ext/to_h2oCalda-to_acquaDiTorre-to_h2oCalda>
-                <http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4001.txtSEZIONE_REAZIONE_R-4001.txth2otorreexit1> .
+                <http://www.disit.org/altair/resource/ul153> .
 
 <http://www.disit.org/altair/resource/s-901>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Tank> ;
@@ -10675,8 +10647,6 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "HCL_2_LINEA_ACIDINO.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/bruciatore> ;
-        <http://www.disit.org/saref4bldg-ext/to_aria-to_n2-to_ariaFalsa-to_cl2-to_aria-to_ariaFalsa-to_n2-to_cl2>
                 <http://www.disit.org/altair/resource/bruciatore> .
 
 <http://www.disit.org/altair/resource/c980>
@@ -11856,15 +11826,15 @@
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "FERRICO_FERROSO_CLORO_FERRO.txt" .
 
+<http://www.disit.org/altair/resource/mbar>
+        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> .
+
 <http://www.disit.org/altair/resource/Flusso_585>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
         <http://www.disit.org/saref4bldg-ext/endIn>
                 <http://www.disit.org/altair/resource/exitversoimpiantoiposodio> ;
         <http://www.disit.org/saref4bldg-ext/startIn>
                 <http://www.disit.org/altair/resource/p851b> .
-
-<http://www.disit.org/altair/resource/mbar>
-        a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/UnitOfMeasure> .
 
 <http://www.disit.org/altair/resource/Flusso_332>
         a       owl:NamedIndividual , <http://www.disit.org/saref4bldg-ext/Flow> ;
@@ -11880,8 +11850,6 @@
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/ul135> ;
         <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3>
-                <http://www.disit.org/altair/resource/ul135> ;
-        <http://www.disit.org/saref4bldg-ext/to_k2co3-to_KOH>
                 <http://www.disit.org/altair/resource/ul135> .
 
 <http://www.disit.org/altair/resource/pic460>
@@ -12492,13 +12460,13 @@
                 <http://www.disit.org/altair/resource/lv-201> .
 
 <http://www.disit.org/altair/resource/e-4502>
-        a       <https://saref.etsi.org/saref4bldg/PhysicalObject> , owl:NamedIndividual ;
+        a       owl:NamedIndividual , <https://saref.etsi.org/saref4bldg/PhysicalObject> ;
         <http://www.disit.org/saref4bldg-ext/isSchermata>
                 "SEZIONE_REAZIONE_R-4001.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
-                <http://www.disit.org/altair/resource/h20torreexit> , <http://www.disit.org/altair/resource/xv4201a> , <http://www.disit.org/altair/resource/xv4001d> ;
+                <http://www.disit.org/altair/resource/xv4201a> , <http://www.disit.org/altair/resource/xv4001d> , <http://www.disit.org/altair/resource/h20torreexit> ;
         <http://www.disit.org/saref4bldg-ext/to_GasScarico>
-                <http://www.disit.org/altair/resource/xv4001d> ;
+                <http://www.disit.org/altair/resource/xv4201a> , <http://www.disit.org/altair/resource/xv4001d> ;
         <http://www.disit.org/saref4bldg-ext/to_H2O>
                 <http://www.disit.org/altair/resource/h20torreexit> ;
         <http://www.disit.org/saref4bldg-ext/to_acquaDiTorre>
@@ -13245,7 +13213,7 @@
                 "RECUPERO_CO2.txt" ;
         <http://www.disit.org/saref4bldg-ext/to>
                 <http://www.disit.org/altair/resource/c460b> , <http://www.disit.org/altair/resource/c460a> ;
-        <http://www.disit.org/saref4bldg-ext/to_k2co3-to_KOH>
+        <http://www.disit.org/saref4bldg-ext/to_KOH-to_k2co3>
                 <http://www.disit.org/altair/resource/c460b> .
 
 <http://www.disit.org/altair/resource/Flusso_142>

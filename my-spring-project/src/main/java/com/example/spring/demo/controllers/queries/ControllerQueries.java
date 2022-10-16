@@ -47,6 +47,7 @@ public class ControllerQueries {
 
 
 
+
   @GetMapping("/delete_everythings")
   //http://localhost:8080/spring-app/queries/delete_everythings
   public void delete() throws IOException {

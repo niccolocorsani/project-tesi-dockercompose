@@ -59,6 +59,7 @@ public class MyController {
   }
 
 
+
   @GetMapping("/update-csv")
   //http://localhost:8080/spring-app/svg/get?values=abc,2,3
   public String
@@ -77,6 +78,11 @@ public class MyController {
     return null;
 
   }
+
+
+
+
+
 
 
   public String getLastSvgGenerated() {

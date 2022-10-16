@@ -474,6 +474,7 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", "link-text")
       .text(d => d.p.label.replace('http://www.disit.org/saref4bldg-ext/', '')).on("click", async (d) => {
 
+        this.globalVariableService.current_selected_D = d
         await this.openDialogSync()
 
         console.log(this.globalVariableService)
@@ -630,7 +631,6 @@ export class SparqlForceComponent implements OnInit {
       }
     }
 
-    console.log('oooo')
     d3.selectAll("svg").remove();
     this.graph.triples.forEach(triple => console.log(triple.p.color))
     this.createChart();
@@ -688,6 +688,7 @@ export class SparqlForceComponent implements OnInit {
   async openDialogSync(): Promise<number> {
     this.dialogRef = this.dialog.open(DialogAnimationsExampleDialog, {
       width: "500px",
+
     });
 
 
