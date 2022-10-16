@@ -21,6 +21,7 @@ export class GraphdbRequesDerviceToSpringAppService {
     //console.log(queryOnlySelectClause)
     await this.http.get<any>('http://127.0.0.1:8080/spring-app/queries/get?query='+queryOnlySelectClause).subscribe((value: any) => {
         this.variable_to_wait = value
+        this.globalVaraiblesService.schermataCheRitornaLaQueryMale = value
       },
       (error: any) => {
         console.error(error)

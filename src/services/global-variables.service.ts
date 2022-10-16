@@ -6,6 +6,10 @@ import {Injectable} from '@angular/core';
 export class GlobalVariablesService {
 
 
+  schermataCheRitornaLaQueryMale = ''
+
+
+
   svgReady = false
   nodiRotti = [];
   svgd3 = '';

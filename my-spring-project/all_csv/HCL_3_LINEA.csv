@@ -408,3 +408,7 @@ k601b;ObjectProperty;to_h2-to_h2;ul210
 ul210;ObjectProperty;to_h2;k601b
 xv606;ObjectProperty;to_cl2-to_cl2;xv607
 xv607;ObjectProperty;to_cl2;degasamento
+pah103;ObjectProperty;to_hcl;ul240
+ul280;ObjectProperty;to_hcl;p606
+pah103;ObjectProperty;to_hcl;ul280
+ul240;ObjectProperty;to_hcl;HCL_3_LINEA.txtp600b

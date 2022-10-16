@@ -228,6 +228,7 @@ a2ul14;ObjectProperty;to;s-904b
 ferricononpotabilestart;ObjectProperty;to;s-904b
 ferricononpotabilestart;ObjectProperty;to;s-904c
 a2ul14;ObjectProperty;to;s-904c
+xv904abc_2;ObjectProperty;to;a2truck2exit
 xv904de_2;ObjectProperty;to;a2truck2exit
 xv904abc_1;ObjectProperty;to;a2truck1exit
 s-904c;ObjectProperty;to;a2ul19
@@ -299,3 +300,17 @@ a2ul11;ObjectProperty;to_cloruroFerrico;xv904abc_1
 a2ul20;ObjectProperty;to_cloruroFerrico;p904a
 a2ul15;ObjectProperty;to_cloruroFerrico;a2ul20
 p904a;ObjectProperty;to_cloruroFerrico;a2ul10
+xv954ab;ObjectProperty;to_ferroso;xv904de_1
+xv904de_1;ObjectProperty;to_ferroso-to_cloruroFerrico;xv904de_2
+xv904de_2;ObjectProperty;to_cloruroFerrico-to_ferroso;a2truck2exit
+xv904abc_2;ObjectProperty;to_cloruroFerrico;a2truck2exit
+a2ul11;ObjectProperty;to_cloruroFerrico;xv904abc_2
+a2ul10;ObjectProperty;to_cloruroFerrico;xv904abc_2
+s-904b;ObjectProperty;to_cloruroFerrico;a2ul12
+s-904b;ObjectProperty;to_cloruroFerrico;a2ul12
+s-904b;ObjectProperty;to_cloruroFerrico;a2ul16
+a2ul17;ObjectProperty;to_cloruroFerrico;a2ul20
+a2ul16;ObjectProperty;to_cloruroFerrico;a2ul20
+a2ul18;ObjectProperty;to_cloruroFerrico;a2ul20
+a2ul19;ObjectProperty;to_cloruroFerrico;a2ul20
+a2ul10;ObjectProperty;to_cloruroFerrico;xv904abc_1

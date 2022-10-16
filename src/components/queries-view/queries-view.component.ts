@@ -14,7 +14,7 @@ export class QueriesViewComponent implements OnInit {
     ' select * where { \n' +
     '    ?s  ?p ?o.\n' +
     '    ?p  rdfs:subPropertyOf :to.\n' +
-    '\t?s  :isSchermata "STOCCAGGIO_IPOCLORITO_DI_SODIO.txt".\n' +
+    '\t?s  :isSchermata "PARCO_SERBATOI_2.txt".\n' +
     '} \n'
     ,
     ' select * where { \n' +

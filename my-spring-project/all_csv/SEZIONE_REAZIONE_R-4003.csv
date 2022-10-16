@@ -254,3 +254,12 @@ ul141;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4003.txt
 SEZIONE_REAZIONE_R-4003.txtdegasamentoiposodioexit;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4003.txt
 ul140;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4003.txt
 s4304-exit;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4003.txt
+SEZIONE_REAZIONE_R-4003.txtclorostart;ObjectProperty;to_Cloro;ul144
+ul144;ObjectProperty;to_Cloro;xv4207c
+SEZIONE_REAZIONE_R-4003.txtazotostart;ObjectProperty;to_N2;ul140
+ul140;ObjectProperty;to_N2;ul141
+ul141;ObjectProperty;to_N2;xv4245c
+r-4003;ObjectProperty;to_H2OCalda;h20caldaexit
+SEZIONE_REAZIONE_R-4003.txts-4301start;ObjectProperty;to_ParaffinaACatenaMedia;r-4003
+SEZIONE_REAZIONE_R-4003.txtp-4606start;ObjectProperty;to_ParaffinaACatenaLunghissima;r-4003
+SEZIONE_REAZIONE_R-4003.txts-4302start;ObjectProperty;to_ParaffinaACatenaLunga;r-4003

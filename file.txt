@@ -135,6 +135,9 @@ subject:http://www.disit.org/altair/resource/start1 predicate::to object:http://
 subject:http://www.disit.org/altair/resource/start1 predicate::to object:http://www.disit.org/altair/resource/xv1703a
 subject:http://www.disit.org/altair/resource/v1701b predicate::to object:http://www.disit.org/altair/resource/xv1709b
 subject:http://www.disit.org/altair/resource/v1701b predicate::to object:http://www.disit.org/altair/resource/xv1701b
+subject:http://www.disit.org/altair/resource/xv1701b predicate::to object:http://www.disit.org/altair/resource/xv1701a
+subject:http://www.disit.org/altair/resource/xv1701b predicate::to object:http://www.disit.org/altair/resource/p1702a
+subject:http://www.disit.org/altair/resource/xv1701b predicate::to object:http://www.disit.org/altair/resource/p1702b
 subject:http://www.disit.org/altair/resource/xv1741 predicate::to object:http://www.disit.org/altair/resource/xv1709c
 subject:http://www.disit.org/altair/resource/xv1706b predicate::to object:http://www.disit.org/altair/resource/v1701b
 subject:http://www.disit.org/altair/resource/p1702a predicate::to object:http://www.disit.org/altair/resource/stoccaggioexit
@@ -425,6 +428,7 @@ subject:http://www.disit.org/altair/resource/a1ul14 predicate::to object:http://
 subject:http://www.disit.org/altair/resource/CARICO_FERRICO_FERROSO.txts-904d predicate::to object:http://www.disit.org/altair/resource/a1ul8
 subject:http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtp601b predicate::to object:http://www.disit.org/altair/resource/ul35
 subject:http://www.disit.org/altair/resource/ul35 predicate::to object:http://www.disit.org/altair/resource/ul34
+subject:http://www.disit.org/altair/resource/xv904abc_2 predicate::to object:http://www.disit.org/altair/resource/a2truck2exit
 subject:http://www.disit.org/altair/resource/ul135 predicate::to object:http://www.disit.org/altair/resource/c460a
 subject:http://www.disit.org/altair/resource/ul135 predicate::to object:http://www.disit.org/altair/resource/c460b
 subject:http://www.disit.org/altair/resource/p461a predicate::to object:http://www.disit.org/altair/resource/ul135
@@ -513,7 +517,6 @@ subject:http://www.disit.org/altair/resource/a1ul3 predicate::to object:http://w
 subject:http://www.disit.org/altair/resource/a2ul11 predicate::to object:http://www.disit.org/altair/resource/xv904abc_2
 subject:http://www.disit.org/altair/resource/a2ul11 predicate::to object:http://www.disit.org/altair/resource/xv904abc_1
 subject:http://www.disit.org/altair/resource/a2ul11 predicate::to object:http://www.disit.org/altair/resource/ibcexit
-subject:http://www.disit.org/altair/resource/ul172 predicate::to object:http://www.disit.org/altair/resource/fi604
 subject:http://www.disit.org/altair/resource/ul172 predicate::to object:http://www.disit.org/altair/resource/p642
 subject:http://www.disit.org/altair/resource/ul172 predicate::to object:http://www.disit.org/altair/resource/HCL_4_LINEA.txtHCL_4_LINEA.txtcwHCL_4_LINEA.txtexit2
 subject:http://www.disit.org/altair/resource/HCL_4_LINEA.txthclstart predicate::to object:http://www.disit.org/altair/resource/ul172
@@ -576,6 +579,7 @@ subject:http://www.disit.org/altair/resource/xv606 predicate::to object:http://w
 subject:http://www.disit.org/altair/resource/xv606 predicate::to object:http://www.disit.org/altair/resource/xv607
 subject:http://www.disit.org/altair/resource/xv630_2 predicate::to object:http://www.disit.org/altair/resource/HCL_4_LINEA.txtdegasamentoexit
 subject:http://www.disit.org/altair/resource/xv630_1 predicate::to object:http://www.disit.org/altair/resource/xv630_2
+subject:http://www.disit.org/altair/resource/xv630_1 predicate::to object:http://www.disit.org/altair/resource/ul179
 subject:http://www.disit.org/altair/resource/ul171 predicate::to object:http://www.disit.org/altair/resource/sv640_1
 subject:http://www.disit.org/altair/resource/sv640_1 predicate::to object:http://www.disit.org/altair/resource/ul176
 subject:http://www.disit.org/altair/resource/p606 predicate::to object:http://www.disit.org/altair/resource/pah103
@@ -616,7 +620,6 @@ subject:http://www.disit.org/altair/resource/k601b predicate::to object:http://w
 subject:http://www.disit.org/altair/resource/xv070c predicate::to object:http://www.disit.org/altair/resource/bruciatore1
 subject:http://www.disit.org/altair/resource/k601c predicate::to object:http://www.disit.org/altair/resource/sv640pdoppione
 subject:http://www.disit.org/altair/resource/k601c predicate::to object:http://www.disit.org/altair/resource/ul171
-subject:http://www.disit.org/altair/resource/k601c predicate::to object:http://www.disit.org/altair/resource/ul179
 subject:http://www.disit.org/altair/resource/k601c predicate::to object:http://www.disit.org/altair/resource/ul170
 subject:http://www.disit.org/altair/resource/HCL_4_LINEA.txth2start predicate::to object:http://www.disit.org/altair/resource/k601c
 subject:http://www.disit.org/altair/resource/HCL_3_LINEA.txtp600b predicate::to object:http://www.disit.org/altair/resource/ul230
@@ -748,7 +751,6 @@ subject:http://www.disit.org/altair/resource/ul132 predicate::to object:http://w
 subject:http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtxv072c predicate::to object:http://www.disit.org/altair/resource/HCL_1_LINEA_(FG600).txtdegasamentoexit
 subject:http://www.disit.org/altair/resource/a1ul10 predicate::to object:http://www.disit.org/altair/resource/a1ul11
 subject:http://www.disit.org/altair/resource/ul153 predicate::to object:http://www.disit.org/altair/resource/r-4001
-subject:http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtcwstart predicate::to object:http://www.disit.org/altair/resource/bruciatore
 subject:http://www.disit.org/altair/resource/HCL_2_LINEA_ACIDINO.txtcwstart predicate::to object:http://www.disit.org/altair/resource/ul39
 subject:http://www.disit.org/altair/resource/HCL_3_LINEA.txtcwstart predicate::to object:http://www.disit.org/altair/resource/ul280
 subject:http://www.disit.org/altair/resource/HCL_3_LINEA.txtairstart predicate::to object:http://www.disit.org/altair/resource/sv203b

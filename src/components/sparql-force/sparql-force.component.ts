@@ -150,7 +150,7 @@ export class SparqlForceComponent implements OnInit {
 
   }
 
-  async redrawWithWrittenQuery(query: string) {
+  async redrawWithModalQuery(query: string) {
     this.createChart();
     query = this.globalVariableService.variabileListaRadiosButtonQuery
     this.globalVariableService.svgReady = true
@@ -446,16 +446,21 @@ export class SparqlForceComponent implements OnInit {
       .append("path")
       .attr("marker-end", "url(#end)")
       .style("stroke", (d) => {
+
+        if (d.p.label.includes('cloro')) return '#FFEA00'
+        if (d.p.label.includes('CloroParaffine')) return '#fafa8c'
+        if (d.p.label.includes('ferroso')) return '#07e512'
+        if (d.p.label.includes('cloruro_ferrico')) return '#e50707'
+        if (d.p.label.includes('cl2')) return '#FFEA00'
+        if (d.p.label.includes('hcl')) return '#FF8000'
+        if (d.p.label.includes('IpocloritoDiSodio')) return '#e7d496'
+        if (d.p.label.includes('NaOH24')) return '#dd9ce8'
+        if (d.p.label.includes('fiati')) return '#030101'
+
+
         if (d.p.label != 'http://www.disit.org/saref4bldg-ext/to') {
           return '#0418ee'
         }
-        if (d.p.label.includes('to_cloro')) return '#FFEA00'
-        if (d.p.label.includes('to_ferroso')) return '#07e512'
-        if (d.p.label.includes('to_cloruro_ferrico')) return '#e50707'
-        if (d.p.label.includes('to_cl2')) return '#FFEA00'
-        if (d.p.label.includes('to_hcl')) return '#FF8000'
-        if (d.p.label.includes('IpocloritoDiSodio')) return '#e7d496'
-
 
         //d.p.color
       })
@@ -476,8 +481,21 @@ export class SparqlForceComponent implements OnInit {
           return
 
         let query = "select * where {<" + d.s.label + "> :isSchermata ?o.}"
+
+        await this.delay(1000)
         let queryResult = await this.graphdbRequesDerviceToSpringAppService.normalQuery(query)
 
+
+        while(queryResult.length > 4 || this.globalVariableService.schermataCheRitornaLaQueryMale.length == 0){ // questo while va fatto perchè se no ritorna valori strani
+          await this.delay(1000)
+          await this.graphdbRequesDerviceToSpringAppService.normalQuery(query)
+          if(this.globalVariableService.schermataCheRitornaLaQueryMale.length > 0)
+            queryResult = this.globalVariableService.schermataCheRitornaLaQueryMale
+
+          console.log(queryResult)
+        }
+
+        console.log(queryResult)
 
         let schermata = queryResult[0][0].split(":")[1].split("^")[0].replace("\"", "").replace("\"", "").replace(".txt", "")
         let infoDaAggiungereAlCSV = d.s.label.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.variabileDelModalRadio + ';' + d.o.label.replace('http://www.disit.org/altair/resource/', '')
@@ -658,21 +676,22 @@ export class SparqlForceComponent implements OnInit {
   }
 
   async riaggiornaGrafoConColori() { // con sto servizio aggiorno l'ontologia su graphDB eliminando quella precedente e mettendone una nuova
-    //let schermate = ['CARICO_FERRICO_FERROSO.csv','CARICO_FERRICO_FERROSO_2.csv','FERRICO_FERROSO_CLORO_FERRO.csv','HCL_1_LINEA_(FG600).csv','HCL_2_LINEA_ACIDINO.csv','HCL_3_LINEA.csv','HCL_4_LINEA.csv','IMPIANTO_FeCL3_2.csv','IPOCLORITO.csv','K2CO3.csv','PARCO_SERBATOI_2.csv','PREPARAZIONE_NAOH_20.csv','RECUPERO_CO2.csv','SEZIONE REAZIONE R-4003.csv','SEZIONE_REAZIONE_R-4001.csv','SEZIONE_REAZIONE_R-4002.csv','STOCCAGGIO.csv','STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
-    let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
+    let schermate = ['CARICO_FERRICO_FERROSO.csv','CARICO_FERRICO_FERROSO_2.csv','FERRICO_FERROSO_CLORO_FERRO.csv','HCL_1_LINEA_(FG600).csv','HCL_2_LINEA_ACIDINO.csv','HCL_3_LINEA.csv','HCL_4_LINEA.csv','IMPIANTO_FeCL3_2.csv','IPOCLORITO.csv','K2CO3.csv','PARCO_SERBATOI_2.csv','PREPARAZIONE_NAOH_20.csv','RECUPERO_CO2.csv','SEZIONE_REAZIONE_R-4003.csv','SEZIONE_REAZIONE_R-4001.csv','SEZIONE_REAZIONE_R-4002.csv','STOCCAGGIO.csv','STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
+   // let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
     let svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, schermate)
     await this.delay(1000)
     this.cleanGraph()
     await this.redraw()
   }
 
-
+  dialogRef
   async openDialogSync(): Promise<number> {
-    const dialogRef = this.dialog.open(DialogAnimationsExampleDialog, {
+    this.dialogRef = this.dialog.open(DialogAnimationsExampleDialog, {
       width: "500px",
     });
 
-    return dialogRef.afterClosed()
+
+    return this.dialogRef.afterClosed()
       .toPromise() // here you have a Promise instead an Observable
       .then(result => {
         console.log("The dialog was closed " + result);
@@ -694,5 +713,11 @@ export class SparqlForceComponent implements OnInit {
     this.globalVariableService.spinner = true
     await this.delay(4000)
     this.globalVariableService.spinner = false
+  }
+
+
+  scale(scaleFactor: any){
+    let val = document.getElementById('valore-scalatura-svg').value
+    document.getElementById('svg-body').style.transform = 'scale('+val+')';
   }
 }

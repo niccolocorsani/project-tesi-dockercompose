@@ -47,8 +47,30 @@
   <br/>
 
   <button class="content" style="height: 100px; font-size: 30px;" id="bottone11" class="z-indexed"
-          class="btn btn-primary" (click)="redrawWithWrittenQuery('')">Genera grafo da query
+          class="btn btn-primary" (click)="redrawWithModalQuery('')">Genera grafo da query
   </button>
+
+  <button class="content" style="height: 100px; font-size: 30px;" id="bottone13" class="z-indexed"
+          class="btn btn-primary" (click)="redrawWithComplexStatment('?s ?p ?o.%0A'+
+'    ?p rdfs:subPropertyOf* :to.%0A')">tutto colorati con to
+  </button>
+
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div>  <button class="content" style="height: 100px; font-size: 30px;" id="bottone12" class="z-indexed"
+               class="btn btn-primary" (click)="scale(0.2)">scala
+</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <input id="valore-scalatura-svg" value="0.2">
 </div>
 
 <div id="svg-body" class="panel-body" #chart></div>

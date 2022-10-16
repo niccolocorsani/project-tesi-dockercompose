@@ -339,3 +339,17 @@ SEZIONE_REAZIONE_R-4002.txtazotostart;DataProperty;isSchermata;SEZIONE_REAZIONE_
 degasodicoexit;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4002.txt
 xv4245;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4002.txt
 ul160;DataProperty;isSchermata;SEZIONE_REAZIONE_R-4002.txt
+xv4213b;ObjectProperty;to_AcquaDiTorre-to_AcquaDiTorre;SEZIONE_REAZIONE_R-4002.txte-4505
+SEZIONE_REAZIONE_R-4002.txte-4505;ObjectProperty;to_AcquaDiTorre;SEZIONE_REAZIONE_R-4002.txtSEZIONE_REAZIONE_R-4002.txth2otorreexit1
+SEZIONE_REAZIONE_R-4002.txts-4302start;ObjectProperty;to_ParaffinaACatenaLunga;r-4002
+hv4231;ObjectProperty;to_ParaffinaACatenaMedia;r-4002
+SEZIONE_REAZIONE_R-4002.txts-4301start;ObjectProperty;to_ParaffinaACatenaMedia;hv4231
+SEZIONE_REAZIONE_R-4002.txtp-4606start;ObjectProperty;to_ParaffinaACatenaLunghissima;xv4234
+xv4234;ObjectProperty;to_ParaffinaACatenaLunghissima;r-4002
+SEZIONE_REAZIONE_R-4002.txth2ocaldastart;ObjectProperty;to_H2OCalda;xv4213a
+xv4213a;ObjectProperty;to_H2OCalda;r-4002
+SEZIONE_REAZIONE_R-4002.txtSEZIONE_REAZIONE_R-4002.txth2otorrestart1;ObjectProperty;to_AcquaDiTorre;xv4213b
+SEZIONE_REAZIONE_R-4002.txtazotostart;ObjectProperty;to_AcquaDiTorre-to_N2;ul160
+r-4002;ObjectProperty;to_GasScarico;e-4503
+e-4503;ObjectProperty;to_GasScarico;xv4002d
+xv4002d;ObjectProperty;to_GasScarico;gasdisingaccioexit
