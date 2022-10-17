@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.*;
 
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -123,15 +125,10 @@ public class MyController {
 
     System.out.println("Righe prima" + linesPrima);
     System.out.println("Righe dopo" + linesDopo);
-    JFrame frame = new JFrame("Erroree");
-    ///// TODO da finire....
-    JOptionPane.showMessageDialog(frame, "Eggs are not supposed to be green.");
-    ////
-    if(linesPrima == linesDopo) {
-      throw new Exception("Erroreeeeee elimina ");
-    }
-    if(linesPrima != (linesDopo - 1)) {
+    System.setProperty("java.awt.headless", "false");
 
+    if(linesPrima != (linesDopo + 1)) {
+      JFrame frame = new JFrame("Erroree");
       JOptionPane.showMessageDialog(frame, "Errore");
       throw new Exception("Erroreeeee elimina");
     }
