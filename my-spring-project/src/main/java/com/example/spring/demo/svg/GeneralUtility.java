@@ -14,6 +14,8 @@ public class GeneralUtility {
     long linesPrima = Files.lines(Paths.get("./all-csv-prorpieta-separate/" + csvName + ".csv")).count();
 
 
+    
+
     File inputFile = null;
     File tempFile = null;
     try {
