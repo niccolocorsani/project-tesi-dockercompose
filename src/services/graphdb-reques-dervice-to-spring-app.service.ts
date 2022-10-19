@@ -34,7 +34,7 @@ export class GraphdbRequesDerviceToSpringAppService {
 
   @log('',[])
   async queryReturnListOfTriples(queryOnlySelectClause : string) {
-    queryOnlySelectClause = queryOnlySelectClause.replace('}','%7D').replace('{','%7B')
+    queryOnlySelectClause = queryOnlySelectClause.replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('+','%2B').replace('+','%2B').replace('+','%2B')
     //console.log(queryOnlySelectClause)
     await this.http.get<any>('http://127.0.0.1:8080/spring-app/queries/get_list_of_triple?query='+queryOnlySelectClause).subscribe((value: any) => {
         this.variable_to_wait = value
@@ -47,6 +47,22 @@ export class GraphdbRequesDerviceToSpringAppService {
     return this.variable_to_wait
   }
 
+
+
+  @log('',[])
+  async queryReturnObject(queryOnlySelectClause : string) {
+    queryOnlySelectClause = queryOnlySelectClause.replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('}','%7D').replace('{','%7B').replace('+','%2B').replace('+','%2B').replace('+','%2B')
+    //console.log(queryOnlySelectClause)
+    await this.http.get<any>('http://127.0.0.1:8080/spring-app/queries/get_object?query='+queryOnlySelectClause).subscribe((value: any) => {
+        this.variable_to_wait = value
+      },
+      (error: any) => {
+        console.error(error)
+      }
+    );
+    await this.spinner_delay()
+    return this.variable_to_wait
+  }
   @log('',[])
   async deleteEveryThing(queryOnlySelectClause : string) {
 

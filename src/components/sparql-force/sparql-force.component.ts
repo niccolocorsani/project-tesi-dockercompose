@@ -104,13 +104,33 @@ export class SparqlForceComponent implements OnInit {
     if (this.data) {
       this.createChart();
     }
-    await this.redraw()
+    await this.redrawWithOnlySelctStatmentQuery(' select * where { \n' +
+      '    ?s  ?p ?o.\n' +
+      '    ?p  rdfs:subPropertyOf :to.\n' +
+      '   ?s  :isSchermata "PARCO_SERBATOI_2.txt".\n' +
+      '} \n')
 
-    await this.delay(1500)
+    await this.delay(500)
 
 
   }
 
+  async redrawWithOnlySelctStatmentQuery(query: string) {
+    this.globalVariableService.svgReady = true
+    await this.spinner_delay()
+    this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples(query)
+    this.createChart();
+
+    console.log(this.data)
+    this.cleanGraph();
+    this.attachData();
+    d3.selectAll("svg").remove();
+    this.createChart();
+    this.globalVariableService.svgReady = false
+    this.globalVariableService.svgd3 = this.svg
+    // if (esito === false)
+    //  await this.redrawWithDifferentPredicate('select * where {' + query + '}')
+  }
 
   async checkIfTextInDome(sostanzaCheCiDovrebbeEssere: string) {
     let tuttiPredicate = ''
@@ -156,8 +176,8 @@ export class SparqlForceComponent implements OnInit {
     this.globalVariableService.svgReady = true
     await this.spinner_delay()
     this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples(query)
-    console.log(this.data)
     await this.spinner_delay()
+    this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples(query)  // perchè alla prima ritorna la query fatta precedetmente
     this.cleanGraph();
     this.attachData();
     d3.selectAll("svg").remove();
@@ -178,8 +198,8 @@ export class SparqlForceComponent implements OnInit {
     this.globalVariableService.svgReady = true
     await this.spinner_delay()
     this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples('select * where {' + query + '}')
-    console.log(this.data)
     await this.spinner_delay()
+    this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples('select * where {' + query + '}')   // perchè alla prima ritorna la query fatta precedetmente
     this.cleanGraph();
     this.attachData();
     d3.selectAll("svg").remove();
@@ -187,7 +207,6 @@ export class SparqlForceComponent implements OnInit {
     this.globalVariableService.svgReady = false
     this.globalVariableService.svgd3 = this.svg
 
-    let esito = await this.checkIfTextInDome("to_cloro")
     await this.spinner_delay()
 
     if (esito === false)
@@ -410,6 +429,9 @@ export class SparqlForceComponent implements OnInit {
   }
 
 
+  firstPressed = ''
+  secondPressed = ''
+
   @logD3()
   updateChart() {
     if (!this.svg) return;
@@ -450,12 +472,14 @@ export class SparqlForceComponent implements OnInit {
         if (d.p.label.includes('cloro')) return '#FFEA00'
         if (d.p.label.includes('CloroParaffine')) return '#fafa8c'
         if (d.p.label.includes('ferroso')) return '#07e512'
-        if (d.p.label.includes('cloruro_ferrico')) return '#e50707'
+        if (d.p.label.includes('cloruroFerrico')) return '#e50707'
         if (d.p.label.includes('cl2')) return '#FFEA00'
         if (d.p.label.includes('hcl')) return '#FF8000'
         if (d.p.label.includes('IpocloritoDiSodio')) return '#e7d496'
         if (d.p.label.includes('NaOH24')) return '#dd9ce8'
-        if (d.p.label.includes('fiati')) return '#030101'
+        if (d.p.label.includes('Sfiati')) return '#030101'
+        if (d.p.label.includes('k2co3')) return '#880fff'
+
 
 
         if (d.p.label != 'http://www.disit.org/saref4bldg-ext/to') {
@@ -475,7 +499,6 @@ export class SparqlForceComponent implements OnInit {
       .text(d => d.p.label.replace('http://www.disit.org/saref4bldg-ext/', '')).on("click", async (d) => {
 
 
-
         let queryScheramta = "select * where {<" + d.s.label + "> :isSchermata ?o.}"
         let queryResultSchermata = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryScheramta)
         this.globalVariableService.currentSelectedShermataElement = queryResultSchermata
@@ -493,10 +516,10 @@ export class SparqlForceComponent implements OnInit {
         let queryResult = await this.graphdbRequesDerviceToSpringAppService.normalQuery(query)
 
 
-        while(queryResult.length > 4 || this.globalVariableService.schermataCheRitornaLaQueryMale.length == 0){ // questo while va fatto perchè se no ritorna valori strani
+        while (queryResult.length > 4 || this.globalVariableService.schermataCheRitornaLaQueryMale.length == 0) { // questo while va fatto perchè se no ritorna valori strani
           await this.delay(1000)
           await this.graphdbRequesDerviceToSpringAppService.normalQuery(query)
-          if(this.globalVariableService.schermataCheRitornaLaQueryMale.length > 0)
+          if (this.globalVariableService.schermataCheRitornaLaQueryMale.length > 0)
             queryResult = this.globalVariableService.schermataCheRitornaLaQueryMale
 
           console.log(queryResult)
@@ -531,7 +554,7 @@ export class SparqlForceComponent implements OnInit {
       .text(d => d.label.replace('https://saref.etsi.org/saref4bldg/', '').replace('http://www.disit.org/altair/resource/', '')).on("click", (d) => {
         this.router.navigate([]).then(result => {
             // window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
-            window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
+            // window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
           }
         );
       })
@@ -553,10 +576,77 @@ export class SparqlForceComponent implements OnInit {
           return "node"
         }
       })
-      .attr("id", d => d.label)
+
+
+      .attr("id", d => d.label.replace('http://www.disit.org/altair/resource/', ''))
       .attr("r", 24)
-      .on("click", (d) => {
-        this.clicked(d);
+      .on("click", async (d) => {
+        d3.select("#" + d.label.replace('http://www.disit.org/altair/resource/', '')).style("fill", "black");
+
+
+        if (this.firstPressed != '')
+          this.secondPressed = d.label
+        else
+          this.firstPressed = d.label
+
+
+        if (this.firstPressed == '' || this.secondPressed == '') {
+          //// TODO da finire
+          return
+        } else {
+          let foo = confirm('Crea percorso ?');
+          if (foo === false) {
+            this.secondPressed = ''
+            this.firstPressed = ''
+            return
+          }
+        }
+
+        //// Questa è la miglior soluzione lo legge benissimo   https://meyerweb.com/eric/tools/dencoder/
+
+
+        let allPath = await this.graphdbRequesDerviceToSpringAppService.normalQuery('SELECT%20%3Fstart%20%3Fend%20%3Findex%20%3Fpath%0A%20%20%20%20%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20VALUES%20(%3Fsrc%20%3Fdst)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20(%20<' + this.firstPressed + '>%20<' + this.secondPressed + '>%20)%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20%3Chttp%3A%2F%2Fwww.ontotext.com%2Fpath%23search%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Curn%3Apath%3E%20path%3AfindPath%20path%3AshortestPath%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AsourceNode%20%3Fsrc%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AdestinationNode%20%3Fdst%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3ApathIndex%20%3Fpath%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AstartNode%20%3Fstart%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AendNode%20%3Fend%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AmaxPathLength%2030%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AresultBindingIndex%20%3Findex%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20%3Curn%3Apath%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fstart%20%3Ato%20%3Fend%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%7D')
+        await this.spinner_delay()
+        allPath = await this.graphdbRequesDerviceToSpringAppService.normalQuery('SELECT%20%3Fstart%20%3Fend%20%3Findex%20%3Fpath%0A%20%20%20%20%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20VALUES%20(%3Fsrc%20%3Fdst)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20(%20<' + this.firstPressed + '>%20<' + this.secondPressed + '>%20)%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20%3Chttp%3A%2F%2Fwww.ontotext.com%2Fpath%23search%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Curn%3Apath%3E%20path%3AfindPath%20path%3AshortestPath%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AsourceNode%20%3Fsrc%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AdestinationNode%20%3Fdst%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3ApathIndex%20%3Fpath%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AstartNode%20%3Fstart%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AendNode%20%3Fend%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AmaxPathLength%2030%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20path%3AresultBindingIndex%20%3Findex%20.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20SERVICE%20%3Curn%3Apath%3E%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Fstart%20%3Ato%20%3Fend%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%7D')
+
+
+        await this.openDialogSync()
+
+        var listOfStringCSV = []
+        var start
+        var end
+        allPath.forEach(value => {
+
+          start = value[0].replace('start:', '')
+          end = value[1].replace('end:', '')
+
+          d3.select("#" + start.replace('http://www.disit.org/altair/resource/', '')).style("fill", "green");
+          d3.select("#" + end.replace('http://www.disit.org/altair/resource/', '')).style("fill", "green");
+
+          listOfStringCSV.push(start.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.variabileDelModalRadio + ';' + end.replace('http://www.disit.org/altair/resource/', ''))
+
+
+        })
+        this.globalVariableService.variabileDelModalRadio = ''
+
+
+
+          // o:"PARCO_SERBATOI_2.txt"^^<http://www.w3.org/2001/XMLSchema#string>
+
+
+        let schermata = await this.getCurrentClickedSchermata(start)
+
+        console.log(schermata)
+        for (const value of listOfStringCSV) {
+          alert('aggiungo: ' + value + '\nschermata : ' + schermata)
+          await this.svgRequestService.addInfoToCSV(value, schermata)
+        }
+
+
+        this.firstPressed = ''
+        this.secondPressed = ''
+
+
       })
       .call(this.force.drag);//nodes
 
@@ -682,8 +772,8 @@ export class SparqlForceComponent implements OnInit {
   }
 
   async riaggiornaGrafoConColori() { // con sto servizio aggiorno l'ontologia su graphDB eliminando quella precedente e mettendone una nuova
-    let schermate = ['CARICO_FERRICO_FERROSO.csv','CARICO_FERRICO_FERROSO_2.csv','FERRICO_FERROSO_CLORO_FERRO.csv','HCL_1_LINEA_(FG600).csv','HCL_2_LINEA_ACIDINO.csv','HCL_3_LINEA.csv','HCL_4_LINEA.csv','IMPIANTO_FeCL3_2.csv','IPOCLORITO.csv','K2CO3.csv','PARCO_SERBATOI_2.csv','PREPARAZIONE_NAOH_20.csv','RECUPERO_CO2.csv','SEZIONE_REAZIONE_R-4003.csv','SEZIONE_REAZIONE_R-4001.csv','SEZIONE_REAZIONE_R-4002.csv','STOCCAGGIO.csv','STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
-   // let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
+    let schermate = ['CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'FERRICO_FERROSO_CLORO_FERRO.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'IMPIANTO_FeCL3_2.csv', 'IPOCLORITO.csv', 'K2CO3.csv', 'PARCO_SERBATOI_2.csv', 'PREPARAZIONE_NAOH_20.csv', 'RECUPERO_CO2.csv', 'SEZIONE_REAZIONE_R-4003.csv', 'SEZIONE_REAZIONE_R-4001.csv', 'SEZIONE_REAZIONE_R-4002.csv', 'STOCCAGGIO.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
+    // let schermate = ['IMPIANTO_FeCL3_2.csv', 'CARICO_FERRICO_FERROSO.csv', 'CARICO_FERRICO_FERROSO_2.csv', 'HCL_1_LINEA_(FG600).csv', 'HCL_2_LINEA_ACIDINO.csv', 'HCL_3_LINEA.csv', 'HCL_4_LINEA.csv', 'PARCO_SERBATOI_2.csv', 'STOCCAGGIO_IPOCLORITO_DI_SODIO.csv']
     let svg = await this.svgRequestService.getSVG(this.overSogliaListXristrette, schermate)
     await this.delay(1000)
     this.cleanGraph()
@@ -691,6 +781,7 @@ export class SparqlForceComponent implements OnInit {
   }
 
   dialogRef
+
   async openDialogSync(): Promise<number> {
     this.dialogRef = this.dialog.open(DialogAnimationsExampleDialog, {
       width: "500px",
@@ -723,8 +814,42 @@ export class SparqlForceComponent implements OnInit {
   }
 
 
-  scale(scaleFactor: any){
+  scale(scaleFactor: any) {
     let val = document.getElementById('valore-scalatura-svg').value
-    document.getElementById('svg-body').style.transform = 'scale('+val+')';
+    document.getElementById('svg-body').style.transform = 'scale(' + val + ')';
+  }
+
+
+  scaleWithArgument(scaleFactor: any) {
+    document.getElementById('svg-body').style.transform = 'scale(' + scaleFactor + ')';
+  }
+
+
+  async getCurrentClickedSchermata(iri: string) {
+
+
+    let queryScheramta = "select * where {<" + iri + "> :isSchermata ?o.}"
+    let queryResultSchermata = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryScheramta)
+    this.globalVariableService.currentSelectedShermataElement = queryResultSchermata
+
+
+    let schermata = this.globalVariableService.schermataCheRitornaLaQueryMale
+
+
+    console.log(schermata)
+    await this.spinner_delay()
+
+    queryResultSchermata = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryScheramta)
+    this.globalVariableService.currentSelectedShermataElement = queryResultSchermata
+
+
+    schermata = this.globalVariableService.schermataCheRitornaLaQueryMale
+
+    console.log(schermata)
+
+
+    return this.globalVariableService.schermataCheRitornaLaQueryMale[0][0].split(":")[1].split("^")[0].replace("\"", "").replace("\"", "").replace(".txt", "")
+
+
   }
 }

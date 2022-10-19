@@ -63,6 +63,23 @@ export class GraphdbRequestsService {
     return this.distanceNodes
   }
 
+
+  @log('', [])
+  async getPathBetweenNodes(node1: string, node2: string) {
+    await this.http.get<any>('http://127.0.0.1:8081/nodes-distance/?node=' + node1 + '*' + node2).subscribe((value: any) => {
+        this.distanceNodes = value
+        console.log('observer get ' + value)
+      },
+      (error: any) => {
+        this.distanceNodes = 'x'
+        console.error(error)
+
+      }
+    );
+    await this.spinner_delay()
+    return this.distanceNodes
+  }
+
   @log('', [])
   async queryWithSpecifiedWithSlectStatementTranneGraffe(selectStatmentSenzaGraffe: string) {
     await this.http.get<any>('http://127.0.0.1:8081/query-with-specified-statement-senza-graffa/?statement_senza_graffe=' + selectStatmentSenzaGraffe).subscribe((value: any) => {

@@ -40,10 +40,13 @@ public class ControllerQueries {
     List<Triple> listOfTriple = UpdateOntologyFiletoRepository.runQueryReturnListOfObject(UpdateOntologyFiletoRepository.getRepositoryConnection(), query);
     if (!listOfTriple.isEmpty()) {
       System.out.println(listOfTriple);
+      System.out.println(listOfTriple.size());
     }
     return listOfTriple;
 
   }
+
+
 
 
 

@@ -3,7 +3,16 @@
 <br/>
 <div class="mygrid">
   <button class="content" style="height: 100px; font-size: 30px;" id="bottone9" class="z-indexed"
-          class="btn btn-primary" (click)="redraw()">rigenera grafo originale
+          class="btn btn-primary" (click)="redraw()">Visualizza tutto grafo (solo to)
+  </button>
+  <button class="content" style="height: 100px; font-size: 30px;" id="bottone10" class="z-indexed"
+          class="btn btn-primary" (click)="redrawWithComplexStatment('?s ?p ?o.%0A'+
+'    ?p rdfs:subPropertyOf* :to.%0A'+
+'    FILTER (?p != :to) .')">Visualizza tutto grafo (solo sostanze)
+  </button>
+  <button class="content" style="height: 100px; font-size: 30px;" id="bottone13" class="z-indexed"
+          class="btn btn-primary" (click)="redrawWithComplexStatment('?s ?p ?o.%0A'+
+'    ?p rdfs:subPropertyOf* :to.%0A')">Visualizza tutto grafo (to e sostanze)
   </button>
   <!--<button class="content" style="height: 100px; font-size: 30px;" id="bottone1" class="z-indexed"
           class="btn btn-primary" (click)="cleanGraph()">rimuovi grafo
@@ -30,11 +39,7 @@
           class="btn btn-primary" (click)="redrawWithDifferentPredicate('to_cloruro_ferrico')">visualizza con
     to_cloruro_ferrico
   </button>-->
-  <button class="content" style="height: 100px; font-size: 30px;" id="bottone10" class="z-indexed"
-          class="btn btn-primary" (click)="redrawWithComplexStatment('?s ?p ?o.%0A'+
-'    ?p rdfs:subPropertyOf* :to.%0A'+
-'    FILTER (?p != :to) .')">visualizza con tutte le sostanze
-  </button>
+
 
   <br/>
   <br/>
@@ -50,10 +55,7 @@
           class="btn btn-primary" (click)="redrawWithModalQuery('')">Genera grafo da query
   </button>
 
-  <button class="content" style="height: 100px; font-size: 30px;" id="bottone13" class="z-indexed"
-          class="btn btn-primary" (click)="redrawWithComplexStatment('?s ?p ?o.%0A'+
-'    ?p rdfs:subPropertyOf* :to.%0A')">tutto colorati con to
-  </button>
+
 
 </div>
 
@@ -66,7 +68,7 @@
 <br/>
 
 <div>  <button class="content" style="height: 100px; font-size: 30px;" id="bottone12" class="z-indexed"
-               class="btn btn-primary" (click)="scale(0.2)">scala
+               class="btn btn-primary" (click)="scale(0.2)">Scala
 </button>
   &nbsp;&nbsp;&nbsp;&nbsp;
 

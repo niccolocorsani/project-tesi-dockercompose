@@ -366,7 +366,6 @@ subject:http://www.disit.org/altair/resource/ul44 predicate::to object:http://ww
 subject:http://www.disit.org/altair/resource/p-900start predicate::to object:http://www.disit.org/altair/resource/ul45
 subject:http://www.disit.org/altair/resource/ul45 predicate::to object:http://www.disit.org/altair/resource/c-909
 subject:http://www.disit.org/altair/resource/ul41 predicate::to object:http://www.disit.org/altair/resource/c-910
-subject:http://www.disit.org/altair/resource/p902b predicate::to object:http://www.disit.org/altair/resource/ul41
 subject:http://www.disit.org/altair/resource/p902b predicate::to object:http://www.disit.org/altair/resource/ul43
 subject:http://www.disit.org/altair/resource/p902b predicate::to object:http://www.disit.org/altair/resource/ul46
 subject:http://www.disit.org/altair/resource/p902b predicate::to object:http://www.disit.org/altair/resource/ul47
