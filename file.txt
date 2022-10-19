@@ -330,6 +330,9 @@ subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://w
 subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954a
 subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://www.disit.org/altair/resource/ul40
 subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://www.disit.org/altair/resource/IMPIANTO_FeCL3_2.txts-954b
+subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://www.disit.org/saref4bldg-ext/FERRICO_FERROSO_CLORO_FERRO.txtr980
+subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://www.disit.org/saref4bldg-ext/s985
+subject:http://www.disit.org/altair/resource/s-901 predicate::to object:http://www.disit.org/saref4bldg-ext/c981
 subject:http://www.disit.org/altair/resource/s985 predicate::to object:http://www.disit.org/altair/resource/p985
 subject:http://www.disit.org/altair/resource/e980 predicate::to object:http://www.disit.org/altair/resource/s985
 subject:http://www.disit.org/altair/resource/s980 predicate::to object:http://www.disit.org/altair/resource/p980a

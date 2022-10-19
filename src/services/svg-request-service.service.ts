@@ -88,6 +88,55 @@ export class SvgRequestServiceService {
   constructor(public http: HttpClient, private globalVariableService: GlobalVariablesService) {
   }
 
+
+  @log('', [])
+  async getSVGProprietaSeparate(listOfVariable: [], listOfSchermate: []) {
+
+    this.globalVariableService.svgReady = true
+    let values = ''
+    if (listOfVariable != null) {
+      listOfVariable.forEach(value => {
+        if (value != 'KOHrampa1caricoprodotti' && value != 'prediction' && value != 'KOHrampa2caricoprodotti' && value != 'ConversioneNaOH' && value != 'ConversioneKOHlinea1')
+          try {
+            values = values + this.variables[value].label + ','
+          } catch (e) {
+            console.log(value)
+            console.error(e)
+          }
+      })
+      values = values.substring(0, values.length - 1)
+    } else values = 'mock' // se non sono state analizzate le variabili
+
+
+    let schermate = ''
+    listOfSchermate.forEach(value => {
+      schermate = schermate + value + ','
+    })
+    schermate = schermate.substring(0, schermate.length - 1)
+
+    this.http.get<any>('http://localhost:8080/spring-app/svg/get-separate?values=' + values + '&schermate=' + schermate, this.httpOptions).subscribe((value: string) => {
+        this.svg = value
+        const newSvg = document.getElementById('svg');
+        if (newSvg != null) {
+          newSvg.innerHTML = ''
+          var SVGjava = document.createElement('div'); // is a node
+          SVGjava.innerHTML = value;
+          newSvg.appendChild(SVGjava)
+          this.globalVariableService.svgReady = false
+        }
+        this.variable_to_wait = 'something'
+      },
+      (error: any) => {
+        console.error(error)
+      }
+    );
+    await this.delay(10)
+
+    await this.spinner_delay()
+    return this.svg
+  }
+
+
   @log('', [])
   async getSVG(listOfVariable: [], listOfSchermate: []) {
 

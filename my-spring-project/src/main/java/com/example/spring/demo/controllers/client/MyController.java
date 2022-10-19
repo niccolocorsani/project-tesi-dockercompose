@@ -1,5 +1,6 @@
 package com.example.spring.demo.controllers.client;
 
+import com.example.spring.demo.svg.GeneralUtility;
 import com.example.spring.demo.svg.Main;
 
 import org.springframework.http.*;
@@ -30,6 +31,35 @@ public class MyController {
     Main main = new Main();
     List<String> variablesToColor = values;
     main.execute(variablesToColor, schermate);
+    System.out.println("SVG.....");
+    String svg = Files.readString(Path.of("./generated_svg/" + this.getLastSvgGenerated()));
+
+    return svg;
+
+  }
+
+
+
+
+
+  @GetMapping("/get-separate")
+  //http://localhost:8080/spring-app/svg/get?values=abc,2,3
+  public String getSVGProprietaSeparate(@RequestParam List<String> values, @RequestParam List<String> schermate) throws Exception {
+
+    Main main = new Main();
+    List<String> variablesToColor = values;
+
+
+    File folder = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
+    File[] listOfFiles = folder.listFiles();
+    for (int i = 0; i < listOfFiles.length; i++) {
+      System.out.println(listOfFiles[i].getName());
+      File file = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-generato/"+listOfFiles[i].getName()) ;
+      file.delete();
+      GeneralUtility.dividiProprietaCongiunte(listOfFiles[i].getName());
+    }
+
+    main.executeConTipologiaSeparateOno(variablesToColor, schermate);
     System.out.println("SVG.....");
     String svg = Files.readString(Path.of("./generated_svg/" + this.getLastSvgGenerated()));
 

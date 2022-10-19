@@ -11,16 +11,14 @@ public class GeneralUtility {
   public static void dividiProprietaCongiunte(String csvName) throws Exception {
 
 
-    long linesPrima = Files.lines(Paths.get("./all-csv-prorpieta-separate/" + csvName + ".csv")).count();
+    long linesPrima = Files.lines(Paths.get("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/" + csvName)).count();
 
-
-    
 
     File inputFile = null;
     File tempFile = null;
     try {
-      inputFile = new File("./all-csv-prorpieta-separate/" + csvName + ".csv");
-      tempFile = new File("./all-csv-prorpieta-separate/" + "prova" + ".csv");
+      inputFile = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/" + csvName);
+      tempFile = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-generato/" + csvName);
 
       BufferedReader reader = new BufferedReader(new FileReader(inputFile));
       BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -28,50 +26,66 @@ public class GeneralUtility {
       String[] splittedTo = null;
       String currentLine;
 
+      int counterAddedProperty = 0;
+
       while ((currentLine = reader.readLine()) != null) {
 
-        if(currentLine.contains("ObjectProperty")) {
+        if (!currentLine.contains("ObjectProperty")) {
+          writer.write(currentLine + System.getProperty("line.separator"));
+          continue;
+        }
+        if (currentLine.contains("ObjectProperty")) {
           splitted = currentLine.split(";");
-          splittedTo = splitted[2].split("-");
-          for(String s : splittedTo)
-            System.out.println(s);
+          if (!splitted[2].contains("-")) {
+            writer.write(currentLine + System.getProperty("line.separator"));
+            continue;
+          }
+          if (currentLine.contains("ObjectProperty")) {
+            if (splitted[2].contains("-")) {
+              splittedTo = splitted[2].split("-");
+              System.out.println(splitted[2]);
+              for (String s : splittedTo) {
+                System.out.println(s);
+                writer.write(splitted[0] + ";ObjectProperty;" + s + ";" + splitted[3] + System.getProperty("line.separator"));
+                counterAddedProperty++;
+              }
+              counterAddedProperty--;
+            }
+          }
         }
 
-      //  if (currentLine.equals(lineToRemove)) continue;
-      //  writer.write(currentLine + System.getProperty("line.separator"));
       }
-    //  writer.close();
-    //  reader.close();
-    //  boolean successful = tempFile.renameTo(inputFile);
-    //  System.out.println(successful);
+      writer.close();
+      reader.close();
+
+      long linesDopo = Files.lines(Paths.get("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-generato/" + csvName)).count();
+
+
+      System.out.println("Righe prima" + linesPrima);
+      System.out.println("Righe dopo" + linesDopo);
+      System.setProperty("java.awt.headless", "false");
+
+      if (linesDopo < linesPrima) {
+        JFrame frame = new JFrame("Erroree");
+        JOptionPane.showMessageDialog(frame, "Errore");
+        throw new Exception("Erroreeeee elimina");
+      }
 
     } catch (Exception e) {
       e.printStackTrace();
     }
 
 
-   // long linesDopo = Files.lines(Paths.get("./all_csv/" + csvName + ".csv")).count();
-
-
-   // System.out.println("Righe prima" + linesPrima);
-    // System.out.println("Righe dopo" + linesDopo);
-   // System.setProperty("java.awt.headless", "false");
-
-//    if (linesPrima != (linesDopo + 1)) {
-//      JFrame frame = new JFrame("Erroree");
-//      JOptionPane.showMessageDialog(frame, "Errore");
-//      throw new Exception("Erroreeeee elimina");
-//    }
-//
-//
-//    boolean successful = tempFile.renameTo(inputFile);
-
   }
 
 
   public static void main(String[] args) throws Exception {
 
-
-    GeneralUtility.dividiProprietaCongiunte("FERRICO_FERROSO_CLORO_FERRO.csv");
+    File folder = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
+    File[] listOfFiles = folder.listFiles();
+    for (int i = 0; i < listOfFiles.length; i++) {
+      System.out.println(listOfFiles[i].getName());
+      GeneralUtility.dividiProprietaCongiunte(listOfFiles[i].getName());
+    }
   }
 }

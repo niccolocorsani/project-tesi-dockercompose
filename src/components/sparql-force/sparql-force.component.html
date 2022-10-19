@@ -23,6 +23,11 @@
   <button class="content" style="height: 100px; font-size: 30px;" id="bottone3" class="z-indexed"
           class="btn btn-primary" (click)="riaggiornaGrafoConColori()">Aggiorna ontologia GraphDB
   </button>
+
+  <button class="content" style="height: 100px; font-size: 30px;" id="bottone14" class="z-indexed"
+          class="btn btn-primary" (click)="aggiornaOntlogiaConProprietaSeparate()">Aggiorna ontologia GraphDB con proprietà separate
+  </button>
+
   <!--<button class="content" style="height: 100px; font-size: 30px;" id="bottone4" class="z-indexed"
           class="btn btn-primary" (click)="updateColors()">Aggiorna colori
   </button>  TODO da finire..... che rappresenta l'intero impianto con tutti i colori-->
@@ -74,7 +79,7 @@
 
   <input id="valore-scalatura-svg" value="0.2">
 </div>
-
+<a href="http://localhost:8080/spring-app/svg/files">DOWNLOAD GENERATED ONTOLOGY </a>
 <div id="svg-body" class="panel-body" #chart></div>
 
 
