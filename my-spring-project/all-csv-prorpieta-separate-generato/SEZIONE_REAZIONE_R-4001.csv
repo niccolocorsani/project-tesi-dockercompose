@@ -317,3 +317,4 @@ xv4145;ObjectProperty;to_n2;SEZIONE_REAZIONE_R-4001.txtdegasamentoiposodioexit
 xv4145;ObjectProperty;to_cloro;SEZIONE_REAZIONE_R-4001.txtdegasamentoiposodioexit
 r-4001;ObjectProperty;to_h2oCalda;acquacaldaexit
 xv4602-2;ObjectProperty;to_CloroParaffine;ul152
+r-4001;DataProperty;shapName;TemperaturareattoreR4001

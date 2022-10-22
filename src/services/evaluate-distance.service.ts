@@ -30,14 +30,21 @@ export class EvaluateDistanceService {
       S904D: {label: 's-904d', impianto: ['CARICO-FERRICO-FERROSO']},// Ben Identificato  Identificato
       S904E: {label: 's-904e', impianto: ['CARICO-FERRICO-FERROSO']},// Ben Identificato  Identificato
 
+
+
+
       TemperaturareattoreR4001: {label: 'r-4001', impianto: ['R-4001']},// Ben Identificato
       TemperaturareattoreR4002: {label: 'r-4002', impianto: ['R-4002']}, // Ben Identificato
       TemperaturareattoreR4003: {label: 'r-4003', impianto: ['R-4003']}, // Ben Identificato
       S4304: {label: 's4304exit', impianto: ['R-4001', 'R-4002', 'R-4003']}, // Ben Identificato
+
       QuantitaNaOHperBatchNaClO: {label: 'naohstart', impianto: ['Ipoclorito']}, // Ben Identificato
       // trovato da excel--> misuratore FIC1702
       QuantitaNaOHperBatchNaClO_2: {label: 'ul110', impianto: ['PreparazioneNaOH']},// Ben Identificato
       // trovato da excel--> misuratore FIC2234_1
+
+
+
 
 
       ConversioneNaOH: {label: '', impianto: ['PreparazioneNaOH']}, //trovato su excel-->HC-R5001

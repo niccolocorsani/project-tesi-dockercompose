@@ -115,11 +115,6 @@
 <http://www.disit.org/altair/resource/ul31> <http://www.disit.org/saref4bldg-ext/min-max> "360 - 620 (90 - 120 ton/g HCl 35%)" .
 <http://www.disit.org/altair/resource/ul31> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
 <http://www.disit.org/altair/resource/ul31> <http://www.disit.org/saref4bldg-ext/note> "ok in Nm3/h" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl3linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:FIC-201/PID1/SP.CV" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl3linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/DVpath> "SINTESI_HCL/CL-LOOP/FIC-201/PID1/SP" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl3linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/funzione> "SP portata H2" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl3linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/note> "ACQUISIRE INIDIRIZZO OPCUA SIA DELLA MISURA STRUMENTO CHE SET POINT MODULO" .
-<http://www.disit.org/altair/resource/ScritturaSP> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:OPC_SP/FIC-201_SP.CV" .
 <http://www.disit.org/altair/resource/ul25> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:500FIC-640_2/PID1/PV.CV" .
 <http://www.disit.org/altair/resource/ul25> <http://www.disit.org/saref4bldg-ext/DVpath> "HCL_LINEA_4/CL4-LOOP/500FIC-640_2/PID1/PV" .
 <http://www.disit.org/altair/resource/ul25> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione e controllo portata Cloro" .
@@ -127,22 +122,6 @@
 <http://www.disit.org/altair/resource/ul25> <http://www.disit.org/saref4bldg-ext/min-max> "360 - 620 (90 - 120 ton/g HCl 36%)" .
 <http://www.disit.org/altair/resource/ul25> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
 <http://www.disit.org/altair/resource/ul25> <http://www.disit.org/saref4bldg-ext/note> "ok in Nm3/h" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl4linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:500FIC-640_1/PID1/SP.CV" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl4linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/DVpath> "HCL_LINEA_4/CL4-LOOP/500FIC-640_1/PID1/PV" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl4linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/funzione> "SP portata H2" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl4linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "Nm3/h" .
-<http://www.disit.org/altair/resource/portataIDROGENOaHCl4linea+SETPOINT> <http://www.disit.org/saref4bldg-ext/note> "ACQUISIRE INIDIRIZZO OPCUA SIA DELLA MISURA STRUMENTO CHE SET POINT MODULO" .
-<http://www.disit.org/altair/resource/ScritturaSP> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:OPC_SP/500FIC-640_2_SP.CV" .
-<http://www.disit.org/altair/resource/ScritturaSP> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "Nm3/h" .
-<http://www.disit.org/altair/resource/QuantitàperFeCl3standard> <http://www.disit.org/saref4bldg-ext/nodoUA> "N/A" .
-<http://www.disit.org/altair/resource/QuantitàperFeCl3standard> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/QuantitàperelettrolisiKOH> <http://www.disit.org/saref4bldg-ext/nodoUA> "N/A" .
-<http://www.disit.org/altair/resource/QuantitàperelettrolisiKOH> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/QuantitàperelettrolisiNaOH> <http://www.disit.org/saref4bldg-ext/nodoUA> "N/A" .
-<http://www.disit.org/altair/resource/QuantitàperelettrolisiNaOH> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/QuantitàperelettrolisiNaOH> <http://www.disit.org/saref4bldg-ext/note> "misura al 60% va riportata al 50%" .
-<http://www.disit.org/altair/resource/QuantitàperTAS> <http://www.disit.org/saref4bldg-ext/nodoUA> "N/A" .
-<http://www.disit.org/altair/resource/QuantitàperTAS> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
 <http://www.disit.org/altair/resource/s-4303start> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:LI4303/AI1/PV.CV" .
 <http://www.disit.org/altair/resource/s-4303start> <http://www.disit.org/saref4bldg-ext/DVpath> "CPS/FF_AI_/LI4303/AI1/PV" .
 <http://www.disit.org/altair/resource/s-4303start> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
@@ -164,16 +143,16 @@
 <http://www.disit.org/altair/resource/s-4304> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
 <http://www.disit.org/altair/resource/s-4304> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
 <http://www.disit.org/altair/resource/s-4304> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "ok" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:LI4323/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/DVpath> "CPS/FF_AI_/LI4323/AI1/PV" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/prodotto> "Essechlor 52" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/densita> "1265" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/s4305exit> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "ok" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:LI4323/AI1/PV.CV" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/DVpath> "CPS/FF_AI_/LI4323/AI1/PV" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/prodotto> "Essechlor 52" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/densita> "1265" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/SEZIONE_REAZIONE_R-4002.txts4305exit> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "ok" .
 <http://www.disit.org/altair/resource/s-4306> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:LI4328/AI1/PV.CV" .
 <http://www.disit.org/altair/resource/s-4306> <http://www.disit.org/saref4bldg-ext/DVpath> "CPS/FF_AI_/LI4328/AI1/PV" .
 <http://www.disit.org/altair/resource/s-4306> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
@@ -236,65 +215,56 @@
 <http://www.disit.org/altair/resource/ul144> <http://www.disit.org/saref4bldg-ext/DVpath> "CPS_R4003/R4003_FF_PID/FIC4208C/PID1/SP.CV" .
 <http://www.disit.org/altair/resource/ul144> <http://www.disit.org/saref4bldg-ext/funzione> "SP portata Cloro R 4003" .
 <http://www.disit.org/altair/resource/ul144> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:OPC_SP/FIC4208C_SP.CV" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI851/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI851/AI1/PV" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita/fuori specifica" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/S851> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI852/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI852/AI1/PV" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/S852> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI854/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI854/AI1/PV" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/S854> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI856/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI856/AI1/PV" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/S856> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI857/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI857/AI1/PV" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/S857> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:FT-IPOSODIO/AI1/PV.CV" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/DVpath> "HCL/FT-IPOSODIO/AI1/PV" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione portata" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "kg/h" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/min-max> "0 - 800 (40 - 100 ton/g di prodotto)" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/densita> "3 kg/Nm3" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/note> "non affidabile" .
-<http://www.disit.org/altair/resource/portatacloro> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "non affidabile" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI851/AI1/PV.CV" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI851/AI1/PV" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita/fuori specifica" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/exits-851> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI852/AI1/PV.CV" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI852/AI1/PV" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/s-852> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI854/AI1/PV.CV" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI854/AI1/PV" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/s-854> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI856/AI1/PV.CV" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI856/AI1/PV" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/s-856> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI857/AI1/PV.CV" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI857/AI1/PV" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/min-max> "0%-95%" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/prodotto> "ipoclorito di sodio" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/densita> "1250" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/destinazione> "vendita" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/s-857> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "OK" .
 <http://www.disit.org/altair/resource/s-904d> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI904D/AI1/PV.CV" .
 <http://www.disit.org/altair/resource/s-904d> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI904D/AI1/PV" .
 <http://www.disit.org/altair/resource/s-904d> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .
@@ -343,14 +313,14 @@
 <http://www.disit.org/altair/resource/s-901> <http://www.disit.org/saref4bldg-ext/destinazione> "M.P." .
 <http://www.disit.org/altair/resource/s-901> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
 <http://www.disit.org/altair/resource/s-901> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "manca indirizzo OPCUA" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/funzione> "inidcazione livello" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/min-max> "5%-95%" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/prodotto> "Acido esausto" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/densita> "1150" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/destinazione> "M.P." .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
-<http://www.disit.org/altair/resource/S910A> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "strumento da configurare, manca indirizzo OPCUA" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/funzione> "inidcazione livello" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "%" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/min-max> "5%-95%" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/prodotto> "Acido esausto" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/densita> "1150" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/destinazione> "M.P." .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/sorgente> "DCS Emerson" .
+<http://www.disit.org/altair/resource/s-910astart> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "strumento da configurare, manca indirizzo OPCUA" .
 <http://www.disit.org/altair/resource/c980> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:900FIC986/PID1/PV.CV" .
 <http://www.disit.org/altair/resource/c980> <http://www.disit.org/saref4bldg-ext/DVpath> "FERRICO/FE-LOOP/900FIC986/PID1/PV" .
 <http://www.disit.org/altair/resource/c980> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione e regolazione portata" .
@@ -365,15 +335,6 @@
 <http://www.disit.org/altair/resource/c-910> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "Nm3/h" .
 <http://www.disit.org/altair/resource/c-910> <http://www.disit.org/saref4bldg-ext/min-max> "0-150" .
 <http://www.disit.org/altair/resource/c-910> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "NON ANCORA INSTALLATO, DA INSERIRE INDIRIZZO OPCUA" .
-<http://www.disit.org/altair/resource/portataacidoesausto> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:900-FIC901/PID1/PV.CV" .
-<http://www.disit.org/altair/resource/portataacidoesausto> <http://www.disit.org/saref4bldg-ext/DVpath> "900-FERRICO/900-LOOP/900-FIC901/PID1/PV.CV" .
-<http://www.disit.org/altair/resource/portataacidoesausto> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione e regolazione portata" .
-<http://www.disit.org/altair/resource/portataacidoesausto> <http://www.disit.org/saref4bldg-ext/unita-di-misura> "l/h" .
-<http://www.disit.org/altair/resource/portataacidoesausto> <http://www.disit.org/saref4bldg-ext/min-max> "0-5000" .
-<http://www.disit.org/altair/resource/portataacidoesausto> <http://www.disit.org/saref4bldg-ext/verifica-lettura-da-unifi> "DA CONFIGURARE DA UNIFI, ACQUISIRE ANCHE SET POINT MODULO" .
-<http://www.disit.org/altair/resource/SPportataacidoesausto> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:900-FIC901/PID1/SP.CV" .
-<http://www.disit.org/altair/resource/SPportataacidoesausto> <http://www.disit.org/saref4bldg-ext/DVpath> "901-FERRICO/900-LOOP/900-FIC901/PID1/SP.CV" .
-<http://www.disit.org/altair/resource/ScritturaSP> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:OPC_SP/900-FIC901_SP.CV" .
 <http://www.disit.org/altair/resource/s-904a> <http://www.disit.org/saref4bldg-ext/nodoUA> "ns=2;s=0:800LI904A/AI1/PV.CV" .
 <http://www.disit.org/altair/resource/s-904a> <http://www.disit.org/saref4bldg-ext/DVpath> "STOCCAGGI/STOCCAGGI-AI/800LI904A/AI1/PV" .
 <http://www.disit.org/altair/resource/s-904a> <http://www.disit.org/saref4bldg-ext/funzione> "indicazione livello" .

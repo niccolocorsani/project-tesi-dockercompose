@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Chart} from "chart.js";
 import zoomPlugin from 'chartjs-plugin-zoom';
 import {Router} from "@angular/router";
@@ -15,10 +15,26 @@ Chart.register(zoomPlugin);
   styleUrls: ['./app.component.css']
 })
 @classDecorator
-export class AppComponent {
+export class AppComponent  implements OnInit{
 
   constructor(private router: Router, public globalVaraibleService: GlobalVariablesService) {
   }
+
+  ngOnInit(): void {
+    let keys = Object.keys(this.globalVaraibleService.variables)
+
+
+    keys.forEach(value =>{
+
+      // @ts-ignore
+      console.log(this.globalVaraibleService.variables[value]['label']+';DataProperty;shapName;'+value)
+      // a2ul19;DataProperty;isSchermata;CARICO_FERRICO_FERROSO_2.txt
+
+    })
+
+
+    }
+
 
 
   navigateTab(viewName: string) {
@@ -37,6 +53,10 @@ export class AppComponent {
     });
 
   }
+
+
+
+
 
 }
 

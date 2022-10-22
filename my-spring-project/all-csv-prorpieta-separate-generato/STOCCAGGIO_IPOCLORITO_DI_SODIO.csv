@@ -317,3 +317,14 @@ startdaimpiantoiposodio;ObjectProperty;to_IpocloritoDiSodio;xv854
 p851b;ObjectProperty;to_IpocloritoDiSodio;ul180
 xv855_2;ObjectProperty;to_IpocloritoDiSodio;p851a
 xv856_2;ObjectProperty;to_IpocloritoDiSodio;p851b
+p851b;DataProperty;shapName;caricoiposodio
+s-857;DataProperty;shapName;S857
+s-856;DataProperty;shapName;S856
+exits-851;DataProperty;shapName;S851
+s-852;DataProperty;shapName;S852
+s-854;DataProperty;shapName;S854
+s-857;DataProperty;shapName;diff_S857
+s-856;DataProperty;shapName;diff_S856
+exits-851;DataProperty;shapName;diff_S851
+s-852;DataProperty;shapName;diff_S852
+s-854;DataProperty;shapName;diff_S854

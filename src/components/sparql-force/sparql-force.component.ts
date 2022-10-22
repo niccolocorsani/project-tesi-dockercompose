@@ -553,8 +553,8 @@ export class SparqlForceComponent implements OnInit {
       .attr("class", "node-text")
       .text(d => d.label.replace('https://saref.etsi.org/saref4bldg/', '').replace('http://www.disit.org/altair/resource/', '')).on("click", (d) => {
         this.router.navigate([]).then(result => {
-            // window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
-            // window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
+             window.open("https://log.disit.org/service/?sparql=http%3A%2F%2F192.168.1.149%3A7200%2Frepositories%2Faltair&uri=" + d.label, '_blank')
+             //window.open("http://localhost:7200/graphs-visualizations?uri=" + d.label, '_blank');
           }
         );
       })

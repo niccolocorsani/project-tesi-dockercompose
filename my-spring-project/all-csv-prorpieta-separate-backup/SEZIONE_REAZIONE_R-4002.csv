@@ -394,3 +394,5 @@ r-4002;ObjectProperty;to_n2-to_cloro;xv4245
 xv4604-1;ObjectProperty;to_CloroParaffine;xv4604-2
 xv4221;ObjectProperty;to_CloroParaffine;p-4604
 SEZIONE_REAZIONE_R-4002.txts-4302start;ObjectProperty;to_ParaffinaACatenaLunga;r-4002
+r-4002;DataProperty;shapName;TemperaturareattoreR4002
+SEZIONE_REAZIONE_R-4002.txts4304exit;DataProperty;shapName;S4304

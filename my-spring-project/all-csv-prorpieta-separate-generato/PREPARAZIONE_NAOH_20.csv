@@ -221,3 +221,4 @@ ul110;ObjectProperty;to_acquaDemineralizzata;mx2234
 ul110;ObjectProperty;to_NaOH;mx2234
 mx2234;ObjectProperty;to_acquaDemineralizzata;e-2228
 mx2234;ObjectProperty;to_NaOH;e-2228
+ul110;DataProperty;shapName;QuantitaNaOHperBatchNaClO_2

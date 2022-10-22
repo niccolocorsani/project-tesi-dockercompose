@@ -343,3 +343,5 @@ s-4303start;ObjectProperty;to_CloroParaffine;p-4613
 xv4304-2;ObjectProperty;to_CloroParaffine;p-4614
 p-4614;ObjectProperty;to_CloroParaffine;xv4614-1
 xv4305-2;ObjectProperty;to_CloroParaffine;p-4615
+s-4304;DataProperty;shapName;S4304
+s-4304;DataProperty;shapName;diff_S4304

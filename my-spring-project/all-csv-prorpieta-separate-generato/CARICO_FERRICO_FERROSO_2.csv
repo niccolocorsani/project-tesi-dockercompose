@@ -316,3 +316,11 @@ a2ul16;ObjectProperty;to_cloruroFerrico;a2ul20
 a2ul18;ObjectProperty;to_cloruroFerrico;a2ul20
 a2ul19;ObjectProperty;to_cloruroFerrico;a2ul20
 a2ul10;ObjectProperty;to_cloruroFerrico;xv904abc_1
+s-904a;DataProperty;shapName;S904A
+s-904b;DataProperty;shapName;S904B
+s-904c;DataProperty;shapName;S904C
+p904a;DataProperty;shapName;caricocloruroferricostandard
+p904b;DataProperty;shapName;caricocloruroferricopotabile
+s-904a;DataProperty;shapName;diff_S904A
+s-904b;DataProperty;shapName;diff_S904B
+s-904c;DataProperty;shapName;diff_S904C

@@ -3,6 +3,7 @@ package com.example.spring.demo.controllers.client;
 import com.example.spring.demo.svg.GeneralUtility;
 import com.example.spring.demo.svg.Main;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,6 +49,17 @@ public class MyController {
 
     Main main = new Main();
     List<String> variablesToColor = values;
+
+
+    File source = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all_csv/");
+    File dest = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
+    try {
+      FileUtils.copyDirectory(source, dest);
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+
 
 
     File folder = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");

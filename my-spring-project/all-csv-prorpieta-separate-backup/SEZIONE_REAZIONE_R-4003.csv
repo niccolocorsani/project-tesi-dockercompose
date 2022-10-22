@@ -290,3 +290,4 @@ xv4313;ObjectProperty;to_h2oCalda;r-4003
 SEZIONE_REAZIONE_R-4003.txts-4301start;ObjectProperty;to_ParaffinaACatenaMedia;r-4003
 SEZIONE_REAZIONE_R-4003.txts-4302start;ObjectProperty;to_ParaffinaACatenaLunga;r-4003
 SEZIONE_REAZIONE_R-4003.txtp-4606start;ObjectProperty;to_ParaffinaACatenaLunghissima;r-4003
+r-4003;DataProperty;shapName;TemperaturareattoreR4003
