@@ -71,7 +71,7 @@ public class OntologyBuilder {
             pm = new DefaultPrefixManager(null, null, "http://www.disit.org/altair/resource/");
             individuals_iri.put(data[0], pm.getDefaultPrefix());
             individual = factory.getOWLNamedIndividual(":" + data[0], pm);
-            pm = findClassPrefix(o, data[2]);
+            //pm = findClassPrefix(o, data[2]);
             owlClass = factory.getOWLClass(":" + data[2], pm);
             classAssertionAxiom = factory.getOWLClassAssertionAxiom(owlClass, individual);
             man.addAxiom(o, classAssertionAxiom);
