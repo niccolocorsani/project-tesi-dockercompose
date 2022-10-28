@@ -48,7 +48,6 @@ export class DialogAnimationsExampleDialog {
       this.globalVariableService.variabileDelModalRadio = this.globalVariableService.variabileDelModalRadio + '-' + event.source.value
     else
       this.globalVariableService.variabileDelModalRadio = event.source.value
-    console.log(this.globalVariableService.variabileDelModalRadio)
   }
 
   async eliminaObjectProperty() {

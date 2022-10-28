@@ -51,7 +51,7 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
   };
 
 
-  constructor(public http: HttpClient, private chartJsService: ChartjsService, private distanceService: EvaluateDistanceService, private graphDBrequestService: GraphdbRequestsService, private svgRequestService: SvgRequestServiceService, public globalVariableService: GlobalVariablesService, private graphdbRequestServiceToSpring : GraphdbRequesDerviceToSpringAppService) {
+  constructor(public http: HttpClient, private chartJsService: ChartjsService, private distanceService: EvaluateDistanceService, private graphDBrequestService: GraphdbRequestsService, private svgRequestService: SvgRequestServiceService, public globalVariableService: GlobalVariablesService, private graphdbRequestServiceToSpring: GraphdbRequesDerviceToSpringAppService) {
     Chart.register(...registerables);
   }
 
@@ -123,24 +123,29 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     let date1 = new Date(document.getElementById('x1').value).getTime()
     let date2 = new Date(document.getElementById('x2').value).getTime()
 
+
     this.http.get<any>('assets/shap.json').subscribe(async value => {
       let listOfDate = Object.keys(value)
+
+
+      listOfDate.forEach(date => {
+        if (date.length < 12) console.log(date)
+
+      })
+     // listOfDate = listOfDate.filter(date => date.length < 12)
       let dates = listOfDate.map(date => new Date(date).getTime())
+
+
       for (const date of dates) {
+
+
         if (date < date1 || date > date2) {
-          let dateToRemove = new Date(date)
-          let year = String(dateToRemove.getFullYear())
-          let month = String(dateToRemove.getMonth() + 1)
-          if (month.length == 1) month = '0' + month
-          let day = String(dateToRemove.getDate())
-          let hour = String(dateToRemove.getHours())
-          if (hour.length == 1) hour = '0' + hour
-          let minute = String(dateToRemove.getMinutes())
-          if (minute.length == 1) minute = '0' + minute
-          let second = String(dateToRemove.getSeconds())
-          if (second.length == 1) second = '0' + second
-          let stringDate = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
+          let stringDate = this.num_to_date(date)
+
+
           delete value[stringDate]
+          //2020-06-01 01:55:00
+          ////TODO capire perchè non mette date giuste
         }
       }
       let element = this.chartJsService.createTimeEventsAndDataSetFromJson(value);
@@ -152,6 +157,32 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     this.dataSetXRistrette = dataSet
     this.timeEventsXristrette = timesEvent
   }
+
+
+  num_to_date(date: any) {
+
+
+    let dateToRemove = new Date(date)
+    let year = String(dateToRemove.getFullYear())
+    let month = String(dateToRemove.getMonth() + 1)
+    if (month.length == 1) month = '0' + month
+    let day = String(dateToRemove.getDate())
+    if (day.length == 1) day = '0' + day
+    let hour = String(dateToRemove.getHours())
+    if (hour.length == 1) hour = '0' + hour
+    let minute = String(dateToRemove.getMinutes())
+    if (minute.length == 1) minute = '0' + minute
+    let second = String(dateToRemove.getSeconds())
+    if (second.length == 1) second = '0' + second
+    let stringDate = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second
+
+
+    if (stringDate.includes("2020-06-2 04:35:00"))
+      console.log('stop')
+
+    return stringDate
+  }
+
 
   @log('chart component', []) addSogliaXristrette() {
     // @ts-ignore
@@ -165,7 +196,6 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
     this.overSogliaListXristrette = this.chartJsService.filterDataSetByThreshold(this.dataSetXRistrette, this.sogliaXRistrette)[1]
     this.over_soglia_list_with_infoXristrette = this.overSogliaListXristrette
     this.globalVariableService.nodiRotti = this.overSogliaListXristrette
-    console.log(this.globalVariableService.nodiRotti)
   }
 
   @log('chart component', [])
@@ -264,11 +294,10 @@ export class ChartsAndOtherFunctionalitiesComponent implements OnInit {
 
   async checkIfOntologyIsAlreadyPresent() {
 
-    let normalQueryOutput =  await this.graphDBrequestService.normalQuery()
+    let normalQueryOutput = await this.graphDBrequestService.normalQuery()
 
-    if(normalQueryOutput.length != 0)
+    if (normalQueryOutput.length != 0)
       this.ontologyAlreadyPresent = true;
-
 
 
   }

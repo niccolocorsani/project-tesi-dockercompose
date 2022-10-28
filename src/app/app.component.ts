@@ -24,13 +24,6 @@ export class AppComponent  implements OnInit{
     let keys = Object.keys(this.globalVaraibleService.variables)
 
 
-    keys.forEach(value =>{
-
-      // @ts-ignore
-      console.log(this.globalVaraibleService.variables[value]['label']+';DataProperty;shapName;'+value)
-      // a2ul19;DataProperty;isSchermata;CARICO_FERRICO_FERROSO_2.txt
-
-    })
 
 
     }
@@ -46,7 +39,6 @@ export class AppComponent  implements OnInit{
         nodiRottiString = nodiRottiString + nodoRotto + ','
     })
     nodiRottiString = nodiRottiString.substring(0, nodiRottiString.length - 1)
-    console.log(this.globalVaraibleService.nodiRotti)
     // @ts-ignore
     this.router.navigate([]).then(result => {
       window.open(viewName + '?rotti=' + nodiRottiString, '_blank');

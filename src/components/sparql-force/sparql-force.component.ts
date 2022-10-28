@@ -121,7 +121,6 @@ export class SparqlForceComponent implements OnInit {
     this.data = await this.graphdbRequesDerviceToSpringAppService.queryReturnListOfTriples(query)
     this.createChart();
 
-    console.log(this.data)
     this.cleanGraph();
     this.attachData();
     d3.selectAll("svg").remove();
@@ -143,19 +142,16 @@ export class SparqlForceComponent implements OnInit {
     elements.forEach((node) => {
       tuttiPredicate = tuttiPredicate + node.textContent
     });
-    console.log(tuttiPredicate)
     if (tuttiPredicate.includes(sostanzaCheCiDovrebbeEssere)) return true
     else return false
   }
 
 
   async redrawWithDifferentPredicate(query: string) {
-    console.log(query)
     this.createChart();
     this.globalVariableService.svgReady = true
     await this.spinner_delay() ///// TODO capire perhcè non aspetta sempre.... semplificaare il codice.... la doppia chiamata con redraw tipo sopra non serve
     this.data = await this.graphDBrequestService.queryWithSpecifiedPredicate(query)
-    console.log(this.data)
     this.cleanGraph();
     this.attachData();
     d3.selectAll("svg").remove();
@@ -164,7 +160,6 @@ export class SparqlForceComponent implements OnInit {
     this.globalVariableService.svgd3 = this.svg
     await this.spinner_delay()
     let esito = await this.checkIfTextInDome(query)
-    console.log(esito)
     if (esito === false)
       await this.redrawWithDifferentPredicate(query)
 
@@ -506,7 +501,6 @@ export class SparqlForceComponent implements OnInit {
         this.globalVariableService.current_selected_D = d
         await this.openDialogSync()
 
-        console.log(this.globalVariableService)
         if (this.globalVariableService.variabileDelModalRadio == '') // se non è stato cliccato nulla
           return
 
@@ -522,10 +516,8 @@ export class SparqlForceComponent implements OnInit {
           if (this.globalVariableService.schermataCheRitornaLaQueryMale.length > 0)
             queryResult = this.globalVariableService.schermataCheRitornaLaQueryMale
 
-          console.log(queryResult)
         }
 
-        console.log(queryResult)
 
         let schermata = queryResult[0][0].split(":")[1].split("^")[0].replace("\"", "").replace("\"", "").replace(".txt", "")
         let infoDaAggiungereAlCSV = d.s.label.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.variabileDelModalRadio + ';' + d.o.label.replace('http://www.disit.org/altair/resource/', '')
@@ -636,7 +628,6 @@ export class SparqlForceComponent implements OnInit {
 
         let schermata = await this.getCurrentClickedSchermata(start)
 
-        console.log(schermata)
         for (const value of listOfStringCSV) {
           alert('aggiungo: ' + value + '\nschermata : ' + schermata)
           await this.svgRequestService.addInfoToCSV(value, schermata)
@@ -710,25 +701,21 @@ export class SparqlForceComponent implements OnInit {
       let queryResult = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryCloro)
       //// questi if non bastano......va messo queryResult.length != 0 && queryResult o == d.o
       if (queryResult.length != 0) {
-        console.log(this.graph.triples[element].o.label + ' yellow')
         this.graph.triples[element].p.color = 'yellow'
       }
       let queryCloruroFerrico = "select * where {<" + this.graph.triples[element].s.label + "> :to_cloruro_ferrico ?o.}"
       queryResult = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryCloruroFerrico)
       if (queryResult.length != 0) {
-        console.log(this.graph.triples[element].p.label + ' red')
         this.graph.triples[element].p.color = 'red'
       }
       let queryFerroso = "select * where {<" + this.graph.triples[element].s.label + "> :to_ferroso ?o.}"
       queryResult = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryFerroso)
       if (queryResult.length != 0) {
-        console.log(this.graph.triples[element].p.label + ' green')
         this.graph.triples[element].p.color = 'green'
       }
     }
 
     d3.selectAll("svg").remove();
-    this.graph.triples.forEach(triple => console.log(triple.p.color))
     this.createChart();
     this.graph.nodes.forEach(triple => console.log(triple.p.color))
     this.globalVariableService.svgReady = false
@@ -803,7 +790,6 @@ export class SparqlForceComponent implements OnInit {
     return this.dialogRef.afterClosed()
       .toPromise() // here you have a Promise instead an Observable
       .then(result => {
-        console.log("The dialog was closed " + result);
         this.waitDialog = false
         return Promise.resolve(result); // will return a Promise here
       });
@@ -847,7 +833,6 @@ export class SparqlForceComponent implements OnInit {
     let schermata = this.globalVariableService.schermataCheRitornaLaQueryMale
 
 
-    console.log(schermata)
     await this.spinner_delay()
 
     queryResultSchermata = await this.graphdbRequesDerviceToSpringAppService.normalQuery(queryScheramta)
@@ -856,7 +841,6 @@ export class SparqlForceComponent implements OnInit {
 
     schermata = this.globalVariableService.schermataCheRitornaLaQueryMale
 
-    console.log(schermata)
 
 
     return this.globalVariableService.schermataCheRitornaLaQueryMale[0][0].split(":")[1].split("^")[0].replace("\"", "").replace("\"", "").replace(".txt", "")
