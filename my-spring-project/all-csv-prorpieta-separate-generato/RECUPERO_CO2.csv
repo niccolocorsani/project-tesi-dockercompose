@@ -15,7 +15,7 @@ adstart3_recuperoco2;Class;PhysicalObject;
 xv461-2;Class;Valve;
 ul133;Class;PhysicalObject;
 ba462;Class;PhysicalObject;
-RECUPERO_CO2.txtkohstart_recuperoco2;Class;PhysicalObject;
+kohstart_recuperoco2;Class;PhysicalObject;
 ul132;Class;PhysicalObject;
 ul131;Class;PhysicalObject;
 xv461-1;Class;Valve;
@@ -107,7 +107,7 @@ Flusso_323;Class;Flow;
 Flusso_323;ObjectProperty;startIn;ba461
 Flusso_323;ObjectProperty;endIn;ul131
 Flusso_324;Class;Flow;
-Flusso_324;ObjectProperty;startIn;RECUPERO_CO2.txtkohstart_recuperoco2
+Flusso_324;ObjectProperty;startIn;kohstart_recuperoco2
 Flusso_324;ObjectProperty;endIn;xv461-1
 Flusso_325;Class;Flow;
 Flusso_325;ObjectProperty;startIn;ul133
@@ -250,7 +250,7 @@ k460;ObjectProperty;to;ul132
 ul131;ObjectProperty;to;ul132
 ba460;ObjectProperty;to;ul131
 ba461;ObjectProperty;to;ul131
-RECUPERO_CO2.txtkohstart_recuperoco2;ObjectProperty;to;xv461-1
+kohstart_recuperoco2;ObjectProperty;to;xv461-1
 ul133;ObjectProperty;to;s461
 xv461-1;ObjectProperty;to;s461
 xv461-2;ObjectProperty;to;s461
@@ -293,7 +293,7 @@ xv461-2;DataProperty;isSchermata;RECUPERO_CO2.txt
 ul133;DataProperty;isSchermata;RECUPERO_CO2.txt
 ba462;DataProperty;isSchermata;RECUPERO_CO2.txt
 fi462;DataProperty;isSchermata;RECUPERO_CO2.txt
-RECUPERO_CO2.txtkohstart_recuperoco2;DataProperty;isSchermata;RECUPERO_CO2.txt
+kohstart_recuperoco2;DataProperty;isSchermata;RECUPERO_CO2.txt
 ul132;DataProperty;isSchermata;RECUPERO_CO2.txt
 ul131;DataProperty;isSchermata;RECUPERO_CO2.txt
 xv461-1;DataProperty;isSchermata;RECUPERO_CO2.txt
@@ -362,7 +362,7 @@ ul134;ObjectProperty;to_acquaDemineralizzata;c460a
 ul135;ObjectProperty;to_KOH;c460a
 ul135;ObjectProperty;to_k2co3;c460a
 ul135;ObjectProperty;to_acquaDemineralizzata;c460a
-RECUPERO_CO2.txtkohstart_recuperoco2;ObjectProperty;to_KOH;xv461-1
+kohstart_recuperoco2;ObjectProperty;to_KOH;xv461-1
 xv461-1;ObjectProperty;to_KOH;s461
 adstart3_recuperoco2;ObjectProperty;to_acquaDemineralizzata;xv461-2
 xv461-2;ObjectProperty;to_acquaDemineralizzata;s461
@@ -374,3 +374,5 @@ ul131;ObjectProperty;to_FumiDaCogenerazione;ul132
 ul131;ObjectProperty;to_vapore;ul132
 adstart1_recuperoco2;ObjectProperty;to_acquaDemineralizzata;s548
 vbstart_recuperoco2;ObjectProperty;to_vaporeBassaPressione;s548
+ba460;ObjectProperty;to_vapore;k460
+ba460;ObjectProperty;to_FumiDaCogenerazione;k460

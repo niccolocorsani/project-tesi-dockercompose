@@ -1,5 +1,5 @@
 p-901start;Class;PhysicalObject;
-IMPIANTO_FeCL3_2.txtc905exit;Class;PhysicalObject;
+c905exit;Class;PhysicalObject;
 p-900start;Class;PhysicalObject;
 ul40;Class;PhysicalObject;
 ul45;Class;PhysicalObject;
@@ -15,7 +15,7 @@ ul42;Class;PhysicalObject;
 xv912_1;Class;Valve;
 s-954b;Class;PhysicalObject;
 c-909;Class;Container;
-IMPIANTO_FeCL3_2.txtdegasamentoexit;Class;PhysicalObject;
+degasamentoexit;Class;PhysicalObject;
 xv912_2;Class;Valve;
 xv901b;Class;Valve;
 ul43;Class;PhysicalObject;
@@ -38,7 +38,7 @@ p909;Class;Pump;
 atbstart1;Class;PhysicalObject;
 Flusso_484;Class;Flow;
 Flusso_484;ObjectProperty;startIn;c-910
-Flusso_484;ObjectProperty;endIn;IMPIANTO_FeCL3_2.txtc905exit
+Flusso_484;ObjectProperty;endIn;c905exit
 Flusso_485;Class;Flow;
 Flusso_485;ObjectProperty;startIn;s-901
 Flusso_485;ObjectProperty;endIn;ul40
@@ -131,10 +131,10 @@ Flusso_514;ObjectProperty;startIn;cv-905-1
 Flusso_514;ObjectProperty;endIn;c-909
 Flusso_515;Class;Flow;
 Flusso_515;ObjectProperty;startIn;xv912_2
-Flusso_515;ObjectProperty;endIn;IMPIANTO_FeCL3_2.txtdegasamentoexit
+Flusso_515;ObjectProperty;endIn;degasamentoexit
 Flusso_516;Class;Flow;
 Flusso_516;ObjectProperty;startIn;xv901b
-Flusso_516;ObjectProperty;endIn;IMPIANTO_FeCL3_2.txtdegasamentoexit
+Flusso_516;ObjectProperty;endIn;degasamentoexit
 Flusso_517;Class;Flow;
 Flusso_517;ObjectProperty;startIn;xv912_1
 Flusso_517;ObjectProperty;endIn;xv912_2
@@ -269,7 +269,7 @@ hc900;Class;Sensor;
 percentage;Class;UnitOfMeasure;
 hc900;ObjectProperty;canMeasureIn;percentage
 hc900;ObjectProperty;isContainedIn;ul46
-c-910;ObjectProperty;to;IMPIANTO_FeCL3_2.txtc905exit
+c-910;ObjectProperty;to;c905exit
 s-901;ObjectProperty;to;ul40
 900-p910c;ObjectProperty;to;ul40
 900-p910a;ObjectProperty;to;ul40
@@ -299,8 +299,8 @@ s-901;ObjectProperty;to;s-954b
 ul44;ObjectProperty;to;c-909
 ul45;ObjectProperty;to;c-909
 cv-905-1;ObjectProperty;to;c-909
-xv912_2;ObjectProperty;to;IMPIANTO_FeCL3_2.txtdegasamentoexit
-xv901b;ObjectProperty;to;IMPIANTO_FeCL3_2.txtdegasamentoexit
+xv912_2;ObjectProperty;to;degasamentoexit
+xv901b;ObjectProperty;to;degasamentoexit
 xv912_1;ObjectProperty;to;xv912_2
 xv901a;ObjectProperty;to;xv901b
 p902a;ObjectProperty;to;ul43
@@ -330,7 +330,7 @@ atbstart2;ObjectProperty;to;900-p910a
 fic901;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 p-901start;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 fic909-2;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
-IMPIANTO_FeCL3_2.txtc905exit;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
+c905exit;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 p-900start;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 pi909-2;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 ul40;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
@@ -352,7 +352,7 @@ ul42;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 xv912_1;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 s-954b;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 c-909;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
-IMPIANTO_FeCL3_2.txtdegasamentoexit;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
+degasamentoexit;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 pi901;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 xv912_2;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
 ti900;DataProperty;isSchermata;IMPIANTO_FeCL3_2.txt
@@ -393,16 +393,16 @@ s-901;ObjectProperty;to_ferroso;ul40
 900-p910b;ObjectProperty;to_ferroso;s-954b
 s-901;ObjectProperty;to_ferroso;s-954a
 ul40;ObjectProperty;to_ferroso;c-910
-c-910;ObjectProperty;to_cloro;IMPIANTO_FeCL3_2.txtc905exit
+c-910;ObjectProperty;to_cloro;c905exit
 ul41;ObjectProperty;to_cloruroFerrico;c-910
 ul42;ObjectProperty;to_cloro;c-910
 xv912_1;ObjectProperty;to_cloro;ul42
 xv912_2;ObjectProperty;to_cloro;ul42
 xv912_1;ObjectProperty;to_cloro;xv912_2
 cl2-da-k2204start;ObjectProperty;to_cloro;xv912_1
-xv912_2;ObjectProperty;to_cloro;IMPIANTO_FeCL3_2.txtdegasamentoexit
+xv912_2;ObjectProperty;to_cloro;degasamentoexit
 cl2-da-k2204start;ObjectProperty;to_cloro;xv912_1
-xv901b;ObjectProperty;to_cloro;IMPIANTO_FeCL3_2.txtdegasamentoexit
+xv901b;ObjectProperty;to_cloro;degasamentoexit
 cl2-da-k2204start;ObjectProperty;to_cloro;xv901a
 xv901a;ObjectProperty;to_cloro;xv901b
 xv901a;ObjectProperty;to_cloro;ul44
@@ -465,6 +465,3 @@ s-910astart;ObjectProperty;to_ferroso;900-p910c
 atbstart2;ObjectProperty;to_ferroso;900-p910b
 s-910astart;ObjectProperty;to_ferroso;900-p910c
 900-p910a;ObjectProperty;to_ferroso;s-901
-s-901;ObjectProperty;to_Sfiati;c981
-s-901;ObjectProperty;to_Sfiati;s985
-s-901;ObjectProperty;to_Sfiati;FERRICO_FERROSO_CLORO_FERRO.txtr980

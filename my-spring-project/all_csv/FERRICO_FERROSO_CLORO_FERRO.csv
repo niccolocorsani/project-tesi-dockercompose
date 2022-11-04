@@ -617,3 +617,7 @@ s-904e;ObjectProperty;to_cloruroFerrico;a1ul9
 s-901;ObjectProperty;to_Sfiati;c981
 s-901;ObjectProperty;to_Sfiati;s985
 s-901;ObjectProperty;to_Sfiati;r980
+ms980start;ObjectProperty;to_ferroso;s980
+s980;ObjectProperty;to_ferroso;p980a
+p980a;ObjectProperty;to_ferroso;ul19
+ul19;ObjectProperty;to_ferroso;c980

@@ -270,3 +270,5 @@ s-904d;DataProperty;shapName;S904D
 s-904e;DataProperty;shapName;S904E
 s-904d;DataProperty;shapName;diff_S904D
 s-904e;DataProperty;shapName;diff_S904E
+a1ul3;ObjectProperty;to_ferroso;a1ul2
+a1ul9;ObjectProperty;to_cloruroFerrico;a1ul11

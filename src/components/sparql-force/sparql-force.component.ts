@@ -608,17 +608,14 @@ export class SparqlForceComponent implements OnInit {
         var start
         var end
         allPath.forEach(value => {
-
           start = value[0].replace('start:', '')
           end = value[1].replace('end:', '')
-
           d3.select("#" + start.replace('http://www.disit.org/altair/resource/', '')).style("fill", "green");
           d3.select("#" + end.replace('http://www.disit.org/altair/resource/', '')).style("fill", "green");
-
           listOfStringCSV.push(start.replace('http://www.disit.org/altair/resource/', '') + ';ObjectProperty;' + this.globalVariableService.variabileDelModalRadio + ';' + end.replace('http://www.disit.org/altair/resource/', ''))
-
-
         })
+
+
         this.globalVariableService.variabileDelModalRadio = ''
 
 
