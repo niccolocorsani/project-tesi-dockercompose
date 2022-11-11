@@ -36,8 +36,16 @@ public class ControllerQueries {
   //http://localhost:8080/spring-app/queries/get?query=a
   public List<Triple> getReturnListOfObject(@RequestParam String query) throws IOException {
 
+    System.err.println("get_list_of_triple called");
+
     System.err.println(query);
+
+    System.err.println("ooooo"+UpdateOntologyFiletoRepository.getRepositoryConnection());
+
     List<Triple> listOfTriple = UpdateOntologyFiletoRepository.runQueryReturnListOfObject(UpdateOntologyFiletoRepository.getRepositoryConnection(), query);
+
+    System.out.println("Problem");
+
     if (!listOfTriple.isEmpty()) {
       System.out.println(listOfTriple);
       System.out.println(listOfTriple.size());

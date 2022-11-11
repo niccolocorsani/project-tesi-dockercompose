@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+
+  my-spring-app:
+    platform: linux/x86_64
+
+    build: ./my-spring-project
+    ports:
+      - "8080:8080"
+
+
+  graphDB:
+    image: ontotext/graphdb:10.0.2
+    ports:
+     - "7200:7200"
+
+    volumes:
+      - $PWD/graphdb-home:/opt/graphdb/home
+
+ # front-end:
+ #   platform: linux/x86_64
+ #   build: ./
+ #   ports:
+ #    - "4200:4200"
+
+
+#  my-python-app:
+#    platform: linux/x86_64
+#    build: ./tesi-back-end
+#    ports:
+#      - "8081:8081"
+
+
+
+

@@ -11,14 +11,14 @@ public class GeneralUtility {
   public static void dividiProprietaCongiunte(String csvName) throws Exception {
 
 
-    long linesPrima = Files.lines(Paths.get("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/" + csvName)).count();
+    long linesPrima = Files.lines(Paths.get(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-backup/" + csvName)).count();
 
 
     File inputFile = null;
     File tempFile = null;
     try {
-      inputFile = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/" + csvName);
-      tempFile = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-generato/" + csvName);
+      inputFile = new File(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-backup/" + csvName);
+      tempFile = new File(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-generato/" + csvName);
 
       BufferedReader reader = new BufferedReader(new FileReader(inputFile));
       BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
@@ -58,7 +58,7 @@ public class GeneralUtility {
       writer.close();
       reader.close();
 
-      long linesDopo = Files.lines(Paths.get("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-generato/" + csvName)).count();
+      long linesDopo = Files.lines(Paths.get(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-generato/" + csvName)).count();
 
 
       System.out.println("Righe prima" + linesPrima);
@@ -81,11 +81,14 @@ public class GeneralUtility {
 
   public static void main(String[] args) throws Exception {
 
-    File folder = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
+
+    System.out.println(System.getProperty("user.dir"));
+
+   /* File folder = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
     File[] listOfFiles = folder.listFiles();
     for (int i = 0; i < listOfFiles.length; i++) {
       System.out.println(listOfFiles[i].getName());
       GeneralUtility.dividiProprietaCongiunte(listOfFiles[i].getName());
-    }
+    }*/
   }
 }

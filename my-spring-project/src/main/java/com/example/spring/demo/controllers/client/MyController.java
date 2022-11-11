@@ -34,7 +34,6 @@ public class MyController {
     main.execute(variablesToColor, schermate);
     System.out.println("SVG.....");
     String svg = Files.readString(Path.of("./generated_svg/" + this.getLastSvgGenerated()));
-
     return svg;
 
   }
@@ -49,25 +48,23 @@ public class MyController {
 
     Main main = new Main();
     List<String> variablesToColor = values;
-
-
-    File source = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all_csv/");
-    File dest = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
+    File source = new File(System.getProperty("user.dir")+"/all_csv/");
+    File dest = new File(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-backup/");
     try {
       FileUtils.copyDirectory(source, dest);
     } catch (IOException e) {
       e.printStackTrace();
     }
 
-
-
-
-    File folder = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-backup/");
+    File folder = new File(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-backup/");
     File[] listOfFiles = folder.listFiles();
     for (int i = 0; i < listOfFiles.length; i++) {
-      System.out.println(listOfFiles[i].getName());
-      File file = new File("/Users/nicc/Desktop/Progetto-di-tesi-10-settembre-inzio/my-spring-project/all-csv-prorpieta-separate-generato/"+listOfFiles[i].getName()) ;
+
+      System.out.println("1");
+      File file = new File(System.getProperty("user.dir")+"/all-csv-prorpieta-separate-generato/"+listOfFiles[i].getName()) ;
       file.delete();
+      System.out.println("2");
+
       GeneralUtility.dividiProprietaCongiunte(listOfFiles[i].getName());
     }
 
@@ -105,7 +102,6 @@ public class MyController {
 
 
   @GetMapping("/update-csv")
-  //http://localhost:8080/spring-app/svg/get?values=abc,2,3
   public String
   updateCSV(@RequestParam String infoToAddToCSV, @RequestParam String csvName) throws IOException {
 
@@ -130,10 +126,6 @@ public class MyController {
   deleteRaw(@RequestParam String rawToDelete, @RequestParam String csvName) throws Exception {
 
     long linesPrima = Files.lines(Paths.get("./all_csv/" + csvName + ".csv")).count();
-
-
-
-
 
 
     File inputFile = null;

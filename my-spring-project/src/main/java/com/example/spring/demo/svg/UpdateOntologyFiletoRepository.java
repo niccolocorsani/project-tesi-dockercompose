@@ -20,7 +20,7 @@ public class UpdateOntologyFiletoRepository {
 
   // GraphDB
   private static final String GRAPHDB_SERVER =
-    "http://localhost:7200/";
+    "http://127.0.0.1:7200/";
   private static final String REPOSITORY_ID = "altair";
 
 
@@ -90,11 +90,14 @@ public class UpdateOntologyFiletoRepository {
     TupleQueryResult result = null;
 
 
+    System.out.println("iiiiiiiiiiiiiii");
     List<Triple> listOfTriple = new ArrayList<>();
 
     try {
 
       result = tupleQuery.evaluate();
+      System.out.println("evaluate Query");
+
       while (result.hasNext()) {
         BindingSet bindingSet = result.next();
         Triple t = new Triple();
@@ -116,7 +119,9 @@ public class UpdateOntologyFiletoRepository {
         }
         listOfTriple.add(t);
       }
-    } catch (QueryEvaluationException qee) {
+    } catch (Exception e) {
+      System.out.println(e.getMessage());
+      e.printStackTrace();
       // logger.error(WTF_MARKER,
       //        qee.getStackTrace().toString(), qee);
     } finally {
